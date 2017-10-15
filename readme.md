@@ -18,7 +18,29 @@
  - img 
  
  
-* make the migrations
+* make the migrations - check 
 * manually add data to the table 
-* retrieve through controller and output as dummy to a blade file 
+* retrieve through controller and output as dummy to a blade file - check 
+
+# Recipe Notes
+* stir fries are all too similar
+ * 
+
+# Cupboard
+ - garlic
+ - onions
+ - coconut milk
+ - salt
+ - pepper
+ - olive oil
+ - cooking oil 
+ - balsamic vinegar
+ - curry powder
+ - chia seeds or flax seeds 
+ - cayenne pepper
+ - ginger powder
+ - rice
+ - quinoa
+ - oats 
+ 
  
