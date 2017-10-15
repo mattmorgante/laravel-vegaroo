@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/recipes',  ['uses' => 'recipes_controller@index']);
+Route::get('/recipes', 'recipes_controller@index');
 
-Route::get('/recipes/{slug}',  ['uses' => 'recipes_controller@show']);
+Route::get('/recipes/{slug}', 'recipes_controller@show');
+
+Route::get('/environmental-benefits', 'ArticlesController@environment');
+
+Route::get('/health-benefits', 'ArticlesController@health');
+
+Route::get('/vegan-on-a-budget', 'ArticlesController@budget');
+
+Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
