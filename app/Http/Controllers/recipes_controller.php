@@ -26,4 +26,8 @@ class recipes_controller extends Controller
         ]);
     }
 
+    public function pantry() {
+        return view('pantry');
+    }
+
 }
