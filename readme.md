@@ -30,24 +30,6 @@
 # Recipe Notes
 * stir fries are all too similar
  * 
-
-# Cupboard
- - garlic
- - onions
- - coconut milk
- - salt
- - pepper
- - olive oil
- - cooking oil 
- - balsamic vinegar
- - curry powder
- - chia seeds or flax seeds 
- - cayenne pepper
- - ginger powder
- - rice
- - quinoa
- - oats 
-
  
  
  

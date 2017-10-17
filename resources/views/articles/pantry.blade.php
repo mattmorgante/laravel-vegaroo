@@ -1,16 +1,21 @@
 # Cupboard
 - garlic
 - onions
-- coconut milk
+- coconut milk (non-perishable!)
 - salt
 - pepper
 - olive oil
 - cooking oil
 - balsamic vinegar
 - curry powder
+- turmeric
 - chia seeds or flax seeds
 - cayenne pepper
 - ginger powder
-- rice
+- brown rice
 - quinoa
 - oats
+- beans
+- chickpeas
+- lentils
+- any other legumes
