@@ -17,7 +17,7 @@ class recipes_controller extends Controller
         $recipe = recipe::where('slug', '=', $slug)->first();
 
         $ingredients = explode(',', $recipe->ingredients);
-        $instructions = explode(',', $recipe->instructions);
+        $instructions = explode(';', $recipe->instructions);
 
         return view('recipe')->with([
             'recipe' => $recipe,
