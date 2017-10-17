@@ -42,7 +42,7 @@ body {
           flex: 1;
   list-style: none;
   border: 1px solid black;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,6 +51,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.article_link {
+  padding: 40px;
 }
 
 .row_item_title {

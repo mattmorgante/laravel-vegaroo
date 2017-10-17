@@ -25,9 +25,4 @@ class recipes_controller extends Controller
             'instructions' => $instructions
         ]);
     }
-
-    public function pantry() {
-        return view('pantry');
-    }
-
 }

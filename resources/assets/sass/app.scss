@@ -29,10 +29,14 @@ body {
   flex: 1;
   list-style: none;
   border: 1px solid black;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.article_link {
+  padding: 40px;
 }
 
 .row_item_title { text-align: center; }

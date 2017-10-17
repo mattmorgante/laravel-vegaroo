@@ -14,11 +14,19 @@ class ArticlesController extends Controller
         return view('articles/health');
     }
 
+    public function animals() {
+        return view('articles/animals');
+    }
+
     public function budget() {
         return view('articles/budget');
     }
 
-    public function animals() {
-        return view('articles/animals');
+    public function about() {
+        return view('articles/about');
+    }
+
+    public function pantry() {
+        return view('articles/pantry');
     }
 }
