@@ -1,22 +1,49 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-@import "variables";
-
-.categories {
-  display: flex;
-  width: 100%;
+body {
+  font-family: Camphor,Open Sans,Segoe UI,sans-serif;
 }
 
-.category {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.flexible_row {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.row_item {
+  flex: 1;
   list-style: none;
   border: 1px solid black;
   padding: 20px;
-  flex: 1;
+  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.row_item_title { text-align: center; }
+
+
+.price {
+  text-align: left;
+}
+
+.recipe_extras {
+  display: flex;
+  justify-content: space-between;
 }
 
