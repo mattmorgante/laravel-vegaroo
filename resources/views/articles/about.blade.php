@@ -9,6 +9,7 @@ Fast
 Less than 30 minutes
 
 Easy
+Everything should be available in a normal grocery store
 No ingredients that are foreign to you
 No unnecessary steps, no unnecessary ingredients
 
