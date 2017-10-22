@@ -34,6 +34,7 @@ body {
           flex-flow: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 0px;
 }
 
 .row_item {
@@ -72,5 +73,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.checkbox input,
+.radio input {
+  margin: 8px;
 }
 

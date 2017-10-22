@@ -2,14 +2,13 @@
 
 
 <br>
-<div class="container">
+<div class="container" style="text-align: center">
     <div>
-        <h3 >Calculate the environmental impact of your diet.</h3>
+        <h1>Calculate the environmental impact of your diet.</h1>
     </div>
 
     <div>
         <h3>What best describes your diet?</h3>
-
         <div>
             <label>
                 <input type="radio" name="diet" onchange="updateValue(0)" checked>Average American (4 servings of meat and dairy per day)
@@ -30,34 +29,42 @@
     </div>
 
     <div class="container">
-        <h3 class="title header">
+        <h3>
             Compared to an Average American diet, every day a(n) <br><span id="update_text">Average American</span> will save:
         </h3>
     </div>
-    <!--<input type="range" id="myRange" value="0" step ="25" oninput="updateValue(this.value)" style="width: 100%;">-->
 
     <hr>
-        <p class="title">Carbon Dioxide</p>
-        <div class="content widget" style="font-size: 2.5em">0</div>
+    <div class="flexible_row">
+        <div class="row_item">
+            <p class="title">Carbon Dioxide</p>
+            <div class="content widget" style="font-size: 2.5em">0</div>
             <p>Grams</p>
-        <p class="title">Water</p>
-        <div class="content widget" style="font-size: 2.5em">0</div>
+        </div>
+        <div class="row_item">
+            <p class="title">Water</p>
+            <div class="content widget" style="font-size: 2.5em">0</div>
             <p>Liters</p>
-                <p class="title">Forest</p>
-                <div class="content widget" style="font-size: 2.5em">0
-                </div>
-                <p>Square Feet</p>
-                <p class="title">Waste</p>
-                <div class="content widget" style="font-size: 2.5em">0
-                </div>
-                <p>Lives</p>
-                <p class="title">Animal Lives</p>
-                <div class="content widget" style="font-size: 2.5em">0
-                </div>
-                <p>Kilograms</p>
+        </div>
+        <div class="row_item">
+            <p class="title">Forest</p>
+            <div class="content widget" style="font-size: 2.5em">0</div>
+            <p>Square Feet</p>
+        </div>
+        <div class="row_item">
+            <p class="title">Waste</p>
+            <div class="content widget" style="font-size: 2.5em">0</div>
+            <p>Kilograms</p>
+        </div>
+        <div class="row_item">
+            <p class="title">Animal Lives</p>
+            <div class="content widget" style="font-size: 2.5em">0</div>
+            <p>Lives</p>
+        </div>
+    </div>
     <hr>
     <div class="content">
-        <h1 class="title is-2 header">Why to eat more Fruits, Vegetables, and plant-based foods and fewer Animal Products</h1>
+        <h1 class="title is-2 header">Why to eat Plant-Based</h1>
     </div>
     <div class="columns">
         <div class="column">
@@ -94,7 +101,7 @@
     </div>
     <hr>
     <div class="content">
-        <h1 class="title is-2 header">How to go Vegan</h1>
+        <h1 class="title is-2 header">How to eat Plant-Based</h1>
     </div>
 
     <div class="columns">
@@ -126,6 +133,7 @@
             </a>
         </div>
     </div>
+</div>
 
     <a href="https://vegaroo.slack.com">
         Join The Community
@@ -141,7 +149,7 @@
     // 9 kilograms
 
     // this should all be divided by four
-    const values = [400, 9000, 30, 250 ,1];
+    const values = [100, 2250, 7.5, 62.5 , .25];
 
     const phrase = ['Average American', 'Average European', 'Pescatarian','Vegetarian','Vegan'];
     var phraseEl = document.getElementById('update_text');

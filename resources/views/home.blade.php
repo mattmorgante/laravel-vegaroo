@@ -65,6 +65,13 @@
         <li class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Stop Animal Cruelty</a></li>
     </ul>
 
+    <div class="flexible_row">
+        <div class="row_item article_item">
+            <a href="/calculator">
+            Calculate The Environmental Impact Of Your Diet</a>
+        </div>
+    </div>
+
     <h3>Salads</h3>
     <ul class="flexible_row">
         <li class="row_item"><a href="/recipes/oatmeal-fruits">Oatmeal & Fruits</a><br>
