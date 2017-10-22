@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/calculator', function () {
+    return view('calculator');
+});
+
 Route::get('/recipes', 'recipes_controller@index');
 
 Route::get('/recipes/{slug}', 'recipes_controller@show');
