@@ -10,8 +10,12 @@ class ArticlesController extends Controller
         return view('articles/environment');
     }
 
-    public function health() {
-        return view('articles/health');
+    public function healthShortTerm() {
+        return view('articles/health-short-term');
+    }
+
+    public function healthLongTerm() {
+        return view('articles/health-long-term');
     }
 
     public function animals() {

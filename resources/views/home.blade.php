@@ -33,7 +33,7 @@
             </div>
         </li>
 
-        <li class="row_item"><a href="/recipes/granola-berries">Granola with Berries</a><br>
+        <li class="row_item"><a href="/recipes/muesli-berries">Granola with Berries</a><br>
             <div class="recipe_extras">
                 <span class="price">$2.45</span>
                 <span class="time">< 5 mins</span>
@@ -60,15 +60,22 @@
 
     <h3>Why Vegaroo?</h3>
     <ul class="flexible_row">
-        <li class="row_item article_item"><a class="article_link" href="/health-benefits">Improve Your Health</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Prevent Climate Change</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Stop Animal Cruelty</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the #resistance against Climate Change</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Chronic Disease</a></li>
     </ul>
 
     <div class="flexible_row">
         <div class="row_item article_item">
             <a href="/calculator">
             Calculate The Environmental Impact Of Your Diet</a>
+        </div>
+    </div>
+
+    <div class="flexible_row">
+        <div class="row_item article_item">
+            <a href="/stop-animal-cruelty">
+                Stop Animal Cruelty</a>
         </div>
     </div>
 
