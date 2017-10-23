@@ -135,11 +135,6 @@
     </div>
 </div>
 
-    <a href="https://vegaroo.slack.com">
-        Join The Community
-    </a>
-    <!-- End of container -->
-
 <script>
     // Source: Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.
     // 4163 liters

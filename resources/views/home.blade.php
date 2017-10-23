@@ -185,5 +185,12 @@
     </ul>
 
 
+    <div class="flexible_row">
+        <div class="row_item">
+            <a href="https://vegaroo.slack.com">Join The Community</a>
+        </div>
+    </div>
+
+
 
 </div>
