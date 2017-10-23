@@ -4,7 +4,7 @@
     <div class="hero">
         <h1>Vegaroo</h1>
         <br>
-        <h2>Easy, Cheap, and Delicious Vegetarian and Vegan meals</h2><h4>Because we could all use a few more fruits and vegetables</h4>
+        <h2>Easy, Cheap, and Delicious Vegetarian and Vegan meals</h2><h4>Because eating more vegetables can't hurt!</h4>
         <hr>
     </div>
 
