@@ -62,19 +62,14 @@
     <ul class="flexible_row">
         <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the #resistance against Climate Change</a></li>
         <li class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Chronic Disease</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></li>
     </ul>
 
     <div class="flexible_row">
-        <div class="row_item article_item">
-            <a href="/calculator">
-            Calculate The Environmental Impact Of Your Diet</a>
-        </div>
-    </div>
+        <div class="row_item article_item"><a class="article_link" href="/about">About Vegaroo</a></div>
 
-    <div class="flexible_row">
         <div class="row_item article_item">
-            <a href="/stop-animal-cruelty">
+            <a href="/stop-animal-cruelty" class="article_link">
                 Stop Animal Cruelty</a>
         </div>
     </div>
@@ -114,6 +109,14 @@
         </li>
     </ul>
 
+    <h3>Climate Calculator</h3>
+    <div class="flexible_row">
+        <div class="row_item article_item">
+            <a href="/calculator" class="article_link">
+            Understand The Environmental Impact Of Your Diet</a>
+        </div>
+    </div>
+
     <h3>Bowls</h3>
     <ul class="flexible_row">
         <li class="row_item"><a href="/recipes/oatmeal-fruits">Oatmeal & Fruits</a><br>
@@ -152,7 +155,7 @@
     <h3>Learn More</h3>
     <ul class="flexible_row">
         <li class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">How To Eat Vegan On A Budget</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/pantry">What you need in your pantry at all times</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/pantry">The Pantry Checklist</a></li>
         <li class="row_item article_item"><a class="article_link" href="/about">Learn More About Vegaroo</a></li>
     </ul>
 
@@ -197,6 +200,14 @@
             <a href="https://vegaroo.slack.com">Join The Community</a>
         </div>
     </div>
+
+    <br>
+    <br>
+
+    <div class="footer">
+        <p>Made with plants in Amsterdam by <a href="https://www.mattmorgante.com">Matt</a></p>
+    </div>
+
 
 
 
