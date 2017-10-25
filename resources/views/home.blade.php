@@ -25,7 +25,7 @@
 
     <h3>Breakfasts</h3>
     <ul class="flexible_row">
-        <li class="row_item"><a href="/recipes/oatmeal-fruits">Oatmeal & Fruits</a><br>
+        <li class="row_item"><a href="/recipes/oatmeal">Oatmeal & Fruits</a><br>
             <div class="recipe_extras">
                 <span class="price">$2.45</span>
                 <span class="time">< 5 mins</span>
@@ -33,7 +33,7 @@
             </div>
         </li>
 
-        <li class="row_item"><a href="/recipes/muesli-berries">Granola with Berries</a><br>
+        <li class="row_item"><a href="/recipes/muesli">Granola with Berries</a><br>
             <div class="recipe_extras">
                 <span class="price">$2.45</span>
                 <span class="time">< 5 mins</span>
@@ -119,7 +119,7 @@
 
     <h3>Bowls</h3>
     <ul class="flexible_row">
-        <li class="row_item"><a href="/recipes/oatmeal-fruits">Oatmeal & Fruits</a><br>
+        <li class="row_item"><a href="/recipes/oatmeal">Oatmeal & Fruits</a><br>
             <div class="recipe_extras">
                 <span class="price">$2.45</span>
                 <span class="time">< 5 mins</span>
