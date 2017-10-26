@@ -1,61 +1,38 @@
 @extends('layouts.app')
 
+<nav class="nav">
+    <div class="nav-left">
+        <ul>
+            <li><a href="/">Vegaroo</a></li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li><a href="/">Resources</a></li>
+            <li><a href="/">Recipes</a></li>
+            <li><a href="/">Values</a></li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
     <div class="hero">
-        <h1>Vegaroo</h1>
-        <br>
         <h2>Easy, Cheap, and Delicious Vegetarian and Vegan meals</h2><h4>Because eating more vegetables can't hurt!</h4>
         <hr>
     </div>
 
-    <h3>What are you in the mood for?</h3>
-    <ul class="flexible_row">
-        <li class="row_item">Breakfasts</li>
-        <li class="row_item">Grain Bowls</li>
-        <li class="row_item">Curries</li>
-        <li class="row_item">Salads</li>
-    </ul>
-    <ul class="flexible_row">
-        <li class="row_item">Stir Fries</li>
-        <li class="row_item">Snacks</li>
-        <li class="row_item">Smoothies</li>
-        <li class="row_item">Classics</li>
-    </ul>
-
-
     <h3>Breakfasts</h3>
     <ul class="flexible_row">
-        <li class="row_item"><a href="/recipes/oatmeal">Oatmeal & Fruits</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">7/10</span>
-            </div>
-        </li>
+        @foreach ($breakfasts as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
 
-        <li class="row_item"><a href="/recipes/muesli">Granola with Berries</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">4/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/avocado-toast">Avocado on Toast</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">6/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/protein-smoothie">Oatmeal Protein Smoothie</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">9/10</span>
-            </div>
-        </li>
+    <h3>Grain Bowls</h3>
+    <ul class="flexible_row">
+        @foreach ($bowls as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
     </ul>
 
     <h3>Why Vegaroo?</h3>
@@ -76,37 +53,9 @@
 
     <h3>Salads</h3>
     <ul class="flexible_row">
-        <li class="row_item"><a href="/recipes/oatmeal-fruits">Oatmeal & Fruits</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">7/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/granola-berries">Granola with Berries</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">4/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/avocado-toast">Avocado on Toast</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">6/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/protein-smoothie">Oatmeal Protein Smoothie</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">9/10</span>
-            </div>
-        </li>
+        @foreach ($salads as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
     </ul>
 
     <h3>Climate Calculator</h3>
@@ -117,39 +66,20 @@
         </div>
     </div>
 
-    <h3>Bowls</h3>
+
+    <h3>Curries</h3>
     <ul class="flexible_row">
-        <li class="row_item"><a href="/recipes/oatmeal">Oatmeal & Fruits</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">7/10</span>
-            </div>
-        </li>
+        @foreach ($curry as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
 
-        <li class="row_item"><a href="/recipes/granola-berries">Granola with Berries</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">4/10</span>
-            </div>
-        </li>
 
-        <li class="row_item"><a href="/recipes/avocado-toast">Avocado on Toast</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">6/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/protein-smoothie">Oatmeal Protein Smoothie</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">9/10</span>
-            </div>
-        </li>
+    <h3>Stir-Fry</h3>
+    <ul class="flexible_row">
+        @foreach ($stirFry as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
     </ul>
 
     <h3>Learn More</h3>
@@ -159,47 +89,32 @@
         <li class="row_item article_item"><a class="article_link" href="/about">Learn More About Vegaroo</a></li>
     </ul>
 
-    <h3>Curries</h3>
+    <h3>Classics</h3>
     <ul class="flexible_row">
-        <li class="row_item"><a href="/recipes/dhal-curry-naan">Oatmeal & Fruits</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">7/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/granola-berries">Granola with Berries</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">4/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/avocado-toast">Avocado on Toast</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">6/10</span>
-            </div>
-        </li>
-
-        <li class="row_item"><a href="/recipes/protein-smoothie">Oatmeal Protein Smoothie</a><br>
-            <div class="recipe_extras">
-                <span class="price">$2.45</span>
-                <span class="time">< 5 mins</span>
-                <span class="nutrition_score">9/10</span>
-            </div>
-        </li>
+        @foreach ($classics as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
     </ul>
 
+    <h3>Snacks</h3>
+    <ul class="flexible_row">
+        @foreach ($snacks as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
 
     <div class="flexible_row">
         <div class="row_item">
             <a href="https://vegaroo.slack.com">Join The Community</a>
         </div>
     </div>
+
+    <h3>Smoothies</h3>
+    <ul class="flexible_row">
+        @foreach ($smoothies as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
 
     <br>
     <br>

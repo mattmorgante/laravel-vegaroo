@@ -2,6 +2,36 @@ body {
   font-family: Camphor,Open Sans,Segoe UI,sans-serif;
 }
 
+nav {
+  background: grey;
+  padding: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+nav a {
+  display: block;
+  width: 90px;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-left ul li {
+  float: left;
+}
+
+.nav-right ul li {
+  float: right;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
