@@ -25,4 +25,4 @@ Route::get('/health-benefits-long-term', 'ArticlesController@healthLongTerm');
 Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
 Route::get('/vegan-on-a-budget', 'ArticlesController@budget');
 Route::get('/pantry', 'ArticlesController@pantry');
-Route::get('/about', 'ArticlesController@about');
+Route::get('/values', 'ArticlesController@about');

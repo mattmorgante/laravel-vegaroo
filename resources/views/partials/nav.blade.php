@@ -6,9 +6,9 @@
     </div>
     <div class="nav-right">
         <ul>
-            <li><a href="/">Resources</a></li>
-            <li><a href="/">Recipes</a></li>
-            <li><a href="/">Values</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/values">Values</a></li>
         </ul>
     </div>
 </nav>
