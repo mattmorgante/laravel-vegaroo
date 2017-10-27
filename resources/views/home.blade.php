@@ -1,23 +1,9 @@
 @extends('layouts.app')
 
-<nav class="nav">
-    <div class="nav-left">
-        <ul>
-            <li><a href="/">Vegaroo</a></li>
-        </ul>
-    </div>
-    <div class="nav-right">
-        <ul>
-            <li><a href="/">Resources</a></li>
-            <li><a href="/">Recipes</a></li>
-            <li><a href="/">Values</a></li>
-        </ul>
-    </div>
-</nav>
-
+@include('partials.nav')
 <div class="container">
     <div class="hero">
-        <h2>Easy, Cheap, and Delicious Vegetarian and Vegan meals</h2><h4>Because eating more vegetables can't hurt!</h4>
+        <h2>Easy, Cheap, and Delicious Plant-Based Meals</h2><h4>Because eating more vegetables can't hurt!</h4>
         <hr>
     </div>
 
@@ -112,6 +98,13 @@
     <h3>Smoothies</h3>
     <ul class="flexible_row">
         @foreach ($smoothies as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
+
+    <h3>Sides</h3>
+    <ul class="flexible_row">
+        @foreach ($sides as $recipe)
             @include('partials.recipe-box')
         @endforeach
     </ul>

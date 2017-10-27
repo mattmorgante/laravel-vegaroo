@@ -3,7 +3,6 @@ body {
 }
 
 nav {
-  background: grey;
   padding: 15px;
 }
 nav ul {
@@ -17,6 +16,10 @@ nav ul {
 nav a {
   display: block;
   width: 90px;
+}
+
+nav ul li a {
+  text-decoration: none;
 }
 
 .nav-left {

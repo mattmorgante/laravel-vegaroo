@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('partials.nav')
+
     <div class="flexible_row">
         <div class="row_item">
             <h1>{{ $recipe->title }}</h1>
@@ -41,5 +43,21 @@
         <div class="row_item">
             <h2>5</h2>
         </div>
+    </div>
+
+    <div class="notes">
+        <h4>Additional Notes</h4>
+    <ul>
+        @foreach($notes as $note)
+            <li>{{$note}}</li>
+        @endforeach
+    </ul>
+    </div>
+
+    <div class="related">
+        <h4>Related Links</h4>
+        <ul>
+            <li>Either from around the web or internal links? .... not sure yet , probably both</li>
+        </ul>
     </div>
 @endsection

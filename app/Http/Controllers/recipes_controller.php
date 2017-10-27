@@ -17,6 +17,7 @@ class recipes_controller extends Controller
         $classics = recipe::where('category', 'classics')->get();
         $snacks = recipe::where('category', 'snacks')->get();
         $smoothies = recipe::where('category', 'smoothies')->get();
+        $sides = recipe::where('category', 'sides')->get();
 
         return view('home')->with([
             'breakfasts' => $breakfasts,
@@ -26,7 +27,8 @@ class recipes_controller extends Controller
             'stirFry' => $stirFry,
             'classics' => $classics,
             'snacks' => $snacks,
-            'smoothies' => $smoothies
+            'smoothies' => $smoothies,
+            'sides' => $sides
         ]);
     }
 
@@ -36,11 +38,13 @@ class recipes_controller extends Controller
 
         $ingredients = explode(',', $recipe->ingredients);
         $instructions = explode(';', $recipe->instructions);
+        $notes = explode(';', $recipe->notes);
 
         return view('recipe')->with([
             'recipe' => $recipe,
             'ingredients' => $ingredients,
-            'instructions' => $instructions
+            'instructions' => $instructions,
+            'notes' => $notes
         ]);
     }
 }
