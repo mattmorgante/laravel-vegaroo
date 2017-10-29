@@ -1,9 +1,12 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- add ingredients for every recipe 
-- add every recipe to myFitnessPal to get nutrition data  
-- make charts 
+- add ingredients for 10 recipes 
+- add these 10 recipes to myFitnessPal to get nutrition data  
+- make charts on detail page
+- write the articles 
+- Then and only then can you start with styling 
+
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
 * Article: best grains 
@@ -47,12 +50,6 @@
  - fruits 
  - seeds 
  - oatmeal (optional) 
- 
- 
- 
- 
-# Recipe Notes
-* stir fries are all too similar
  
  
  

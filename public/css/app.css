@@ -23,6 +23,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .nav-left {
   float: left;
 }
@@ -85,6 +89,7 @@ nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 5px;
 }
 
 .article_link {
@@ -115,5 +120,9 @@ nav ul li a {
 .checkbox input,
 .radio input {
   margin: 8px;
+}
+
+.values {
+  padding-bottom: 20px;
 }
 
