@@ -19,6 +19,7 @@ Route::get('/calculator', function () {
 Route::get('/', 'recipes_controller@index');
 
 Route::get('/recipes/{slug}', 'recipes_controller@show');
+Route::get('/resources', 'ArticlesController@index');
 Route::get('/environmental-benefits', 'ArticlesController@environment');
 Route::get('/health-benefits-short-term', 'ArticlesController@healthShortTerm');
 Route::get('/health-benefits-long-term', 'ArticlesController@healthLongTerm');
@@ -26,3 +27,4 @@ Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
 Route::get('/vegan-on-a-budget', 'ArticlesController@budget');
 Route::get('/pantry', 'ArticlesController@pantry');
 Route::get('/values', 'ArticlesController@about');
+Route::get('/nutrition', 'ArticlesController@nutrition');

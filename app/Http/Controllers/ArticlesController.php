@@ -10,6 +10,10 @@ class ArticlesController extends Controller
         return view('articles/environment');
     }
 
+    public function index() {
+        return view('articles/index');
+    }
+
     public function healthShortTerm() {
         return view('articles/health-short-term');
     }
@@ -32,5 +36,9 @@ class ArticlesController extends Controller
 
     public function pantry() {
         return view('articles/pantry');
+    }
+
+    public function nutrition() {
+        return view('articles/nutrition');
     }
 }

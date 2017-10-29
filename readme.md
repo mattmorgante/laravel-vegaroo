@@ -15,6 +15,10 @@
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
 
 
+* Ingredients series: 
+- Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
+
+
 * Blueprints: each category should have a blueprint about how to make a generic version of the recipe with anything 
  
  Salad: 
@@ -50,8 +54,3 @@
  - fruits 
  - seeds 
  - oatmeal (optional) 
- 
- 
- 
- 
- 
