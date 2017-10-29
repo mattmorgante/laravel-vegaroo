@@ -9,6 +9,14 @@ class recipes_controller extends Controller
 {
     public function index()
     {
+        $recipes = recipe::get();
+        return view('allrecipes')->with([
+            'recipes' => $recipes
+        ]);
+    }
+
+    public function home()
+    {
         $breakfasts = recipe::where('category', 'breakfast')->get();
         $salads = recipe::where('category', 'salads')->get();
         $bowls = recipe::where('category', 'bowls')->get();

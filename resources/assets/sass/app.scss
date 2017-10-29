@@ -98,3 +98,16 @@ nav ul li a {
 .values {
   padding-bottom: 20px;
 }
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.join_slack {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;     /* will center text in <p>, which is not a flex item */
+}

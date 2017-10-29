@@ -89,10 +89,10 @@
         @endforeach
     </ul>
 
-    <div class="flexible_row">
-        <div class="row_item">
-            <a href="https://vegaroo.slack.com">Join The Community</a>
-        </div>
+    <div id="footer"><!-- flex container -->
+        <button class="join_slack"><!-- flex item -->
+            <h3><a class="article_link" href="https://www.slack.vegaroo.com">Join Our Community</a></h3>
+        </button>
     </div>
 
     <h3>Smoothies</h3>
@@ -115,8 +115,4 @@
     <div class="footer">
         <p>Made with plants in Amsterdam by <a href="https://www.mattmorgante.com">Matt</a></p>
     </div>
-
-
-
-
 </div>
