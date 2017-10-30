@@ -37,12 +37,12 @@
         </div>
     </div>
 
-    <h3>Salads</h3>
-    <ul class="flexible_row">
-        @foreach ($salads as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    {{--<h3>Salads</h3>--}}
+    {{--<ul class="flexible_row">--}}
+        {{--@foreach ($salads as $recipe)--}}
+            {{--@include('partials.recipe-box')--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
 
     <h3>Climate Calculator</h3>
     <div class="flexible_row">
@@ -61,12 +61,12 @@
     </ul>
 
 
-    <h3>Stir-Fry</h3>
-    <ul class="flexible_row">
-        @foreach ($stirFry as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    {{--<h3>Stir-Fry</h3>--}}
+    {{--<ul class="flexible_row">--}}
+        {{--@foreach ($stirFry as $recipe)--}}
+            {{--@include('partials.recipe-box')--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
 
     <h3>Learn More</h3>
     <ul class="flexible_row">
@@ -75,39 +75,39 @@
         <li class="row_item article_item"><a class="article_link" href="/about">Learn More About Vegaroo</a></li>
     </ul>
 
-    <h3>Classics</h3>
-    <ul class="flexible_row">
-        @foreach ($classics as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    {{--<h3>Classics</h3>--}}
+    {{--<ul class="flexible_row">--}}
+        {{--@foreach ($classics as $recipe)--}}
+            {{--@include('partials.recipe-box')--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
 
-    <h3>Snacks</h3>
-    <ul class="flexible_row">
-        @foreach ($snacks as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    {{--<h3>Snacks</h3>--}}
+    {{--<ul class="flexible_row">--}}
+        {{--@foreach ($snacks as $recipe)--}}
+            {{--@include('partials.recipe-box')--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
 
     <div id="footer"><!-- flex container -->
         <button class="join_slack"><!-- flex item -->
-            <h3><a class="article_link" href="https://www.slack.vegaroo.com">Join Our Community</a></h3>
+            <h3><a class="article_link" href="https://www.slack.vegaroo.com">Join The Community</a></h3>
         </button>
     </div>
 
-    <h3>Smoothies</h3>
-    <ul class="flexible_row">
-        @foreach ($smoothies as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    {{--<h3>Smoothies</h3>--}}
+    {{--<ul class="flexible_row">--}}
+        {{--@foreach ($smoothies as $recipe)--}}
+            {{--@include('partials.recipe-box')--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
 
-    <h3>Sides</h3>
-    <ul class="flexible_row">
-        @foreach ($sides as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    {{--<h3>Sides</h3>--}}
+    {{--<ul class="flexible_row">--}}
+        {{--@foreach ($sides as $recipe)--}}
+            {{--@include('partials.recipe-box')--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
 
     <br>
     <br>
