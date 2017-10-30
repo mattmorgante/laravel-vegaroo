@@ -1,5 +1,63 @@
 @extends('layouts.app')
 
+@section('header.javascript')
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawBasic);
+
+        var carbs = {!! $recipe->carbs !!};
+        var protein ={!! $recipe->protein !!};
+        var fat = {!! $recipe->fat !!};
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Nutrient', 'Grams'],
+                ['Carbohydrates',     carbs],
+                ['Protein',      protein],
+                ['Fat',  fat]
+            ]);
+
+            var options = {
+                title: 'Macro Nutrient Breakdown'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+
+
+        function drawBasic() {
+
+            var fiber ={!! $recipe->fiber!!};
+            var sugar = {!! $recipe->sugar !!};
+
+            var data = google.visualization.arrayToDataTable([
+                ['Nutrient', 'Grams',],
+                ['Fiber', fiber],
+                ['Sugar', sugar],
+            ]);
+
+            var options = {
+                title: 'Micro Nutrient Breakdown',
+                chartArea: {width: '25%'},
+                hAxis: {
+                    minValue: 0,
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(
+                    document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+@endsection
+
 @section('content')
 
 @include('partials.nav')
@@ -9,7 +67,6 @@
             <h1>{{ $recipe->title }}</h1>
             <p>{{ $recipe->description }}</p>
             <div class="recipe_extras">
-
                 <p>Cost: <br>{{ $recipe->cost }}</p>
                 <p>Time: <br>{{ $recipe->time }}</p>
                 <p>Nutritional Quality: <br>{{ $recipe->score }} / 10</p>
@@ -17,11 +74,8 @@
         </div>
         <div class="row_item">
             <h2>Nutritional Information</h2>
-            <p>Fat: {{ $recipe->fat }}</p>
-            <p>Protein: {{ $recipe->protein }}</p>
-            <p>Carbs: {{ $recipe->carbs }}</p>
-            <p>Sugar: {{ $recipe->sugar }}</p>
-            <p>Fiber: {{ $recipe->fiber }}</p>
+            <div id="piechart" style="width: 300px; height: 300px;"></div>
+            <div id="chart_div"></div>
         </div>
     </div>
 

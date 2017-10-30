@@ -48,11 +48,12 @@ class recipes_controller extends Controller
         $instructions = explode(';', $recipe->instructions);
         $notes = explode(';', $recipe->notes);
 
+
         return view('recipe')->with([
             'recipe' => $recipe,
             'ingredients' => $ingredients,
             'instructions' => $instructions,
-            'notes' => $notes
+            'notes' => $notes,
         ]);
     }
 }
