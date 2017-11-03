@@ -15,13 +15,13 @@
 
             var data = google.visualization.arrayToDataTable([
                 ['Nutrient', 'Grams'],
-                ['Carbohydrates',     carbs],
+                ['Carbs',     carbs],
                 ['Protein',      protein],
                 ['Fat',  fat]
             ]);
 
             var options = {
-                title: 'Macro Nutrient Breakdown'
+                legend: {position: 'top'}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -36,13 +36,13 @@
             var sugar = {!! $recipe->sugar !!};
 
             var data = google.visualization.arrayToDataTable([
-                ['Nutrient', 'Grams',],
+                ['Nutrient', 'Grams'],
                 ['Fiber', fiber],
-                ['Sugar', sugar],
+                ['Sugar', sugar]
             ]);
 
             var options = {
-                title: 'Micro Nutrient Breakdown',
+                legend: {position: 'none'},
                 chartArea: {width: '25%'},
                 hAxis: {
                     minValue: 0,
@@ -62,25 +62,29 @@
 
 @include('partials.nav')
 
+<br>
     <div class="flexible_row">
-        <div class="row_item">
+        <div class="row_item recipe_detail">
             <h1>{{ $recipe->title }}</h1>
             <p>{{ $recipe->description }}</p>
             <div class="recipe_extras">
-                <p>Cost: <br>{{ $recipe->cost }}</p>
-                <p>Time: <br>{{ $recipe->time }}</p>
-                <p>Nutritional Quality: <br>{{ $recipe->score }} / 10</p>
+                <p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>
+                <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p>
+                <p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>
             </div>
         </div>
         <div class="row_item">
-            <h2>Nutritional Information</h2>
-            <div id="piechart" style="width: 300px; height: 300px;"></div>
-            <div id="chart_div"></div>
+            <h2>Macro Nutrient Information</h2>
+            <div id="piechart" style="width: 100%; height: 400px;"></div>
         </div>
     </div>
 
     <div class="flexible_row">
         <div class="row_item">
+            <h2>Macro Nutrient Information</h2>
+            <div id="chart_div" style="width: 100%; height: 400px;"></div>
+        </div>
+        <div class="row_item instructions">
             <h2>Ingredients: </h2>
             @foreach($ingredients as $ingredient )
                 <ul>
@@ -88,14 +92,11 @@
                 </ul>
             @endforeach
         </div>
-        <div class="row_item">
+        <div class="row_item instructions">
             <h2>Instructions: </h2>
             @foreach($instructions as $i=>$instruction)
                 <p>{{$i+1}}. {{$instruction}}</p>
             @endforeach
-        </div>
-        <div class="row_item">
-            <h2>5</h2>
         </div>
     </div>
 

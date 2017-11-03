@@ -1,15 +1,11 @@
 @extends('layouts.app')
 
-
-<br>
+@include('partials.nav')
 <div class="container" style="text-align: center">
-    <div>
-        <h1>Calculate the environmental impact of your diet.</h1>
-    </div>
+    <h1>Calculate the environmental impact of your diet.</h1>
 
-    <div>
-        <h3>What best describes your diet?</h3>
-        <div>
+    <div class="hero-list-wrapper">
+    <h3>What best describes your diet?</h3>
             <label>
                 <input type="radio" name="diet" onchange="updateValue(0)" checked>Average American (4 servings of meat and dairy per day)
             </label>
@@ -25,7 +21,6 @@
             <label>
                 <input type="radio" name="diet" onchange="updateValue(4)">Vegan (0)
             </label>
-        </div>
     </div>
 
     <div class="container">
@@ -63,79 +58,29 @@
         </div>
     </div>
     <hr>
-    <div class="content">
-        <h1 class="title is-2 header">Why to eat Plant-Based</h1>
-    </div>
-    <div class="columns">
-        <div class="column">
-            <a href="health.html">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-primary">
-                        <p class="title">Improve Your Health</p>
-                        <p class="subtitle">Eating less meat has numerous physical and mental health benefits</p>
-                    </article>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a href="environment.html">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-black">
-                        <p class="title">Fight Climate Change</p>
-                        <p class="subtitle">Animal Agriculture accounts for more than 50% of all greenhouse gas emissions</p>
-                    </article>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a href="animals.html">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-danger">
-                        <p class="title">Stop Animal Cruelty</p>
-                        <p class="subtitle">More than 56 million animals are brutally killed each year for human consumption</p>
-                    </article>
-                </div>
-            </a>
-        </div>
+    <h3 class="section-title"><span class="call-out">Why</span> To Eat More Fruits and Vegetables</h3>
+    <ul class="flexible_row">
+        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the #resistance against Climate Change</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></li>
+    </ul>
 
-    </div>
-    <hr>
-    <div class="content">
-        <h1 class="title is-2 header">How to eat Plant-Based</h1>
+    <div class="flexible_row">
+        <div class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></div>
+        <div class="row_item article_item">
+            <a href="/stop-animal-cruelty" class="article_link">
+                Stop Animal Cruelty</a>
+        </div>
     </div>
 
-    <div class="columns">
-        <div class="column">
-            <a href="/">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-info">
-                        <p class="title">What to eat: With Vegaroo, eating more vegetables and fewer animal products has never been easier</p>
-                    </article>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a href="mindset.html">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-grey">
-                        <p class="title">Mastering the Mindset: Make small changes and build healthy habits</p>
-                    </article>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a href="money.html">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-success">
-                        <p class="title">Save Money: Eating vegan doesn't have to break the bank. Find out how!</p>
-                    </article>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
+    <h3 class="section-title"><span class="call-out">How</span> To Eat More Fruits and Vegetables</h3>
+    <ul class="flexible_row">
+        <li class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eating Vegan On A Budget</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>
+    </ul>
 
-<script>
+
+    <script>
     // Source: Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.
     // 4163 liters
     // 20 kg of grain
