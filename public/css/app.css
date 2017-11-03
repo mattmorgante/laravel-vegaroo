@@ -61,6 +61,11 @@ nav ul li a {
       flex-wrap: wrap;
 }
 
+.hero-list li {
+  text-align: left;
+  font-size: 24px;
+}
+
 .flexible_row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,7 +150,14 @@ nav ul li a {
 .join_slack {
   max-width: 300px;
   margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: lightblue;
   text-align: center;
   /* will center text in <p>, which is not a flex item */
+}
+
+.join_slack a {
+  text-decoration: none;
 }
 
