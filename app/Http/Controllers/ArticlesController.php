@@ -41,4 +41,8 @@ class ArticlesController extends Controller
     public function nutrition() {
         return view('articles/nutrition');
     }
+
+    public function habits() {
+        return view('articles/habits');
+    }
 }

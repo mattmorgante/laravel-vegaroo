@@ -75,6 +75,7 @@
         </div>
         <div class="row_item">
             <h2>Macro Nutrient Information</h2>
+            <h3>{{ $recipe->calories }} Calories</h3>
             <div id="piechart" style="width: 100%; height: 400px;"></div>
         </div>
     </div>

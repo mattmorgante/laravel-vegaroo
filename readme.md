@@ -1,11 +1,11 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- add ingredients for 10 recipes 
-- add these 10 recipes to myFitnessPal to get nutrition data  
-- make charts on detail page
-- write the articles 
-- Then and only then can you start with styling 
+- write the articles
+- add more data to database 
+- small styling fixes 
+- deploy and debug on mobile devices 
+
 
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
@@ -53,4 +53,25 @@
  - Dairy substitute 
  - fruits 
  - seeds 
- - oatmeal (optional) 
+ - oatmeal (optional)
+  
+  
+  Luca's ideas: 
+  - more trees means less C02
+  - Carbon is dangerous, poses a threat to the species. 
+  - Must try to balance it 
+  - Build incentives into the system that reward people for reducing C02
+  - Donate to the tree farms around the world! 
+  
+  
+  - Clean businesses: ones that produce a better output than what they put in 
+    - Clean energy 
+    - Clean water 
+    - Clean foods (fruits, vegetables, whole grains)
+  
+  - Healthy Foods: make sure that organic or other healthy foods are actually what they say.
+     - This an idea for the future. Something to research and keep an eye on. 
+    
+    
+  How to make a tree that grows every time you do something well? - in javascript 
+   
