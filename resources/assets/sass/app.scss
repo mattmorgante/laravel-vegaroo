@@ -262,21 +262,25 @@ label {
   padding:0;
 }
 
+.image_wrapper {
+  text-align: center;
+}
+
 .image_large {
-  max-width: 730px;
-  margin: 20px;
+  max-width: 690px;
+  margin: 10px;
   max-height: 650px;
+  display: inline-block;
 }
 
-.image_land {
-  max-width: 730px;
-  margin: 20px;
+.first_subtitle {
+  margin-top: 50px;
 }
-
 .forest_counter {
   border: 3px solid #e2e2e2;
   font-size: 1.5em;
   padding: 10px;
+  margin: 10px;
 }
 
 #acres {

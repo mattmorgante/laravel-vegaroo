@@ -305,21 +305,26 @@ label {
   padding: 0;
 }
 
-.image_large {
-  max-width: 730px;
-  margin: 20px;
-  max-height: 650px;
+.image_wrapper {
+  text-align: center;
 }
 
-.image_land {
-  max-width: 730px;
-  margin: 20px;
+.image_large {
+  max-width: 690px;
+  margin: 10px;
+  max-height: 650px;
+  display: inline-block;
+}
+
+.first_subtitle {
+  margin-top: 50px;
 }
 
 .forest_counter {
   border: 3px solid #e2e2e2;
   font-size: 1.5em;
   padding: 10px;
+  margin: 10px;
 }
 
 #acres {
