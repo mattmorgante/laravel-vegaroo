@@ -101,13 +101,13 @@
 
         <p class="content">The simplest and most impactful way for individuals to lessen their carbon footprint is to reduce the consumption of animal products</p>
 
-        <div id="chart_div" style="height: 500px;"></div>
+        <div id="chart_div" style="max-width: 100%; height: 500px;"></div>
 
         <h2 class="subtitle">Water</h2>
 
         <p class="content">Fresh water is humanity's most precious resource, and no foods require more water than meat and dairy products.</p>
 
-        <div id="column_chart" style="height: 500px;"></div>
+        <div id="column_chart" style="max-width: 100%; height: 500px;"></div>
 
         <h2 class="subtitle">Forests</h2>
 
@@ -119,7 +119,7 @@
 
         <p class="content">Yet humanity continues to destroy the world's rainforests at frightening rates. Moreover, animal agriculture is responsible for more than 90% of the Amazon's destruction and is the leading driver of species extinction.</p>
 
-        <div id="piechart" style="width: 100%; height: 400px;"></div>
+        <div id="piechart" style="max-width: 100%; height: 400px;"></div>
 
         <div class="forest_counter">Acres of rainforest destroyed since you opened this page: <span id="acres">0</span></div>
 
@@ -137,9 +137,9 @@
 
         <img src="/img/deadzone.png" alt="Deadzone in the gulf of mexico" class="image_large">
 
-        <div class="forest_counter">Pounds of waste produced by livestock since you opened this page: <span id="waste">0</span></div>
+        <div class="forest_counter">Kilograms of waste produced by livestock since you opened this page: <span id="waste">0</span></div>
 
-        
+
         <h2 class="subtitle">More Resources</h2>
         <p class="content">If you're interested in learning more about this topic, please check out the following resources:</p>
 
@@ -161,6 +161,6 @@
     var seconds = 0;
     function waste ( val ) { return val > 9 ? val : "0" + val; }
     setInterval( function(){
-        document.getElementById("waste").innerHTML=waste((++seconds*116500));
+        document.getElementById("waste").innerHTML=waste((++seconds*52843));
     }, 1000);
 </script>

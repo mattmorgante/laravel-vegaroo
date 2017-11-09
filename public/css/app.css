@@ -285,6 +285,7 @@ label {
 }
 
 .article_container {
+  width: 90%;
   max-width: 730px;
   display: inline-block;
   text-align: left;
@@ -310,7 +311,7 @@ label {
 }
 
 .image_large {
-  max-width: 690px;
+  width: 95%;
   margin: 10px;
   max-height: 650px;
   display: inline-block;
