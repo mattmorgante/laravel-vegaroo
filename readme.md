@@ -7,6 +7,9 @@
 - deploy and debug on mobile devices 
 
 
+- Get good data and lots of it. The core product is data 
+
+
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
 * Article: best grains 
@@ -14,9 +17,12 @@
 * Article: glossary (weird foods that people might not know) 
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
 
-
+Future Pipeline
 * Ingredients series: 
-- Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
+    - Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
+* Guest can upvote a recipe
+* Guest can view how many upvotes a recipe has
+* All recipes page is sorted by upvotes 
 
 
 * Blueprints: each category should have a blueprint about how to make a generic version of the recipe with anything 
@@ -62,6 +68,12 @@
   - Must try to balance it 
   - Build incentives into the system that reward people for reducing C02
   - Donate to the tree farms around the world! 
+  
+  Matt's ideas: 
+  - More warming means a smaller amount of arable land to create food 
+  - Higher population growth means we need more food 
+  - We face severe food shortages 
+  - Invest in / donate to companies creating sustainable indoor food  
   
   
   - Clean businesses: ones that produce a better output than what they put in 
