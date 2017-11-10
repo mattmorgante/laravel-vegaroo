@@ -22,6 +22,17 @@ class CreateRecipeTable extends Migration
             $table->string('ingredients');
             $table->string('instructions');
             $table->timestamps();
+            $table->string('slug');
+            $table->string('category');
+            $table->integer('calories');
+            $table->integer('protein');
+            $table->integer('carbs');
+            $table->integer('fat');
+            $table->integer('fiber');
+            $table->integer('sugar');
+            $table->string('img');
+            $table->integer('score');
+            $table->string('notes', 1000);
         });
     }
 
