@@ -23,7 +23,7 @@ nav a {
 
 nav ul li a {
   text-decoration: none;
-  color: darkgreen;
+  color: #429e62;
 }
 
 label {
@@ -255,6 +255,7 @@ label {
 }
 .article_container h1 {
   text-align: center;
+  font-size: 42px;
 }
 
 .article_header_image {
@@ -268,28 +269,34 @@ label {
 }
 
 .image_large {
-  width: 95%;
-  margin: 10px;
+  width: 100%;
+  margin: 15px 0px;
   max-height: 650px;
   display: inline-block;
 }
 
-.first_subtitle {
+.subtitle {
   margin-top: 50px;
 }
+
 .forest_counter {
-  border: 3px solid #e2e2e2;
   font-size: 1.5em;
   padding: 10px;
-  margin: 10px;
+  background-color: #10CF7D;
+  color: #ffffff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: center;
+  width: 95%;
+  margin-top: 30px;
 }
 
 #acres {
-  color: red;
+  color: black;
 }
 
 #waste {
-  color: red;
+  color: black;
 }
 
 .videoWrapper {
@@ -305,4 +312,14 @@ label {
   width: 100%;
   max-width: 1000px;
   height: 100%;
+}
+
+.footer_title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.footer_wrapper {
+  margin-bottom: 50px;
+  text-align: center;
 }

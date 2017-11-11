@@ -7,6 +7,7 @@
         google.charts.setOnLoadCallback(drawChart);
         google.charts.setOnLoadCallback(drawMultSeries);
         google.charts.setOnLoadCallback(drawBasic);
+        google.charts.setOnLoadCallback(drawLandChart);
 
         function drawChart() {
 
@@ -17,7 +18,6 @@
             ]);
 
             var options = {
-                title: 'Causes of Amazon Rainforest Destruction'
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -36,8 +36,7 @@
             ]);
 
             var options = {
-                title: 'Carbon Savings Per Year',
-                chartArea: {width: '80%', height:'300px'},
+                chartArea: {'width': '75%', 'height': '80%'},
                 hAxis: {
                     title: 'Kilograms of Carbon Dioxide',
                     minValue: 0
@@ -45,12 +44,11 @@
                 legend: {position: 'none'}
             };
 
-            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
             chart.draw(data, options);
         }
 
-        google.charts.setOnLoadCallback(drawBasic());
 
         function drawBasic() {
 
@@ -64,9 +62,8 @@
             ]);
 
             var options = {
-                title: 'Liters of Water to Produce 1 Kilogram',
                 legend: {position: 'none'},
-                chartArea: {width: '80%'},
+                chartArea: {'width': '75%', 'height': '80%'},
                 hAxis: {
                     minValue: 0,
                 }
@@ -75,6 +72,28 @@
             var chart = new google.visualization.ColumnChart(
                     document.getElementById('column_chart'));
 
+            chart.draw(data, options);
+        }
+
+        function drawLandChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Food Type', 'Amount of Land'],
+                ['Vegan', .166667],
+                ['Vegetarian', .5],
+                ['Normal Omnivore', 6]
+            ]);
+
+            var options = {
+                legend: {position: 'none'},
+                chartArea: {'width': '75%', 'height': '80%'},
+                hAxis: {
+                    minValue: 0,
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(
+                    document.getElementById('land_chart'));
             chart.draw(data, options);
         }
     </script>
@@ -86,8 +105,8 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">The Environmental Impact of Animal Foods</h1>
-        <h3 class="content"><i>The facts are mounting and the results are undeniable: human consumption of animal products alters the earth in catastrophic ways. Yet every individual can still make a difference. The most impactful way to join the resistance against climate change is to simply eat fewer animal products.</h3>
-        <h3 class="content">How do animal products negatively effect the climate and ecosystems? These are the main drivers:</i></h3>
+        <h3 class="content"><i>The facts are mounting and the results are undeniable: human consumption of animal products alters the earth in catastrophic ways. Yet every individual can still make a difference. The most impactful way to join the resistance against climate change is to simply eat fewer animal products.</i></h3>
+        <h3 class="content">How do animal products negatively effect the climate and ecosystems? These are the main drivers:</h3>
     </div>
 </div>
 
@@ -97,15 +116,17 @@
     <div class="article_container">
         <h2 class="subtitle first_subtitle">Carbon Dioxide</h2>
 
-        <p class="content">The steady rise of greenhouse gasses is one of the leading drivers of global warning.</p>
+        <p class="content">The steady rise of greenhouse gasses is one of the leading drivers of global warning. The simplest and most impactful way for individuals to lessen their carbon footprint is to reduce the consumption of animal products.</p>
 
-        <p class="content">The simplest and most impactful way for individuals to lessen their carbon footprint is to reduce the consumption of animal products</p>
+        <h3 class="chart_title">Carbon Savings Per Year</h3>
 
         <div id="chart_div" style="max-width: 100%; height: 500px;"></div>
 
         <h2 class="subtitle">Water</h2>
 
         <p class="content">Fresh water is humanity's most precious resource, and no foods require more water than meat and dairy products.</p>
+
+        <h3 class="chart_title">Liters of Water to Produce 1 KG of Food</h3>
 
         <div id="column_chart" style="max-width: 100%; height: 500px;"></div>
 
@@ -119,6 +140,8 @@
 
         <p class="content">Yet humanity continues to destroy the world's rainforests at frightening rates. Moreover, animal agriculture is responsible for more than 90% of the Amazon's destruction and is the leading driver of species extinction.</p>
 
+        <h3 class="chart_title">Causes of Amazon Rainforest Destruction</h3>
+
         <div id="piechart" style="max-width: 100%; height: 400px;"></div>
 
         <div class="forest_counter">Acres of rainforest destroyed since you opened this page: <span id="acres">0</span></div>
@@ -127,7 +150,9 @@
 
         <p class="content">As the human population grows to 9 billion by 2050, we will have to feed more people with less land. The easiest way to do so is to reduce the amount of land needed per person.</p>
 
-        <img src="/img/land.png" alt="Land Use of Vegans" class="image_large">
+        <h3 class="chart_title">Acres to Feed 1 Person for 1 Year</h3>
+
+        <div id="land_chart" style="max-width: 100%; height: 500px;"></div>
 
         <p class="content">Feeding a regular omnivore requires 18 times as much land as feeding a vegan. As the world's arable land shrinks due to droughts and natural disasters, we can keep the food supply stable by requiring less land to produce our food.</p>
 
@@ -139,16 +164,37 @@
 
         <div class="forest_counter">Kilograms of waste produced by livestock since you opened this page: <span id="waste">0</span></div>
 
+        <p class="content">Waste is doubly harmful. It negatively impacts ecosystems on land by destroying the soil composition and seeping into the water supply. Then when it runs off into the ocean, it creates oxygen-depleted deadzones where no fish can survive.</p>
 
-        <h2 class="subtitle">More Resources</h2>
-        <p class="content">If you're interested in learning more about this topic, please check out the following resources:</p>
+        <h2 class="subtitle">Conclusion</h2>
 
-        <div class="videoWrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ut3URdEzlKQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-
+        <p class="content">You don't need to buy a Tesla or install solar panels above your house to begin reducing your environmental impact. Preserve our planet's ecosystems and climate for future generations by making more sustainable food choices. To get started now, check out <a href="/recipes">our recipes</a> on Vegaroo.</p>
     </div>
 </div>
+
+<div class="footer_wrapper">
+    <div class="footer_container">
+        <h3 class="footer_title">Read More</h3>
+        <div class="flexible_row">
+            <div class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></div>
+            <div class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></div>
+            <div class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eat Vegan On A Budget</a></div>
+        </div>
+        <br>
+        <div class="btn-wrapper">
+            <a class="btn" href="/recipes">All Recipes</a>
+        </div>
+    </div>
+</div>
+
+        {{--<h2 class="subtitle">More Resources</h2>--}}
+        {{--<p class="content">If you're interested in learning more about this topic, please check out the following resources:</p>--}}
+
+        {{--<div class="videoWrapper">--}}
+            {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/ut3URdEzlKQ" frameborder="0" allowfullscreen></iframe>--}}
+        {{--</div>--}}
+
+
 
 
 <script>
