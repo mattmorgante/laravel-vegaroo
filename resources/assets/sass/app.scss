@@ -62,6 +62,12 @@ label {
   text-align: center;
 }
 
+.title {
+  max-width: 700px;
+  text-align: center;
+  display: inline-block;
+}
+
 .hero_text {
   display: flex;
   align-items: center;
@@ -322,4 +328,8 @@ label {
 .footer_wrapper {
   margin-bottom: 50px;
   text-align: center;
+}
+
+.research {
+  margin-bottom: 20px;
 }

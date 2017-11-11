@@ -4,8 +4,7 @@
 <div class="container">
     <div class="hero">
 
-        <h1>Vegaroo: Not Another Vegan Food Blog</h1>
-        <h2>Simple, easy, cheap, nutritious, and delicious plant-based meals</h2>
+        <h1 class="title">Vegaroo: Simple, easy, cheap, nutritious, and delicious plant-based meals</h1>
 
         <div class="hero-list-wrapper">
             <h3>Vegaroo has a strict no-tolerance policy</h3>
@@ -34,28 +33,21 @@
 
     <h3 class="section-title"><span class="call-out">Why</span> To Eat More Fruits and Vegetables</h3>
     <ul class="flexible_row">
-        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the #resistance against Climate Change</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the Resistance Against Climate Change</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Lose Weight and Prevent Chronic Disease</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Stop Animal Cruelty</a></li>
     </ul>
 
-    <div class="flexible_row">
-        <div class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></div>
-        <div class="row_item article_item">
-            <a href="/stop-animal-cruelty" class="article_link">
-                Stop Animal Cruelty</a>
-        </div>
-    </div>
-
-        <h3 class="section-title"><span class="call-out">How</span> To Eat More Fruits and Vegetables</h3>
-        <ul class="flexible_row">
-            <li class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eating Vegan On A Budget</a></li>
-            <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
-            <li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>
-        </ul>
-
     <div class="btn-wrapper">
-            <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
+        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
     </div>
+
+    <h3 class="section-title"><span class="call-out">How</span> To Eat More Fruits and Vegetables</h3>
+    <ul class="flexible_row">
+        <li class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eating Vegan On A Budget</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>
+    </ul>
 
     <h3 class="section-title" id="breakfasts">Breakfasts</h3>
     <ul class="flexible_row">
