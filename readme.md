@@ -1,15 +1,10 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- write the articles
+- write the animal cruelty article
+- figure out how to seed the database to production
 - add more data to database 
-- small styling fixes 
-- deploy and debug on mobile devices 
-
-
 - Get good data and lots of it. The core product is data 
-
-
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
 * Article: best grains 

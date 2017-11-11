@@ -14,10 +14,6 @@ class ArticlesController extends Controller
         return view('articles/index');
     }
 
-    public function healthShortTerm() {
-        return view('articles/health-short-term');
-    }
-
     public function healthLongTerm() {
         return view('articles/health-long-term');
     }

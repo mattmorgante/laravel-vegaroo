@@ -22,7 +22,6 @@ class CreateRecipeTable extends Migration
             $table->string('ingredients');
             $table->string('instructions');
             $table->timestamps();
-            $table->string('slug');
             $table->string('category');
             $table->integer('calories');
             $table->integer('protein');
