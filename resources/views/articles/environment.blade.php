@@ -122,6 +122,8 @@
 
         <div id="chart_div" style="max-width: 100%; height: 500px;"></div>
 
+        <p class="content">Merely switching from beef to chicken will already begin to drastically reduce your carbon footprint. “The biggest intervention people could make towards reducing their carbon footprints would not be to abandon cars, but to eat significantly less red meat,” says Professor Tim Benton from the University of Leeds. <a href="https://www.theguardian.com/environment/2014/jul/21/giving-up-beef-reduce-carbon-footprint-more-than-cars">Source</a></p>
+
         <h2 class="subtitle">Water</h2>
 
         <p class="content">Fresh water is humanity's most precious resource, and no foods require more water than meat and dairy products.</p>
@@ -166,6 +168,8 @@
 
         <p class="content">Waste is doubly harmful. It negatively impacts ecosystems on land by destroying the soil composition and seeping into the water supply. Then when it runs off into the ocean, it creates oxygen-depleted deadzones where no fish can survive.</p>
 
+        <p class="content">More than 34,000 miles of rivers and 216,000 acres of lakes and reservoirs in the U.S. have been degraded by waste from confined feeding operations.</p>
+
         <h2 class="subtitle">Conclusion</h2>
 
         <p class="content">You don't need to buy a Tesla or install solar panels above your house to begin reducing your environmental impact. Preserve our planet's ecosystems and climate for future generations by making more sustainable food choices. To get started now, check out <a href="/recipes">our recipes</a> on Vegaroo.</p>
@@ -176,7 +180,7 @@
     <div class="footer_container">
         <h3 class="footer_title">Read More</h3>
         <div class="flexible_row">
-            <div class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></div>
+            <div class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Lose Weight and Gain More Energy</a></div>
             <div class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></div>
             <div class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eat Vegan On A Budget</a></div>
         </div>

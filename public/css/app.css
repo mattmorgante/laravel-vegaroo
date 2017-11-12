@@ -300,10 +300,12 @@ label {
 .article_container h3 {
   text-align: center;
   color: grey;
+  width: 100%;
 }
 
 .article_container h1 {
   text-align: center;
+  width: 100%;
   font-size: 42px;
 }
 
