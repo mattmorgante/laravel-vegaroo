@@ -160,6 +160,15 @@ label {
   font-size: 18px;
 }
 
+.row_header {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
 .recipe_detail {
   padding: 20px;
   display: flex;
@@ -284,6 +293,10 @@ label {
 }
 
 .subtitle {
+  margin-top: 50px;
+}
+
+.first_content {
   margin-top: 50px;
 }
 

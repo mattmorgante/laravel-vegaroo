@@ -2,9 +2,16 @@
 
 * ToDo: 
 - write the animal cruelty article
-- figure out how to seed the database to production
-- add more data to database 
-- Get good data and lots of it. The core product is data 
+- Finish 16 meals fully (including prices!)
+- counter? http://considerveganism.com/counter/ 
+
+
+* Animal Cruelty Strategy (tonight write this)
+- Pictures of pigs, chickens, and cows in horrible conditions 
+- AG-GAG laws 
+- Injections of bacteria and harmful carcinogens 
+- Dairy industry is basically rape and destroying children 
+- End with this is our choice: these pracices will only if you are complicit in it's existence  
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
 * Article: best grains 
