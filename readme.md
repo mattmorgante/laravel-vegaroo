@@ -2,6 +2,8 @@
 
 * ToDo: 
 - WHY is there nutritional information online but not on dev?? Investigate
+- Setup .env file to work with config/database.php
+- Outline health article more beautifully/organized 
 - Finish 16 meals fully (including prices!)
 - counter? http://considerveganism.com/counter/ 
 
