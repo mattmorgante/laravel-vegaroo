@@ -11,11 +11,6 @@
 |
 */
 
-
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
-
 Route::get('/calculator', function () {
     return view('calculator');
 });
