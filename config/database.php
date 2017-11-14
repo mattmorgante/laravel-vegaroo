@@ -47,6 +47,7 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
+
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => $host,
@@ -57,7 +58,7 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
         ),
-//
+
 //        'mysql' => [
 //            'driver' => 'mysql',
 //            'host' => env('DB_HOST', '127.0.0.1'),

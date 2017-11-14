@@ -6,6 +6,7 @@
 nav {
   padding: 15px;
   border-bottom: 1px solid lightgray;
+  height: 50px;
 }
 
 nav ul {
@@ -14,6 +15,7 @@ nav ul {
   padding: 0;
   overflow: hidden;
   text-decoration: none;
+  line-height: 50px;
 }
 
 nav a {
@@ -22,7 +24,8 @@ nav a {
 
 nav ul li a {
   text-decoration: none;
-  color: #429e62;
+  color: #26CE81;
+  font-weight: bold;
 }
 
 label {
@@ -30,6 +33,10 @@ label {
   border-radius: 4px;
   margin-bottom: 7px;
   padding: 0.3em;
+}
+
+.image_icon {
+  max-height: 50px;
 }
 
 .bold {

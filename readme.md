@@ -8,6 +8,12 @@
 - counter? http://considerveganism.com/counter/ 
 
 
+- Really helpful  
+- On a budget https://www.reddit.com/r/vegan/comments/j7hq2/wondering_how_to_manage_a_vegan_diet_on_a_budget/ 
+
+
+
+
 * Animal Cruelty Strategy (tonight write this)
 - Pictures of pigs, chickens, and cows in horrible conditions 
 - AG-GAG laws 
