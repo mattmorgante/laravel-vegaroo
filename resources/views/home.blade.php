@@ -72,7 +72,7 @@
 
     <h3 class="section-title" id="curry">Curries</h3>
     <ul class="flexible_row">
-        @foreach ($curry as $recipe)
+        @foreach ($curries as $recipe)
             @include('partials.recipe-box')
         @endforeach
     </ul>
@@ -87,7 +87,7 @@
 
     {{--<h3>Stir-Fry</h3>--}}
     {{--<ul class="flexible_row">--}}
-        {{--@foreach ($stirFry as $recipe)--}}
+        {{--@foreach ($stirFries as $recipe)--}}
             {{--@include('partials.recipe-box')--}}
         {{--@endforeach--}}
     {{--</ul>--}}

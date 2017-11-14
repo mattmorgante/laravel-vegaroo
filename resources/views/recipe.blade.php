@@ -101,6 +101,13 @@
         </div>
     </div>
 
+    <h3>Other {{ $categoryName }}</h3>
+    <div class="flexible_row">
+        @foreach ($similarRecipes as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </div>
+
     <div class="notes">
         <h4>Additional Notes</h4>
     <ul>

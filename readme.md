@@ -1,7 +1,7 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- write the animal cruelty article
+- WHY is there nutritional information online but not on dev?? Investigate
 - Finish 16 meals fully (including prices!)
 - counter? http://considerveganism.com/counter/ 
 
@@ -14,7 +14,11 @@
 - End with this is our choice: these pracices will only if you are complicit in it's existence  
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
-* Article: best grains 
+* Article: all about grains 
+- brown rice
+- quinoa 
+- buckwheat 
+- bulgur 
 * Article: best vegan dairy substitutes (coconut milk, coco yogurt, soy milk, soy yogurt, almond milk, oat milk) 
 * Article: glossary (weird foods that people might not know) 
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
