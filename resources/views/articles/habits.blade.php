@@ -15,10 +15,11 @@
 <div class="article_wrapper">
     <div class="article_container">
 
+        * take small steps
+        * switch from beef to chicken
+        *
+        * build positive steps with the habit loop
+        * prepare your responses to common questions
 
-
-* take small steps
-* switch from beef to chicken
-*
-* build positive steps with the habit loop
-* prepare your responses to common questions
+    </div>
+</div>

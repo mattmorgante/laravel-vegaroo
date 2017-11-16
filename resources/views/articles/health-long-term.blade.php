@@ -16,74 +16,79 @@
 
         <h2 class="subtitle">The Research</h2>
 
-        <p class="content research">Heart disease, obesity, diabetes, cancer, strokes, hypertension, and cholesterol all have a common enemy: the vegan diet!
-
-            The purpose of this page is to accumulate and distill the scientific research about nutrition and diet, specifically related to the consumption of meat and dairy and presents it in easily consumable chunks that real humans can understand.</p>
+        <p class="content research">Heart disease, obesity, diabetes, cancer, strokes, hypertension, and cholesterol all have a common enemy: the vegan diet! The purpose of this page is to accumulate and distill the scientific research about nutrition and diet and present it in easily consumable chunks that real humans can understand.</p>
 
         <p class="content">For example, often when reading scientific research I run across a sentence like this:</p>
+        <ul>
+        <li class="content">Regarding cause-specific mortality, men and women had elevated risks for cancer mortality for red (HR, 1.22 [95% CI, 1.16-1.29], and HR, 1.20 [95% CI, 1.12-1.30], respectively) and processed meat (HR, 1.12 [95% CI, 1.06-1.19], and HR, 1.11 [95% CI 1.04-1.19], respectively) intakes. Furthermore, cardiovascular disease risk was elevated for men and women in the highest quintile of red (HR, 1.27 [95% CI, 1.20-1.35], and HR, 1.50 [95% CI, 1.37-1.65], respectively) and processed meat (HR, 1.09 [95% CI, 1.03-1.15], and HR, 1.38 [95% CI, 1.26-1.51], respectively) intakes. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Source</a> </li>
+        </ul>
 
-        <p class="content">Those consuming larger amounts of high-fat dairy had higher breast cancer mortality (0.5 to <1.0 servings/day: hazard ratio [HR] = 1.20, 95% confidence interval [CI] = 0.82 to 1.77; and ≥1.0 servings/day: HR = 1.49, 95% CI = 1.00 to 2.24, Ptrend = .05), higher all-cause mortality ( Ptrend < .001), and higher non–breast cancer mortality<a href="https://academic.oup.com/jnci/article/105/9/616/986948/High-and-Low-Fat-Dairy-Intake-Recurrence-and">Source</a> </p>
-
-        <p class="content">Although to most people this means nothing, it can be translated from scientist-speak to human. What it really means is: <strong>for women who have had breast cancer, one serving of whole dairy per day increases their risk of dying from the disease 49% and dying from any disease 64%.</strong></p>
-
-        <p class="content">So even though the Susan G. Komen breast cancer foundation puts pink "Breast Cancer Awareness" labels on their packaging, many of their products actually increase the risk of breast cancer!</p>
-
-        <h2 class="subtitle">Obesity, Heart Disease & Diabetes</h2>
+        <p class="content">Although to most people this means nothing, it can be translated from scientist-speak to human. What it really means is:</p>
 
         <ul>
+            <li>People who ate the most red meat were 20% more likely to die of cancer and at least 27% more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50% higher.</li>
+        </ul>
 
+        <h2 class="subtitle">Obesity, Heart Disease, Diabetes, & High Blood Pressure</h2>
+
+        <p class="content">The links between these three diseases are too strong to separate their results in studies, but the outcomes are impossible to ignore. A vegan diet protects against all of these dangerous chronic conditions.</p>
+
+        <ul>
             <li class="content research">Vegetarians have a lower mean BMI (by about 1 kg/m2), a lower mean plasma total cholesterol concentration (by about 0.5 mmol/l), and a lower mortality from coronary artery disease (by about 25 %). <a target="_blank" href="https://www.cambridge.org/core/journals/proceedings-of-the-nutrition-society/article/health-benefits-of-a-vegetarian-diet/8774207AE8B2CCB4A90D6ADDBC9EA89F">Source</a></li>
 
             <li class="content research">Vegetarians also appear to have lower low-density lipoprotein cholesterol levels, lower blood pressure, and lower rates of hypertension and type 2 diabetes than nonvegetarians. Furthermore, vegetarians tend to have a lower body mass index and lower overall cancer rates. <a target="_blank" href="http://europepmc.org/abstract/med/19562864">Source</a></li>
 
             <li class="content research">The three boosters of bad cholesterol (transfat, saturated fat, and dietary cholesterol) all stem from eating animal products and processed junk foods. <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/21521229">Source</a></li>
+
             <li class="content research">Vegans tend to be thinner, have lower serum cholesterol, and lower blood pressure, reducing their risk of heart disease. <a target="_blank" href="http://ajcn.nutrition.org/content/89/5/1627S.full">Source</a></li>
 
             <li class="content">Increasing the consumption of fruits and vegetables reduces the risk of hypertension, cornary artery disease, stroke, cancer, obesity, and type 2 diabetes.<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3419346/">Source</a> </li>
+            <br>
+            <li class="content">A substitution of one serving of nuts, low-fat dairy, and whole grains per day for one serving of red meat per day was associated with a 16-35% lower risk of Type 2 Diabetes. Results suggest that red meat consumption, particularly processed red meat, is associated with an increased risk of T2D. <a href="https://www.researchgate.net/publication/51562202_Red_meat_consumption_and_risk_of_type_2_diabetes_3_Cohorts_of_US_adults_and_an_ppdated_meta-analysis">Source</a></li>
+            <br>
 
-            <li class="content">A substitution of one serving of nuts, low-fat dairy, and whole grains per day for one serving of red meat per day was associated with a 16-35% lower risk of Type 2 Diabetes. Our results suggest that red meat consumption, particularly processed red meat, is associated with an increased risk of T2D.<a href="https://www.researchgate.net/publication/51562202_Red_meat_consumption_and_risk_of_type_2_diabetes_3_Cohorts_of_US_adults_and_an_ppdated_meta-analysis"></a> </li>
-
-
-            <li class="content">people who ate the most red meat were 20 percent more likely to die of cancer and at least 27 percent more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50 percent higher.
-                <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Source</a></li>
+            <li class="content">People who ate the most red meat were 20 percent more likely to die of cancer and at least 27 percent more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50 percent higher. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Source</a></li>
+            <br>
 
             <li class="content research">Vegetarian diets confer protection against cardiovascular diseases, cardiometabolic risk factors, some cancers and total mortality. Compared to lacto-ovo-vegetarian diets, vegan diets offer additional protection for obesity, hypertension, type-2 diabetes, and cardiovascular mortality. <a target="_blank" href="http://www.mdpi.com/2072-6643/6/6/2131/htm">Source</a></li>
 
             <li class="content research">Vegetarians have lower rates of coronary heart disease, largely explained by low LDL cholesterol, probable lower rates of hypertension and diabetes mellitus, and lower prevalence of obesity. Overall, their cancer rates appear to be moderately lower than others living in the same communities, and life expectancy appears to be greater. <a target="_blank" href="http://ajcn.nutrition.org/content/89/5/1607S.short">Source</a></li>
 
-            <li class="content">Participants in the study who consumed high amounts of meat were 33 percent more likely to have central obesity.<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697260/"></a>Source</li>
+            <li class="content">Participants in the study who consumed high amounts of meat were 33 percent more likely to have central obesity. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697260/">Source</a></li>
+
+            <br>
             
             <li class="content">The American Dietetic Association, the world’s largest organization of nutrition experts, maintains that vegetarians have less obesity and lower rates of chronic medical conditions such as heart disease, diabetes and hypertension.
                 <a href="http://care.diabetesjournals.org/content/31/Supplement_1/S61">Source</a> </li>
         </ul>
 
+        <h2 class="subtitle">Processed Meats Cause Cancer</h2>
+
+        <p class="content">The World Health Organization classifies processed meats like ham, hot dogs, and bacon as Group 1 Carcinogens, which means they are harmful to humans. This places processed meats in the same category as other harmful substances like Cigarettes and Plutonium.
+            <a href="https://www.cancer.org/cancer/cancer-causes/general-info/known-and-probable-human-carcinogens.html">Source</a>
+        </p>
+
         <h2 class="subtitle">The Links Between Dairy & Cancer</h2>
 
         <ul>
-
             <li class="content">Dairy products and calcium are associated with a greater risk of prostate cancer. <a
                         href="https://www.ncbi.nlm.nih.gov/pubmed/11566656">Source</a> </li>
-
             <li class="content">Men who avoid dairy products are at lower risk for prostate cancer incidence and mortality, compared to others. <a href="http://www.pcrm.org/sites/default/files/pdfs/health/milk_and_prostate_cancer.pdf">Source</a> </li>
-            
             <li class="content">For women who have had breast cancer, one serving of whole dairy per day increases their risk of dying from the disease 49% and dying from any disease 64%.<a href="https://academic.oup.com/jnci/article/105/9/616/986948/High-and-Low-Fat-Dairy-Intake-Recurrence-and">Source</a> </li>
-
         </ul>
 
         <h2 class="subtitle">But Doesn't Dairy Protect My Bones?</h2>
-
         <ul>
-
             <li class="content">Total calcium intake is not related to a lower risk of hip facture. However, women consuming 12.5 miligrams of Vitamin D had a 37% lower risk of hip fracture.<a href="http://ajcn.nutrition.org/content/77/2/504.long">Source</a> </li>
         </ul>
 
-
-        <h2 class="subtitle">Meat Leads To Diabetes and Veganism Treats Diabetes Better Than Conventional Medication</h2>
+        <h2 class="subtitle">Diabetes</h2>
+        <p class="content">Meat leads to diabetes and going vegan treats diabetes better than conventional medication</p>
 
         <ul>
-            <li class="content">Positive associations were also observed between type 2 diabetes and red meat and other processed meats. The relative risk for diabetes for every 1-serving increase in intake is 1.26 (95% CI, 1.21-1.42) for red meat, 1.38 (95% CI, 1.23-1.56) for total processed meats, 1.73 (95% CI, 1.39-2.16) for bacon, 1.49 (95% CI, 1.04-2.11) for hot dogs, and 1.43 (95% CI, 1.22-1.69) for processed meats.<a href="https://www.ncbi.nlm.nih.gov/pubmed/15534160">Source</a> </li>
+            <li class="content">An increase in intake of red meat and processed meats is directly correlated with an increase in Type 2 Diabetes. For every 1 serving increase in red meat per day, you are 26% more likely to get Type 2 Diabetes. 1 serving of processed meats? 43%! 1 serving of bacon? 49%!<a href="https://www.ncbi.nlm.nih.gov/pubmed/15534160">Source</a> </li>
 
-            <li class="content research">A low-fat vegan diet appeared to improve glycemia and plasma lipids more than did conventional diabetes diet recommendations. <a target="_blank" href="http://ajcn.nutrition.org/content/early/2009/04/01/ajcn.2009.26736H.short">Source</a></li>
+            <li class="content research">A low-fat vegan diet improves glycemia and plasma lipids more than conventional diabetes diet recommendations.<a target="_blank" href="http://ajcn.nutrition.org/content/early/2009/04/01/ajcn.2009.26736H.short">Source</a></li>
         </ul>
 
         <h2 class="subtitle">Veganism is just as effective as dangerous statin drugs</h2>

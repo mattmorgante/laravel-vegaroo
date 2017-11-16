@@ -1,15 +1,25 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- WHY is there nutritional information online but not on dev?? Investigate
 - Setup .env file to work with config/database.php
-- Outline health article more beautifully/organized 
+- Outline health article more beautifully 
+  * Add name of study to each health bullet point 
 - Finish 16 meals fully (including prices!)
+- Best Books and Blogs
+
+
 - counter? http://considerveganism.com/counter/ 
 
 
-- Really helpful  
+- Really helpful  https://www.reddit.com/r/vegan/wiki/beginnersguide 
 - On a budget https://www.reddit.com/r/vegan/comments/j7hq2/wondering_how_to_manage_a_vegan_diet_on_a_budget/ 
+
+
+Best Books 
+
+
+Best Blogs 
+
 
 
 
@@ -102,38 +112,6 @@ Future Pipeline
 How to make a tree that grows every time you do something well? - in javascript 
   
   
-Presentation: Cookie Wall 
-
-WHY 
-- EU Law says you must enable us to track cookies 
-- Cookies are increasingly becoming important as ways to track data within websites
-- 
-
-HOW
-- Are you on gfcc? Don't check for cookies 
-- Are you on /cookie-consent already? Don't check for cookies
-- Otherwise we check for cookies 
-- First we make sure we can set the cookie. If not, we keep redirecting them to the cookie wall 
-- Second we create the URL for the cookie wall. It consists of 
-* cookie-consent
-* return location (encoding as a URL)
-* referrer
-* and the time 
-- Finally we are now on the cookie wall 
-
-- When you click on Akkoord, what happens?? 
-- We set the cookie! 
-- So what does a cookie consist of? Ingredients, just like a regular cookie 
-- Butter, flour, sugar, chocolate chips, eggs 
-- Except our cookie has different ingredients 
-- Name (CookieConsent)
-- Value (1)
-- Domain (autovisie.dev)
-- Expiration Date (2025)
-- Referrer (if applicable)
- 
-- We return them to the returnURL (/nieuws)
-
 
 
 

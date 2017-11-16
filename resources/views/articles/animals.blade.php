@@ -78,13 +78,6 @@
 
         <p class="content">While the mothers are denied their instinctual desires to be with newborn calves, the males are taken away to become veal and the females become the next generation of dairy cows. This cycle repeats itself every year, procuding horrendous mental and physical results for the cows. 75% of animals who are killed because they can no longer stand on their own are dairy cows.</p>
 
-        {{--<h2 class="subtitle">Hormones & Antibiotics</h2>--}}
-
-        {{--<p class="content">Dairy cows are also often pumped full of hormones to increase their milk production. When you consider that dairy cows can produce 45 kilograms of milk per day, about 10 times more than they could just a few decades ago, you might think twice about how "natural" that glass of milk is.</p>--}}
-        {{----}}
-        {{--<p class="content">Antibiotics are also a large source of concern originating from the meat and dairy industries. 80% of all antibiotics are given to animals, increasing overall resistance </p>--}}
-
-
         <h2 class="subtitle">Lifespan</h2>
 
         <p class="content">Every kind of animal raised for food production gets brutally murdered as soon as they are large enough to become meat or are no longer productive as milk or egg producers. Most deaths occur without sedatives; factory farms can kill thousands of animals in a day using highly efficient and deadly machines.</p>

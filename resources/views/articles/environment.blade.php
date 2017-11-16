@@ -106,7 +106,7 @@
     <div class="article_container">
         <h1 class="title">The Environmental Impact of Animal Foods</h1>
         <h3 class="content"><i>The facts are mounting and the results are undeniable: human consumption of animal products alters the earth in catastrophic ways. Yet every individual can still make a difference. The most impactful way to join the resistance against climate change is to simply eat fewer animal products.</i></h3>
-        <h3 class="content">How do animal products negatively effect the climate and ecosystems? These are the main drivers:</h3>
+        <h3 class="content"><i>How do animal products negatively effect the climate and ecosystems? These are the main drivers:</i></h3>
     </div>
 </div>
 

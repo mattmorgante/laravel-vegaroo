@@ -13,25 +13,33 @@
 
 <div class="article_wrapper">
     <div class="article_container">
-        <h2 class="subtitle">Eat As Much As You Want</h2>
+        <h2 class="subtitle">Fruits, Vegetables & Whole Grains: Eat As Much As You Want</h2>
         <p class="content">1% of americans receive recommended daily servings</p>
         <p class="content">The healthiest foods are unprocessed and plant-based (think fruits, vegetables, legumes and whole grains)</p>
 
-        <p class="content">Dont sleep on spices! </p>
+        <p class="content">Dont sleep on spices!</p>
 
         <p class="content">To understand more about the positive health effects of vegetables, please read <a href="/health-benefits-long-term">Our Article On Health</a></p>
 
-        <h2 class="subtitle">Eat Sparingly</h2>
+        <h2 class="content"></h2>
+
+        <h2 class="subtitle"></h2>
+
+        <h2 class="subtitle">Processed Plant-Foods: Eat Sparingly</h2>
 
         <p class="content">Processed plant-based foods can be unhealthy, depending on how they are prepared (don't forget that a diet consisting of beer, doritos, oreos, and french fries cooked in vegetable oil is vegan!)
             - Unprocessed animal foods are not healthy, but better than processed ones (like chicken breast, natural yogurt)</p>
 
-        <h2 class="subtitle">Avoid Eating</h2>
+        <h2 class="subtitle">Fish, Poultry & Dairy: Harmful, But Better Than Eating Carcinogens</h2>
 
-        <p class="content">- Processed animal foods should be avoided at all costs (for example: hot dogs, lunch meats, flavored yogurts)
+        <h2 class="subtitle">Red Meat: Almost Carcinogens</h2>
+
+        <h2 class="subtitle">Processed Meats: They Literally Cause Cancer</h2>
+
+        <p class="content">Processed animal foods should be avoided at all costs (for example: hot dogs, lunch meats, flavored yogurts)
         </p>
 
-        <p class="content">- Replacing vegetables cures heart disease, cancer, diabetes, etc. (link to health-long-term)</p>
+        <p class="content">Replacing vegetables cures heart disease, cancer, diabetes, etc. (link to health-long-term)</p>
 
         <p class="content">To understand more about the negative health effects of meat and dairy products, please read <a href="/health-benefits-long-term">Our Article On Health</a></p>
 
