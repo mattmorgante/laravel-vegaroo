@@ -14,6 +14,11 @@ class EmailController extends Controller
         $subscriber = new Email();
         $subscriber->email = $email;
         $subscriber->save();
+
+        return response()->json([
+            $data['email']
+        ]);
+
     }
 
 }

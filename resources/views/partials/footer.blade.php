@@ -30,6 +30,8 @@
             data: data,
         success: function(response) {
             console.log(response);
+            alert('Thanks! We will be in touch soon!');
+            $('.input_button').fadeOut();
         }
         });
 
