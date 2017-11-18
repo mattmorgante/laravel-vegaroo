@@ -52,7 +52,7 @@
     <ul class="flexible_row">
         <li class="row_item article_item"><a class="article_link" href="/nutrition">The Vegaroo Nutrition Manifesto</a></li>
         <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>
+        {{--<li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>--}}
     </ul>
 
     <h3 class="section-title" id="breakfasts">Breakfasts</h3>
@@ -105,11 +105,11 @@
         {{--@endforeach--}}
     {{--</ul>--}}
 
-    <div id="footer"><!-- flex container -->
-        <div class="join_slack"><!-- flex item -->
-            <h3><a class="article_link" href="https://vegaroo.slack.com">Join The Community</a></h3>
-        </div>
-    </div>
+    {{--<div id="footer"><!-- flex container -->--}}
+        {{--<div class="join_slack"><!-- flex item -->--}}
+            {{--<h3><a class="article_link" href="https://vegaroo.slack.com">Join The Community</a></h3>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
     {{--<h3>Smoothies</h3>--}}
     {{--<ul class="flexible_row">--}}

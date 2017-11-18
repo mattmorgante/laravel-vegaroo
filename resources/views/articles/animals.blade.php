@@ -89,7 +89,9 @@
 
         <h2 class="subtitle">Conclusion</h2>
 
-        <p class="content">Meat and dairy products aren't just destroying our health and our environment: they are also inflicting immense amounts of cruelty to billions of sentient beings every year. If you're interested in learning more about this topic, check out the resources and videos below.</p>
+        <p class="content">Meat and dairy products aren't just destroying our health and our environment: they are also inflicting immense amounts of cruelty to billions of sentient beings every year. These practices will only continue if you are complicit in it's existence. Every day, you make choices which have the power to dismantle this industry: choose vegan and </p>
+
+            <p class="content">If you're interested in learning more about this topic, check out the resources and videos below.</p>
 
         <p class="content">
             Source: USDA

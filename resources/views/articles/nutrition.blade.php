@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<img class="article_header_image" src="/img/berries.jpeg" alt="What to eat and why: the Vegaroo Nutrition Manifesto">
+<img class="article_header_image" src="/img/veg.jpeg" alt="What to eat and why: the Vegaroo Nutrition Manifesto">
 
 <div class="article_wrapper">
     <div class="article_container">

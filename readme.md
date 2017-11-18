@@ -3,7 +3,7 @@
 * ToDo: 
 - Setup .env file to work with config/database.php
 - Outline health article more beautifully 
-  * Add name of study to each health bullet point 
+* Add name of study to each health bullet point 
 - Finish 16 meals fully (including prices!)
 - Best Books and Blogs
 
@@ -16,12 +16,22 @@
 
 
 Best Books 
+- How Not To Die 
 
 
 Best Blogs 
-
-
-
+- Oh She Glows
+- Minimalist Baker
+- BudgetBytes/vegan
+- Not a blog but reddit.com/r/vegan
+ - reddit eat cheap and vegan 
+ 
+ 
+Best Documentaries 
+- Cowspiracy 
+- What the Health
+- Food Choices 
+- What more??? 
 
 
 * Animal Cruelty Strategy (tonight write this)

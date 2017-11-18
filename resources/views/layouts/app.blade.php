@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <meta name="msapplication-config" content="/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
     @section('header.javascript')
     @show
