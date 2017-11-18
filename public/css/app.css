@@ -326,6 +326,12 @@ label {
   color: white;
 }
 
+@media (max-width: 767px) {
+  .call_to_action {
+    height: 350px;
+  }
+}
+
 .call_to_action p {
   font-size: 22px;
 }

@@ -2,21 +2,22 @@
 
 * ToDo: 
 - Setup .env file to work with config/database.php
-- Outline health article more beautifully 
-* Add name of study to each health bullet point 
-- Finish 16 meals fully (including prices!)
+- Outline health article (halfway done)
+- Finish 16 meals fully
+- Fix meal detail page -- too sloppy!
 - Best Books and Blogs
 
 
+
+More Resources: 
 - counter? http://considerveganism.com/counter/ 
-
-
 - Really helpful  https://www.reddit.com/r/vegan/wiki/beginnersguide 
 - On a budget https://www.reddit.com/r/vegan/comments/j7hq2/wondering_how_to_manage_a_vegan_diet_on_a_budget/ 
 
 
 Best Books 
 - How Not To Die 
+- Plant-Based Journey
 
 
 Best Blogs 
@@ -32,16 +33,9 @@ Best Documentaries
 - What the Health
 - Food Choices 
 - What more??? 
-
-
-* Animal Cruelty Strategy (tonight write this)
-- Pictures of pigs, chickens, and cows in horrible conditions 
-- AG-GAG laws 
-- Injections of bacteria and harmful carcinogens 
-- Dairy industry is basically rape and destroying children 
-- End with this is our choice: these pracices will only if you are complicit in it's existence  
   
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
+
 * Article: all about grains 
 - brown rice
 - quinoa 
