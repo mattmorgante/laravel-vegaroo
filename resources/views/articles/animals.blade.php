@@ -105,5 +105,15 @@
     </div>
 </div>
 
+<div class="footer_wrapper">
+    <div class="footer_container">
+        @include('partials.how')
+        <br>
+        <div class="btn-wrapper">
+            <a target="_blank" class="btn" href="/recipes">All Recipes</a>
+        </div>
+    </div>
+</div>
+
 
 

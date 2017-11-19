@@ -48,3 +48,13 @@
         <li class="content">Lentils</li>
     </div>
 </div>
+
+<div class="footer_wrapper">
+    <div class="footer_container">
+        @include('partials.why')
+        <br>
+        <div class="btn-wrapper">
+            <a target="_blank" class="btn" href="/recipes">All Recipes</a>
+        </div>
+    </div>
+</div>

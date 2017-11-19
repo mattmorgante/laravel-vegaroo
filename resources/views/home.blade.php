@@ -31,30 +31,13 @@
         <a class="btn" href="/recipes">All Recipes</a>
     </div>
 
-    <h3 class="section-title"><span class="call-out">Why</span> To Eat More Fruits and Vegetables</h3>
-    <div class="flexible_row">
-        <h3 class="row_header">Environmental Reasons</h3>
-        <h3 class="row_header">Health Reasons</h3>
-        <h3 class="row_header">Ethical Reasons</h3>
-    </div>
-
-    <ul class="flexible_row">
-        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the Resistance Against Climate Change</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Lose Weight and Prevent Chronic Disease</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Stop Animal Cruelty</a></li>
-    </ul>
+    @include('partials.why')
 
     <div class="btn-wrapper">
         <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
     </div>
 
-    <h3 class="section-title"><span class="call-out">How</span> To Eat More Fruits and Vegetables</h3>
-    <ul class="flexible_row">
-        <li class="row_item article_item"><a class="article_link" href="/nutrition">The Vegaroo Nutrition Manifesto</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/blogs-books-documentaries">The Best Blogs, Books and Documentaries about Veganism</a></li>
-        {{--<li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>--}}
-    </ul>
+    @include('partials.how')
 
     <h3 class="section-title" id="breakfasts">Breakfasts</h3>
     <ul class="flexible_row">

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -164,6 +163,7 @@
 
         <img src="/img/deadzone.png" alt="Deadzone in the gulf of mexico" class="image_large">
 
+        <p class="content"> In the Gulf of Mexico there is a 7,000 square mile “dead zone” where there is no aquatic life primarily due to pollution from animal waste and chemical fertilizers.</p>
         <div class="forest_counter">Kilograms of waste produced by livestock since you opened this page: <span id="waste">0</span></div>
 
         <p class="content">Waste is doubly harmful. It negatively impacts ecosystems on land by destroying the soil composition and seeping into the water supply. Then when it runs off into the ocean, it creates oxygen-depleted deadzones where no fish can survive.</p>
@@ -172,18 +172,15 @@
 
         <h2 class="subtitle">Conclusion</h2>
 
+        <p class="content">Do you hate species extinction? Water Pollution? Habitat Destruction? Global Warming? Soil degradation? Then look no further, because the most impactful way to fight all of these atrocities on the environment is to simply stop purchasing animal products.</p>
+
         <p class="content">You don't need to buy a Tesla or install solar panels above your house to begin reducing your environmental impact. Preserve our planet's ecosystems and climate for future generations by making more sustainable food choices. To get started now, check out <a href="/recipes">our recipes</a> on Vegaroo.</p>
     </div>
 </div>
 
 <div class="footer_wrapper">
     <div class="footer_container">
-        <h3 class="footer_title">Read More</h3>
-        <div class="flexible_row">
-            <div class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Lose Weight and Gain More Energy</a></div>
-            <div class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></div>
-            <div class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eat Vegan On A Budget</a></div>
-        </div>
+        @include('partials.how')
         <br>
         <div class="btn-wrapper">
             <a class="btn" href="/recipes">All Recipes</a>

@@ -57,30 +57,27 @@
             <p>Lives</p>
         </div>
     </div>
-    <hr>
-    <h3 class="section-title"><span class="call-out">Why</span> To Eat More Fruits and Vegetables</h3>
-    <ul class="flexible_row">
-        <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the #resistance against Climate Change</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/health-benefits-short-term">Lose Weight and Gain More Energy</a></li>
-    </ul>
 
-    <div class="flexible_row">
-        <div class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Prevent Heart Disease, Cancer & more</a></div>
-        <div class="row_item article_item">
-            <a href="/stop-animal-cruelty" class="article_link">
-                Stop Animal Cruelty</a>
-        </div>
+</div>
+<div class="sources_wrapper">
+    <div class="sources">
+        <h3>Sources</h3>
+        <ul>
+            <li><a href="https://link.springer.com/article/10.1007/s10584-014-1169-1/fulltext.html">Scarborough, Peter, et al. Dietary greenhouse gas emissions of meat-eaters, fish-eaters, vegetarians and vegans in the UK</a></li>
+            <li><a href="http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf">Meat Eater's Guide to Climate Change and Health</a></li>
+            <li><a href="http://www.wri.org/blog/2016/04/sustainable-diets-what-you-need-know-12-charts">Ranganathan, Janet & Waite, Richard. Sustainable Diets: What You Need to Know in 12 Charts</a></li>
+            <li><a href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
+        </ul>
     </div>
+</div>
+<div class="container">
+    @include('partials.why')
 
-    <h3 class="section-title"><span class="call-out">How</span> To Eat More Fruits and Vegetables</h3>
-    <ul class="flexible_row">
-        <li class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eating Vegan On A Budget</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
-        <li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>
-    </ul>
+    @include('partials.how')
+</div>
 
 
-    <script>
+<script>
     // Source: Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.
     // 4163 liters
     // 20 kg of grain
@@ -111,6 +108,3 @@
         newValues = [];
     }
 </script>
-
-</body>
-</html>

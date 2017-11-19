@@ -140,12 +140,7 @@
 
 <div class="footer_wrapper">
     <div class="footer_container">
-        <h3 class="footer_title">Read More</h3>
-        <div class="flexible_row">
-            <div class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Stop Animal Cruelty</a></div>
-            <div class="row_item article_item"><a class="article_link" href="/environmental-benefits">Protect The Environment</a></div>
-            <div class="row_item article_item"><a class="article_link" href="/vegan-on-a-budget">Eat Vegan On A Budget</a></div>
-        </div>
+        @include('partials.how')
         <br>
         <div class="btn-wrapper">
             <a target="_blank" class="btn" href="/recipes">All Recipes</a>

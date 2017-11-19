@@ -39,6 +39,7 @@
             <li><a target="_blank" href="http://www.imdb.com/title/tt3302820/">Cowspiracy</a>Examines the links between the production of animal products and environmental degradation</li>
             <li><a target="_blank" href="http://www.imdb.com/title/tt5541848/">What The Health</a>The sequel from the makers of Cowspiracy tracks the links between animal products and disease, exposing the links between the food industry, government organizations, and health companies.</li>
             <li><a target="_blank" href="http://www.imdb.com/title/tt6039284/">Explores the impact of food on health, the environment, and more.</a></li>
+            <li><a href="https://www.eatingyoualive.com/">Eating You Alive</a>Investigates how to treat chronic diseases through lifestyle changes and why doctors are not trained in nutrition.</li>
             <li><a target="_blank" href="http://www.imdb.com/title/tt1227378/?ref_=tt_rec_tt">Fat, Sick & Nearly Dead</a>The inspiring story of an obese Australian man who turns his health around by drinking only fresh fruit and vegetable juice for 60 days.</li>
         </ul>
 
@@ -54,5 +55,15 @@
         </ul>
 
         <br>
+    </div>
+</div>
+
+<div class="footer_wrapper">
+    <div class="footer_container">
+        @include('partials.why')
+        <br>
+        <div class="btn-wrapper">
+            <a target="_blank" class="btn" href="/recipes">All Recipes</a>
+        </div>
     </div>
 </div>
