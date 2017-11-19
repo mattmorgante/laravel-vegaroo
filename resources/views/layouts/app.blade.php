@@ -22,7 +22,7 @@
 
         gtag('config', 'UA-56273136-4');
     </script>
-    
+
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
 
     @section('header.javascript')
