@@ -28,5 +28,8 @@ Route::get('/pantry', 'ArticlesController@pantry');
 Route::get('/values', 'ArticlesController@about');
 Route::get('/nutrition', 'ArticlesController@nutrition');
 Route::get('/habits', 'ArticlesController@habits');
+Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
+Route::get('/celebrities', 'ArticlesController@celebrities');
+
 
 Route::post('/addEmail', 'EmailController@create');

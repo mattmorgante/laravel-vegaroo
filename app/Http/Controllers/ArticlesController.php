@@ -41,4 +41,7 @@ class ArticlesController extends Controller
     public function habits() {
         return view('articles/habits');
     }
+    public function blogs() {
+        return view('articles/blogs');
+    }
 }

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="hero">
 
-        <h1 class="title">Vegaroo: Simple, easy, cheap, nutritious, and delicious plant-based meals</h1>
+        <h1 class="title">Simple, easy, cheap, nutritious, and delicious plant-based meals</h1>
 
         <div class="hero-list-wrapper">
             <h3>Vegaroo has a strict no-tolerance policy</h3>
@@ -52,6 +52,7 @@
     <ul class="flexible_row">
         <li class="row_item article_item"><a class="article_link" href="/nutrition">The Vegaroo Nutrition Manifesto</a></li>
         <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
+        <li class="row_item article_item"><a class="article_link" href="/blogs-books-documentaries">The Best Blogs, Books and Documentaries about Veganism</a></li>
         {{--<li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>--}}
     </ul>
 

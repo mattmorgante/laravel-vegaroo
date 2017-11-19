@@ -44,6 +44,7 @@ Best Documentaries
 * Article: best vegan dairy substitutes (coconut milk, coco yogurt, soy milk, soy yogurt, almond milk, oat milk) 
 * Article: glossary (weird foods that people might not know) 
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
+* Article: best vegan athletes
 
 Future Pipeline
 * Ingredients series: 
