@@ -20,12 +20,8 @@ Best Books
 - Plant-Based Journey
 
 
-Best Blogs 
-- Oh She Glows
-- Minimalist Baker
+
 - BudgetBytes/vegan
-- Not a blog but reddit.com/r/vegan
- - reddit eat cheap and vegan 
  
  
 Best Documentaries 
