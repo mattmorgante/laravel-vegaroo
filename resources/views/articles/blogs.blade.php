@@ -14,7 +14,6 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h2 class="subtitle">Non-Fiction Books</h2>
-
         <ul>
             <li><a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die</a>Discusses the leading causes of death in the United States, then presents evidence-based research about how each one can be prevented and reversed through a plant-based diet.</li>
             <li><a target="_blank" href="http://amzn.to/2zPXSV4">The Plant-Based Journey</a>Strategies and advice for any aspiring vegan for how to make the switch, plus deep discussion over the WHY behind overeating.</li>
@@ -48,6 +47,7 @@
             <li>Not actually a blog but rather a supportive and insightful community, there are many subreddits with advice for aspiring vegans. Be sure to check out<a href="https://reddit.com/r/vegan">/r/vegan</a> for jokes, news, and awesome pictures
                 <a href="https://www.reddit.com/r/veganfood">/r/VeganFood</a> for recipes, <a href="https://www.reddit.com/r/veganfitness">/r/VeganFitness</a> for advice on bulking, cutting, and nutrition for fitness lovers, and
             <a href="https://www.reddit.com/r/EatCheapAndVegan/">/r/EatCheapAndVegan</a> for penny pinchers eating vegan.</li>
+            <li><a href="https://www.reddit.com/r/vegan/wiki/beginnersguide">Beginner's Guide To Veganism</a>A fantastic overview of what it means to be a vegan and responses to common questions regarding plant-based diets.</li>
             <li><a href="https://minimalistbaker.com/">Minimalist Baker</a>Consistently amazing vegan recipes across a wide range of categories, but some of the ingredients may be difficult to find and sometimes fancy kitchen gadgets are required.</li>
             <li><a href="http://ohsheglows.com/">Oh She Glows</a>One of the oldest and most prolific vegan blogs in terms of sheer number of recipes, you can definitely find something to your liking within this deep archive.</li>
             <li><a href="http://www.veganricha.com/">Vegan Richa</a>Plenty of delicious recipes across a wide spectrum, although some meals are undeniably complicated. Also a treasure trove of vegan indian recipes.</li>

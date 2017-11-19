@@ -68,22 +68,10 @@
             <h1>{{ $recipe->title }}</h1>
             <p>{{ $recipe->description }}</p>
             <div class="recipe_extras">
-                <p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>
+                {{--<p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>--}}
                 <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p>
-                <p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>
+{{--                <p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>--}}
             </div>
-        </div>
-        <div class="row_item">
-            <h2>Macro Nutrient Information</h2>
-            <h3>{{ $recipe->calories }} Calories</h3>
-            <div id="piechart" style="width: 100%; height: 400px;"></div>
-        </div>
-    </div>
-
-    <div class="flexible_row">
-        <div class="row_item">
-            <h2>Macro Nutrient Information</h2>
-            <div id="chart_div" style="width: 100%; height: 400px;"></div>
         </div>
         <div class="row_item instructions">
             <h2>Ingredients: </h2>
@@ -101,26 +89,40 @@
         </div>
     </div>
 
-    <h3>Other {{ $categoryName }}</h3>
+    <div class="flexible_row">
+        <div class="row_item">
+            <h2>Macro Nutrient Information</h2>
+            <h3>{{ $recipe->calories }} Calories</h3>
+            <div id="piechart" style="width: 100%; height: 400px;"></div>
+        </div>
+        <div class="row_item">
+            <h2>Macro Nutrient Information</h2>
+            <div id="chart_div" style="width: 100%; height: 400px;"></div>
+        </div>
+
+    </div>
+
+    <h3>More {{ $categoryName }}</h3>
     <div class="flexible_row">
         @foreach ($similarRecipes as $recipe)
             @include('partials.recipe-box')
         @endforeach
     </div>
+<br>
 
-    <div class="notes">
-        <h4>Additional Notes</h4>
-    <ul>
-        @foreach($notes as $note)
-            <li>{{$note}}</li>
-        @endforeach
-    </ul>
-    </div>
+    {{--<div class="notes">--}}
+        {{--<h4>Additional Notes</h4>--}}
+    {{--<ul>--}}
+        {{--@foreach($notes as $note)--}}
+            {{--<li>{{$note}}</li>--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
+    {{--</div>--}}
 
-    <div class="related">
-        <h4>Related Links</h4>
-        <ul>
-            <li>Either from around the web or internal links? .... not sure yet , probably both</li>
-        </ul>
-    </div>
+    {{--<div class="related">--}}
+        {{--<h4>Related Links</h4>--}}
+        {{--<ul>--}}
+            {{--<li>Either from around the web or internal links? .... not sure yet , probably both</li>--}}
+        {{--</ul>--}}
+    {{--</div>--}}
 @endsection
