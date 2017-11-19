@@ -23,7 +23,7 @@
         <div class="row_item"><a href="#breakfasts">Breakfasts</a></div>
         <div class="row_item"><a href="#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="#curry">Curries</a></div>
-        <div class="row_item"><a href="#salads">Salads</a></div>
+        {{--<div class="row_item"><a href="#salads">Salads</a></div>--}}
     </ul>
 
 

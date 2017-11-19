@@ -69,8 +69,9 @@
             <p>{{ $recipe->description }}</p>
             <div class="recipe_extras">
                 {{--<p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>--}}
-                <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p>
-{{--                <p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>--}}
+                <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p><br>
+                <p><span class="call-out-small">Calories: </span><br>{{ $recipe->calories }}</p>
+                {{--<p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>--}}
             </div>
         </div>
         <div class="row_item instructions">

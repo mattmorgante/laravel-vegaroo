@@ -39,12 +39,6 @@ h3 {
   margin: 10px;
 }
 
-@media (max-width: 767px) {
-  .call_to_action {
-    height: 350px;
-  }
-}
-
 .image_icon {
   max-height: 50px;
 }
@@ -335,6 +329,12 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+}
+
+@media (max-width: 767px) {
+  .call_to_action {
+    height: 350px;
+  }
 }
 
 .call_to_action p {

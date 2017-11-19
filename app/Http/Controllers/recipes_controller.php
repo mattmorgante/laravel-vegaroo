@@ -9,7 +9,7 @@ class recipes_controller extends Controller
 {
     public function index()
     {
-        $recipes = recipe::get();
+        $recipes = recipe::where('slug', '!=', '')->get();
         return view('allrecipes')->with([
             'recipes' => $recipes
         ]);

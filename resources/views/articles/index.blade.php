@@ -32,10 +32,5 @@
         <li class="row_item article_item"><a class="article_link" href="/pantry">Stocking Your Pantry As A Vegan</a></li>
         <li class="row_item article_item"><a class="article_link" href="/habits">Building Tiny Habits: Your secret to success as a vegan</a></li>
     </ul>
-
-    <br>
-    <div class="btn-wrapper">
-        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
-    </div>
 </div>
 
