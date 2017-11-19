@@ -4,7 +4,7 @@
 
 <div class="article_wrapper">
     <div class="article_container">
-        <h1 class="title">Reduce The Risk Of Chronic Disease By Eating Vegan</h1>
+        <h1 class="title">Reduce The Risk Of Every Major Chronic Disease By Eating Vegan</h1>
         <h3 class="content research"><i>The leading killers in the Western world today are all caused by our diet and lifestyle decisions. Thankfully this means they can also all be prevented and reversed by avoiding animal products and processed junk foods. For a long and healthy life, focus the diet around fruits, vegetables, whole grains, and nuts.</i></h3>
     </div>
 </div>
@@ -88,51 +88,70 @@
 
                 A substitution of one serving of nuts, low-fat dairy, and whole grains per day for one serving of red meat per day was associated with a 16-35% lower risk of Type 2 Diabetes. Red meat consumption, particularly processed red meat, is definitely associated with an increased risk of type 2 diabetes.</li>
 
-            <li class="content research">People who ate the most red meat were 20 percent more likely to die of cancer and at least 27 percent more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50 percent higher. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Source</a></li>
+            <li class="content research">
+                <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Sinha, Cross, et al. <i>Meat intake and mortality: a prospective study of over half a million people</i></a> -
+                People who ate the most red meat were 20 percent more likely to die of cancer and at least 27 percent more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50 percent higher. <a href="">Source</a></li>
             <br>
         </ul>
 
         <h2 class="subtitle">Processed Meats Cause Cancer</h2>
         <ul>
-            <li class="content research">The World Health Organization classifies processed meats like ham, hot dogs, and bacon as Group 1 Carcinogens, which means they are harmful to humans. This places processed meats in the same category as other harmful substances like Cigarettes and Plutonium.
-                <a href="https://www.cancer.org/cancer/cancer-causes/general-info/known-and-probable-human-carcinogens.html">Source</a>
+            <li class="content research">
+                <a target="_blank" href="https://www.cancer.org/cancer/cancer-causes/general-info/known-and-probable-human-carcinogens.html">American Cancer Society. <i>Known and Probable Human Carcinogens</i></a> -
+                The World Health Organization classifies processed meats like ham, hot dogs, and bacon as Group 1 Carcinogens, which means they are harmful to humans. This places processed meats in the same category as other harmful substances like Cigarettes and Plutonium.
             </li>
         </ul>
 
         <h2 class="subtitle">The Links Between Dairy & Cancer</h2>
 
         <ul>
-            <li class="content research">Dairy products and calcium are associated with a greater risk of prostate cancer. <a
-                        href="https://www.ncbi.nlm.nih.gov/pubmed/11566656">Source</a> </li>
-            <li class="content research">Men who avoid dairy products are at lower risk for prostate cancer incidence and mortality, compared to others. <a href="http://www.pcrm.org/sites/default/files/pdfs/health/milk_and_prostate_cancer.pdf">Source</a> </li>
-            <li class="content research">For women who have had breast cancer, one serving of whole dairy per day increases their risk of dying from the disease 49% and dying from any disease 64%.<a href="https://academic.oup.com/jnci/article/105/9/616/986948/High-and-Low-Fat-Dairy-Intake-Recurrence-and">Source</a> </li>
+            <li class="content research">
+                <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/11566656">Chan, Stampfer, et al. <i>Dairy products, calcium, and prostate cancer risk in the Physicians' Health Study.</i></a> -
+                Dairy products and associated with a greater risk of prostate cancer. Compared with men who had less than half a serving of dairy per day, those who ate more than 2.5 servings had a 34% higher risk of prostate cancer.
+            </li>
+            <li class="content research">
+                <a target="_blank" href="http://www.pcrm.org/sites/default/files/pdfs/health/milk_and_prostate_cancer.pdf">Barnard. <i>Milk Consumption and Prostate Cancer</i></a> -
+                Men who avoid dairy products are at lower risk for prostate cancer incidence and mortality, compared to others. <a href="">Source</a></li>
         </ul>
 
         <h2 class="subtitle">But Doesn't Dairy Protect My Bones?</h2>
         <ul>
-            <li class="content research">Total calcium intake is not related to a lower risk of hip facture. However, women consuming 12.5 miligrams of Vitamin D had a 37% lower risk of hip fracture.<a href="http://ajcn.nutrition.org/content/77/2/504.long">Source</a> </li>
+            <li class="content research">
+                <a target="_blank" href="http://ajcn.nutrition.org/content/77/2/504.long">Feskanich, Willett, & Colditz. <i>Calcium, vitamin D, milk consumption, and hip fractures</i></a> -
+                Total calcium intake is not related to a lower risk of hip facture. However, women consuming 12.5 miligrams of Vitamin D had a 37% lower risk of hip fracture.</li>
         </ul>
 
         <h2 class="subtitle">Diabetes</h2>
-        <p class="content research">Meat leads to diabetes and going vegan treats diabetes better than conventional medication</p>
+        <p class="content research">Meat leads to diabetes and going vegan treats diabetes better than conventional medication!</p>
 
         <ul>
-            <li class="content research">An increase in intake of red meat and processed meats is directly correlated with an increase in Type 2 Diabetes. For every 1 serving increase in red meat per day, you are 26% more likely to get Type 2 Diabetes. 1 serving of processed meats? 43%! 1 serving of bacon? 49%!<a href="https://www.ncbi.nlm.nih.gov/pubmed/15534160">Source</a> </li>
+            <li class="content research">
+                <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/15534160">Fung, Schulze, et al. <i>Dietary patterns, meat intake, and the risk of type 2 diabetes in women</i></a> -
 
-            <li class="content research">A low-fat vegan diet improves glycemia and plasma lipids more than conventional diabetes diet recommendations.<a target="_blank" href="http://ajcn.nutrition.org/content/early/2009/04/01/ajcn.2009.26736H.short">Source</a></li>
+                An increase in intake of red meat and processed meats is directly correlated with an increase in Type 2 Diabetes. For every 1 serving increase in red meat per day, women are 26% more likely to get Type 2 Diabetes. 1 serving of processed meats? 43%! 1 serving of bacon? 49%!</li>
+
+            <li class="content research">
+                <a target="_blank" href="http://ajcn.nutrition.org/content/early/2009/04/01/ajcn.2009.26736H.short">Fung, Schulze, et al. <i>A low-fat vegan diet and a conventional diabetes diet in the treatment of type 2 diabetes</i></a> -
+                A low-fat vegan diet improves glycemia and plasma lipids more than conventional diabetes diet recommendations.</li>
         </ul>
 
         <h2 class="subtitle">Veganism is just as effective as dangerous statin drugs</h2>
         <ul>
-            <li class="content research">Plant-based diets lower cholesterol just as effectively as statin drugs, without the side effects. <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/14527636">Source</a></li>
+            <li class="content research">
+                <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/14527636">Jenkins, Kendall, et al. <i>The Garden of Eden--plant based diets, the genetic drive to conserve cholesterol and its implications for heart disease in the 21st century.</i></a> -
+
+                Plant-based diets lower cholesterol just as effectively as statin drugs, without the side effects. A diet of leafy vegetables, fruit and nuts lowered LDL choloesterol by over 30%, equivalent to the standard cholesterol-lowering medications.</li>
         </ul>
 
-        <h2>The problems with paleo/atkins diets</h2>
+        <h2>The Problem With Paleo</h2>
 
-        <p class="content research">They help you lose weight in the short-term, but in the long-term there's is no scienitifc proof that they help people keep weight off.</p>
+        <p class="content research">Research suggests that Paleo and Atkins diets (low carb, high fat and high protein) help you lose weight in the short-term, but in the long-term there's is no scienitifc proof that they help people keep weight off.</p>
 
         <ul>
-            <li class="content research">A consistent positive association between meat consumption and adiposity measures among U.S. adults. This may suggest diets that promote high meat consumption, such as the Atkins diet, might lead to higher BMI, waist circumference and obesity<br>there is no proof that the Atkins diet is effective beyond 6 months; there is no clear evidence that Atkins style diets are better than any others for helping people to loss weight; and the long-term effects on health and disease prevention are unknown<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697260/">Source</a></li>
+            <li class="content research">
+                <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697260/">Wang, Beydoun. <i>Meat consumption is associated with obesity and central obesity among US adults.</i></a> -
+
+                There is a consistent correlation between meat consumption and obesity among U.S. adults. This may suggest diets that promote high meat consumption, such as the Atkins diet, might lead to higher BMI, waist circumference and obesity. There is no proof that the Atkins diet is effective beyond 6 months; there is no clear evidence that Atkins style diets are better than any others for helping people to loss weight; and the long-term effects on health and disease prevention are unknown</li>
         </ul>
 
     </div>

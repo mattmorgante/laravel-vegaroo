@@ -19,6 +19,7 @@
         <li class="content">Garlic</li>
         <li class="content">Onions</li>
         <li class="content">Olive Oil</li>
+        <li class="content">Balsamic Vinegar</li>
         <li class="content">Vegetable Oil</li>
         <li class="content">Coconut Oil</li>
         <li class="content">Coconut Milk</li>
@@ -33,14 +34,20 @@
         <li class="content">Turmeric</li>
         <li class="content">Curry Powder</li>
 
-        <h2 class="subtitle">Toppings</h2>
-
+        <h2 class="subtitle">Nuts & Seeds</h2>
         <li class="content">Chia Seeds</li>
         <li class="content">Flax Seeds</li>
-        <li class="content">Balsamic Vinegar</li>
+        <li class="content">Almonds</li>
+        <li class="content">Pecans</li>
+        <li class="content">Cashews</li>
+        <li class="content">Walnuts</li>
+        <li class="content">Nut Butter</li>
+        <li class="content">Tahini</li>
 
         <h2 class="subtitle">Grains & Legumes</h2>
         <li class="content">Brown Rice</li>
+        <li class="content">Barley</li>
+        <li class="content">Couscous</li>
         <li class="content">Quinoa</li>
         <li class="content">Oatmeal</li>
         <li class="content">Any Variety of Beans</li>
