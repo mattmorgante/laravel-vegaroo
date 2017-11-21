@@ -7,8 +7,10 @@
     <div class="container">
         <div class="flexible_row">
             <div class="row_item">
-                <h1>{{ $recipe->title }}</h1>
-                <p>{{ $recipe->description }}</p>
+                <a href="/recipes/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p>{{ $recipe->description }}</p>
+                </a>
                 </div>
             </div>
         </div>

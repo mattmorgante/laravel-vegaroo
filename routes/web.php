@@ -31,5 +31,7 @@ Route::get('/habits', 'ArticlesController@habits');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
 Route::get('/celebrities', 'ArticlesController@celebrities');
 
+Route::get('/blueprint', 'recipes_controller@blueprint');
+
 
 Route::post('/addEmail', 'EmailController@create');

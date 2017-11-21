@@ -66,4 +66,8 @@ class recipes_controller extends Controller
             'categoryName' => $categoryName
         ]);
     }
+
+    public function blueprint() {
+        return view('blueprint');
+    }
 }
