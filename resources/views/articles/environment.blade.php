@@ -122,7 +122,7 @@
         <h3 class="content"><i>How do animal products negatively effect the climate and ecosystems? These are the main drivers:</i></h3>
     </div>
 </div>
-
+<br>
 <img class="article_header_image" src="/img/plants.jpeg" alt="Plants reduce carbon dioxide in the atmosphere">
 
 <div class="article_wrapper">

@@ -1,10 +1,8 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- 10 Small steps 
 - Nutrition manifesto (what CAN I eat?)
 - Pictures optimized 
-- Load head before nav 
 - Meta tags & descriptions 
 
 

@@ -10,7 +10,7 @@
         <h3 class="content"><i>Nutrition is an evolving science. Despite vast progress, we still don't know everything about what constitutes the word "healthy." That being said, we can set some ground rules based on the scientific knowledge currently available.</i></h3>
     </div>
 </div>
-
+<br>
 <img class="article_header_image" src="/img/veg.jpeg" alt="What to eat and why: the Vegaroo Nutrition Manifesto">
 
 <div class="article_wrapper">

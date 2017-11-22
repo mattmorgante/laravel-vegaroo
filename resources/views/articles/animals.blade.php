@@ -38,7 +38,7 @@
         <h3 class="content"><i>Animals raised for food consumption are raised in inhumane conditions on an incomprehensible scale. From babies taken from their mothers immediately after birth to sick cows pumped full of toxic antibiotics, the meat and dairy industries maim and murder millions every day.</i></h3>
     </div>
 </div>
-
+<br>
 <img class="article_header_image" src="/img/cow.jpeg" alt="Eating Vegan is the easiest way to avoid disease">
 
 <div class="article_wrapper">

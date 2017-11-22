@@ -2,7 +2,20 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vegaroo</title>
+    <title>Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans</title>
+    <meta name="description" content="Easy, Cheap & Delicious Plant-based Meals For Vegans"/>
+    <link rel="canonical" href="http://vegaroo.co/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans" />
+    <meta property="og:description" content="Easy, Cheap & Delicious Plant-based Meals For Vegans" />
+    <meta property="og:url" content="http://vegaroo.co/" />
+    <meta property="og:site_name" content="Vegaroo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Easy, Cheap & Delicious Plant-based Meals For Vegans" />
+    <meta name="twitter:title" content="Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans" />
+    <meta name="twitter:site" content="@havesomegante" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">

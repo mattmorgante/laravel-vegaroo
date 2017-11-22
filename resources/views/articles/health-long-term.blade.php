@@ -10,7 +10,7 @@
         <h3 class="content research"><i>The leading killers in the Western world today are all caused by our diet and lifestyle decisions. Thankfully this means they can also all be prevented and reversed by avoiding animal products and processed junk foods. For a long and healthy life, focus the diet around fruits, vegetables, whole grains, and nuts.</i></h3>
     </div>
 </div>
-
+<br>
 <img class="article_header_image" src="/img/berries.jpeg" alt="Eating Vegan is the easiest way to avoid disease">
 
 <div class="article_wrapper">

@@ -10,7 +10,7 @@
         <h3 class="content"><i>In order to easily maintain a vegan lifestyle, it helps to stock your cupboard well. Consider these the non-perishable essentials, making the recipes on vegaroo easier to manage.</i></h3>
     </div>
 </div>
-
+<br>
 <img class="article_header_image" src="/img/berries.jpeg" alt="The essentials for a simple vegan pantry">
 
 <div class="article_wrapper">

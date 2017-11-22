@@ -10,7 +10,7 @@
         <h3 class="content research"><i>On your plant-based journey, there will be times when you seek information, inspiration, or community. Luckily, the wealth of vegan resources is expanding rapidly; it's never been easier to make the switch! Here you can find the best blogs, books and documentaries about Veganism.</i></h3>
     </div>
 </div>
-
+<br>
 <img class="article_header_image" src="/img/greens.jpg" alt="Eating Vegan is easier than ever">
 
 <div class="article_wrapper">
