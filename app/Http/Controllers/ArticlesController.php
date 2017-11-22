@@ -39,8 +39,8 @@ class ArticlesController extends Controller
         return view('articles/nutrition');
     }
 
-    public function habits() {
-        return view('articles/habits');
+    public function smallSteps() {
+        return view('articles/small-steps');
     }
     public function blogs() {
         return view('articles/blogs');

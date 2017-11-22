@@ -1,35 +1,22 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- Setup .env file to work with config/database.php
-- Outline health article (halfway done)
-- Finish 16 meals fully
-- Fix meal detail page -- too sloppy!
-- Best Books and Blogs
+- 10 Small steps 
+- Nutrition manifesto (what CAN I eat?)
+- Pictures optimized 
+- Load head before nav 
+- Meta tags & descriptions 
 
+
+Nice to have: 
+- Change header to POP off the page more 
 
 
 More Resources: 
 - counter? http://considerveganism.com/counter/ 
-- Really helpful  https://www.reddit.com/r/vegan/wiki/beginnersguide 
 - On a budget https://www.reddit.com/r/vegan/comments/j7hq2/wondering_how_to_manage_a_vegan_diet_on_a_budget/ 
 
 
-Best Books 
-- How Not To Die 
-- Plant-Based Journey
-
-
-
-- BudgetBytes/vegan
- 
- 
-Best Documentaries 
-- Cowspiracy 
-- What the Health
-- Food Choices 
-- What more??? 
-  
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
 
 * Article: all about grains 
