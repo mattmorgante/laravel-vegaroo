@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<head>
+@section('header.javascript')
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart', 'bar']});
@@ -95,11 +95,25 @@
                     document.getElementById('land_chart'));
             chart.draw(data, options);
         }
-    </script>
-</head>
 
+        var sec = 0;
+        function pad ( val ) { return val > 9 ? val : "0" + val; }
+        setInterval( function(){
+            document.getElementById("acres").innerHTML=pad(++sec);
+        }, 1000);
+
+        var seconds = 0;
+        function waste ( val ) { return val > 9 ? val : "0" + val; }
+        setInterval( function(){
+            document.getElementById("waste").innerHTML=waste((++seconds*52843));
+        }, 1000);
+    </script>
+@endsection
+
+@section('content')
 
 @include('partials.nav')
+
 
 <div class="article_wrapper">
     <div class="article_container">
@@ -195,19 +209,4 @@
             {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/ut3URdEzlKQ" frameborder="0" allowfullscreen></iframe>--}}
         {{--</div>--}}
 
-
-
-
-<script>
-    var sec = 0;
-    function pad ( val ) { return val > 9 ? val : "0" + val; }
-    setInterval( function(){
-        document.getElementById("acres").innerHTML=pad(++sec);
-    }, 1000);
-
-    var seconds = 0;
-    function waste ( val ) { return val > 9 ? val : "0" + val; }
-    setInterval( function(){
-        document.getElementById("waste").innerHTML=waste((++seconds*52843));
-    }, 1000);
-</script>
+@endsection

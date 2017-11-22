@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 @include('partials.nav')
 <div class="container">
     <div class="hero">
@@ -111,3 +113,5 @@
 
     <br>
 </div>
+
+@endsection

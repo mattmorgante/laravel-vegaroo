@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 @include('partials.nav')
 
 <div class="article_wrapper">
@@ -67,3 +69,5 @@
         </div>
     </div>
 </div>
+
+@endsection

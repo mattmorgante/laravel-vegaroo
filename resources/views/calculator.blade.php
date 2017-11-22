@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 @include('partials.nav')
 <div class="container" style="text-align: center">
     <h1>Calculate the environmental impact of your diet.</h1>
@@ -108,3 +110,6 @@
         newValues = [];
     }
 </script>
+
+
+@endsection

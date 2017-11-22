@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 @include('partials.nav')
 
 
@@ -17,3 +19,5 @@
     </div>
 @endforeach
 <br>
+
+@endsection
