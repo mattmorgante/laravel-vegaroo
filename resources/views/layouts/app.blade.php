@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans</title>
     <meta name="description" content="Easy, Cheap & Delicious Plant-based Meals For Vegans"/>
-    <link rel="canonical" href="http://vegaroo.co/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans" />

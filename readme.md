@@ -3,7 +3,8 @@
 * ToDo: 
 - Nutrition manifesto (what CAN I eat?)
 - Pictures optimized 
-- Meta tags & descriptions 
+- Meta tags & descriptions: https://github.com/artesaos/seotools 
+- Leverage Browser Caching 
 
 
 Nice to have: 
@@ -26,6 +27,12 @@ More Resources:
 * Article: glossary (weird foods that people might not know) 
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
 * Article: best vegan athletes
+* Article: short-term health effects
+- Lose weight
+- Poop better
+- Heartburn
+- Energy 
+
 
 Future Pipeline
 * Ingredients series: 
