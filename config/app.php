@@ -178,7 +178,11 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 
+        // composer packages
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        RenatoMarinho\LaravelPageSpeed\ServiceProvider::class,
+
 
     ],
 
@@ -229,6 +233,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'ResponseCache' => Spatie\ResponseCache\ResponseCacheFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

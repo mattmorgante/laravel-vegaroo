@@ -123,7 +123,7 @@
     </div>
 </div>
 <br>
-<img class="article_header_image" src="/img/plants.jpeg" alt="Plants reduce carbon dioxide in the atmosphere">
+<img class="article_header_image" src="/pla" alt="Plants reduce carbon dioxide in the atmosphere">
 
 <div class="article_wrapper">
     <div class="article_container">
@@ -201,5 +201,12 @@
         </div>
     </div>
 </div>
+
+          {{--<h2 class="subtitle">More Resources</h2>--}}
+        {{--<p class="content">If you're interested in learning more about this topic, please check out the following resources:</p>--}}
+
+        {{--<div class="videoWrapper">--}}
+            {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/ut3URdEzlKQ" frameborder="0" allowfullscreen></iframe>--}}
+        {{--</div>--}}
 
 @endsection
