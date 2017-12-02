@@ -32,7 +32,7 @@
 
         <p class="content">Eating Vegan doesn't necessarily mean eating healthy. After all, a diet of Oreos, french fries and beer is vegan! That's why at Vegaroo we try to emphasize the importance of eating a wide variety of whole-plant based foods. Yet processed plant-foods are especially helpful in making the switch from an omnivorous diet. </p>
 
-        <p class="content">Some of the processed plant foods that might be helpful for intiating a transition to the vegan diet are plant-based dairy alternatives like almond milk and soy yogurt or pre-packaged vegan burgers.</p>
+        <p class="content">Some of the processed plant foods that might be helpful for intiating a transition to the vegan diet are plant-based dairy alternatives like almond milk and soy yogurt, pre-packaged vegan burgers, or vegan cheese alternatives.</p>
 
         <h2 class="subtitle">Poultry & Fish: Harmful, But Better Than Eating Carcinogens</h2>
 

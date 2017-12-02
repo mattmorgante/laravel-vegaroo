@@ -11,7 +11,7 @@
             <div class="row_item">
                 <a href="/recipes/{{ $recipe->slug }}">
                     <h1>{{ $recipe->title }}</h1>
-                    <p>{{ $recipe->description }}</p>
+                    <p style="color:black;">{{ $recipe->description }}</p>
                 </a>
                 </div>
             </div>
