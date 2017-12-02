@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eca0ac0ba9a0c2d03734c47423f33970",
-    "content-hash": "c16cae03886a1fb5a1053388fe0ca0eb",
+    "hash": "5883d755db7dab9128325b7d8c2c6ad8",
+    "content-hash": "be464f5c1d35ba86fa266bb02ae96eac",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3224,6 +3224,75 @@
                 "spatie"
             ],
             "time": "2017-11-03 09:47:05"
+        },
+        {
+            "name": "spatie/laravel-responsecache",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-responsecache.git",
+                "reference": "fba611740aea10106752b35fe919848e1bd43c0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/fba611740aea10106752b35fe919848e1bd43c0f",
+                "reference": "fba611740aea10106752b35fe919848e1bd43c0f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "~5.5.0",
+                "illuminate/config": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/contracts": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "nesbot/carbon": "~1.19",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.9",
+                "orchestra/testbench": "~3.5.0",
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ResponseCache\\ResponseCacheServiceProvider"
+                    ],
+                    "aliases": {
+                        "ResponseCache": "Spatie\\ResponseCache\\Facades\\ResponseCache"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ResponseCache\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Speed up a Laravel application by caching the entire response",
+            "homepage": "https://github.com/spatie/laravel-responsecache",
+            "keywords": [
+                "cache",
+                "laravel",
+                "laravel-responsecache",
+                "performance",
+                "response",
+                "spatie"
+            ],
+            "time": "2017-09-26 16:22:32"
         },
         {
             "name": "spatie/laravel-sitemap",

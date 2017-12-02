@@ -4,8 +4,6 @@
 - Meta tags & descriptions (make seo a partial)
 - Small steps article 
 - Pictures optimized 
-- Leverage Browser Caching 
-
 
 Nice to have: 
 - Change header to POP off the page more 

@@ -7,8 +7,10 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
+        "intervention/image": "^2.4",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
+        "spatie/laravel-responsecache": "^4.1",
         "spatie/laravel-sitemap": "^3.3"
     },
     "require-dev": {
