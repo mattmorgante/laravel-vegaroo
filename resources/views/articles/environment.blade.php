@@ -118,8 +118,8 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">The Environmental Impact of Animal Foods</h1>
-        <h3 class="content"><i>The facts are mounting and the results are undeniable: human consumption of animal products alters the earth in catastrophic ways. Yet every individual can still make a difference. The most impactful way to join the resistance against climate change is to simply eat fewer animal products.</i></h3>
-        <h3 class="content"><i>How do animal products negatively effect the climate and ecosystems? These are the main drivers:</i></h3>
+        <h2 class="content"><i>The facts are mounting and the results are undeniable: human consumption of animal products alters the earth in catastrophic ways. Yet every individual can still make a difference. The most impactful way to join the resistance against climate change is to simply eat fewer animal products.</i></h2>
+        <h2 class="content"><i>How do animal products negatively effect the climate and ecosystems? These are the main drivers:</i></h2>
     </div>
 </div>
 <br>
@@ -201,12 +201,5 @@
         </div>
     </div>
 </div>
-
-          {{--<h2 class="subtitle">More Resources</h2>--}}
-        {{--<p class="content">If you're interested in learning more about this topic, please check out the following resources:</p>--}}
-
-        {{--<div class="videoWrapper">--}}
-            {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/ut3URdEzlKQ" frameborder="0" allowfullscreen></iframe>--}}
-        {{--</div>--}}
 
 @endsection

@@ -7,7 +7,7 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">Connect To The Wealth of Vegan Resources On The Internet</h1>
-        <h3 class="content research"><i>On your plant-based journey, there will be times when you seek information, inspiration, or community. Luckily, the wealth of vegan resources is expanding rapidly; it's never been easier to make the switch! Here you can find the best blogs, books and documentaries about Veganism.</i></h3>
+        <h2 class="content research"><i>On your plant-based journey, there will be times when you seek information, inspiration, or community. Luckily, the wealth of vegan resources is expanding rapidly; it's never been easier to make the switch! Here you can find the best blogs, books and documentaries about Veganism.</i></h2>
     </div>
 </div>
 <br>

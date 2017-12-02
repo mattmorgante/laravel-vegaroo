@@ -6,7 +6,7 @@
 <div class="container">
     <div class="hero">
 
-        <h1 class="title">Simple, easy, cheap, nutritious, and delicious plant-based meals</h1>
+        <h1 class="title">Simple, easy, cheap, nutritious and delicious plant-based meals</h1>
 
         <div class="hero-list-wrapper">
             <h3>Vegaroo has a strict no-tolerance policy</h3>

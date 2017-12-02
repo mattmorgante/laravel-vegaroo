@@ -344,6 +344,20 @@ h3 {
   .call_to_action {
     height: 350px;
   }
+
+  .image_icon {
+    max-height: 30px;
+    height: 30px;
+  }
+
+  .nav {
+    height: 30px;
+  }
+
+  .nav-right ul {
+    line-height: 36px;
+    font-size: 14px;
+  }
 }
 
 .call_to_action p {
@@ -388,10 +402,11 @@ input[type=text] {
   text-align: left;
 }
 
-.article_container h3 {
+.article_container h2 {
   text-align: center;
   color: grey;
   width: 100%;
+  font-size: 20px;
 }
 
 .article_container h1 {

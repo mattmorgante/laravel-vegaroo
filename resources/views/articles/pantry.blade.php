@@ -7,7 +7,7 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">The Essentials For A Vegan Pantry</h1>
-        <h3 class="content"><i>In order to easily maintain a vegan lifestyle, it helps to stock your cupboard well. Consider these the non-perishable essentials, making the recipes on vegaroo easier to manage.</i></h3>
+        <h2 class="content"><i>In order to easily maintain a vegan lifestyle, it helps to stock your cupboard well. Consider these the non-perishable essentials, making the recipes on vegaroo easier to manage.</i></h2>
     </div>
 </div>
 <br>

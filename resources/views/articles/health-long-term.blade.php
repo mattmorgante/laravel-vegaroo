@@ -7,7 +7,7 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">Reduce The Risk Of Every Major Chronic Disease By Eating Vegan</h1>
-        <h3 class="content research"><i>The leading killers in the Western world today are all caused by our diet and lifestyle decisions. Thankfully this means they can also all be prevented and reversed by avoiding animal products and processed junk foods. For a long and healthy life, focus the diet around fruits, vegetables, whole grains, and nuts.</i></h3>
+        <h2 class="content research"><i>The leading killers in the Western world today are all caused by our diet and lifestyle decisions. Thankfully this means they can also all be prevented and reversed by avoiding animal products and processed junk foods. For a long and healthy life, focus the diet around fruits, vegetables, whole grains, and nuts.</i></h2>
     </div>
 </div>
 <br>

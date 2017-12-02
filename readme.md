@@ -1,9 +1,9 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- Nutrition manifesto (what CAN I eat?)
+- Meta tags & descriptions 
+- Small steps article 
 - Pictures optimized 
-- Meta tags & descriptions: https://github.com/artesaos/seotools 
 - Leverage Browser Caching 
 
 
@@ -27,6 +27,15 @@ More Resources:
 * Article: glossary (weird foods that people might not know) 
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
 * Article: best vegan athletes
+- Damian Lillard
+- Kyrie Irving 
+- Javale McGee 
+- Venus Williams 
+- Scott Jurek 
+- Trent Williams (redskins ol )
+https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan--and-stayed-strong/2016/11/22/58c2e674-865c-11e6-92c2-14b64f3d453f_story.html?utm_term=.a447586d9a95
+- Kendrick Farris (weightlifter)
+
 * Article: short-term health effects
 - Lose weight
 - Poop better

@@ -35,7 +35,7 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">Stop The Global Slaughter</h1>
-        <h3 class="content"><i>Animals raised for food consumption are raised in inhumane conditions on an incomprehensible scale. From babies taken from their mothers immediately after birth to sick cows pumped full of toxic antibiotics, the meat and dairy industries maim and murder millions every day.</i></h3>
+        <h2 class="content"><i>Animals raised for food consumption are raised in inhumane conditions on an incomprehensible scale. From babies taken from their mothers immediately after birth to sick cows pumped full of toxic antibiotics, the meat and dairy industries maim and murder millions every day.</i></h2>
     </div>
 </div>
 <br>
@@ -91,7 +91,7 @@
 
         <h2 class="subtitle">Conclusion</h2>
 
-        <p class="content">Meat and dairy products aren't just destroying our health and our environment: they are also inflicting immense amounts of cruelty to billions of sentient beings every year. These practices will only continue if you are complicit in it's existence. Every day, you make choices which have the power to dismantle this industry: choose vegan and </p>
+        <p class="content">Meat and dairy products aren't just destroying our health and our environment: they are also inflicting immense amounts of cruelty to billions of sentient beings every year. These practices will only continue if you are complicit in its existence. Every day, you make choices which have the power to dismantle this industry.</p>
 
             <p class="content">If you're interested in learning more about this topic, check out the resources and videos below.</p>
 
