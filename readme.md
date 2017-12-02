@@ -1,7 +1,7 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
-- Meta tags & descriptions 
+- Meta tags & descriptions (make seo a partial)
 - Small steps article 
 - Pictures optimized 
 - Leverage Browser Caching 

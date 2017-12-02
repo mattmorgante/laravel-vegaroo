@@ -11,7 +11,7 @@
     </div>
 </div>
 <br>
-<img class="article_header_image" src="/img/greens.jpg" alt="Eating Vegan is easier than ever">
+<img class="article_header_image" src="/img/bookshelf.jpeg" alt="Eating Vegan is easier than ever">
 
 <div class="article_wrapper">
     <div class="article_container">

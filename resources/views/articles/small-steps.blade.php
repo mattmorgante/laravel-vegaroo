@@ -17,7 +17,7 @@
 
 <div class="article_wrapper">
     <div class="article_container">
-        <p>Over time, small daily actions can create big differences in your well-being and environmental impact</p>
+        <p>Over time, small daily actions can create big differences in your well-being and environmental impact. The trick is to start with a small change that you can </p>
         <ol>
             <li class="research">Milk to Almond Milk</li>
             <li class="research">Beef to Chicken</li>

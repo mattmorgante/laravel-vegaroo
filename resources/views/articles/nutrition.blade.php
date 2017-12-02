@@ -39,6 +39,11 @@
         <p class="content">For many people looking to make positive changes to their diet, switching from beef to poultry or fish is a good first step. However, even these "healthy alternatives" have been linked to troubling health outcomes like increased cholesterol, the leading indicator of heart disease.
             <a href="https://www.forksoverknives.com/beef-chicken-fish-will-not-lower-cholesterol/#gs.1HghgPw"> In fact, switching from red meat to chicken and fish doesn't necessarily decrease cholesterol or saturated fat.</a></p>
 
+        <p class="content">Don't trust me? How about a doctor?</p>
+        <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RjNcvDxCvFk" frameborder="0" allowfullscreen></iframe>
+        </div>
+
         <p class="content">Additionally, poultry is the easiest way to expose yourself to <a href="https://www.wired.com/story/antibiotic-brined-chicken-and-other-bad-ideas-from-us-farming/">antibiotic-resistant bacteria</a>, fecal contamination, and unnatural hormones that are used by the dairy industries to make birds fatter, faster.</p>
 
         <p class="content">Whether farmed or caught in the wild, fish are also exposed to numerous toxins before they reach your mouth. Whether it's in run-off from industrial plants that reaches the water supply or supplemented by farmers growing fish in confined quarters, most fish available in grocery stores today are not the same as their natural ancestors.
@@ -63,7 +68,7 @@
 
         <h2 class="subtitle">Tl;DR</h2>
 
-        <p class="content">Nutrition is still an evolving science, and the interests of heavily entrenched big food companies want the evolution of science to go as slowly as possible. Yet the research consistently proves that eating meat and dairy products causes more harm than good. Instead, center a diet around vegetables, fruits, beans, and whole grains for the healthiest long-term outcomes.</p>
+        <p class="content">Nutrition is still an evolving science, and the interests of heavily entrenched big food companies want the evolution of science to go as slowly as possible. Yet the research consistently proves that eating meat and dairy products causes more harm than good. Instead, center your diet around vegetables, fruits, beans, and whole grains for the healthiest long-term outcomes.</p>
     </div>
 </div>
 
