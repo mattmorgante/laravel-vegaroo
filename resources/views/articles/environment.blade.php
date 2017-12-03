@@ -123,7 +123,7 @@
     </div>
 </div>
 <br>
-<img class="article_header_image" src="/pla" alt="Plants reduce carbon dioxide in the atmosphere">
+<img class="article_header_image" src="/img/plants.jpeg" alt="Plants reduce carbon dioxide in the atmosphere">
 
 <div class="article_wrapper">
     <div class="article_container">
@@ -175,9 +175,10 @@
 
         <p class="content">Every minute, 7 million pounds of waste are produced by animals raised for consumption in the U.S. alone. Waste then mixes with nitrogen-based fertilizers to destroy ecosystems both on land and at sea.</p>
 
-        <img src="/img/deadzone.png" alt="Deadzone in the gulf of mexico" class="image_large">
-
         <p class="content"> In the Gulf of Mexico there is a 7,000 square mile “dead zone” where there is no aquatic life primarily due to pollution from animal waste and chemical fertilizers.</p>
+
+        <img src="/img/deadzone.jpg" alt="Deadzone in the gulf of mexico" class="image_large">
+
         <div class="forest_counter">Kilograms of waste produced by livestock since you opened this page: <span id="waste">0</span></div>
 
         <p class="content">Waste is doubly harmful. It negatively impacts ecosystems on land by destroying the soil composition and seeping into the water supply. Then when it runs off into the ocean, it creates oxygen-depleted deadzones where no fish can survive.</p>

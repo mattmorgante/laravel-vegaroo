@@ -2,7 +2,6 @@
 
 * ToDo: 
 - Meta tags & descriptions (make seo a partial)
-- Small steps article 
 - Pictures optimized 
 
 Nice to have: 

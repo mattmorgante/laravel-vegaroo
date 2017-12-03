@@ -183,7 +183,6 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         RenatoMarinho\LaravelPageSpeed\ServiceProvider::class,
 
-
     ],
 
     /*
