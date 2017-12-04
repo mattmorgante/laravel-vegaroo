@@ -37,7 +37,7 @@
         gtag('config', 'UA-56273136-4');
     </script>
 
-    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/critical.css')}}"/>
 
     @section('header.javascript')
     @show
@@ -46,4 +46,6 @@
     @yield('content')
     @include('partials.footer')
 </body>
+<link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
 </html>
+

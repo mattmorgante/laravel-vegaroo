@@ -1,8 +1,8 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
 * ToDo: 
+- Fix nutrition in dhal and thai red curry 
 - Meta tags & descriptions (make seo a partial)
-- Pictures optimized 
 
 Nice to have: 
 - Change header to POP off the page more 
