@@ -39,6 +39,12 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
 - Heartburn
 - Energy 
 
+* Insight/Pain Point
+- Getting enough food and energy throughout the day! Solution: oats, protein balls
+ Tofu Bowl 
+ https://www.reddit.com/r/veganfitness/comments/7cofry/tofu_poke_bowls/ 
+
+
 
 Future Pipeline
 * Ingredients series: 
