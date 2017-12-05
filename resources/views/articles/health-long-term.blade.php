@@ -22,7 +22,7 @@
 
         <p class="content research">For example, often when reading scientific research I run across a sentence like this:</p>
         <ul>
-        <li class="content research">Regarding cause-specific mortality, men and women had elevated risks for cancer mortality for red (HR, 1.22 [95% CI, 1.16-1.29], and HR, 1.20 [95% CI, 1.12-1.30], respectively) and processed meat (HR, 1.12 [95% CI, 1.06-1.19], and HR, 1.11 [95% CI 1.04-1.19], respectively) intakes. Furthermore, cardiovascular disease risk was elevated for men and women in the highest quintile of red (HR, 1.27 [95% CI, 1.20-1.35], and HR, 1.50 [95% CI, 1.37-1.65], respectively) and processed meat (HR, 1.09 [95% CI, 1.03-1.15], and HR, 1.38 [95% CI, 1.26-1.51], respectively) intakes. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Source</a> </li>
+        <li class="content research">Regarding cause-specific mortality, men and women had elevated risks for cancer mortality for red (HR, 1.22 [95% CI, 1.16-1.29], and HR, 1.20 [95% CI, 1.12-1.30], respectively) and processed meat (HR, 1.12 [95% CI, 1.06-1.19], and HR, 1.11 [95% CI 1.04-1.19], respectively) intakes. Furthermore, cardiovascular disease risk was elevated for men and women in the highest quintile of red (HR, 1.27 [95% CI, 1.20-1.35], and HR, 1.50 [95% CI, 1.37-1.65], respectively) and processed meat (HR, 1.09 [95% CI, 1.03-1.15], and HR, 1.38 [95% CI, 1.26-1.51], respectively) intakes. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">r</a> </li>
         </ul>
 
         <p class="content research">Although to most people this means nothing, it can be translated from scientist-speak to human. What it really means is:</p>
@@ -73,7 +73,7 @@
             <li class="content research">
                 <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697260">Wang, Beydoun. <i>Meat consumption is associated with obesity and central obesity among US adults</i></a>
 
-                Participants in the study who consumed high amounts of meat were 33 percent more likely to have central obesity. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697260/">Source</a></li>
+                Participants in the study who consumed high amounts of meat were 33 percent more likely to have central obesity.</li>
 
             <li class="content research">
                 <a target="_blank" href="http://care.diabetesjournals.org/content/31/Supplement_1/S61">American Diabetes Association. <i>Nutrition Recommendations and Interventions for Diabetes</i></a>
@@ -92,7 +92,7 @@
 
             <li class="content research">
                 <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Sinha, Cross, et al. <i>Meat intake and mortality: a prospective study of over half a million people</i></a> -
-                People who ate the most red meat were 20 percent more likely to die of cancer and at least 27 percent more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50 percent higher. <a href="">Source</a></li>
+                People who ate the most red meat were 20 percent more likely to die of cancer and at least 27 percent more likely to die of heart disease than those who ate the least. In women who consumed the most meat, the risk of dying from cardiovascular disease was 50 percent higher.</li>
             <br>
         </ul>
 
@@ -113,7 +113,7 @@
             </li>
             <li class="content research">
                 <a target="_blank" href="http://www.pcrm.org/sites/default/files/pdfs/health/milk_and_prostate_cancer.pdf">Barnard. <i>Milk Consumption and Prostate Cancer</i></a> -
-                Men who avoid dairy products are at lower risk for prostate cancer incidence and mortality, compared to others. <a href="">Source</a></li>
+                Men who avoid dairy products are at lower risk for prostate cancer incidence and mortality, compared to others.</li>
         </ul>
 
         <h2 class="subtitle">But Doesn't Dairy Protect My Bones?</h2>

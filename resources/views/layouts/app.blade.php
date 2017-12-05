@@ -2,7 +2,7 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans</title>
+    <title>Vegaroo - Easy, Cheap and Delicious Plant-based Meals For Vegans</title>
     <meta name="description" content="Vegaroo has simple, easy, and cheap plant-based recipes and helpful resources to improve health and reduce environmental impact"/>
     <link rel="canonical" href="{!! request()->fullUrl() !!}" />
     <meta property="og:locale" content="en_US" />
@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="Easy, Cheap & Delicious Plant-based Meals For Vegans" />
     <meta name="twitter:title" content="Vegaroo | Easy, Cheap & Delicious Plant-based Meals For Vegans" />
-    <meta name="twitter:site" content="@havesomegante" />
+    <meta name="twitter:site" content="@havesomegante"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -33,7 +33,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-56273136-4');
     </script>
 
