@@ -24,6 +24,7 @@ return [
     */
 
     'skip' => [
+        'calculator',
         '*.xml',
         '*.less',
         '*.pdf',
