@@ -2,15 +2,39 @@
 
 * ToDo: 
 - Fix nutrition in dhal and thai red curry 
-- Meta tags & descriptions (make seo a partial)
+- Bug: graphs on mobile
+- Videos on stop animal cruelty 
+- Meta tags & descriptions (make seo a dynamic partial)
+- Minify CSS 
+- Email validation on form 
+- Can you drop in an imgur widget or something and have users post their own pics of the dish? 
+- Put resources on bottom with images
+- footer with lots of links - good for SEO 
+
+
+-  if it's a fitness/bodybuilding meal then I don't care if the pictures don't look great
+
+On all recipes you need H2s with the category name 
+
+
+Version 0.2 
+- Add more recipes: stir fries, classics, snacks, smoothies, salads, oven baked goodness
+- /recipes/{category} links 
+- Guest can upvote a recipe 
+- All recipes page is sorted by upvotes
+ 
+Version 0.3
+- log in 
+- save recipe as favorite 
+- Build blueprint 
+- Share blueprint
+
+Version 0.4 
+- 
 
 Nice to have: 
 - Change header to POP off the page more 
 
-
-More Resources: 
-- counter? http://considerveganism.com/counter/ 
-- On a budget https://www.reddit.com/r/vegan/comments/j7hq2/wondering_how_to_manage_a_vegan_diet_on_a_budget/ 
 
 
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
@@ -45,14 +69,12 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
  https://www.reddit.com/r/veganfitness/comments/7cofry/tofu_poke_bowls/ 
 
 
-
 Future Pipeline
 * Ingredients series: 
     - Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
 * Guest can upvote a recipe
 * Guest can view how many upvotes a recipe has
 * All recipes page is sorted by upvotes 
-
 
 * Blueprints: each category should have a blueprint about how to make a generic version of the recipe with anything 
  
@@ -111,8 +133,6 @@ Future Pipeline
     - Clean foods (fruits, vegetables, whole grains)
   
   - Healthy Foods: make sure that organic or other healthy foods are actually what they say.
-     - This an idea for the future. Something to research and keep an eye on. 
-    
     
 How to make a tree that grows every time you do something well? - in javascript 
   

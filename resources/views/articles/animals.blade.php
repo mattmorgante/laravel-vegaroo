@@ -93,17 +93,17 @@
 
         <p class="content">Meat and dairy products aren't just destroying our health and our environment: they are also inflicting immense amounts of cruelty to billions of sentient beings every year. These practices will only continue if you are complicit in its existence. Every day, you make choices which have the power to dismantle this industry.</p>
 
-            <p class="content">If you're interested in learning more about this topic, check out the resources and videos below.</p>
+            {{--<p class="content">If you're interested in learning more about this topic, check out the resources and videos below.</p>--}}
 
-        <p class="content">
-            Source: USDA
-            Source: https://www.aspca.org/animal-cruelty/farm-animal-welfare/animals-factory-farms
+        {{--<p class="content">--}}
+            {{--Source: USDA--}}
+            {{--Source: https://www.aspca.org/animal-cruelty/farm-animal-welfare/animals-factory-farms--}}
 
-        </p>
+        {{--</p>--}}
 
 
-        <p class="content">Videos https://www.youtube.com/watch?v=L_vqIGTKuQE </p>
-        <p class="content">Videos https://www.youtube.com/watch?v=QkPBam3qO34 </p>
+        {{--<p class="content">Videos https://www.youtube.com/watch?v=L_vqIGTKuQE </p>--}}
+        {{--<p class="content">Videos https://www.youtube.com/watch?v=QkPBam3qO34 </p>--}}
     </div>
 </div>
 

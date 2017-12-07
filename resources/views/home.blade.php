@@ -28,19 +28,6 @@
         {{--<div class="row_item"><a href="#salads">Salads</a></div>--}}
     </ul>
 
-
-    <div class="btn-wrapper">
-        <a class="btn" href="/recipes">All Recipes</a>
-    </div>
-
-    @include('partials.why')
-
-    <div class="btn-wrapper">
-        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
-    </div>
-
-    @include('partials.how')
-
     <h3 class="section-title" id="breakfasts">Breakfasts</h3>
     <ul class="flexible_row">
         @foreach ($breakfasts as $recipe)
@@ -112,6 +99,17 @@
     {{--</ul>--}}
 
     <br>
+    <div class="btn-wrapper">
+        <a class="btn" href="/recipes">All Recipes</a>
+    </div>
+
+    @include('partials.why')
+
+    <div class="btn-wrapper">
+        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
+    </div>
+
+    @include('partials.how')
 </div>
 
 @endsection
