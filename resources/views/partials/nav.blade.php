@@ -7,7 +7,7 @@
     <div class="nav-right">
         <ul>
             <li><a href="/resources">Resources</a></li>
-            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/vegan-recipes">Recipes</a></li>
             <li><a href="/values">Values</a></li>
         </ul>
     </div>

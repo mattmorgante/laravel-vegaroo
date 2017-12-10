@@ -64,9 +64,7 @@
     <div class="footer_container">
         @include('partials.why')
         <br>
-        <div class="btn-wrapper">
-            <a target="_blank" class="btn" href="/recipes">All Recipes</a>
-        </div>
+        @include('partials.all-recipes-button')
     </div>
 </div>
 

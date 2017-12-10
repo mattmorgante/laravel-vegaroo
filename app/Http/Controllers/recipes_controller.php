@@ -32,41 +32,48 @@ class recipes_controller extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show($category, $slug)
     {
         $recipe = recipe::where('slug', '=', $slug)->first();
+        $categoryDb = $recipe->category;
 
-        // all recipes of this category except the current one
-        $similarRecipes = recipe::where('category', $recipe->category)->get();
-        foreach ($similarRecipes as $key => $similarRecipe) {
-            if ($similarRecipe->slug == $recipe->slug) {
-                unset($similarRecipes[$key]);
+        if ($category == $categoryDb) {
+            // all recipes of this category except the current one
+            $similarRecipes = recipe::where('category', $recipe->category)->get();
+            foreach ($similarRecipes as $key => $similarRecipe) {
+                if ($similarRecipe->slug == $recipe->slug) {
+                    unset($similarRecipes[$key]);
+                }
             }
+            list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
+
+            $ingredients = explode(',', $recipe->ingredients);
+            $instructions = explode(';', $recipe->instructions);
+            $notes = explode(';', $recipe->notes);
+            $categoryName = ucwords($recipe->category);
+
+            return view('recipe')->with([
+                'recipe' => $recipe,
+                'ingredients' => $ingredients,
+                'instructions' => $instructions,
+                'notes' => $notes,
+                'similarRecipes' => $similarRecipes,
+                'categoryName' => $categoryName,
+                'breakfasts' => $breakfasts,
+                'salads' => $salads,
+                'bowls' => $bowls,
+                'curries' => $curries,
+                'stirFries' => $stirFries,
+                'classics' => $classics,
+                'snacks' => $snacks,
+                'smoothies' => $smoothies,
+                'sides' => $sides
+            ]);
+        } else {
+            dd('Shit! Could not find that right now. We will try to fix that as soon as possible.');
         }
-        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
 
-        $ingredients = explode(',', $recipe->ingredients);
-        $instructions = explode(';', $recipe->instructions);
-        $notes = explode(';', $recipe->notes);
-        $categoryName = ucwords($recipe->category);
 
-        return view('recipe')->with([
-            'recipe' => $recipe,
-            'ingredients' => $ingredients,
-            'instructions' => $instructions,
-            'notes' => $notes,
-            'similarRecipes' => $similarRecipes,
-            'categoryName' => $categoryName,
-            'breakfasts' => $breakfasts,
-            'salads' => $salads,
-            'bowls' => $bowls,
-            'curries' => $curries,
-            'stirFries' => $stirFries,
-            'classics' => $classics,
-            'snacks' => $snacks,
-            'smoothies' => $smoothies,
-            'sides' => $sides
-        ]);
     }
 
     public function blueprint() {

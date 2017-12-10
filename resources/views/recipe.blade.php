@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@include('includes.recipe-seo')
+
 @section('header.javascript')
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -116,6 +118,7 @@
 
     @include('partials.grain-bowls')
     @include('partials.curries')
+
 <br>
 
     {{--<div class="notes">--}}

@@ -26,7 +26,7 @@
 
         <p class="content">Beans are a vegans best friend. The offer rich sources of proteins and fiber and are some of the healthiest and most versatile foods out there. Hummus, tofu, and tempeh are all bean-based favorites! Some of the best beans nutritionally are chickpeas, black beans, lentils, edamame, kidney beans, split beans, and cannellini beans.</p>
 
-        <p class="content">At a loss for how to get started with eating more healthy foods? Check out <a href="/recipes">our recipes on Vegaroo, which all feature prominent servings of beans, grains, and vegetables and can be prepared in 30 minutes or less!</a></p>
+        <p class="content">At a loss for how to get started with eating more healthy foods? Check out <a href="/vegan-recipes">our recipes on Vegaroo, which all feature prominent servings of beans, grains, and vegetables and can be prepared in 30 minutes or less!</a></p>
 
         <h2 class="subtitle">Processed Plant Foods: Eat Sparingly</h2>
 
@@ -76,9 +76,7 @@
     <div class="footer_container">
         @include('partials.why')
         <br>
-        <div class="btn-wrapper">
-            <a target="_blank" class="btn" href="/recipes">All Recipes</a>
-        </div>
+        @include('partials.all-recipes-button')
     </div>
 </div>
 

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@include('includes.seo')
+
 @section('content')
 
 @include('partials.nav')
@@ -25,7 +27,7 @@
         <div class="row_item"><a href="#breakfasts">Breakfasts</a></div>
         <div class="row_item"><a href="#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="#curry">Curries</a></div>
-        {{--<div class="row_item"><a href="#salads">Salads</a></div>--}}
+        <div class="row_item"><a href="#stir-fries">Stir Fries</a></div>
     </ul>
 
     <h3 class="section-title" id="breakfasts">Breakfasts</h3>
@@ -47,12 +49,12 @@
     {{--</ul>--}}
 
 
-    {{--<h3>Stir-Fry</h3>--}}
-    {{--<ul class="flexible_row">--}}
-        {{--@foreach ($stirFries as $recipe)--}}
-            {{--@include('partials.recipe-box')--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
+    <h3>Stir-Fries</h3>
+    <ul class="flexible_row" id="stir-fries">
+        @foreach ($stirFries as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
 
     {{--<h3>Classics</h3>--}}
     {{--<ul class="flexible_row">--}}
@@ -90,7 +92,7 @@
 
     <br>
     <div class="btn-wrapper">
-        <a class="btn" href="/recipes">All Recipes</a>
+        <a class="btn" href="/vegan-recipes">All Recipes</a>
     </div>
 
     @include('partials.why')

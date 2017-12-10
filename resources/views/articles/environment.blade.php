@@ -189,7 +189,7 @@
 
         <p class="content">Do you hate species extinction? Water Pollution? Habitat Destruction? Global Warming? Soil degradation? Then look no further, because the most impactful way to fight all of these atrocities on the environment is to simply stop purchasing animal products.</p>
 
-        <p class="content">You don't need to buy a Tesla or install solar panels above your house to begin reducing your environmental impact. Preserve our planet's ecosystems and climate for future generations by making more sustainable food choices. To get started now, check out <a href="/recipes">our recipes</a> on Vegaroo.</p>
+        <p class="content">You don't need to buy a Tesla or install solar panels above your house to begin reducing your environmental impact. Preserve our planet's ecosystems and climate for future generations by making more sustainable food choices. To get started now, check out <a href="/vegan-recipes">our recipes</a> on Vegaroo.</p>
     </div>
 </div>
 
@@ -197,9 +197,7 @@
     <div class="footer_container">
         @include('partials.how')
         <br>
-        <div class="btn-wrapper">
-            <a class="btn" href="/recipes">All Recipes</a>
-        </div>
+        @include('partials.all-recipes-button')
     </div>
 </div>
 

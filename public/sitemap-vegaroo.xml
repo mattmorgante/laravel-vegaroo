@@ -4,7 +4,7 @@
         <loc>http://vegaroo.co/</loc>
     
     
-        <lastmod>2017-11-19T13:57:27+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:19+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -14,7 +14,7 @@
         <loc>http://vegaroo.co/blogs-books-documentaries</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -24,17 +24,7 @@
         <loc>http://vegaroo.co/calculator</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
-    
-        <changefreq>daily</changefreq>
-    
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://vegaroo.co/environment</loc>
-    
-    
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -44,17 +34,7 @@
         <loc>http://vegaroo.co/environmental-benefits</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
-    
-        <changefreq>daily</changefreq>
-    
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://vegaroo.co/habits</loc>
-    
-    
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -64,17 +44,7 @@
         <loc>http://vegaroo.co/health-benefits-long-term</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
-    
-        <changefreq>daily</changefreq>
-    
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://vegaroo.co/health-benefits-short-term</loc>
-    
-    
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -84,17 +54,7 @@
         <loc>http://vegaroo.co/nutrition</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
-    
-        <changefreq>daily</changefreq>
-    
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://vegaroo.co/pantry</loc>
-    
-    
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -104,17 +64,7 @@
         <loc>http://vegaroo.co/recipes</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
-    
-        <changefreq>daily</changefreq>
-    
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://vegaroo.co/recipes/</loc>
-    
-    
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:20+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -124,7 +74,7 @@
         <loc>http://vegaroo.co/recipes/avocado-toast</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -134,7 +84,7 @@
         <loc>http://vegaroo.co/recipes/burrito-bowl</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:20+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -144,7 +94,7 @@
         <loc>http://vegaroo.co/recipes/cauliflower-carrot-curry</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:22+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -154,7 +104,17 @@
         <loc>http://vegaroo.co/recipes/dhal-curry</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/recipes/eggplant-cashew-basil</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:23+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -164,7 +124,7 @@
         <loc>http://vegaroo.co/recipes/falafel-bowl</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:20+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -174,7 +134,27 @@
         <loc>http://vegaroo.co/recipes/fall-harvest-bowl</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:20+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/recipes/fruit</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:22+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/recipes/mixed-nuts</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:22+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -184,7 +164,17 @@
         <loc>http://vegaroo.co/recipes/muesli-berries</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:20+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/recipes/nut-butter-bread-banana</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:23+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -194,7 +184,7 @@
         <loc>http://vegaroo.co/recipes/oatmeal</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -204,7 +194,7 @@
         <loc>http://vegaroo.co/recipes/protein-smoothie</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -214,7 +204,7 @@
         <loc>http://vegaroo.co/recipes/pumpkin-curry</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -224,7 +214,27 @@
         <loc>http://vegaroo.co/recipes/spicy-asian-tempeh-bowl</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/recipes/thai-red-curry</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:22+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/recipes/vegetables-dip</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:22+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -234,7 +244,17 @@
         <loc>http://vegaroo.co/resources</loc>
     
     
-        <lastmod>2017-11-19T13:57:27+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:19+00:00</lastmod>
+    
+        <changefreq>daily</changefreq>
+    
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://vegaroo.co/small-steps</loc>
+    
+    
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -244,7 +264,7 @@
         <loc>http://vegaroo.co/stop-animal-cruelty</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:21+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
@@ -254,17 +274,7 @@
         <loc>http://vegaroo.co/values</loc>
     
     
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
-    
-        <changefreq>daily</changefreq>
-    
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://vegaroo.co/vegan-on-a-budget</loc>
-    
-    
-        <lastmod>2017-11-19T13:57:28+00:00</lastmod>
+        <lastmod>2017-12-10T13:56:20+00:00</lastmod>
     
         <changefreq>daily</changefreq>
     
