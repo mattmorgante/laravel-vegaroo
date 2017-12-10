@@ -109,6 +109,13 @@
             @include('partials.recipe-box')
         @endforeach
     </div>
+
+    <hr>
+
+    <h2 class="other-recipes">Other Recipes</h2>
+
+    @include('partials.grain-bowls')
+    @include('partials.curries')
 <br>
 
     {{--<div class="notes">--}}

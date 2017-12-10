@@ -23,10 +23,9 @@ Business Model:
 
 
 * ToDo: 
-- Fix nutrition in dhal and thai red curry 
-- Bug: graphs on mobile
-- Videos on stop animal cruelty 
+- Add 20 recipes 
 - Meta tags & descriptions (make seo a dynamic partial)
+- Videos on stop animal cruelty 
 - Minify CSS 
 - Email validation on form 
 - Resources with images on home page

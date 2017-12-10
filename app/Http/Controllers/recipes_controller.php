@@ -17,15 +17,7 @@ class recipes_controller extends Controller
 
     public function home()
     {
-        $breakfasts = recipe::where('category', 'breakfasts')->get();
-        $salads = recipe::where('category', 'salads')->get();
-        $bowls = recipe::where('category', 'bowls')->get();
-        $curries = recipe::where('category', 'curries')->get();
-        $stirFries = recipe::where('category', 'stir-fries')->get();
-        $classics = recipe::where('category', 'classics')->get();
-        $snacks = recipe::where('category', 'snacks')->get();
-        $smoothies = recipe::where('category', 'smoothies')->get();
-        $sides = recipe::where('category', 'sides')->get();
+        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
 
         return view('home')->with([
             'breakfasts' => $breakfasts,
@@ -51,6 +43,7 @@ class recipes_controller extends Controller
                 unset($similarRecipes[$key]);
             }
         }
+        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
 
         $ingredients = explode(',', $recipe->ingredients);
         $instructions = explode(';', $recipe->instructions);
@@ -63,11 +56,37 @@ class recipes_controller extends Controller
             'instructions' => $instructions,
             'notes' => $notes,
             'similarRecipes' => $similarRecipes,
-            'categoryName' => $categoryName
+            'categoryName' => $categoryName,
+            'breakfasts' => $breakfasts,
+            'salads' => $salads,
+            'bowls' => $bowls,
+            'curries' => $curries,
+            'stirFries' => $stirFries,
+            'classics' => $classics,
+            'snacks' => $snacks,
+            'smoothies' => $smoothies,
+            'sides' => $sides
         ]);
     }
 
     public function blueprint() {
         return view('blueprint');
+    }
+
+    /**
+     * @return array
+     */
+    private function getAllCategories()
+    {
+        $breakfasts = recipe::where('category', 'breakfasts')->get();
+        $salads = recipe::where('category', 'salads')->get();
+        $bowls = recipe::where('category', 'bowls')->get();
+        $curries = recipe::where('category', 'curries')->get();
+        $stirFries = recipe::where('category', 'stir-fries')->get();
+        $classics = recipe::where('category', 'classics')->get();
+        $snacks = recipe::where('category', 'snacks')->get();
+        $smoothies = recipe::where('category', 'smoothies')->get();
+        $sides = recipe::where('category', 'sides')->get();
+        return array($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides);
     }
 }
