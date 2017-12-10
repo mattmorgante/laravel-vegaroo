@@ -118,6 +118,7 @@
 
     @include('partials.grain-bowls')
     @include('partials.curries')
+    @include('partials.snacks')
 
 <br>
 
