@@ -23,9 +23,9 @@ Business Model:
 
 
 * ToDo: 
-- Add 20 recipes 
-- Seo on resources pages 
 - Email validation on form 
+- HTTPS redirect 
+- Add 20 recipes 
 - Resources with images on home page
 - footer with lots of links - good for SEO
 
