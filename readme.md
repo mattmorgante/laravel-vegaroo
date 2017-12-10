@@ -25,7 +25,6 @@ Business Model:
 * ToDo: 
 - Email validation on form 
 - HTTPS redirect 
-- Logo doesn't show up on safari
 - Add 20 recipes 
 - Resources with images on home page
 - footer with lots of links - good for SEO
