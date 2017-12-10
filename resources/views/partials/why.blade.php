@@ -7,6 +7,6 @@
 
 <ul class="flexible_row">
     <li class="row_item article_item"><a class="article_link" href="/environmental-benefits">Join the Resistance Against Climate Change</a></li>
-    <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">Lose Weight and Prevent Chronic Disease</a></li>
+    <li class="row_item article_item"><a class="article_link" href="/health-benefits-long-term">The Health Benefits: Lose Weight and Prevent Chronic Disease</a></li>
     <li class="row_item article_item"><a class="article_link" href="/stop-animal-cruelty">Stop Animal Cruelty</a></li>
 </ul>

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Easy cheap delicious and nutritious vegan meals</title>
+<meta name="description" content="Vegaroo has easy and nutritious plant-based meals you can prepare in 30 minutes or less without using any fancy ingredients "/>
+
 @section('content')
 
 @include('partials.nav')

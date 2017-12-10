@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>The Essentials For A Vegan Pantry</title>
+<meta name="description" content="In order to easily maintain a vegan lifestyle, it helps to stock your cupboard well. Consider these the non-perishable essentials, making the recipes on vegaroo easier to manage."/>
+
 @section('content')
 
 @include('partials.nav')

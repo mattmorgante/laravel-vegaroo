@@ -110,6 +110,9 @@
     </script>
 @endsection
 
+<title>Understanding The Environmental Impact of Animal Foods</title>
+<meta name="description" content="The most impactful way to join the resistance against climate change is to simply eat fewer animal products. Food can negatively effect the climate."/>
+
 @section('content')
 
 @include('partials.nav')

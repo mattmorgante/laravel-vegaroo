@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>The research behind the health benefits of going vegan</title>
+<meta name="description" content="You can easily reduce The risk Of every major chronic disease by eating vegan. Focus the diet around fruits, vegetables, whole grains, and nuts."/>
+
 @section('content')
 
 @include('partials.nav')

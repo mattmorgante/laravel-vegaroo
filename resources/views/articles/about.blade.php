@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Vegaroo is home to meals and resources for the aspiring vegan.</title>
+<meta name="description" content="Vegaroo aims to improve the health of people, the planet, and all the animals we share the earth with through making it easy to go vegan."/>
+
 @section('content')
 
 @include('partials.nav')

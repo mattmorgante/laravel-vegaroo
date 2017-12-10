@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>7 Small Steps You Can Take Today To Begin Your Vegan Journey</title>
+<meta name="description" content="Here are seven small actions you can take today to get moving in the right direction towards a diet with more fruits and vegetables and fewer meat and dairy products"/>
+
 @section('content')
 
 @include('partials.nav')
@@ -7,7 +10,7 @@
 <div class="article_wrapper">
     <div class="article_container">
         <h1 class="title">7 Small Steps You Can Take Today To Begin Your Vegan Journey</h1>
-        <h2 class="content"><i>Even though the rise of plant-based meat and dairy substitutes has made reducing animal product intake easier than ever, it can be daunting to make a big change. Here are ten small actions you can take today to get moving in the right direction.</i></h2>
+        <h2 class="content"><i>Even though the rise of plant-based meat and dairy substitutes has made reducing animal product intake easier than ever, it can be daunting to make a big change. Here are seven small actions you can take today to get moving in the right direction.</i></h2>
     </div>
 </div>
 

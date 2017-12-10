@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
+<title>Why plant-based foods are the healthiest for your health</title>
+<meta name="description" content="What are the healthiest and most nutritious food groups for your short and long-term health and what foods do vegans eat?"/>
+
 @section('content')
 
 @include('partials.nav')
 
 <div class="article_wrapper">
     <div class="article_container">
-        <h1 class="title">The Vegaroo Nutrition Manifesto</h1>
+        <h1 class="title">What Are The Healthiest Foods?</h1>
         <h2 class="content"><i>Nutrition is an evolving science. Despite vast progress, we still don't know everything about what constitutes the word "healthy." That being said, we can set some ground rules based on the scientific knowledge currently available.</i></h2>
     </div>
 </div>
@@ -66,7 +69,7 @@
 
         <p class="content">The <a href="https://www.cancer.org/cancer/cancer-causes/general-info/known-and-probable-human-carcinogens.html">World Health Organization</a> classifies processed meats like ham, hot dogs, and bacon as Group 1 Carcinogens, which means they are harmful to humans. This places processed meats in the same category as other harmful substances like cigarettes and plutonium. If you're trying to follow a healthy diet, it's best to avoid this form of meat.</p>
 
-        <h2 class="subtitle">Tl;DR</h2>
+        <h2 class="subtitle">TL;DR</h2>
 
         <p class="content">Nutrition is still an evolving science, and the interests of heavily entrenched big food companies want the evolution of science to go as slowly as possible. Yet the research consistently proves that eating meat and dairy products causes more harm than good. Instead, center your diet around vegetables, fruits, beans, and whole grains for the healthiest long-term outcomes.</p>
     </div>

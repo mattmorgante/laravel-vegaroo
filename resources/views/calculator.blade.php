@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Calculate the Environmental Impact Of Your Diet</title>
+<meta name="description" content="An interactive calculator to determine how much your diet costs the world in terms of carbon dioxide, water, land, grain, and waste."/>
+
 @section('content')
 
 @include('partials.nav')

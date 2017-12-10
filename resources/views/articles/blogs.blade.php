@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Connect To The Wealth of Vegan Resources On The Internet</title>
+<meta name="description" content="Due to a wealth of resources, it's never been easier to go plant-based! Here you can find the best blogs, books and documentaries about Veganism." />
+
 @section('content')
 
 @include('partials.nav')

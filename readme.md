@@ -24,7 +24,6 @@ Business Model:
 
 * ToDo: 
 - Add 20 recipes 
-- Videos on stop animal cruelty  
 - Seo on resources pages 
 - Email validation on form 
 - Resources with images on home page

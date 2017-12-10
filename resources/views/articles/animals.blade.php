@@ -28,6 +28,9 @@
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
+
+    <title>Stop The Global Animal Slaughter by going vegan</title>
+    <meta name="description" content="Animals live in inhumane conditions on an incomprehensible scale. The meat and dairy industries maim and murder millions every day"/>
 </head>
 @include('partials.nav')
 
