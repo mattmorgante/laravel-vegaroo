@@ -28,6 +28,7 @@
         <div class="row_item"><a href="#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="#curry">Curries</a></div>
         <div class="row_item"><a href="#stir-fries">Stir Fries</a></div>
+        <div class="row_item"><a href="#snacks">Snacks</a></div>
     </ul>
 
     <h3 class="section-title" id="breakfasts">Breakfasts</h3>
@@ -48,6 +49,13 @@
         {{--@endforeach--}}
     {{--</ul>--}}
 
+    <h3>Snacks</h3>
+    <ul class="flexible_row" id="snacks">
+        @foreach ($snacks as $recipe)
+            @include('partials.recipe-box')
+        @endforeach
+    </ul>
+
 
     <h3>Stir-Fries</h3>
     <ul class="flexible_row" id="stir-fries">
@@ -59,13 +67,6 @@
     {{--<h3>Classics</h3>--}}
     {{--<ul class="flexible_row">--}}
         {{--@foreach ($classics as $recipe)--}}
-            {{--@include('partials.recipe-box')--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
-
-    {{--<h3>Snacks</h3>--}}
-    {{--<ul class="flexible_row">--}}
-        {{--@foreach ($snacks as $recipe)--}}
             {{--@include('partials.recipe-box')--}}
         {{--@endforeach--}}
     {{--</ul>--}}
