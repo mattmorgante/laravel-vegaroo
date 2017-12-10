@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b9b1a3df60467d96550c1b8028e9250",
-    "content-hash": "36815f966d0e3746c35235765076760a",
+    "hash": "01ee1ea129249ba82af8ee42ca945acf",
+    "content-hash": "87015518be2c26c1d190d740a7940140",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -214,6 +214,46 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "ecrmnn/laravel-https",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ecrmnn/laravel-https.git",
+                "reference": "63f3de05be67a2045c4eef20a58ab48e97e94976"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ecrmnn/laravel-https/zipball/63f3de05be67a2045c4eef20a58ab48e97e94976",
+                "reference": "63f3de05be67a2045c4eef20a58ab48e97e94976",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "module",
+            "autoload": {
+                "psr-4": {
+                    "Ecrmnn\\LaravelHttps\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Eckermann",
+                    "email": "danieleckermann@gmail.com"
+                }
+            ],
+            "description": "Force HTTPS in your Laravel application",
+            "time": "2017-08-17 19:07:52"
         },
         {
             "name": "egulias/email-validator",

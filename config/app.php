@@ -182,6 +182,8 @@ return [
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         RenatoMarinho\LaravelPageSpeed\ServiceProvider::class,
+        Ecrmnn\LaravelHttps\Providers\ServiceProvider::class,
+
 
     ],
 
