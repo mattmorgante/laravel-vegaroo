@@ -13,7 +13,7 @@
 
     <h2>Vegaroo Recipes Are:</h2>
     <ul>
-        <li class="values"><span class="bold">Environmentally Friendly:</span> Vegaroo began as a desire to preserve the environment from the effects of climate change. To understand how what you eat effects the environment, please read our <a href="/environment"><span class="link">environment manifesto</span></a> or play with our <a href="/calculator"><span class="link">climate calculator</span></a>.
+        <li class="values"><span class="bold">Environmentally Friendly:</span> Vegaroo began as a desire to preserve the environment from the effects of climate change. To understand how what you eat effects the environment, please read our <a href="/environmental-benefits"><span class="link">environment manifesto</span></a> or play with our <a href="/calculator"><span class="link">climate calculator</span></a>.
         <li class="values"><span class="bold">Fast:</span> Every recipe on Vegaroo is ready in less than 30 minutes.</li>
         <li class="values"><span class="bold">Easy:</span> No recipes are dependent on complicated cooking techniques or special kitchen items. If you have a knife, cutting board, pots and pans, and an oven, you can make every recipe on Vegaroo!</li>
         <li class="values"><span class="bold">Accessible:</span> None of our recipes are dependent on special ingredients like hemp seed oil, nutritional yeast, or xantham gum. (WTF is that?) Everything should be available in a normal grocery store. If you encounter any items that you cannot find at your local grocery store, please contact us!</li>

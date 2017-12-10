@@ -1,5 +1,16 @@
 # Vegaroo provides simple and delicious plant-based meals 
 
+Mission: make it easier to go vegan 
+
+Business Model: 
+- Concise and well-organized information 
+- The free content is the WHY: exciting and compelling graphics/information about why people should go vegan, along with a few sample recipes 
+- The paid content is the HOW: concise and well-organized information about the best ways to get vegan 
+- And all the recipes are paid 
+- It should also have some aspect of community: Commenting on recipes, uploading a recipe, or asking a question in a forum style   
+- How much does it cost? Ideally less than $30 
+
+
 * ToDo: 
 - Fix nutrition in dhal and thai red curry 
 - Bug: graphs on mobile
@@ -124,18 +135,27 @@ Future Pipeline
   - More warming means a smaller amount of arable land to create food 
   - Higher population growth means we need more food 
   - We face severe food shortages 
-  - Invest in / donate to companies creating sustainable indoor food  
-  
+  - Invest in / donate to companies creating sustainable indoor food
   
   - Clean businesses: ones that produce a better output than what they put in 
     - Clean energy 
     - Clean water 
     - Clean foods (fruits, vegetables, whole grains)
   
+  Pain point: 
+  - Hard to keep track of what is environmentally friendly 
+  
   - Healthy Foods: make sure that organic or other healthy foods are actually what they say.
     
 How to make a tree that grows every time you do something well? - in javascript 
   
+Getting started guide for the aspiring vegan: 
+- What can I eat? 
+- How can I prepare it? 
+- How can I get enough nutrients in my diet? 
+- How can I deal with social pressures? 
+* 
+
   
 
 

@@ -1,4 +1,4 @@
-<h3 class="section-title"><span class="call-out">Why</span> To Eat More Fruits and Vegetables</h3>
+<h3 class="section-title"><span class="call-out">Why</span> Eat More Fruits and Vegetables</h3>
 {{--<div class="flexible_row">--}}
     {{--<h3 class="row_header">Environmental Reasons</h3>--}}
     {{--<h3 class="row_header">Health Reasons</h3>--}}

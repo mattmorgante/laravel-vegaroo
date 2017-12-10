@@ -97,8 +97,8 @@
             <div id="piechart" style="width: 100%; height: 400px;"></div>
         </div>
         <div class="row_item">
-            <h2>Macro Nutrient Information</h2>
-            <div id="chart_div" style="width: 100%; height: 400px;"></div>
+            <h2>Micro Nutrient Information</h2>
+            <div id="chart_div" style="width: 100%; height: 300px;"></div>
         </div>
 
     </div>
