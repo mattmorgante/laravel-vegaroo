@@ -23,8 +23,6 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-
-
     <link rel="stylesheet" type="text/css" href="{{asset('css/critical.css')}}"/>
 
     @section('header.javascript')

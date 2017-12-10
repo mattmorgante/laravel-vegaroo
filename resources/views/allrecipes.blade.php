@@ -7,8 +7,8 @@
 
 @include('partials.nav')
 
-
-@foreach ($recipes as $recipe)
+<h2 class="other-recipes">Breakfasts</h2>
+@foreach ($breakfasts as $recipe)
     <div class="container">
         <div class="flexible_row">
             <div class="row_item">
@@ -22,5 +22,72 @@
     </div>
 @endforeach
 <br>
+
+<h2 class="other-recipes">Grain Bowls</h2>
+@foreach ($bowls as $recipe)
+    <div class="container">
+        <div class="flexible_row">
+            <div class="row_item">
+                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p style="color:black;">{{ $recipe->description }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+@endforeach
+<br>
+
+<h2 class="other-recipes">Curries</h2>
+@foreach ($curries as $recipe)
+    <div class="container">
+        <div class="flexible_row">
+            <div class="row_item">
+                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p style="color:black;">{{ $recipe->description }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+@endforeach
+<br>
+
+<h2 class="other-recipes">Stir Fries</h2>
+@foreach ($stirFries as $recipe)
+    <div class="container">
+        <div class="flexible_row">
+            <div class="row_item">
+                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p style="color:black;">{{ $recipe->description }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+@endforeach
+<br>
+
+<h2 class="other-recipes">Snacks</h2>
+@foreach ($snacks as $recipe)
+    <div class="container">
+        <div class="flexible_row">
+            <div class="row_item">
+                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p style="color:black;">{{ $recipe->description }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+@endforeach
+<br>
+
+
+
 
 @endsection

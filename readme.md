@@ -24,7 +24,6 @@ Business Model:
 
 * ToDo: 
 - Email validation on form 
-- HTTPS redirect 
 - Add 20 recipes 
 - Resources with images on home page
 - footer with lots of links - good for SEO
@@ -34,13 +33,10 @@ Ideas:
 
 Feedback: 
 -  if it's a fitness/bodybuilding meal then I don't care if the pictures don't look great
-
 On all recipes you need H2s with the category name 
-
 
 Version 0.2 
 - Add more recipes: stir fries, classics, snacks, smoothies, salads, oven baked goodness
-- /recipes/{category} links 
 - User can upvote a recipe 
 - All recipes page is sorted by upvotes
  
@@ -123,6 +119,7 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
  - fruits 
  - seeds 
  - oatmeal (optional)
+ https://www.reddit.com/r/veganfitness/comments/7ihg79/i_keep_making_the_same_vegan_protein_shake_and/
   
   
   Luca's ideas: 

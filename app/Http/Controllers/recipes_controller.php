@@ -9,9 +9,18 @@ class recipes_controller extends Controller
 {
     public function index()
     {
-        $recipes = recipe::where('slug', '!=', '')->get();
+        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
+
         return view('allrecipes')->with([
-            'recipes' => $recipes
+            'breakfasts' => $breakfasts,
+            'salads' => $salads,
+            'bowls' => $bowls,
+            'curries' => $curries,
+            'stirFries' => $stirFries,
+            'classics' => $classics,
+            'snacks' => $snacks,
+            'smoothies' => $smoothies,
+            'sides' => $sides
         ]);
     }
 
@@ -69,6 +78,7 @@ class recipes_controller extends Controller
                 'smoothies' => $smoothies,
                 'sides' => $sides
             ]);
+
         } else {
             dd('Shit! Could not find that right now. We will try to fix that as soon as possible.');
         }
