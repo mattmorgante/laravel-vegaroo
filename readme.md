@@ -2,13 +2,24 @@
 
 Mission: make it easier to go vegan 
 
+Why: to improve the health of individual humans, the health of our planet, and the health of all other living things. 
+
 Business Model: 
-- Concise and well-organized information 
 - The free content is the WHY: exciting and compelling graphics/information about why people should go vegan, along with a few sample recipes 
-- The paid content is the HOW: concise and well-organized information about the best ways to get vegan 
-- And all the recipes are paid 
-- It should also have some aspect of community: Commenting on recipes, uploading a recipe, or asking a question in a forum style   
-- How much does it cost? Ideally less than $30 
+- The paid content is the HOW: concise and well-organized information about the best ways to go vegan 
+1. Content / How To Guides 
+- must shy away from re-hashing things that are already out there
+ Getting started guide for the aspiring vegan: 
+ - What can I eat? 
+ - How can I prepare it? 
+ - How can I get enough nutrients in my diet? 
+ - How can I deal with social pressures? 
+2. Recipes 
+- Static recipes
+- Blueprints: saveable, shareable 
+3. Community
+- Community = Commenting on recipes, uploading a recipe, or asking a question in a forum style   
+- How much does it cost? Decide via A/B testing 
 
 
 * ToDo: 
@@ -18,11 +29,14 @@ Business Model:
 - Meta tags & descriptions (make seo a dynamic partial)
 - Minify CSS 
 - Email validation on form 
+- Resources with images on home page
+- More recipe links on single recipe page 
+- footer with lots of links - good for SEO
+
+Ideas: 
 - Can you drop in an imgur widget or something and have users post their own pics of the dish? 
-- Put resources on bottom with images
-- footer with lots of links - good for SEO 
 
-
+Feedback: 
 -  if it's a fitness/bodybuilding meal then I don't care if the pictures don't look great
 
 On all recipes you need H2s with the category name 
@@ -31,7 +45,7 @@ On all recipes you need H2s with the category name
 Version 0.2 
 - Add more recipes: stir fries, classics, snacks, smoothies, salads, oven baked goodness
 - /recipes/{category} links 
-- Guest can upvote a recipe 
+- User can upvote a recipe 
 - All recipes page is sorted by upvotes
  
 Version 0.3
@@ -40,17 +54,20 @@ Version 0.3
 - Build blueprint 
 - Share blueprint
 
-Version 0.4 
-- 
-
 Nice to have: 
 - Change header to POP off the page more 
 
+* Insight/Pain Point
+- Getting enough food and energy throughout the day! Solution: oats, protein balls
+ Tofu Bowl 
+ https://www.reddit.com/r/veganfitness/comments/7cofry/tofu_poke_bowls/ 
 
 
+Articles 
+* Ingredients series: 
+    - Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
-
-* Article: all about grains 
+* Article: all about grains
 - brown rice
 - quinoa 
 - buckwheat 
@@ -74,18 +91,6 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
 - Heartburn
 - Energy 
 
-* Insight/Pain Point
-- Getting enough food and energy throughout the day! Solution: oats, protein balls
- Tofu Bowl 
- https://www.reddit.com/r/veganfitness/comments/7cofry/tofu_poke_bowls/ 
-
-
-Future Pipeline
-* Ingredients series: 
-    - Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
-* Guest can upvote a recipe
-* Guest can view how many upvotes a recipe has
-* All recipes page is sorted by upvotes 
 
 * Blueprints: each category should have a blueprint about how to make a generic version of the recipe with anything 
  
@@ -148,13 +153,6 @@ Future Pipeline
   - Healthy Foods: make sure that organic or other healthy foods are actually what they say.
     
 How to make a tree that grows every time you do something well? - in javascript 
-  
-Getting started guide for the aspiring vegan: 
-- What can I eat? 
-- How can I prepare it? 
-- How can I get enough nutrients in my diet? 
-- How can I deal with social pressures? 
-* 
 
   
 
