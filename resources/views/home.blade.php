@@ -28,36 +28,27 @@
         <div class="row_item"><a href="#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="#curry">Curries</a></div>
         <div class="row_item"><a href="#stir-fries">Stir Fries</a></div>
+    </ul>
+    <ul class="flexible_row">
         <div class="row_item"><a href="#snacks">Snacks</a></div>
+        <div class="row_item"><a href="#smoothies">Smoothies</a></div>
+        <div class="row_item"><a href="#salads">Salads</a></div>
     </ul>
 
-    <h3 class="section-title" id="breakfasts">Breakfasts</h3>
-    <ul class="flexible_row">
-        @foreach ($breakfasts as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    @include('partials.breakfasts')
 
     @include('partials.grain-bowls')
 
     @include('partials.curries')
 
-    {{--<h3 class="section-title" id="salads">Salads</h3>--}}
-    {{--<ul class="flexible_row">--}}
-        {{--@foreach ($salads as $recipe)--}}
-            {{--@include('partials.recipe-box')--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
+    @include('partials.salads')
 
     @include('partials.snacks')
 
+    @include('partials.stir-fries')
 
-    <h3>Stir-Fries</h3>
-    <ul class="flexible_row" id="stir-fries">
-        @foreach ($stirFries as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
-    </ul>
+    @include('partials.smoothies')
+
 
     {{--<h3>Classics</h3>--}}
     {{--<ul class="flexible_row">--}}
@@ -71,13 +62,6 @@
             {{--<h3><a class="article_link" href="https://vegaroo.slack.com">Join The Community</a></h3>--}}
         {{--</div>--}}
     {{--</div>--}}
-
-    {{--<h3>Smoothies</h3>--}}
-    {{--<ul class="flexible_row">--}}
-        {{--@foreach ($smoothies as $recipe)--}}
-            {{--@include('partials.recipe-box')--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
 
     {{--<h3>Sides</h3>--}}
     {{--<ul class="flexible_row">--}}

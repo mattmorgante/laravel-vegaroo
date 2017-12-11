@@ -1,6 +1,6 @@
-<h3 class="section-title" id="snacks">Snacks</h3>
+<h3 class="section-title" id="salads">Salads</h3>
 <ul class="flexible_row">
-    @foreach ($snacks as $recipe)
+    @foreach ($salads as $recipe)
         @include('partials.recipe-box')
     @endforeach
 </ul>

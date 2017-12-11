@@ -23,10 +23,11 @@ Business Model:
 
 
 * ToDo: 
+- 6 more recipes
 - Email validation on form 
-- Add 20 recipes 
 - Resources with images on home page
 - Build email list
+- "other recipes" is fucked up, categories are static 
 
 Ideas: 
 - Can you drop in an imgur widget or something and have users post their own pics of the dish? 

@@ -105,20 +105,25 @@
 
     </div>
 
-    <h3>More {{ $categoryName }}</h3>
-    <div class="flexible_row">
-        @foreach ($similarRecipes as $recipe)
-            @include('partials.recipe-box')
-        @endforeach
+    <div class="container">
+
+        <h3>More {{ $categoryName }}</h3>
+        <div class="flexible_row">
+            @foreach ($similarRecipes as $recipe)
+                @include('partials.recipe-box')
+            @endforeach
+        </div>
+
+        <h2 class="other-recipes">Other Recipes</h2>
+    
+        @include('partials.breakfasts')
+        @include('partials.grain-bowls')
+        @include('partials.curries')
+        @include('partials.salads')
+        @include('partials.snacks')
+        @include('partials.stir-fries')
+        @include('partials.smoothies')
     </div>
-
-    <hr>
-
-    <h2 class="other-recipes">Other Recipes</h2>
-
-    @include('partials.grain-bowls')
-    @include('partials.curries')
-    @include('partials.snacks')
 
 <br>
 
