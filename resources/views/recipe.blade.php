@@ -115,7 +115,7 @@
         </div>
 
         <h2 class="other-recipes">Other Recipes</h2>
-    
+
         @include('partials.breakfasts')
         @include('partials.grain-bowls')
         @include('partials.curries')

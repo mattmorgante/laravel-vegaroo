@@ -16,7 +16,7 @@
 
 <br>
 
-<img class="article_header_image" src="/img/step.jpg" alt="Eating Vegan is the easiest way to avoid disease">
+<img class="article_header_image" src="/img/step.jpg" alt="Taking small steps towards veganism can easily add up over time">
 
 <div class="article_wrapper">
     <div class="article_container">

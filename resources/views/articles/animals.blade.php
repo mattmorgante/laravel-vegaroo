@@ -42,7 +42,7 @@
     </div>
 </div>
 <br>
-<img class="article_header_image" src="/img/cow.jpeg" alt="Eating Vegan is the easiest way to avoid disease">
+<img class="article_header_image" src="/img/cow.jpeg" alt="Billions of animals are killed each year to feed humans">
 
 <div class="article_wrapper">
     <div class="article_container">

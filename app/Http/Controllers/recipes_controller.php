@@ -80,10 +80,8 @@ class recipes_controller extends Controller
             ]);
 
         } else {
-            dd('Shit! Could not find that right now. We will try to fix that as soon as possible.');
+            dd('Uh Oh! Could not find that right now. We will try to fix this as soon as possible.');
         }
-
-
     }
 
     public function blueprint() {

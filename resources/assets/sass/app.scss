@@ -16,9 +16,16 @@ h3 {
   margin: 10px;
 }
 
+// images
 .image_icon {
   max-height: 50px;
 }
+
+.tiny_img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 
 .bold {
   font-weight: bold;
@@ -218,6 +225,12 @@ h3 {
   .nav-right ul {
     line-height: 36px;
     font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tiny_img {
+    height: 160px;
   }
 }
 
