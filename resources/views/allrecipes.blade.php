@@ -35,7 +35,6 @@
             </div>
         </div>
     </div>
-    </div>
 @endforeach
 <br>
 
@@ -50,7 +49,6 @@
                 </a>
             </div>
         </div>
-    </div>
     </div>
 @endforeach
 <br>
@@ -67,7 +65,6 @@
             </div>
         </div>
     </div>
-    </div>
 @endforeach
 <br>
 
@@ -83,6 +80,35 @@
             </div>
         </div>
     </div>
+@endforeach
+<br>
+
+<h2 class="other-recipes">Salads</h2>
+@foreach ($salads as $recipe)
+    <div class="container">
+        <div class="flexible_row">
+            <div class="row_item">
+                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p style="color:black;">{{ $recipe->description }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+@endforeach
+<br>
+
+<h2 class="other-recipes">Smoothies</h2>
+@foreach ($smoothies as $recipe)
+    <div class="container">
+        <div class="flexible_row">
+            <div class="row_item">
+                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
+                    <h1>{{ $recipe->title }}</h1>
+                    <p style="color:black;">{{ $recipe->description }}</p>
+                </a>
+            </div>
+        </div>
     </div>
 @endforeach
 <br>
