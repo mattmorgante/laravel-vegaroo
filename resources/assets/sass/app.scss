@@ -48,11 +48,12 @@ h3 {
 
 .btn-wrapper {
   text-align: center;
+  padding-top: 25px;
 }
 .btn {
   padding: 10px 20px;
   text-transform: uppercase;
-  background-color: #10CF7D;
+  background-color: green;
   margin: 0 auto;
   display: inline-block;
   text-align: center;
@@ -106,7 +107,7 @@ h3 {
 
 .row_item a {
   text-decoration: none;
-  color: green;
+  color: darkgreen;
   font-weight: 900;
   font-size: 18px;
 }
@@ -203,7 +204,7 @@ h3 {
 
 .call_to_action {
   width: 100%;
-  background-color: #10CF7D;
+  background-color: darkgreen;
   height: 200px;
   text-align: center;
   display: flex;
@@ -256,7 +257,7 @@ input[type=text] {
 .call_to_action .button {
   height: 50px;
   background-color: white;
-  color: #10CF7D;
+  color: darkgreen;
   padding: 13px 40px;
   margin: 15px;
   border-radius: 4px;

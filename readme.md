@@ -23,9 +23,14 @@ Business Model:
 
 
 * ToDo: 
-- 6 more recipes
 - Email validation on form 
 - Build email list
+
+Recipe ToDo list
+Asian Inspired Salad: 2 cups bok choy, 1/2 cucumber, 2 cups edamame, 2 oz peanuts
+Teriyaki Tempeh Stir Fry
+Verry Berry Smoothie
+The most nutritious fruit, berries are chock full of antioxidants and adding a serving to your daily diet can improve your health and reduce the risk of disease. Try this recipe to easily squeeze some berries into your day
 
 Ideas: 
 - Can you drop in an imgur widget or something and have users post their own pics of the dish? 

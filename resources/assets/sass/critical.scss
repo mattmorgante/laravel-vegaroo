@@ -28,6 +28,7 @@ nav ul li a {
   color: #26CE81;
   font-weight: bold;
 }
+
 .nav-left {
   float: left;
 }
@@ -35,6 +36,25 @@ nav ul li a {
 @media (max-width: 767px) {
   .image_icon {
     height: 30px;
+  }
+}
+
+// not mobile
+@media (min-width: 768px) {
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .nav-right ul li {
+    padding-left: 20px !important;
+  }
+
+  nav {
+    height: 58px !important;
+  }
+
+  .image_icon {
+    max-height: 58px !important;
   }
 }
 
