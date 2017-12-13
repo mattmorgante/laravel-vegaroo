@@ -24,28 +24,42 @@
 
     <h3>What are you in the mood for?</h3>
     <ul class="flexible_row">
-        <div class="row_item"><a href="#breakfasts">Breakfasts</a></div>
         <div class="row_item"><a href="#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="#curry">Curries</a></div>
         <div class="row_item"><a href="#stir-fries">Stir Fries</a></div>
     </ul>
     <ul class="flexible_row">
+        <div class="row_item"><a href="#salads">Salads</a></div>
+        <div class="row_item"><a href="#breakfasts">Breakfasts</a></div>
         <div class="row_item"><a href="#snacks">Snacks</a></div>
         <div class="row_item"><a href="#smoothies">Smoothies</a></div>
-        <div class="row_item"><a href="#salads">Salads</a></div>
     </ul>
 
-    @include('partials.breakfasts')
 
     @include('partials.grain-bowls')
 
     @include('partials.curries')
 
+    @include('partials.stir-fries')
+
+    <div class="btn-wrapper">
+        <a class="btn" href="/vegan-recipes">All Recipes</a>
+    </div>
+
+    @include('partials.why')
+
+    <div class="btn-wrapper">
+        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
+    </div>
+
+    @include('partials.how')
+
     @include('partials.salads')
+
+    @include('partials.breakfasts')
 
     @include('partials.snacks')
 
-    @include('partials.stir-fries')
 
     @include('partials.smoothies')
 
@@ -69,18 +83,6 @@
             {{--@include('partials.recipe-box')--}}
         {{--@endforeach--}}
     {{--</ul>--}}
-
-    <div class="btn-wrapper">
-        <a class="btn" href="/vegan-recipes">All Recipes</a>
-    </div>
-
-    @include('partials.why')
-
-    <div class="btn-wrapper">
-        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
-    </div>
-
-    @include('partials.how')
 </div>
 
 @endsection
