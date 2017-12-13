@@ -6,6 +6,10 @@ Why: to improve the health of individual humans, the health of our planet, and t
 
 Business Model: 
 - The free content is the WHY: exciting and compelling graphics/information about why people should go vegan, along with a few sample recipes 
+
+# Create a page with a form 
+- Vegaroo Beta 
+- 9.99/month 
 - The paid content is the HOW: concise and well-organized information about the best ways to go vegan 
 1. Content / How To Guides 
 - must shy away from re-hashing things that are already out there
@@ -20,10 +24,19 @@ Business Model:
 3. Community
 - Community = Commenting on recipes, uploading a recipe, or asking a question in a forum style   
 - How much does it cost? Decide via A/B testing 
+-------------------------------------
+- Personalized Assistance
+- Limited time offer: answer your questions and come up with new feature requests based on your wants & needs 
+- Meal planning advice & shopping lists 
+- 24/7 chat support 
+- Help you take steps towards veganism
+- This is how you get feedback and feature requests 
 
 
 * ToDo: 
 - Email validation on form 
+- Fix micronutrient graph on mobile!
+- Fix recipe bug from reddit 
 - Build email list
 
 Recipe ToDo list
@@ -34,13 +47,10 @@ The most nutritious fruit, berries are chock full of antioxidants and adding a s
 
 Ideas: 
 - Can you drop in an imgur widget or something and have users post their own pics of the dish? 
-
-Feedback: 
 -  if it's a fitness/bodybuilding meal then I don't care if the pictures don't look great
-On all recipes you need H2s with the category name 
 
 Version 0.2 
-- Add more recipes: stir fries, classics, snacks, smoothies, salads, oven baked goodness
+- Add more recipes: classics, oven baked goodness
 - User can upvote a recipe 
 - All recipes page is sorted by upvotes
  
@@ -150,15 +160,3 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
   - Healthy Foods: make sure that organic or other healthy foods are actually what they say.
     
 How to make a tree that grows every time you do something well? - in javascript 
-
-  
-
-
-
-
-
-
-
-
-
-   
