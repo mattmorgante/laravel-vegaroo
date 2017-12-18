@@ -18,7 +18,7 @@ Route::get('/calculator', function () {
 Route::get('/', 'recipes_controller@home');
 Route::get('/vegan-recipes', 'recipes_controller@index');
 
-Route::get('/vegan-recipes/{category}/{slug}', 'recipes_controller@show');
+Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');
 Route::get('/resources', 'ArticlesController@index');
 Route::get('/environmental-benefits', 'ArticlesController@environment');
 Route::get('/health-benefits-long-term', 'ArticlesController@healthLongTerm');

@@ -41,51 +41,64 @@ class recipes_controller extends Controller
         ]);
     }
 
-    public function show($category, $slug)
+    public function show($category, $slug = null)
     {
-        $recipe = recipe::where('slug', '=', $slug)->first();
-        $categoryDb = $recipe->category;
+        if ($slug == null) {
+            $recipes = recipe::where('category', $category)->get();
 
-        if ($category == $categoryDb) {
-            // all recipes of this category except the current one
-            $similarRecipes = recipe::where('category', $recipe->category)->get();
-            foreach ($similarRecipes as $key => $similarRecipe) {
-                if ($similarRecipe->slug == $recipe->slug) {
-                    unset($similarRecipes[$key]);
-                }
-            }
-            list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
-
-            $ingredients = explode(',', $recipe->ingredients);
-            $instructions = explode(';', $recipe->instructions);
-            $notes = explode(';', $recipe->notes);
-            $categoryName = ucwords($recipe->category);
-
-            return view('recipe')->with([
-                'recipe' => $recipe,
-                'ingredients' => $ingredients,
-                'instructions' => $instructions,
-                'notes' => $notes,
-                'similarRecipes' => $similarRecipes,
-                'categoryName' => $categoryName,
-                'breakfasts' => $breakfasts,
-                'salads' => $salads,
-                'bowls' => $bowls,
-                'curries' => $curries,
-                'stirFries' => $stirFries,
-                'classics' => $classics,
-                'snacks' => $snacks,
-                'smoothies' => $smoothies,
-                'sides' => $sides
+            return view('recipeCategory')->with([
+                'category' => ucwords($category),
+                'recipes' => $recipes
             ]);
-
         } else {
-            dd('Uh Oh! Could not find that right now. We will try to fix this as soon as possible.');
+            $recipe = recipe::where('slug', '=', $slug)->first();
+            $categoryDb = $recipe->category;
+
+            if ($category == $categoryDb) {
+                // all recipes of this category except the current one
+                $similarRecipes = recipe::where('category', $recipe->category)->get();
+                foreach ($similarRecipes as $key => $similarRecipe) {
+                    if ($similarRecipe->slug == $recipe->slug) {
+                        unset($similarRecipes[$key]);
+                    }
+                }
+                list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
+
+                $ingredients = explode(',', $recipe->ingredients);
+                $instructions = explode(';', $recipe->instructions);
+                $notes = explode(';', $recipe->notes);
+                $categoryName = ucwords($recipe->category);
+
+                return view('recipe')->with([
+                    'recipe' => $recipe,
+                    'ingredients' => $ingredients,
+                    'instructions' => $instructions,
+                    'notes' => $notes,
+                    'similarRecipes' => $similarRecipes,
+                    'categoryName' => $categoryName,
+                    'breakfasts' => $breakfasts,
+                    'salads' => $salads,
+                    'bowls' => $bowls,
+                    'curries' => $curries,
+                    'stirFries' => $stirFries,
+                    'classics' => $classics,
+                    'snacks' => $snacks,
+                    'smoothies' => $smoothies,
+                    'sides' => $sides
+                ]);
+
+            } else {
+                dd('Uh Oh! Could not find that right now. We will try to fix this as soon as possible.');
+            }
         }
     }
 
     public function blueprint() {
         return view('blueprint');
+    }
+
+    private function showCategoryPage($category) {
+
     }
 
     /**

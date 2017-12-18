@@ -1,4 +1,4 @@
-# Vegaroo provides simple and delicious plant-based meals 
+# Vegaroo has simple and delicious plant-based meals and concise resources to help people eat fewer animal products 
 
 Mission: make it easier to go vegan 
 
@@ -9,7 +9,7 @@ Business Model:
 
 # Create a page with a form 
 - Vegaroo Beta 
-- 9.99/month 
+- 9.99/month 14.99 strikethrough
 - The paid content is the HOW: concise and well-organized information about the best ways to go vegan 
 1. Content / How To Guides 
 - must shy away from re-hashing things that are already out there
@@ -34,10 +34,12 @@ Business Model:
 
 
 * ToDo: 
+- Category pages! 
 - Email validation on form 
 - Fix micronutrient graph on mobile!
-- Fix recipe bug from reddit 
-- Build email list
+- Send welcome email 
+- Upvote a recipe
+- Recipe blueprint create your own
 
 Recipe ToDo list
 Asian Inspired Salad: 2 cups bok choy, 1/2 cucumber, 2 cups edamame, 2 oz peanuts
