@@ -68,10 +68,10 @@
     <div class="sources">
         <h3>Sources</h3>
         <ul>
-            <li><a href="https://link.springer.com/article/10.1007/s10584-014-1169-1/fulltext.html">Scarborough, Peter, et al. Dietary greenhouse gas emissions of meat-eaters, fish-eaters, vegetarians and vegans in the UK</a></li>
-            <li><a href="http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf">Meat Eater's Guide to Climate Change and Health</a></li>
-            <li><a href="http://www.wri.org/blog/2016/04/sustainable-diets-what-you-need-know-12-charts">Ranganathan, Janet & Waite, Richard. Sustainable Diets: What You Need to Know in 12 Charts</a></li>
-            <li><a href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
+            <li><a target="_blank" href="https://link.springer.com/article/10.1007/s10584-014-1169-1/fulltext.html">Scarborough, Peter, et al. Dietary greenhouse gas emissions of meat-eaters, fish-eaters, vegetarians and vegans in the UK</a></li>
+            <li><a target="_blank" href="http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf">Meat Eater's Guide to Climate Change and Health</a></li>
+            <li><a target="_blank" href="http://www.wri.org/blog/2016/04/sustainable-diets-what-you-need-know-12-charts">Ranganathan, Janet & Waite, Richard. Sustainable Diets: What You Need to Know in 12 Charts</a></li>
+            <li><a target="_blank" href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
         </ul>
     </div>
 </div>

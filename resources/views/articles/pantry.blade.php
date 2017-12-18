@@ -63,7 +63,9 @@
 
 <div class="footer_wrapper">
     <div class="footer_container">
-        @include('partials.why')
+        <div class="container">
+            @include('partials.why')
+        </div>
         <br>
         @include('partials.all-recipes-button')
     </div>
