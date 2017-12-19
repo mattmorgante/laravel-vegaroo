@@ -34,8 +34,8 @@ Business Model:
 
 
 * ToDo: 
-- Category pages! 
-- Email validation on form 
+- Email validation on form - security issue
+- Image for each recipe 
 - Fix micronutrient graph on mobile!
 - Send welcome email 
 - Upvote a recipe
