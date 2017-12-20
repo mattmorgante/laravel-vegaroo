@@ -33,9 +33,20 @@ Business Model:
 - This is how you get feedback and feature requests 
 
 
+Feedback: 
+1. people want pictures 
+2. people like recipes more than articles
+3. Top 3 articles: calculator, environmental-benefits, small steps (all outside of top 10)
+
+Your friend needs photos on his Vegan food website - definitely a banner image per page, and then ideally an instagrammy photo of each meal - very hard to feel hungry / like you wanna make it with only a plain text menu. Everything else looks really good / idea is great too! Also I don't know how OCD is he wants to get, but to make it look more professional the brand colours should match (the logo green and text green are completely different...they're also a bit hiddy! A lime green is more food-like (like the HelloFresh website), his looks a bit corporatey). Also I'd get rid of the emoji-line at the top saying "no food-porn" - that's what makes things look good / go viral / that's what millennials live for / that is surely how his brand can grow - by showing how amazing vegan food can look (and obvs the underlying principles of veganism, but you know what I mean!) 
+
+Also in the middle of the different recipe categories, he's got 2 sections about how to eat more fruit and veg and why to eat more fruit and version...then after that the recipe categories continue. They should be separate pages. One for recipes, one for each other topic. Then the homepage can be a simple navigation to each of them. Right now his homepage is basically the recipe page with the other sections randomly embedded in.
+
+Ok final thing - on the resources page he has a "what to eat" and "why to eat" ...there's potential to have a full "who, what, when, where, why" e.g. who: celebrities, vegan activists etc that have switched to vegan, and maybe some stats on how many people have gone vegan so far. When: could be advice on when you should eat, and what types of food are best when you wake up, before you go to sleep etc. Where: recommendations on where to buy these foods, and maybe popular restaurants etc that are vegan
+
 * ToDo: 
 - Email validation on form - security issue
-- Image for each recipe 
+- 1 Image for each recipe 
 - Fix micronutrient graph on mobile!
 - Send welcome email 
 - Upvote a recipe
