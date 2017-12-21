@@ -2,7 +2,47 @@
 
 Mission: make it easier to go vegan 
 
-Why: to improve the health of individual humans, the health of our planet, and the health of all other living things. 
+Why: to improve the health of individual humans, the health of our planet, and the health of all other living things.
+ 
+ToDo List
+Bug Fixes 
+- Colors consistent (and fix the logo) 
+- Fix micronutrient graph on mobile
+- Send welcome email 
+- Email validation on form - security issue
+- More simple navigation on home page! 
+
+10 in person user interviews 
+- Central park 
+- Montgomery mall 
+- 
+
+Feature #1 
+- Make every recipe 
+- Take a picture of every recipe (pictures are meant to be helpful, not perfect)
+- Upload all of the pictures 
+- Redesign home page with all pictures 
+- Redesign detail page with pictures 
+- Nice to have: For each recipe, user can upload a picture  
+
+Feature #2 
+- Upvote a recipe
+- Sort all recipes page by most popular
+- Do you have to be logged in to upvote a recipe? Not yet 
+ 
+Feature #3
+- Join button 
+- Enter your email and get access to: 
+- Personalized help via facebook messenger (vegaroo chat)
+- Access to slack group 
+- log in
+- username email password 
+- save recipe as favorite 
+ 
+Feature #4
+- Recipe blueprint create your own
+- Share blueprint
+
 
 Business Model: 
 - The free content is the WHY: exciting and compelling graphics/information about why people should go vegan, along with a few sample recipes 
@@ -15,9 +55,12 @@ Business Model:
 - must shy away from re-hashing things that are already out there
  Getting started guide for the aspiring vegan: 
  - What can I eat? 
+ - When can I eat it? 
+ - Where can I find it? Best restaurants and grocery stores for vegans
+ - Who else is eating it? Popular athletes and celebrities that are vegan 
  - How can I prepare it? 
  - How can I get enough nutrients in my diet? 
- - How can I deal with social pressures? 
+ - How can I deal with social pressures?
 2. Recipes 
 - Static recipes
 - Blueprints: saveable, shareable 
@@ -33,45 +76,14 @@ Business Model:
 - This is how you get feedback and feature requests 
 
 
-Feedback: 
-1. people want pictures 
-2. people like recipes more than articles
-3. Top 3 articles: calculator, environmental-benefits, small steps (all outside of top 10)
-
-Your friend needs photos on his Vegan food website - definitely a banner image per page, and then ideally an instagrammy photo of each meal - very hard to feel hungry / like you wanna make it with only a plain text menu. Everything else looks really good / idea is great too! Also I don't know how OCD is he wants to get, but to make it look more professional the brand colours should match (the logo green and text green are completely different...they're also a bit hiddy! A lime green is more food-like (like the HelloFresh website), his looks a bit corporatey). Also I'd get rid of the emoji-line at the top saying "no food-porn" - that's what makes things look good / go viral / that's what millennials live for / that is surely how his brand can grow - by showing how amazing vegan food can look (and obvs the underlying principles of veganism, but you know what I mean!) 
-
-Also in the middle of the different recipe categories, he's got 2 sections about how to eat more fruit and veg and why to eat more fruit and version...then after that the recipe categories continue. They should be separate pages. One for recipes, one for each other topic. Then the homepage can be a simple navigation to each of them. Right now his homepage is basically the recipe page with the other sections randomly embedded in.
-
-Ok final thing - on the resources page he has a "what to eat" and "why to eat" ...there's potential to have a full "who, what, when, where, why" e.g. who: celebrities, vegan activists etc that have switched to vegan, and maybe some stats on how many people have gone vegan so far. When: could be advice on when you should eat, and what types of food are best when you wake up, before you go to sleep etc. Where: recommendations on where to buy these foods, and maybe popular restaurants etc that are vegan
-
-* ToDo: 
-- Email validation on form - security issue
-- 1 Image for each recipe 
-- Fix micronutrient graph on mobile!
-- Send welcome email 
-- Upvote a recipe
-- Recipe blueprint create your own
+Top 3 articles: calculator, environmental-benefits, small steps (all outside of top 10 total pages )
 
 Recipe ToDo list
 Asian Inspired Salad: 2 cups bok choy, 1/2 cucumber, 2 cups edamame, 2 oz peanuts
 Teriyaki Tempeh Stir Fry
 Verry Berry Smoothie
 The most nutritious fruit, berries are chock full of antioxidants and adding a serving to your daily diet can improve your health and reduce the risk of disease. Try this recipe to easily squeeze some berries into your day
-
-Ideas: 
-- Can you drop in an imgur widget or something and have users post their own pics of the dish? 
--  if it's a fitness/bodybuilding meal then I don't care if the pictures don't look great
-
-Version 0.2 
-- Add more recipes: classics, oven baked goodness
-- User can upvote a recipe 
-- All recipes page is sorted by upvotes
- 
-Version 0.3
-- log in 
-- save recipe as favorite 
-- Build blueprint 
-- Share blueprint
+Recipes: classics, oven baked goodness
 
 Nice to have: 
 - Change header to POP off the page more 

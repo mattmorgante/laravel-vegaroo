@@ -58,7 +58,15 @@
         }
     </script>
 
-@endsection
+    <script>
+        function upvote() {
+            var recipeSlug = "burrito-bowl";
+            var numberOfUpvotes = document.getElementById('number_of_upvotes');
+            console.log(numberOfUpvotes);
+
+    </script>
+
+        @endsection
 
 @section('content')
 
@@ -102,8 +110,12 @@
             <h2>Micro Nutrient Information</h2>
             <div id="chart_div" style="width: 100%; height: 300px;"></div>
         </div>
-
     </div>
+
+    {{--<div class="upvotes">--}}
+        {{--<h2>Upvotes: <span id="number_of_upvotes">{{ $recipe->upvotes }}</span></h2>--}}
+        {{--<button onclick="upvote()">Upvote</button>--}}
+    {{--</div>--}}
 
     <div class="container">
 
@@ -143,3 +155,25 @@
         {{--</ul>--}}
     {{--</div>--}}
 @endsection
+
+<script>
+    function upvote() {
+        var recipeSlug = "burrito-bowl";
+        var numberOfUpvotes = document.getElementById('number_of_upvotes');
+        console.log(numberOfUpvotes);
+
+        $.ajax({
+            url: "/upvote",
+            data: {
+                slug: recipeSlug
+            }
+        })
+            .done(function(response) {
+                console.log('success!');
+                console.log(response);
+        })
+            .fail(function() {
+                console.log('failure');
+        });
+    }
+</script>

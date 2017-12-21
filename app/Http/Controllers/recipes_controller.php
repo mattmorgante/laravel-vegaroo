@@ -93,6 +93,14 @@ class recipes_controller extends Controller
         }
     }
 
+    public function upvote(Request $request) {
+        $recipe = recipe::where('slug', $request->input('slug'))->first();
+        $currentUpvotes = $recipe->upvotes;
+        $recipe->upvotes = $currentUpvotes + 1;
+        $recipe->update();
+        return true;
+    }
+
     public function blueprint() {
         return view('blueprint');
     }
