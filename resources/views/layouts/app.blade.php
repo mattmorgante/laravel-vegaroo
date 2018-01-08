@@ -32,14 +32,16 @@
     @yield('content')
     @include('partials.footer')
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56273136-4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-56273136-4');
-    </script>
+    @if (env('APP_ENV') == 'production')
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56273136-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-56273136-4');
+        </script>
+    @endif
 </body>
 <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
 </html>
