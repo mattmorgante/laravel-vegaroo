@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
 @include('partials.nav')
-<h2>Daily Report</h2>
+
+<div id="success" class="header" style="display: none;">
+    <h2>Thanks, your information has been successfully saved!</h2>
+</div>
+
+<h2 class="header-dashboard">Daily Report</h2>
 
 <table>
-    <tr>
-    </tr>
 
     <tr>
         <td>Foods</td>
@@ -27,10 +30,6 @@
             <td>{{ $food->recommended }}</td>
         @endforeach
     </tr>
-
-
-
-
 
     <tr>
         <td>Actual Servings</td>
@@ -94,17 +93,11 @@
 </table>
 
 <div class="btn-wrapper">
-    <a class="btn" href="/save">Save Today's Information</a>
+    <a class="btn" onclick="save()">Save Today's Information</a>
 </div>
 
-<h2>Weekly Report</h2>
+<h2 class="header-dashboard">Weekly Report</h2>
 <table>
-    {{--<tr>--}}
-        {{--<th>Foods</th>--}}
-        {{--<th scope="col" colspan="2">Monday</th>--}}
-        {{--<th scope="col" colspan="2">Tuesday</th>--}}
-    {{--</tr>--}}
-
     <tr>
         <th>Foods</th>
     @foreach ($foodNames as $food)
@@ -121,7 +114,8 @@
 
     @foreach( $last7Days as $day)
         <tr>
-            <td>{{ $day->day }}</td>
+            <td>{{ \Carbon\Carbon::parse($day->day)->format('d-m-Y')}}
+            </td>
             <td class="{{ ($day->beans >= '3') ? 'green' : 'red' }}">{{ $day->beans }}</td>
             <td class="{{ ($day->greens >= '2s') ? 'green' : 'red' }}">{{ $day->greens }}</td>
             <td class="{{ ($day->cruciferous >= '1') ? 'green' : 'red' }}">{{ $day->cruciferous }}</td>
@@ -141,6 +135,9 @@
 
 </table>
 
+<br>
+<br>
+
 
 <script>
     function increment(v, target){
@@ -149,4 +146,49 @@
         document.getElementById(target).value = value;
     }
 
+    function save() {
+        var beans = $('#v').val();
+        var greens = $('#v2').val();
+        var cruciferous = $('#v3').val();
+        var berries = $('#v4').val();
+        var fruits = $('#v5').val();
+        var vegetables = $('#v6').val();
+        var grains = $('#v7').val();
+        var flaxseeds = $('#v8').val();
+        var nuts = $('#v9').val();
+        var spices = $('#v10').val();
+        var water = $('#v11').val();
+        var id = 1;
+
+        var allFoods = {
+            beans: beans,
+            greens: greens,
+            cruciferous: cruciferous,
+            berries: berries,
+            fruits: fruits,
+            vegetables: vegetables,
+            grains: grains,
+            flaxseeds: flaxseeds,
+            nuts: nuts,
+            spices: spices,
+            water: water
+        };
+
+        $.ajax({
+            url: "/save",
+            data: {
+                userId: id,
+                newValues: allFoods
+            }
+        })
+                .done(function (response) {
+                    console.log(response);
+                    console.log('yes');
+                    $('#success').show();
+
+                })
+                .fail(function () {
+                    console.log("error");
+                });
+    }
 </script>

@@ -26,16 +26,12 @@ class HomeController extends Controller
     public function userIndex()
     {
         $userId = (Auth::user()->id);
-
-        $today = Carbon::now()->toDateString();
-
+        $today = $this->getToday($userId);
         $foods = Foods::all();
         $foodNames = Foods::all()->pluck('name');
         $recServings = Foods::all()->pluck('recommended');
         $last7Days = Days::where('user_id', $userId)->get();
-        $today = Days::where('day', $today)
-            ->where('user_id', $userId)
-            ->first();
+
 
         return view('user-home')->with([
             'foodNames' => $foodNames,
@@ -46,7 +42,29 @@ class HomeController extends Controller
         ]);
     }
 
-    public function save() {
+    public function save(Request $request) {
+        $userId = $request->input('userId');
+        $today = $this->getToday($userId);
+        $foods = $request->input('newValues');
+        $today->beans = $foods['beans'];
+        $today->greens = $foods['greens'];
+        $today->cruciferous = $foods['cruciferous'];
+        $today->berries = $foods['berries'];
+        $today->fruits = $foods['fruits'];
+        $today->vegetables = $foods['vegetables'];
+        $today->grains = $foods['grains'];
+        $today->flaxseeds = $foods['flaxseeds'];
+        $today->nuts = $foods['nuts'];
+        $today->spices = $foods['spices'];
+        $today->water = $foods['water'];
+        $today->save();
+    }
 
+    private function getToday($userId) {
+        $dateToday = Carbon::now()->toDateString();
+
+        return Days::where('day', $dateToday)
+            ->where('user_id', $userId)
+            ->first();
     }
 }

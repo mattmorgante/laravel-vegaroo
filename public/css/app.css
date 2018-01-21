@@ -439,3 +439,7 @@ tr:nth-child(even) {
 .red {
   background-color: red;
 }
+
+.header-dashboard {
+  text-align: center;
+}
