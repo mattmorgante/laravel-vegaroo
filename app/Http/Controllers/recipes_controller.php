@@ -101,6 +101,15 @@ class recipes_controller extends Controller
         return true;
     }
 
+    public function sorted() {
+        // get all
+
+        // sort them
+
+        // return as $recipes 
+
+    }
+
     public function blueprint() {
         return view('blueprint');
     }

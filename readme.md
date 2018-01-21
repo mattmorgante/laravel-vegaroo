@@ -1,21 +1,23 @@
 # Vegaroo has simple and delicious plant-based meals and concise resources to help people eat fewer animal products 
 
+SEO Problems 
+- No h2 
+- Canonical URL doesn't work because HTML is minified 
+{{-- ToDo: set language, doctype, XML sitemap --}}
+
+Thanks for joining me at the beginning of this journey and indicating your interest in Vegaroo - it means so much to me. 
+
+
 Mission: make it easier to go vegan 
 
 Why: to improve the health of individual humans, the health of our planet, and the health of all other living things.
- 
-ToDo List
+
 Bug Fixes 
 - Colors consistent (and fix the logo) 
 - Fix micronutrient graph on mobile
 - Send welcome email 
 - Email validation on form - security issue
 - More simple navigation on home page! 
-
-10 in person user interviews 
-- Central park 
-- Montgomery mall 
-- 
 
 Feature #1 
 - Make every recipe 

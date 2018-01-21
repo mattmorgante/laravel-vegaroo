@@ -17,9 +17,11 @@ Route::get('/calculator', function () {
 
 Route::get('/', 'recipes_controller@home');
 Route::get('/vegan-recipes', 'recipes_controller@index');
+Route::get('/vegan-recipes/sorted', 'recipes_controller@sorted');
 
 Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');
 Route::get('/resources', 'ArticlesController@index');
+
 Route::get('/environmental-benefits', 'ArticlesController@environment');
 Route::get('/health-benefits-long-term', 'ArticlesController@healthLongTerm');
 Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
