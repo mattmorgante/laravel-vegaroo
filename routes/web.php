@@ -37,3 +37,7 @@ Route::get('/blueprint', 'recipes_controller@blueprint');
 Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'recipes_controller@upvote');
 
+Route::get('/home', 'HomeController@userIndex')->name('home');
+
+Auth::routes();
+

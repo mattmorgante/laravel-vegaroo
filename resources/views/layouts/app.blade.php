@@ -29,6 +29,8 @@
     @show
 </head>
 <body>
+
+
     @yield('content')
     @include('partials.footer')
 

@@ -60,7 +60,6 @@
 
     @include('partials.snacks')
 
-
     @include('partials.smoothies')
 
 
@@ -84,5 +83,10 @@
         {{--@endforeach--}}
     {{--</ul>--}}
 </div>
+@include('partials.grain-bowls')
+
+@include('partials.curries')
+
+@include('partials.stir-fries')
 
 @endsection
