@@ -30,7 +30,15 @@ class HomeController extends Controller
         $foods = Foods::all();
         $foodNames = Foods::all()->pluck('name');
         $recServings = Foods::all()->pluck('recommended');
+
         $last7Days = Days::where('user_id', $userId)->get();
+        if (count($last7Days) < 1) {
+            $day1 = new Days();
+            $day1->user_id= $userId;
+            $day1->day = Carbon::now()->toDateString();
+            $day1->save();
+            $last7Days = Days::where('user_id', $userId)->get();
+        }
 
 
         return view('user-home')->with([

@@ -158,7 +158,7 @@
         var nuts = $('#v9').val();
         var spices = $('#v10').val();
         var water = $('#v11').val();
-        var id = 1;
+        var id = {{ (Auth::user()->id) }};
 
         var allFoods = {
             beans: beans,
