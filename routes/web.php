@@ -39,5 +39,7 @@ Route::get('/upvote', 'recipes_controller@upvote');
 
 Route::get('/home', 'HomeController@userIndex')->name('home');
 
+Route::get('/save', 'HomeController@save')->name('save');
+
 Auth::routes();
 

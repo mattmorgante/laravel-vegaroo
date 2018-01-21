@@ -28,33 +28,74 @@
         @endforeach
     </tr>
 
+
+
+
+
     <tr>
         <td>Actual Servings</td>
-        <td>
-            {{--<button onclick="increment(e)">--}}
-                {{--Minus--}}
-            {{--</button>--}}
-            {{ $today->beans }}
-            {{--<button>--}}
-                {{--Plus--}}
-            {{--</button>--}}
-
+        <td id="beans">
+            <input type=button value='-' onclick='increment(-1, "v")'>
+            <input size=3 id='v' name='v' value='{{ $today->beans }}'>
+            <input type=button value='+' onclick='increment(1, "v")'>
         </td>
-        <td>{{ $today->greens }}</td>
-        <td>{{ $today->cruciferous }}</td>
-        <td>{{ $today->berries }}</td>
-        <td>{{ $today->fruits }}</td>
-        <td>{{ $today->vegetables }}</td>
-        <td>{{ $today->grains }}</td>
-        <td>{{ $today->flaxseeds }}</td>
-        <td>{{ $today->nuts }}</td>
-        <td>{{ $today->spices }}</td>
-        <td>{{ $today->water }}</td>
-
+        <td id="greens">
+            <input type=button value='-' onclick='increment(-1, "v2")'>
+            <input size=3 id='v2' name='v' value='{{ $today->greens }}'>
+            <input type=button value='+' onclick='increment(1, "v2")'>
+        </td>
+        <td id="cruciferous">
+            <input type=button value='-' onclick='increment(-1, "v3")'>
+            <input size=3 id='v3' name='v' value='{{ $today->cruciferous }}'>
+            <input type=button value='+' onclick='increment(1, "v3")'>
+        </td>
+        <td id="berries">
+            <input type=button value='-' onclick='increment(-1, "v4")'>
+            <input size=3 id='v4' name='v' value='{{ $today->berries }}'>
+            <input type=button value='+' onclick='increment(1, "v4")'>
+        </td>
+        <td id="fruits">
+            <input type=button value='-' onclick='increment(-1, "v5")'>
+            <input size=3 id='v5' name='v' value='{{ $today->fruits }}'>
+            <input type=button value='+' onclick='increment(1, "v5")'>
+        </td>
+        <td id="vegetables">
+            <input type=button value='-' onclick='increment(-1, "v6")'>
+            <input size=3 id='v6' name='v' value='{{ $today->vegetables }}'>
+            <input type=button value='+' onclick='increment(1, "v6")'>
+        </td>
+        <td id="grains">
+            <input type=button value='-' onclick='increment(-1, "v7")'>
+            <input size=3 id='v7' name='v' value='{{ $today->grains }}'>
+            <input type=button value='+' onclick='increment(1, "v7")'>
+        </td>
+        <td id="flaxseeds">
+            <input type=button value='-' onclick='increment(-1, "v8")'>
+            <input size=3 id='v8' name='v' value='{{ $today->flaxseeds }}'>
+            <input type=button value='+' onclick='increment(1, "v8")'>
+        </td>
+        <td id="nuts">
+            <input type=button value='-' onclick='increment(-1, "v9")'>
+            <input size=3 id='v9' name='v' value='{{ $today->nuts }}'>
+            <input type=button value='+' onclick='increment(1, "v9")'>
+        </td>
+        <td id="spices">
+            <input type=button value='-' onclick='increment(-1, "v10")'>
+            <input size=3 id='v10' name='v' value='{{ $today->spices }}'>
+            <input type=button value='+' onclick='increment(1, "v10")'>
+        </td>
+        <td id="water">
+            <input type=button value='-' onclick='increment(-1, "v11")'>
+            <input size=3 id='v11' name='v' value='{{ $today->water }}'>
+            <input type=button value='+' onclick='increment(1, "v11")'>
+        </td>
     </tr>
 
 </table>
 
+<div class="btn-wrapper">
+    <a class="btn" href="/save">Save Today's Information</a>
+</div>
 
 <h2>Weekly Report</h2>
 <table>
@@ -102,8 +143,10 @@
 
 
 <script>
-    function increment(e) {
-        console.log(e)
+    function increment(v, target){
+        var value = parseInt(document.getElementById(target).value);
+        value+=v;
+        document.getElementById(target).value = value;
     }
 
 </script>

@@ -45,4 +45,8 @@ class HomeController extends Controller
             'today' => $today
         ]);
     }
+
+    public function save() {
+
+    }
 }
