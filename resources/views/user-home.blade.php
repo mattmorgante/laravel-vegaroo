@@ -13,16 +13,24 @@
     <tr>
         <td>Foods</td>
     @foreach ($foods as $food)
-        <td>{{ $food->name }}</td>
+        <td><a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a></td>
     @endforeach
     </tr>
 
-    {{--<tr>--}}
-        {{--<td>Examples</td>--}}
-        {{--@foreach ($foods as $food)--}}
-            {{--<td>ToDo: Examples</td>--}}
-        {{--@endforeach--}}
-    {{--</tr>--}}
+    <tr>
+        <td>Examples</td>
+        <td>Black beans, kidney beans, chickpeas, hummus, tempeh, lentils, edamame</td>
+        <td>Spinach, arugula, kale, swiss chard</td>
+        <td>Brocoli, cauliflower, crussel cprouts, cabbage</td>
+        <td>Blueberries, strawberries, raspberries, blackberries</td>
+        <td>Brocoli, Cauliflower, Brussel Sprouts, Cabbage</td>
+        <td>Apples, bananas, oranges, dates, pineapple, lemons, limes</td>
+        <td>Whole-grain bread, rice, bulgur, quinoa, popcorn, oats, whole-wheat pasta</td>
+        <td>Uhh...yeah, only flaxseeds</td>
+        <td>Almonds, walnuts, cashews, pistachios, chia seeds, sesame seeds, sunflower seeds</td>
+        <td>Curry powder, cumin, cinnamon, turmeric, paprika, oregano, nutmeg</td>
+        <td>Tea or water</td>
+    </tr>
 
     <tr>
         <td>Recommended Servings</td>

@@ -20,6 +20,9 @@ Route::get('/vegan-recipes', 'recipes_controller@index');
 Route::get('/vegan-recipes/sorted', 'recipes_controller@sorted');
 
 Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');
+Route::get('/vegan-foods/{food}', 'FoodsController@show');
+
+
 Route::get('/resources', 'ArticlesController@index');
 
 Route::get('/environmental-benefits', 'ArticlesController@environment');
@@ -28,7 +31,7 @@ Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
 Route::get('/vegan-on-a-budget', 'ArticlesController@budget');
 Route::get('/pantry', 'ArticlesController@pantry');
 Route::get('/values', 'ArticlesController@about');
-Route::get('/nutrition', 'ArticlesController@nutrition');
+Route::get('/nutrition', 'ArticlesCo    ntroller@nutrition');
 Route::get('/small-steps', 'ArticlesController@smallSteps');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
 Route::get('/celebrities', 'ArticlesController@celebrities');
