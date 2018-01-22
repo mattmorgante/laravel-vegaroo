@@ -27,6 +27,11 @@ class HomeController extends Controller
     {
         $userId = (Auth::user()->id);
         $today = $this->getToday($userId);
+
+        if (empty($today)) {
+            $today = $this->createADay($userId);
+        }
+
         $foods = Foods::all();
         $foodNames = Foods::all()->pluck('name');
         $recServings = Foods::all()->pluck('recommended');
@@ -34,12 +39,8 @@ class HomeController extends Controller
         $daysOfUser = Days::where('user_id', $userId)->orderBy('day', 'desc')->get();
 
         if (count($daysOfUser) < 1) {
-            $day1 = new Days();
-            $day1->user_id= $userId;
-            $day1->day = Carbon::now()->toDateString();
-            $day1->save();
+            $today = $this->createADay($userId);
             $daysOfUser = Days::where('user_id', $userId)->get();
-            $today = $this->getToday($userId);
         }
 
         return view('user-home')->with([
@@ -67,6 +68,15 @@ class HomeController extends Controller
         $today->spices = $foods['spices'];
         $today->water = $foods['water'];
         $today->save();
+    }
+
+    private function createADay($userId){
+        $today = new Days();
+        $today->user_id = $userId;
+        $today->day = Carbon::now()->toDateString();
+        $today->save();
+        $today = $this->getToday($userId);
+        return $today;
     }
 
     private function getToday($userId) {
