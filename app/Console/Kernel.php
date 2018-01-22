@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
          $schedule->command('sitemap:generate')
                   ->daily();
+        $schedule->command('create:newDay');
     }
 
     /**
