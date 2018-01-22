@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @include('partials.nav')
-
+<div class="container">
 <div id="success" class="header" style="display: none;">
     <h2>Thanks, your information has been successfully saved!</h2>
 </div>
@@ -145,6 +145,7 @@
 
 <br>
 <br>
+</div>
 
 
 <script>

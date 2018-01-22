@@ -53,7 +53,7 @@ h3 {
 .btn {
   padding: 10px 20px;
   text-transform: uppercase;
-  background-color: green;
+  background-color: #26ce81;
   margin: 0 auto;
   display: inline-block;
   text-align: center;
@@ -366,3 +366,30 @@ h3 {
 .other-recipes {
   text-align: center;
 }
+
+//
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.green {
+  background-color: #26ce81;
+}
+
+.red {
+  background-color: red;
+}
+
+//tr:nth-child(even) {
+//  background-color: #dddddd;
+//}
+

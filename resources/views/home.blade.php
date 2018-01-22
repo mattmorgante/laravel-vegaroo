@@ -42,18 +42,6 @@
 
     @include('partials.stir-fries')
 
-    <div class="btn-wrapper">
-        <a class="btn" href="/vegan-recipes">All Recipes</a>
-    </div>
-
-    @include('partials.why')
-
-    <div class="btn-wrapper">
-        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
-    </div>
-
-    @include('partials.how')
-
     @include('partials.salads')
 
     @include('partials.breakfasts')
@@ -82,11 +70,14 @@
             {{--@include('partials.recipe-box')--}}
         {{--@endforeach--}}
     {{--</ul>--}}
+
+    @include('partials.why')
+
+    <div class="btn-wrapper">
+        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
+    </div>
+
+    @include('partials.how')
 </div>
-@include('partials.grain-bowls')
-
-@include('partials.curries')
-
-@include('partials.stir-fries')
 
 @endsection
