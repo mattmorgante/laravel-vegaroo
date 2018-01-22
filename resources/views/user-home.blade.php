@@ -125,7 +125,7 @@
             <td>{{ \Carbon\Carbon::parse($day->day)->format('d-m-Y')}}
             </td>
             <td class="{{ ($day->beans >= '3') ? 'green' : 'red' }}">{{ $day->beans }}</td>
-            <td class="{{ ($day->greens >= '2s') ? 'green' : 'red' }}">{{ $day->greens }}</td>
+            <td class="{{ ($day->greens >= '2') ? 'green' : 'red' }}">{{ $day->greens }}</td>
             <td class="{{ ($day->cruciferous >= '1') ? 'green' : 'red' }}">{{ $day->cruciferous }}</td>
             <td class="{{ ($day->berries >= '1') ? 'green' : 'red' }}">{{ $day->berries }}</td>
             <td class="{{ ($day->fruits >= '3') ? 'green' : 'red' }}">{{ $day->fruits }}</td>
