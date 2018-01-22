@@ -13,12 +13,11 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen 
+- Style login/register pages
 - Make chart scroll sideways on mobile
 - Update weekly report when daily one gets saved after ajax success
-- decrement doesn't work? at least on production
 - Styling of charts (better color coding as well)
 - Style input buttons 
-- Style login/register pages
 - How to edit a previous day? Calendar icon on page 
 - Content and images for detail pages 
 

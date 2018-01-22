@@ -3,7 +3,7 @@
         <div class="input_button">
             <form onsubmit="return doSomething();">
                 <span class="enter_email">
-                    <input type="text" placeholder="Enter Your Email Address" name="email">
+                    <input class="email-submit" type="text" placeholder="Enter Your Email Address" name="email">
                 </span>
                 <input type="submit" class="button">
             </form>
