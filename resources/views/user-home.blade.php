@@ -21,10 +21,10 @@
         <td>Examples</td>
         <td>Black beans, kidney beans, chickpeas, hummus, tempeh, lentils, edamame</td>
         <td>Spinach, arugula, kale, swiss chard</td>
-        <td>Brocoli, cauliflower, crussel cprouts, cabbage</td>
+        <td>Broccoli, cauliflower, crussel cprouts, cabbage</td>
         <td>Blueberries, strawberries, raspberries, blackberries</td>
-        <td>Brocoli, Cauliflower, Brussel Sprouts, Cabbage</td>
         <td>Apples, bananas, oranges, dates, pineapple, lemons, limes</td>
+        <td>Eggplant, Zucchini, Asparagus, Carrots, Squash, Tomatoes, etc</td>
         <td>Whole-grain bread, rice, bulgur, quinoa, popcorn, oats, whole-wheat pasta</td>
         <td>Uhh...yeah, only flaxseeds</td>
         <td>Almonds, walnuts, cashews, pistachios, chia seeds, sesame seeds, sunflower seeds</td>
