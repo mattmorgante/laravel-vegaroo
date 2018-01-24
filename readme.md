@@ -13,7 +13,6 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen 
-- make the button like it feels that it safes
 - Update weekly report when daily one gets saved after ajax success
 - let a user change a day besides today - check how rescuetime does it 
 - Style login/register pages

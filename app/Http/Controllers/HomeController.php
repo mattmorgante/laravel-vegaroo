@@ -53,8 +53,7 @@ class HomeController extends Controller
     }
 
     public function save(Request $request) {
-        $userId = $request->input('userId');
-        $today = $this->getToday($userId);
+        $today = Days::where('id', $request->input('dayId'))->first();
         $foods = $request->input('newValues');
         $today->beans = $foods['beans'];
         $today->greens = $foods['greens'];
