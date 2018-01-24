@@ -130,9 +130,9 @@
             <td class="{{ ($day->berries >= '1') ? 'green' : 'red' }}">{{ $day->berries }}</td>
             <td class="{{ ($day->fruits >= '3') ? 'green' : 'red' }}">{{ $day->fruits }}</td>
             <td class="{{ ($day->vegetables >= '2') ? 'green' : 'red' }}">{{ $day->vegetables }}</td>
-            <td class="{{ ($day->grains >= '3') ? 'green' : 'red' }}">{{ $day->grains }}</td>
+            <td class="{{ ($day->grains > '2' and $day->grains < '6' ) ? 'green' : 'red' }}">{{ $day->grains }}</td>
             <td class="{{ ($day->flaxseeds >= '1') ? 'green' : 'red' }}">{{ $day->flaxseeds }}</td>
-            <td class="{{ ($day->nuts >= '1') ? 'green' : 'red' }}">{{ $day->nuts }}</td>
+            <td class="{{ ($day->nuts > '0' and $day->nuts < '3' ) ? 'green' : 'red' }}">{{ $day->nuts }}</td>
             <td class="{{ ($day->spices >= '1') ? 'green' : 'red' }}">{{ $day->spices }}</td>
             <td class="{{ ($day->water >= '8') ? 'green' : 'red' }}">{{ $day->water }}</td>
 

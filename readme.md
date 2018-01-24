@@ -13,12 +13,13 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen 
+- make the button like it feels that it safes
+- Update weekly report when daily one gets saved after ajax success
+- let a user change a day besides today - check how rescuetime does it 
 - Style login/register pages
 - Make chart scroll sideways on mobile
-- Update weekly report when daily one gets saved after ajax success
 - Styling of charts (better color coding as well)
-- Style input buttons 
-- How to edit a previous day? Calendar icon on page 
+- Style increment buttons 
 - Content and images for detail pages 
 
 ------------------------------------------------
