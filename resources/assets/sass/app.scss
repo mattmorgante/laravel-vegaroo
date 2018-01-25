@@ -6,7 +6,8 @@ body {
 }
 svg:not(:root).svg-inline--fa {
   cursor: pointer;
-  margin: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 label {
   display: block;
@@ -381,15 +382,19 @@ table {
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 6px;
+  min-width: 76px;
 }
+
 
 .green {
   background-color: #26ce81;
+  text-align: center;
 }
 
 .red {
   background-color: red;
+  text-align: center;
 }
 
 // login/register
@@ -430,4 +435,13 @@ input .user-input #email {
 .login-links {
   display: flex;
   justify-content: space-between;
+}
+
+.table-data {
+  text-align: center;
+  border: 1px solid black;
+  background-color: transparent;
+  font-size: 14px;
+  border-radius: 7px;
+  color: black;
 }
