@@ -9,6 +9,7 @@
         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
             <input type="text" id="name" name="name" class="form__field form-control" placeholder="Name" value="{{ old('name') }}" required autofocus />
             @if ($errors->has('name'))
+                <br>
                 <span class="help-block">
                     <strong>{{ $errors->first('name') }}</strong>
                 </span>
@@ -18,6 +19,7 @@
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
             <input type="email" id="email" name="email" class="form__field form-control" placeholder="Your E-Mail Address" value="{{ old('email') }}" required autofocus />
             @if ($errors->has('email'))
+                <br>
                 <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
                 </span>
@@ -27,6 +29,7 @@
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
             <input type="password" id="password" name="password" class="form__field form-control" placeholder="Password" required  />
             @if ($errors->has('password'))
+                <br>
                 <span class="help-block">
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
@@ -46,7 +49,7 @@
             <br>
 
             <a href="{{ route('login') }}">
-                Already Have An Account? Login Here
+               Login Here
             </a>
         </div>
     </form>

@@ -458,7 +458,6 @@ th {
 .form__field {
   width: 360px;
   background: #fff;
-  color: #a3a3a3;
   font: inherit;
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
