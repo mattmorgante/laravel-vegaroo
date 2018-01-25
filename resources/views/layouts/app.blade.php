@@ -24,8 +24,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" type="text/css" href="{{asset('css/critical.css')}}"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
-    @section('header.javascript')
+@section('header.javascript')
     @show
 </head>
 <body>

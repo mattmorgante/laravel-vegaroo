@@ -3,10 +3,8 @@
 @include('partials.nav')
 <div class="container">
 <div id="success" class="header" style="display: none;">
-    <h2>Thanks, your information has been successfully saved!</h2>
+    <h2>Thanks, your information has been successfully saved! Refresh to update all the colors.</h2>
 </div>
-
-<h2 class="header-dashboard">Daily Report</h2>
 
 <table>
 
@@ -43,61 +41,18 @@
 @foreach( $last7Days as $day)
     <tr>
         <td>{{ \Carbon\Carbon::parse($day->day)->format('d-m-Y')}}</td>
-        <td class="{{ ($day->beans >= '3') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v{{$day->id}}")'>
-            <input size=3 id='v{{$day->id}}' name='v' value='{{ $day->beans }}'>
-            <input type=button value='+' onclick='increment(1, "v{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->greens >= '2') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v2{{$day->id}}")'>
-            <input size=3 id='v2{{$day->id}}' name='v' value='{{ $day->greens }}'>
-            <input type=button value='+' onclick='increment(1, "v2{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->cruciferous >= '1') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v3{{$day->id}}")'>
-            <input size=3 id='v3{{$day->id}}' name='v' value='{{ $day->cruciferous }}'>
-            <input type=button value='+' onclick='increment(1, "v3{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->berries >= '1') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v4{{$day->id}}")'>
-            <input size=3 id='v4{{$day->id}}' name='v' value='{{ $day->berries }}'>
-            <input type=button value='+' onclick='increment(1, "v4{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->fruits >= '3') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v5{{$day->id}}")'>
-            <input size=3 id='v5{{$day->id}}' name='v' value='{{ $day->fruits }}'>
-            <input type=button value='+' onclick='increment(1, "v5{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->vegetables >= '2') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v6{{$day->id}}")'>
-            <input size=3 id='v6{{$day->id}}' name='v' value='{{ $day->vegetables }}'>
-            <input type=button value='+' onclick='increment(1, "v6{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->grains > '2' and $day->grains < '6' ) ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v7{{$day->id}}")'>
-            <input size=3 id='v7{{$day->id}}' name='v' value='{{ $day->grains }}'>
-            <input type=button value='+' onclick='increment(1, "v7{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->flaxseeds >= '1') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v8{{$day->id}}")'>
-            <input size=3 id='v8{{$day->id}}' name='v' value='{{ $day->flaxseeds }}'>
-            <input type=button value='+' onclick='increment(1, "v8{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->nuts > '0' and $day->nuts < '3' ) ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v9{{$day->id}}")'>
-            <input size=3 id='v9{{$day->id}}' name='v' value='{{ $day->nuts }}'>
-            <input type=button value='+' onclick='increment(1, "v9{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->spices >= '1') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v10{{$day->id}}")'>
-            <input size=3 id='v10{{$day->id}}' name='v' value='{{ $day->spices }}'>
-            <input type=button value='+' onclick='increment(1, "v10{{$day->id}}")'>
-        </td>
-        <td class="{{ ($day->water >= '8') ? 'green' : 'red' }}">
-            <input type=button value='-' onclick='increment(-1, "v11{{$day->id}}")'>
-            <input size=3 id='v11{{$day->id}}' name='v' value='{{ $day->water }}'>
-            <input type=button value='+' onclick='increment(1, "v11{{$day->id}}")'>
-        </td>
+
+        @include('partials.table-data', ['food' => 'beans', 'amount' => $day->beans, 'recommended' => 3])
+        @include('partials.table-data', ['food' => 'greens', 'amount' => $day->greens, 'recommended' => 2])
+        @include('partials.table-data', ['food' => 'cruciferous', 'amount' => $day->cruciferous, 'recommended' => 1])
+        @include('partials.table-data', ['food' => 'berries', 'amount' => $day->berries, 'recommended' => 1])
+        @include('partials.table-data', ['food' => 'fruits', 'amount' => $day->fruits, 'recommended' => 3])
+        @include('partials.table-data', ['food' => 'vegetables', 'amount' => $day->vegetables, 'recommended' => 2])
+        @include('partials.table-data', ['food' => 'grains', 'amount' => $day->grains, 'recommended' => 3])
+        @include('partials.table-data', ['food' => 'flaxseeds', 'amount' => $day->flaxseeds, 'recommended' => 1])
+        @include('partials.table-data', ['food' => 'nuts', 'amount' => $day->nuts, 'recommended' => 1])
+        @include('partials.table-data', ['food' => 'spices', 'amount' => $day->spices, 'recommended' => 1])
+        @include('partials.table-data', ['food' => 'water', 'amount' => $day->water, 'recommended' => 8])
         <td><a style="cursor:pointer;" class="btn" onclick="save({{$day->id}})">Save</a></td>
     </tr>
 @endforeach
@@ -117,17 +72,17 @@
     }
 
     function save(dayId) {
-        var beans = $('#v'+dayId).val();
-        var greens = $('#v2'+dayId).val();
-        var cruciferous = $('#v3'+dayId).val();
-        var berries = $('#v4'+dayId).val();
-        var fruits = $('#v5'+dayId).val();
-        var vegetables = $('#v6'+dayId).val();
-        var grains = $('#v7'+dayId).val();
-        var flaxseeds = $('#v8'+dayId).val();
-        var nuts = $('#v9'+dayId).val();
-        var spices = $('#v10'+dayId).val();
-        var water = $('#v11'+dayId).val();
+        var beans = $('#vbeans'+dayId).val();
+        var greens = $('#vgreens'+dayId).val();
+        var cruciferous = $('#vcruciferous'+dayId).val();
+        var berries = $('#vberries'+dayId).val();
+        var fruits = $('#vfruits'+dayId).val();
+        var vegetables = $('#vvegetables'+dayId).val();
+        var grains = $('#vgrains'+dayId).val();
+        var flaxseeds = $('#vflaxseeds'+dayId).val();
+        var nuts = $('#vnuts'+dayId).val();
+        var spices = $('#vspices'+dayId).val();
+        var water = $('#vwater'+dayId).val();
 
         var allFoods = {
             beans: beans,

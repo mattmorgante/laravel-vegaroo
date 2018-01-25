@@ -4,7 +4,10 @@ body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
 }
-
+svg:not(:root).svg-inline--fa {
+  cursor: pointer;
+  margin: 3px;
+}
 label {
   display: block;
   border-radius: 4px;
