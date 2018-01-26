@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @include('partials.nav')
+@section('content')
 <div class="container">
 <div id="success" class="header" style="display: none;">
     <h2>Thanks, your information has been successfully saved! Refresh to update all the colors.</h2>
@@ -19,7 +20,7 @@
         <td>Examples</td>
         <td>Black beans, kidney beans, chickpeas, hummus, tempeh, lentils, edamame</td>
         <td>Spinach, arugula, kale, swiss chard</td>
-        <td>Broccoli, cauliflower, crussel cprouts, cabbage</td>
+        <td>Broccoli, cauliflower, brussel sprouts, cabbage</td>
         <td>Blueberries, strawberries, raspberries, blackberries</td>
         <td>Apples, bananas, oranges, dates, pineapple, lemons, limes</td>
         <td>Eggplant, Zucchini, Asparagus, Carrots, Squash, Tomatoes, etc</td>
@@ -117,3 +118,4 @@
                 });
     }
 </script>
+@endsection
