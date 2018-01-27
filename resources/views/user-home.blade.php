@@ -2,7 +2,6 @@
 
 @include('partials.nav')
 @section('content')
-<div class="container">
 <div id="success" class="header" style="display: none;">
     <h2>Thanks, your information has been successfully saved! Refresh to update all the colors.</h2>
 </div>
@@ -36,6 +35,7 @@
         @foreach ($foods as $food)
             <td>{{ $food->recommended }}</td>
         @endforeach
+        <td>Daily Progress</td>
     </tr>
 
 
@@ -54,6 +54,7 @@
         @include('partials.table-data', ['food' => 'nuts', 'amount' => $day->nuts, 'recommended' => 1])
         @include('partials.table-data', ['food' => 'spices', 'amount' => $day->spices, 'recommended' => 1])
         @include('partials.table-data', ['food' => 'water', 'amount' => $day->water, 'recommended' => 8])
+        <td>{{ $day->percentage }}%</td>
         <td><a style="cursor:pointer;" class="btn" onclick="save({{$day->id}})">Save</a></td>
     </tr>
 @endforeach
@@ -62,13 +63,12 @@
 
 <br>
 <br>
-</div>
 
 
 <script>
-    function increment(v, target){
+    function increment(incrementor, target){
         var value = parseInt(document.getElementById(target).value);
-        value+=v;
+        value+=incrementor;
         document.getElementById(target).value = value;
     }
 

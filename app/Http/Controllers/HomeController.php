@@ -43,6 +43,18 @@ class HomeController extends Controller
             $daysOfUser = Days::where('user_id', $userId)->get();
         }
 
+
+        foreach ($daysOfUser as $day) {
+            $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+
+            $day->percentage = $day->sum / 26;
+            if ($day->percentage > 1){
+                $day->percentage = 1;
+            }
+
+            $day->percentage = 100*(round($day->percentage, 2));
+        }
+
         return view('user-home')->with([
             'foodNames' => $foodNames,
             'recServings' => $recServings,
