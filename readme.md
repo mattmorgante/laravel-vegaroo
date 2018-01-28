@@ -18,8 +18,8 @@ Data Feature / Daily Dozen
 - space between minus and plus with fat fingers  
 - servings on home page as well (more info on the detail page) 
 - dates on the top and foods on the side??? investigate how to make possible 
-- % of total servings per day 
 - % of each food's servings per week 
+- can only update one row at a time 
 - Update color on save without refresh
 - Content and images for detail pages with links to recipes 
 - How to integrate the save button? Looks weird / on the outside 

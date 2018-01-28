@@ -38,6 +38,7 @@ class HomeController extends Controller
 
         $daysOfUser = Days::where('user_id', $userId)->orderBy('day', 'desc')->get();
 
+
         if (count($daysOfUser) < 1) {
             $today = $this->createADay($userId);
             $daysOfUser = Days::where('user_id', $userId)->get();
@@ -53,14 +54,26 @@ class HomeController extends Controller
             }
 
             $day->percentage = 100*(round($day->percentage, 2));
+
         }
+
+        $sums = [];
+        foreach ($foods as $food) {
+            $sum = Days::where('user_id', $userId)->orderBy('day', 'desc')->take(7)->pluck($food->slug)->sum();
+
+            $recommendedWeekly = ($food->recommended * 7);
+
+            $sums[$food->slug] = 100*(round($sum / $recommendedWeekly, 2));
+        }
+
 
         return view('user-home')->with([
             'foodNames' => $foodNames,
             'recServings' => $recServings,
-            'last7Days' => $daysOfUser,
+            'daysOfUser' => $daysOfUser,
             'foods' => $foods,
-            'today' => $today
+            'today' => $today,
+            'sums' => $sums
         ]);
     }
 

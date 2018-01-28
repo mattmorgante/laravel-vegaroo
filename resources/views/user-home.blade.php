@@ -39,7 +39,15 @@
     </tr>
 
 
-@foreach( $last7Days as $day)
+@foreach( $daysOfUser as $day)
+    @if ( $loop->index == 7 )
+        <tr>
+            <td>Weekly Summary</td>
+            @foreach ($sums as $food => $value)
+                <td>{{ $value }}%</td>
+            @endforeach
+        </tr>
+    @endif
     <tr>
         <td>{{ \Carbon\Carbon::parse($day->day)->format('d-m-Y')}}</td>
 
