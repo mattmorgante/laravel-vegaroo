@@ -430,9 +430,16 @@ table {
 td,
 th {
   border: 1px solid #dddddd;
-  text-align: left;
   padding: 6px;
   min-width: 76px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: center;
 }
 
 .green {

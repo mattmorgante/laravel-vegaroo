@@ -13,14 +13,13 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
+- Update color on save without refresh
 - make it able to edit any day immediately upon signing up 
 - card based design - do more research before implementing mobile OR Make chart scroll sideways on mobile
 - space between minus and plus with fat fingers  
 - servings on home page as well (more info on the detail page) 
 - dates on the top and foods on the side??? investigate how to make possible 
-- % of each food's servings per week 
 - can only update one row at a time 
-- Update color on save without refresh
 - Content and images for detail pages with links to recipes 
 - How to integrate the save button? Looks weird / on the outside 
 

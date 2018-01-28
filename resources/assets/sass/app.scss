@@ -9,6 +9,7 @@ svg:not(:root).svg-inline--fa {
   margin-left: 3px;
   margin-right: 3px;
 }
+
 label {
   display: block;
   border-radius: 4px;
@@ -383,9 +384,15 @@ table {
 
 td, th {
   border: 1px solid #dddddd;
-  text-align: left;
   padding: 6px;
   min-width: 76px;
+}
+th {
+  text-align: left;
+}
+
+td {
+  text-align: center;
 }
 
 
