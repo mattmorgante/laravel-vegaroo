@@ -13,9 +13,9 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
+- card based design - do more research before implementing mobile OR Make chart scroll sideways on mobile
 - Update color on save without refresh
 - make it able to edit any day immediately upon signing up 
-- card based design - do more research before implementing mobile OR Make chart scroll sideways on mobile
 - space between minus and plus with fat fingers  
 - servings on home page as well (more info on the detail page) 
 - dates on the top and foods on the side??? investigate how to make possible 

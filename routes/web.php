@@ -41,6 +41,7 @@ Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'recipes_controller@upvote');
 
 Route::get('/home', 'HomeController@userIndex')->name('home');
+Route::get('/home2/{date?}', 'HomeController@userIndex2')->name('home2');
 
 Route::get('/save', 'HomeController@save')->name('save');
 
