@@ -5,14 +5,16 @@
     <div class="container">
         <h2>Header Info</h2>
         <p>Daily Progress = {{ $day->percentage }}% </p>
-        <p>Here we need percentage of daily progress</p>
         <p>Date picker = on select, go to route with new date</p>
         <h2>Cards</h2>
+
+
+
+        <div class="card-wrapper">
         @foreach ($foods as $food)
-            <div class="food-card">
-                <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
-            </div>
+            @include('partials.food-card', ['slug' => $food->slug])
         @endforeach
+        </div>
 
         <h2>Weekly Report</h2>
         <p>Bar Chart</p>

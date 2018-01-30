@@ -513,3 +513,38 @@ input .user-input #email {
   color: black;
 }
 
+.card-wrapper {
+  text-align: center;
+}
+
+.food-card {
+  padding: 30px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  display: inline-block;
+}
+
+@media (min-width: 767px) {
+  .food-card {
+    max-width: 23%;
+  }
+}
+
+@media (min-width: 1160px) {
+  .food-card {
+    max-width: 27%;
+  }
+}
+
+.food-card a {
+  text-decoration: none;
+  color: #26ce81;
+  font-weight: 900;
+  font-size: 18px;
+}
+
