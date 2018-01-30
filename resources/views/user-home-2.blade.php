@@ -3,12 +3,13 @@
 @include('partials.nav')
 @section('content')
     <div class="container">
-        <h2>Daily Progress</h2>
+        <h2>Header Info</h2>
+        <p>Daily Progress = {{ $day->percentage }}% </p>
         <p>Here we need percentage of daily progress</p>
         <p>Date picker = on select, go to route with new date</p>
+        <h2>Cards</h2>
         @foreach ($foods as $food)
             <div class="food-card">
-                @include('partials.table-data', ['food' => $food->name, 'amount' => $today->food, 'recommended' => $food->recommended])
                 <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
             </div>
         @endforeach
@@ -24,6 +25,8 @@
 <script>
     function goToDate(e) {
 //        parse date and go to route with this date (2018-01-02)
+{{--//        "{{URL::to('home')}}"--}}
+        // use jquery date picker and redirect using window.location.href = /
     }
 
     {{-- on update, ajax to back end with food and day --}}
