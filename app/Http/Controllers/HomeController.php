@@ -112,6 +112,13 @@ class HomeController extends Controller
         ]);
     }
 
+    public function save2(Request $request) {
+        $today = Days::where('id', $request->input('dayId'))->first();
+        $food = $request->input('food');
+        $today->{$food} = $request->input('value');
+        $today->save();
+    }
+
     public function save(Request $request) {
         $today = Days::where('id', $request->input('dayId'))->first();
         $foods = $request->input('newValues');

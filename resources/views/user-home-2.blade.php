@@ -12,7 +12,13 @@
 
         <div class="card-wrapper">
         @foreach ($foods as $food)
-            @include('partials.food-card', ['slug' => $food->slug])
+            <div class="{{ ($day->{"$food->slug"} >= $food->recommended) ? 'green' : '' }} food-card">
+                <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
+                <br>
+                <i class="fas fa-minus-circle" onclick='increment(-1, "{{ $food->slug }}-{{ $day->id }}", "{{ $food->recommended }}")'></i>
+                <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$day->id}}' value='{{ $day->{"$food->slug"} }}'> / {{ $food->recommended }}
+                <i class="fas fa-plus-circle" onclick='increment(1, "{{ $food->slug }}-{{ $day->id }}", "{{ $food->recommended }}" )'></i>
+            </div>
         @endforeach
         </div>
 
@@ -25,37 +31,36 @@
 @endsection
 
 <script>
-    function goToDate(e) {
-//        parse date and go to route with this date (2018-01-02)
-{{--//        "{{URL::to('home')}}"--}}
-        // use jquery date picker and redirect using window.location.href = /
-    }
-
-    {{-- on update, ajax to back end with food and day --}}
-    function increment(incrementor, target){
+    function increment(incrementor, target, recommended) {
+        console.log(target);
         var value = parseInt(document.getElementById(target).value);
         value+=incrementor;
-        document.getElementById(target).value = value;
+        if (value > recommended) {
+        } else {
+            document.getElementById(target).value = value;
 
-        var dayId = 1;
-        var allFoods = [];
+            var data = target.split("-");
 
-        $.ajax({
-            url: "/save",
-            data: {
-                dayId: dayId,
-                newValues: allFoods
+            if ( value >= recommended ) {
+                document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
             }
-        })
-                .done(function (response) {
-                    console.log(response);
-                    console.log('yes');
-                    $('#success').show();
-                    window.scrollTo(0, 0);
 
-                })
-                .fail(function () {
-                    console.log("error");
-                });
+            $.ajax({
+                url: "/save2",
+                cache: false,
+                data: {
+                    food: data[0],
+                    dayId: data[1],
+                    value: value
+                }
+            })
+                    .done(function (response) {
+                        console.log(response);
+                        console.log('yes');
+                    })
+                    .fail(function () {
+                        console.log("error");
+                    });
+        }
     }
 </script>
