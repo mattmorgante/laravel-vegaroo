@@ -2,6 +2,8 @@
 
 @include('partials.nav')
 @section('content')
+
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
         google.charts.load('current', {packages: ['corechart', 'bar']});
@@ -10,7 +12,7 @@
         function drawBasic() {
 
             var data = google.visualization.arrayToDataTable([
-                ['Food', '2010 Population'],
+                ['Food', '% Consumed'],
                 ['Beans', {{ $week['beans'] }}],
                 ['Greens', {{ $week['greens'] }}],
                 ['Cruciferous', {{ $week['cruciferous'] }}],
@@ -41,7 +43,34 @@
             var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
             chart.draw(data, options);
-        }    </script>
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Day', '% of Total'],
+                ['2013',  100],
+                ['2014',  80],
+                ['2015',  60],
+                ['2016',  30],
+                ['2016',  70],
+                ['2016',  70],
+                ['2016',  45]
+            ]);
+
+            var options = {
+                legend: { position: "none" },
+                hAxis: {title: 'Day of Week'},
+                vAxis: {minValue: 0, maxValue:100}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+            chart.draw(data, options);
+        }
+    </script>
 
     <div class="container">
         <h2>Header Info</h2>
@@ -64,6 +93,7 @@
         </div>
 
         <h2>Weekly Report</h2>
+        <div id="chart_div2" style="width: 900px; height: 500px"></div>
         <div id="chart_div" style="width: 900px; height: 500px;"></div>
 
 

@@ -113,6 +113,20 @@ class HomeController extends Controller
             $week[$food->slug] = 100*(round($weekPercentage, 2));
         }
 
+        $percentages =[];
+        $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
+        foreach ($days as $day) {
+            $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+
+            $day->percentage = $day->sum / 26;
+            if ($day->percentage > 1){
+                $day->percentage = 1;
+            }
+
+            $day->percentage = 100*(round($day->percentage, 2));
+            $percentages[$day->day] = $day->percentage;
+        }
+
         return view('user-home-2')->with([
             'foodNames' => $foodNames,
             'recServings' => $recServings,
@@ -120,6 +134,7 @@ class HomeController extends Controller
             'foods' => $foods,
             'day' => $day,
             'week' => $week,
+            'percentages' => $percentages
         ]);
     }
 

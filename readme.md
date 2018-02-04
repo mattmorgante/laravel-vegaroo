@@ -13,11 +13,10 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
-- bar chart weekly summary
 - datepicker 
-- make it able to edit any day immediately upon signing up 
-- servings on home page as well (more info on the detail page) 
-- can only update one row at a time 
+- style daily 
+- servings on home page as well (more info on the detail page)
+- disable caching on home
 - Content and images for detail pages with links to recipes 
 
 ------------------------------------------------
