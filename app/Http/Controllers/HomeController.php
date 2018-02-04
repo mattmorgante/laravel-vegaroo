@@ -115,7 +115,9 @@ class HomeController extends Controller
 
         $percentages =[];
         $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
+        $i =0;
         foreach ($days as $day) {
+
             $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
 
             $day->percentage = $day->sum / 26;
@@ -124,7 +126,13 @@ class HomeController extends Controller
             }
 
             $day->percentage = 100*(round($day->percentage, 2));
-            $percentages[$day->day] = $day->percentage;
+            $percentages[$i] = $day->percentage;
+            $i++;
+        }
+
+        $last7days = [];
+        for ($i=0;$i<7; $i++) {
+            $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
         }
 
         return view('user-home-2')->with([
@@ -134,7 +142,8 @@ class HomeController extends Controller
             'foods' => $foods,
             'day' => $day,
             'week' => $week,
-            'percentages' => $percentages
+            'percentage' => $percentages,
+            'days' => $last7days
         ]);
     }
 

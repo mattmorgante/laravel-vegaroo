@@ -52,13 +52,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Day', '% of Total'],
-                ['2013',  100],
-                ['2014',  80],
-                ['2015',  60],
-                ['2016',  30],
-                ['2016',  70],
-                ['2016',  70],
-                ['2016',  45]
+                ['{{ $days[6] }}',  {{ $percentage[6] }}],
+                ['{{ $days[5] }}',  {{ $percentage[5] }}],
+                ['{{ $days[4] }}',  {{ $percentage[4] }}],
+                ['{{ $days[3] }}',  {{ $percentage[3] }}],
+                ['{{ $days[2] }}',  {{ $percentage[2] }}],
+                ['{{ $days[1] }}',  {{ $percentage[1] }}],
+                ['{{ $days[0] }}',  {{ $percentage[0] }}]
             ]);
 
             var options = {
