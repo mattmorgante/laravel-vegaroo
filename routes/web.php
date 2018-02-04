@@ -31,7 +31,7 @@ Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
 Route::get('/vegan-on-a-budget', 'ArticlesController@budget');
 Route::get('/pantry', 'ArticlesController@pantry');
 Route::get('/values', 'ArticlesController@about');
-Route::get('/nutrition', 'ArticlesCo    ntroller@nutrition');
+Route::get('/nutrition', 'ArticlesController@nutrition');
 Route::get('/small-steps', 'ArticlesController@smallSteps');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
 Route::get('/celebrities', 'ArticlesController@celebrities');
@@ -46,5 +46,6 @@ Route::get('/home2/{date?}', 'HomeController@userIndex2')->name('home2');
 Route::get('/save', 'HomeController@save')->name('save');
 Route::get('/save2', 'HomeController@save2')->name('save2');
 
+Route::get('/logout', 'HomeController@logout');
 Auth::routes();
 
