@@ -7,6 +7,7 @@ use App\Foods;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -80,7 +81,14 @@ class HomeController extends Controller
     public function userIndex2(Request $request){
         $userId = (Auth::user()->id);
 
+
         $date = $request->date;
+
+        if ($date == null) {
+            $todayFormatted = Carbon::now()->toDateString();
+            return Redirect::to('home2/' . $todayFormatted);
+        }
+
         $today = Days::where('day', $date)
             ->where('user_id', $userId)
             ->first();
