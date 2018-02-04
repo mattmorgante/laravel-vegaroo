@@ -136,12 +136,13 @@ class HomeController extends Controller
             $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
         }
 
+
         return view('user-home-2')->with([
             'foodNames' => $foodNames,
             'recServings' => $recServings,
             'daysOfUser' => $daysOfUser,
             'foods' => $foods,
-            'day' => $today,
+            'today' => $today,
             'week' => $week,
             'percentage' => $percentages,
             'days' => $last7days

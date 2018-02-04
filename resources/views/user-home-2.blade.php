@@ -74,7 +74,7 @@
 
     <div class="container">
         <h2>Header Info</h2>
-        <p>Daily Progress = {{ $day->percentage }}% </p>
+        <p>Daily Progress = {{ $today->percentage }}% </p>
         <p>Date picker = on select, go to route with new date</p>
         <h2>Cards</h2>
 
@@ -82,12 +82,12 @@
 
         <div class="card-wrapper">
         @foreach ($foods as $food)
-            <div class="{{ ($day->{"$food->slug"} >= $food->recommended) ? 'green' : '' }} food-card">
+            <div class="{{ ($today->{"$food->slug"} >= $food->recommended) ? 'green' : '' }} food-card">
                 <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
                 <br>
-                <i class="fas fa-minus-circle" onclick='increment(-1, "{{ $food->slug }}-{{ $day->id }}", "{{ $food->recommended }}")'></i>
-                <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$day->id}}' value='{{ $day->{"$food->slug"} }}'> / {{ $food->recommended }}
-                <i class="fas fa-plus-circle" onclick='increment(1, "{{ $food->slug }}-{{ $day->id }}", "{{ $food->recommended }}" )'></i>
+                <i class="fas fa-minus-circle" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
+                <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> / {{ $food->recommended }}
+                <i class="fas fa-plus-circle" onclick='increment(1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}" )'></i>
             </div>
         @endforeach
         </div>
