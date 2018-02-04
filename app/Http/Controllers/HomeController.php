@@ -81,22 +81,23 @@ class HomeController extends Controller
         $userId = (Auth::user()->id);
 
         $date = $request->date;
-        $day = Days::where('day', $date)
+        $today = Days::where('day', $date)
             ->where('user_id', $userId)
             ->first();
 
-        if (empty($day)) {
-            $day = $this->createADay($userId);
+
+        if (empty($today)) {
+            $today = $this->createADay($userId);
         }
 
-        $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+        $today->sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
 
-        $day->percentage = $day->sum / 26;
-        if ($day->percentage > 1){
-            $day->percentage = 1;
+        $today->percentage = $today->sum / 26;
+        if ($today->percentage > 1){
+            $today->percentage = 1;
         }
 
-        $day->percentage = 100*(round($day->percentage, 2));
+        $today->percentage = 100*(round($today->percentage, 2));
 
         $foods = Foods::all();
 
@@ -140,7 +141,7 @@ class HomeController extends Controller
             'recServings' => $recServings,
             'daysOfUser' => $daysOfUser,
             'foods' => $foods,
-            'day' => $day,
+            'day' => $today,
             'week' => $week,
             'percentage' => $percentages,
             'days' => $last7days
