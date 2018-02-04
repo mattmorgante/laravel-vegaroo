@@ -71,12 +71,34 @@
             chart.draw(data, options);
         }
     </script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Daily Progress', 'Percentage'],
+                ['Daily Progress', {{ $today->percentage }}],
+                ['Remaining', 100 - {{ $today->percentage }}]
+            ]);
+
+            var options = {
+                legend: 'none',
+                slices: {
+                    0: { color: 'blue' },
+                    1: { color: '#ED4337' }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('daily-progress'));
+            chart.draw(data, options);
+        }
+    </script>
 
     <div class="container">
-        <h2>Header Info</h2>
-        <p>Daily Progress = {{ $today->percentage }}% </p>
-        <p>Date picker = on select, go to route with new date</p>
-        <h2>Cards</h2>
+        <h2>Daily Progress</h2>
+        <div id="daily-progress"style="width: 100%; height: 400px;"></div>
+
+        {{--<p>TODO Date picker = on select, go to route with new date</p>--}}
 
 
 
