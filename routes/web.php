@@ -41,11 +41,11 @@ Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'recipes_controller@upvote');
 
 Route::get('/home', 'HomeController@userIndex')->name('home');
-Route::get('/home2/{date?}', 'HomeController@userIndex2')->name('home2');
+Route::get('/home2/{date?}', 'HomeController@userIndex2')->name('home2')->middleware('auth');
 
-Route::get('/save', 'HomeController@save')->name('save');
-Route::get('/save2', 'HomeController@save2')->name('save2');
+Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
+Route::get('/save2', 'HomeController@save2')->name('save2')->middleware('auth');
 
-Route::get('/logout', 'HomeController@logout');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Auth::routes();
 

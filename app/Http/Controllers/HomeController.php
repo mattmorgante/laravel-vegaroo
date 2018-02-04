@@ -173,13 +173,6 @@ class HomeController extends Controller
         $today->save();
     }
 
-    public function logout () {
-        //logout user
-        auth()->logout();
-        // redirect to homepage
-        return redirect('/');
-    }
-
     private function createADay($userId){
         $today = new Days();
         $today->user_id = $userId;

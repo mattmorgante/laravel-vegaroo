@@ -9,10 +9,18 @@
             <li><a href="/resources">Resources</a></li>
             <li><a href="/vegan-recipes">Recipes</a></li>
             <li><a href="/values">Values</a></li>
-            @if (Auth::check())
-                <li><a href="{{ url('/logout') }}">Logout</a></li>
+            @if ( Auth::guest() )
+                <li><a href="{{ url('/login') }}">Log In</a></li>
             @else
-                <li><a href="{{ url('/login') }}">Login</a></li>
+                <li><a href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form></li>
             @endif
 
         </ul>
