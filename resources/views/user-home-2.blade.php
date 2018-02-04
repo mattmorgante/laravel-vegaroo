@@ -2,6 +2,47 @@
 
 @include('partials.nav')
 @section('content')
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Food', '2010 Population'],
+                ['Beans', {{ $week['beans'] }}],
+                ['Greens', {{ $week['greens'] }}],
+                ['Cruciferous', {{ $week['cruciferous'] }}],
+                ['Berries', {{ $week['berries'] }}],
+                ['Fruits', {{ $week['fruits'] }}],
+                ['Vegetables', {{ $week['vegetables'] }}],
+                ['Grains', {{ $week['grains'] }}],
+                ['Flaxseeds', {{ $week['flaxseeds'] }}],
+                ['Nuts', {{ $week['nuts'] }}],
+                ['Spices', {{ $week['spices'] }}],
+                ['Beverages', {{ $week['water'] }}],
+                ['Exercise', {{ $week['exercise'] }}]
+            ]);
+
+            var options = {
+                legend: { position: "none" },
+
+                hAxis: {
+                    title: '% Consumed',
+                    minValue: 0,
+                    maxValue: 100
+                },
+                vAxis: {
+                    title: 'Food'
+                }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }    </script>
+
     <div class="container">
         <h2>Header Info</h2>
         <p>Daily Progress = {{ $day->percentage }}% </p>
@@ -23,7 +64,7 @@
         </div>
 
         <h2>Weekly Report</h2>
-        <p>Bar Chart</p>
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
 
 
     </div>

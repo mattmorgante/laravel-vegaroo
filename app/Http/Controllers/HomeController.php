@@ -78,14 +78,16 @@ class HomeController extends Controller
     }
 
     public function userIndex2(Request $request){
-        // ToDo: pass through date
-
         $userId = (Auth::user()->id);
 
         $date = $request->date;
         $day = Days::where('day', $date)
             ->where('user_id', $userId)
             ->first();
+
+        if (empty($day)) {
+            $day = $this->createADay($userId);
+        }
 
         $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
 
@@ -97,18 +99,27 @@ class HomeController extends Controller
         $day->percentage = 100*(round($day->percentage, 2));
 
         $foods = Foods::all();
+
         $foodNames = Foods::all()->pluck('name');
         $recServings = Foods::all()->pluck('recommended');
 
         $daysOfUser = Days::where('user_id', $userId)->orderBy('day', 'desc')->get();
 
+        $week = [];
+        foreach ($foods as $food) {
+            $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
+            $weekRecommended = $food->recommended * 7;
+            $weekPercentage = array_sum($weekData) / $weekRecommended;
+            $week[$food->slug] = 100*(round($weekPercentage, 2));
+        }
 
         return view('user-home-2')->with([
             'foodNames' => $foodNames,
             'recServings' => $recServings,
             'daysOfUser' => $daysOfUser,
             'foods' => $foods,
-            'day' => $day
+            'day' => $day,
+            'week' => $week,
         ]);
     }
 

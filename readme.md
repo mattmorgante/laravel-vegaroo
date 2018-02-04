@@ -19,7 +19,6 @@ Data Feature / Daily Dozen
 - servings on home page as well (more info on the detail page) 
 - can only update one row at a time 
 - Content and images for detail pages with links to recipes 
-- How to integrate the save button? Looks weird / on the outside 
 
 ------------------------------------------------
 
