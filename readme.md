@@ -17,6 +17,7 @@ Data Feature / Daily Dozen
 - style daily 
 - servings on home page as well (more info on the detail page)
 - disable caching on home
+- stays green if it goes down! 
 - Content and images for detail pages with links to recipes 
 
 ------------------------------------------------

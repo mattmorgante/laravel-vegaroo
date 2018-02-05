@@ -3,7 +3,6 @@
 @include('partials.nav')
 @section('content')
 
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
         google.charts.load('current', {packages: ['corechart', 'bar']});
@@ -95,11 +94,10 @@
     </script>
 
     <div class="container">
-        <h2>Daily Progress</h2>
+        <h2 style="text-align: center; color: #26ce81;">Daily Progress</h2>
         <div id="daily-progress"style="width: 100%; height: 400px;"></div>
 
         {{--<p>TODO Date picker = on select, go to route with new date</p>--}}
-
 
 
         <div class="card-wrapper">
@@ -115,8 +113,8 @@
         </div>
 
         <h2>Weekly Report</h2>
-        <div id="chart_div2" style="width: 900px; height: 500px"></div>
-        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="chart_div2" style="width: 100%; height: 500px"></div>
+        <div id="chart_div" style="width: 100%; height: 500px;"></div>
 
 
     </div>
