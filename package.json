@@ -19,6 +19,7 @@
         "vue": "^2.1.10"
     },
     "dependencies": {
-        "laravel-mix-purgecss": "^1.0.2"
+        "laravel-mix-purgecss": "^1.0.2",
+        "pikaday": "^1.7.0"
     }
 }

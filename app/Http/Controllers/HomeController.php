@@ -81,8 +81,9 @@ class HomeController extends Controller
     public function userIndex2(Request $request){
         $userId = (Auth::user()->id);
 
-
         $date = $request->date;
+
+//        dd($date);
 
         if ($date == null) {
             $todayFormatted = Carbon::now()->toDateString();

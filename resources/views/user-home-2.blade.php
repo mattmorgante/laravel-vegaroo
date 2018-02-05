@@ -94,8 +94,11 @@
     </script>
 
     <div class="container">
+        <input type="text" id="datepicker" onchange="retrieveDate()">
+        <button id="go-button">Go</button>
         <h2 style="text-align: center; color: #26ce81;">Daily Progress</h2>
         <div id="daily-progress"style="width: 100%; height: 400px;"></div>
+
 
         {{--<p>TODO Date picker = on select, go to route with new date</p>--}}
 
@@ -118,6 +121,36 @@
 
 
     </div>
+    <script src="{{asset('js/pikaday.js')}}"></script>
+    <script>
+        var picker = new Pikaday({ field: document.getElementById('datepicker') });
+        picker.gotoToday();
+
+        function retrieveDate() {
+            var date = picker.getDate();
+            console.log(date);
+        }
+
+        document.getElementById("go-button").addEventListener("click", function(event){
+            event.preventDefault();
+            var date = picker.getDate();
+            var newdate = formatDate(date);
+            console.log('/home2/' + newdate);
+            window.location.href=('/home2/' + newdate);
+        });
+
+        function formatDate(date) {
+            var d = new Date(date),
+                    month = '' + (d.getMonth() + 1),
+                    day = '' + d.getDate(),
+                    year = d.getFullYear();
+
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+
+            return [year, month, day].join('-');
+        }
+    </script>
 
 @endsection
 
@@ -155,3 +188,5 @@
         }
     }
 </script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"/>
