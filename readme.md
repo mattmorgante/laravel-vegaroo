@@ -1,5 +1,6 @@
 # Vegaroo has simple and delicious plant-based meals and concise resources to help people eat fewer animal products 
 
+test
 SEO Problems 
 - No h2 
 - Canonical URL doesn't work because HTML is minified 
