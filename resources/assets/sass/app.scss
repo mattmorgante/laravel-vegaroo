@@ -31,10 +31,22 @@ h3 {
   margin-bottom: 10px;
 }
 
-.header-inline {
-  display: flex;
-  justify-content: space-around;
+@media (max-width: 767px) {
+  .header-inline {
+    display: block;
+  }
+
+  .datepicker-wrapper {
+    text-align: center;
+  }
 }
+@media (min-width: 768px) {
+  .header-inline {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 
 #datepicker {
   height: 30px;
@@ -503,7 +515,7 @@ input .user-input #email {
   background-color: white;
   color: #26ce81;
   height: 30px;
-width: 50px;
+  width: 50px;
   margin: 15px;
   border-radius: 4px;
   cursor: pointer;

@@ -97,7 +97,7 @@
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">Your Daily Progress for {{ $displayDate }}</h2>
 
-        <div>
+        <div class="datepicker-wrapper">
           <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
           <button id="go-button">Go</button>
         </div>

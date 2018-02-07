@@ -29,12 +29,24 @@ h3 {
   margin-bottom: 10px;
 }
 
-.header-inline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+@media (max-width: 767px) {
+  .header-inline {
+    display: block;
+  }
+
+  .datepicker-wrapper {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 #datepicker {
