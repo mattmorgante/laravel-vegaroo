@@ -43,6 +43,13 @@ class recipes_controller extends Controller
 
     public function show($category, $slug = null)
     {
+        if ($category == 'popular') {
+          $recipes = recipe::orderBy('upvotes', 'desc')->get();
+          return view('popularRecipes')->with([
+              'recipes' => $recipes
+          ]);
+        }
+
         if ($slug == null) {
             $recipes = recipe::where('category', $category)->get();
 
