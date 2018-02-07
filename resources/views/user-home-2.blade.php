@@ -104,7 +104,12 @@
 
       </div>
 
-        <div id="daily-progress"style="width: 100%; height: 400px;"></div>
+        <div id="myProgress">
+            <div id="myBar" style="width: {{ $today->percentage }}%;">{{ $today->percentage }}%</div>
+        </div>
+
+        <br>
+        {{--<div id="daily-progress"style="width: 100%; height: 400px;"></div>--}}
 
 
         {{--<p>TODO Date picker = on select, go to route with new date</p>--}}
@@ -180,6 +185,7 @@
 
         } else {
             document.getElementById(target).value = value;
+            updateBar(incrementor);
 
             var data = target.split("-");
 
@@ -204,6 +210,21 @@
                         console.log("error");
                     });
         }
+    }
+
+    function updateBar(incrementor) {
+        var bar = document.getElementById("myBar");
+        var width = bar.style.width;
+        width = width.slice(0, -1);
+        width = parseInt(width);
+        var newWidth = "0";
+        if (incrementor == -1) {
+            newWidth = (width - 4) +'%';
+        } else {
+            newWidth = (width + 4) +'%';
+        }
+        bar.style.width = newWidth;
+        bar.firstChild.nodeValue = newWidth;
     }
 </script>
 

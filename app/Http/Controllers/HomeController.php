@@ -47,7 +47,7 @@ class HomeController extends Controller
 
         $today->sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
 
-        $today->percentage = $today->sum / 26;
+        $today->percentage = $today->sum / 25;
         if ($today->percentage > 1){
             $today->percentage = 1;
         }
@@ -76,7 +76,7 @@ class HomeController extends Controller
 
             $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
 
-            $day->percentage = $day->sum / 26;
+            $day->percentage = $day->sum / 25;
             if ($day->percentage > 1){
                 $day->percentage = 1;
             }

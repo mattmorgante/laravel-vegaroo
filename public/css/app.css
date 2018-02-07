@@ -549,3 +549,16 @@ input .user-input #email {
   font-size: 16px;
 }
 
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  height: 30px;
+  background-color: #26ce81;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
