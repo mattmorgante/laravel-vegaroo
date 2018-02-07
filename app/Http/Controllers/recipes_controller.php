@@ -97,8 +97,7 @@ class recipes_controller extends Controller
         $recipe = recipe::where('slug', $request->input('slug'))->first();
         $currentUpvotes = $recipe->upvotes;
         $recipe->upvotes = $currentUpvotes + 1;
-        $recipe->update();
-        return true;
+        $recipe->save();
     }
 
     public function sorted() {
@@ -106,7 +105,7 @@ class recipes_controller extends Controller
 
         // sort them
 
-        // return as $recipes 
+        // return as $recipes
 
     }
 

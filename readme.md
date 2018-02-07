@@ -16,9 +16,6 @@ Data Feature / Daily Dozen
 - serving sizes
 - next day / yesterday buttons
 - Content and images for detail pages with links to recipes
--
-
-------------------------------------------------
 
 Feature #2
 - Upvote a recipe
