@@ -83,12 +83,16 @@ class HomeController extends Controller
 
         $date = $request->date;
 
-//        dd($date);
-
         if ($date == null) {
             $todayFormatted = Carbon::now()->toDateString();
             return Redirect::to('home2/' . $todayFormatted);
         }
+
+        $date2 = explode('-', $date);
+
+        $displayDate = Carbon::createFromDate($date2[0], $date2[1], $date2[2]);
+
+        $displayDate = $displayDate->toFormattedDateString();
 
         $today = Days::where('day', $date)
             ->where('user_id', $userId)
@@ -154,7 +158,8 @@ class HomeController extends Controller
             'today' => $today,
             'week' => $week,
             'percentage' => $percentages,
-            'days' => $last7days
+            'days' => $last7days,
+            'displayDate' => $displayDate
         ]);
     }
 

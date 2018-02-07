@@ -94,7 +94,8 @@
     </script>
 
     <div class="container">
-        <input type="text" id="datepicker" onchange="retrieveDate()">
+        <h2>Your Daily Progress for {{ $displayDate }}</h2>
+        <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
         <button id="go-button">Go</button>
         <h2 style="text-align: center; color: #26ce81;">Daily Progress</h2>
         <div id="daily-progress"style="width: 100%; height: 400px;"></div>
@@ -159,13 +160,20 @@
         console.log(target);
         var value = parseInt(document.getElementById(target).value);
         value+=incrementor;
+
+        if (value < recommended) {
+            document.getElementById(target).parentElement.style.backgroundColor = "white";
+        }
+
+
         if (value > recommended) {
+
         } else {
             document.getElementById(target).value = value;
 
             var data = target.split("-");
 
-            if ( value >= recommended ) {
+            if ( value == recommended ) {
                 document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
             }
 

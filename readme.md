@@ -13,11 +13,11 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
-- datepicker 
-- style daily 
 - servings on home page as well (more info on the detail page)
 - disable caching on home
-- stays green if it goes down! 
+- weekly report is wrong 
+- fill date field on page load
+- day before / after buttons
 - Content and images for detail pages with links to recipes 
 
 ------------------------------------------------
