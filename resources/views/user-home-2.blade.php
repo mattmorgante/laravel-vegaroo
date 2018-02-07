@@ -94,10 +94,16 @@
     </script>
 
     <div class="container">
-        <h2>Your Daily Progress for {{ $displayDate }}</h2>
-        <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
-        <button id="go-button">Go</button>
-        <h2 style="text-align: center; color: #26ce81;">Daily Progress</h2>
+      <div class="header-inline">
+        <h2 style="text-align: center; color: #26ce81;">Your Daily Progress for {{ $displayDate }}</h2>
+
+        <div>
+          <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
+          <button id="go-button">Go</button>
+        </div>
+
+      </div>
+
         <div id="daily-progress"style="width: 100%; height: 400px;"></div>
 
 
@@ -124,7 +130,11 @@
     </div>
     <script src="{{asset('js/pikaday.js')}}"></script>
     <script>
-        var picker = new Pikaday({ field: document.getElementById('datepicker') });
+        var picker = new Pikaday({
+          field: document.getElementById('datepicker'),
+          maxDate: new Date(),
+          minDate: new Date('January 1, 2018 00:00:00')
+        });
         picker.gotoToday();
 
         function retrieveDate() {

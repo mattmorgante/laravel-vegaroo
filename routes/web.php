@@ -40,12 +40,12 @@ Route::get('/blueprint', 'recipes_controller@blueprint');
 Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'recipes_controller@upvote');
 
-Route::get('/home', 'HomeController@userIndex')->name('home');
 Route::get('/home2/{date?}', 'HomeController@userIndex2')->name('home2')->middleware('auth');
+
+Route::get('/home', 'HomeController@userIndex')->name('home');
 
 Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
 Route::get('/save2', 'HomeController@save2')->name('save2')->middleware('auth');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Auth::routes();
-

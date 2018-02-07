@@ -21,63 +21,6 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the user dashboard.
-     */
-    public function userIndex()
-    {
-        $userId = (Auth::user()->id);
-        $today = $this->getToday($userId);
-
-        if (empty($today)) {
-            $today = $this->createADay($userId);
-        }
-
-        $foods = Foods::all();
-        $foodNames = Foods::all()->pluck('name');
-        $recServings = Foods::all()->pluck('recommended');
-
-        $daysOfUser = Days::where('user_id', $userId)->orderBy('day', 'desc')->get();
-
-
-        if (count($daysOfUser) < 1) {
-            $today = $this->createADay($userId);
-            $daysOfUser = Days::where('user_id', $userId)->get();
-        }
-
-
-        foreach ($daysOfUser as $day) {
-            $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
-
-            $day->percentage = $day->sum / 26;
-            if ($day->percentage > 1){
-                $day->percentage = 1;
-            }
-
-            $day->percentage = 100*(round($day->percentage, 2));
-
-        }
-
-        $sums = [];
-        foreach ($foods as $food) {
-            $sum = Days::where('user_id', $userId)->orderBy('day', 'desc')->take(7)->pluck($food->slug)->sum();
-
-            $recommendedWeekly = ($food->recommended * 7);
-
-            $sums[$food->slug] = 100*(round($sum / $recommendedWeekly, 2));
-        }
-
-
-        return view('user-home')->with([
-            'foodNames' => $foodNames,
-            'recServings' => $recServings,
-            'daysOfUser' => $daysOfUser,
-            'foods' => $foods,
-            'today' => $today,
-            'sums' => $sums
-        ]);
-    }
-
     public function userIndex2(Request $request){
         $userId = (Auth::user()->id);
 
@@ -98,9 +41,8 @@ class HomeController extends Controller
             ->where('user_id', $userId)
             ->first();
 
-
         if (empty($today)) {
-            $today = $this->createADay($userId);
+            $today = $this->createADay($userId, $date);
         }
 
         $today->sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
@@ -187,19 +129,20 @@ class HomeController extends Controller
         $today->save();
     }
 
-    private function createADay($userId){
+    private function createADay($userId, $day){
         $today = new Days();
         $today->user_id = $userId;
-        $today->day = Carbon::now()->toDateString();
+        $today->day = $day;
         $today->save();
-        $today = $this->getToday($userId);
+        $today = $this->getADay($userId, $day);
         return $today;
     }
 
-    private function getToday($userId) {
-        $dateToday = Carbon::now()->toDateString();
-
-        return Days::where('day', $dateToday)
+    private function getAday($userId, $date = null) {
+      if ($date == null) {
+        $date = Carbon::now()->toDateString();
+      }
+        return Days::where('day', $date)
             ->where('user_id', $userId)
             ->first();
     }
