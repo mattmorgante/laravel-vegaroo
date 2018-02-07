@@ -21,14 +21,14 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function userIndex2(Request $request){
+    public function userIndex(Request $request){
         $userId = (Auth::user()->id);
 
         $date = $request->date;
 
         if ($date == null) {
             $todayFormatted = Carbon::now()->toDateString();
-            return Redirect::to('home2/' . $todayFormatted);
+            return Redirect::to('home/' . $todayFormatted);
         }
 
         $date2 = explode('-', $date);
@@ -105,27 +105,10 @@ class HomeController extends Controller
         ]);
     }
 
-    public function save2(Request $request) {
+    public function save(Request $request) {
         $today = Days::where('id', $request->input('dayId'))->first();
         $food = $request->input('food');
         $today->{$food} = $request->input('value');
-        $today->save();
-    }
-
-    public function save(Request $request) {
-        $today = Days::where('id', $request->input('dayId'))->first();
-        $foods = $request->input('newValues');
-        $today->beans = $foods['beans'];
-        $today->greens = $foods['greens'];
-        $today->cruciferous = $foods['cruciferous'];
-        $today->berries = $foods['berries'];
-        $today->fruits = $foods['fruits'];
-        $today->vegetables = $foods['vegetables'];
-        $today->grains = $foods['grains'];
-        $today->flaxseeds = $foods['flaxseeds'];
-        $today->nuts = $foods['nuts'];
-        $today->spices = $foods['spices'];
-        $today->water = $foods['water'];
         $today->save();
     }
 

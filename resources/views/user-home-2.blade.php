@@ -30,12 +30,10 @@
                 legend: { position: "none" },
 
                 hAxis: {
-                    title: '% Consumed',
                     minValue: 0,
                     maxValue: 100
                 },
                 vAxis: {
-                    title: 'Food'
                 }
             };
 
@@ -62,33 +60,10 @@
 
             var options = {
                 legend: { position: "none" },
-                hAxis: {title: 'Day of Week'},
                 vAxis: {minValue: 0, maxValue:100}
             };
 
             var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
-            chart.draw(data, options);
-        }
-    </script>
-    <script type="text/javascript">
-        google.charts.load("current", {packages:["corechart"]});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Daily Progress', 'Percentage'],
-                ['Daily Progress', {{ $today->percentage }}],
-                ['Remaining', 100 - {{ $today->percentage }}]
-            ]);
-
-            var options = {
-                legend: 'none',
-                slices: {
-                    0: { color: 'blue' },
-                    1: { color: '#ED4337' }
-                }
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('daily-progress'));
             chart.draw(data, options);
         }
     </script>
@@ -119,7 +94,7 @@
         @foreach ($foods as $food)
             <div class="{{ ($today->{"$food->slug"} >= $food->recommended) ? 'green' : '' }} food-card">
                 <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
-                <br>
+                <br><br>
                 <i class="fas fa-minus-circle" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
                 <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> / {{ $food->recommended }}
                 <i class="fas fa-plus-circle" onclick='increment(1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}" )'></i>

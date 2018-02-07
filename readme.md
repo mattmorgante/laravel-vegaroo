@@ -15,9 +15,6 @@ Bug Fixes
 
 Data Feature / Daily Dozen
 - servings on home page as well (more info on the detail page)
-- disable caching on home
-- weekly report is wrong 
-- fill date field on page load
 - day before / after buttons
 - Content and images for detail pages with links to recipes 
 
