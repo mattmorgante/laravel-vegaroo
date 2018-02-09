@@ -58,15 +58,7 @@
         }
     </script>
 
-    <script>
-        function upvote() {
-            var recipeSlug = "burrito-bowl";
-            var numberOfUpvotes = document.getElementById('number_of_upvotes');
-            console.log(numberOfUpvotes);
-
-    </script>
-
-        @endsection
+@endsection
 
 @section('content')
 
@@ -112,10 +104,12 @@
         </div>
     </div>
 
-    {{--<div class="upvotes">--}}
-        {{--<h2>Upvotes: <span id="number_of_upvotes">{{ $recipe->upvotes }}</span></h2>--}}
-        {{--<button onclick="upvote()">Upvote</button>--}}
-    {{--</div>--}}
+    <div class="upvotes">
+        <button class="btn" onclick="upvote()">
+          <i class="fas fa-caret-up fa-2x"></i>
+          <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
+        </button>
+    </div>
 
     <div class="container">
 
@@ -158,12 +152,15 @@
 
 <script>
     function upvote() {
-        var recipeSlug = "burrito-bowl";
-        var numberOfUpvotes = document.getElementById('number_of_upvotes');
-        console.log(numberOfUpvotes);
+      var recipeSlug = window.location.href;
+      recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
+      var currentVotes = document.getElementById('number_of_upvotes').innerHTML;
+      currentVotes++;
+      document.getElementById('number_of_upvotes').innerHTML = currentVotes;
 
         $.ajax({
             url: "/upvote",
+            cache: false,
             data: {
                 slug: recipeSlug
             }

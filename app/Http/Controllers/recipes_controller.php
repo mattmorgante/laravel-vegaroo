@@ -43,6 +43,13 @@ class recipes_controller extends Controller
 
     public function show($category, $slug = null)
     {
+        if ($category == 'popular') {
+          $recipes = recipe::orderBy('upvotes', 'desc')->get();
+          return view('popularRecipes')->with([
+              'recipes' => $recipes
+          ]);
+        }
+
         if ($slug == null) {
             $recipes = recipe::where('category', $category)->get();
 
@@ -97,8 +104,7 @@ class recipes_controller extends Controller
         $recipe = recipe::where('slug', $request->input('slug'))->first();
         $currentUpvotes = $recipe->upvotes;
         $recipe->upvotes = $currentUpvotes + 1;
-        $recipe->update();
-        return true;
+        $recipe->save();
     }
 
     public function sorted() {
@@ -106,7 +112,7 @@ class recipes_controller extends Controller
 
         // sort them
 
-        // return as $recipes 
+        // return as $recipes
 
     }
 

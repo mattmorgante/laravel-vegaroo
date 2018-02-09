@@ -6,6 +6,11 @@
 @section('content')
 
 @include('partials.nav')
+<div class="header-inline">
+  <h2 class="other-recipes">All Recipes</h2>
+  <h4><a href="/vegan-recipes/popular">Sort By Most Popular</a></h4>
+</div>
+
 
 <h2 class="other-recipes">Breakfasts</h2>
 @foreach ($breakfasts as $recipe)

@@ -534,3 +534,14 @@ input .user-input #email {
   line-height: 30px;
   color: white;
 }
+
+.upvotes {
+  text-align: center;
+  cursor: pointer;
+  margin: 30px;
+}
+
+#number_of_upvotes {
+  margin-left: 25px;
+  font-size: 40px;
+}
