@@ -10,7 +10,7 @@
             <li><a href="/vegan-recipes">Recipes</a></li>
             <li><a href="/values">Values</a></li>
             @if ( Auth::guest() )
-                <li><a href="{{ url('/login') }}">Log In</a></li>
+                <li class="login-nav"><a href="{{ url('/login') }}">Log In</a></li>
             @else
                 <li><a href="{{ route('logout') }}"
                    onclick="event.preventDefault();

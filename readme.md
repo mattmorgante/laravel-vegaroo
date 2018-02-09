@@ -17,6 +17,8 @@ Data Feature / Daily Dozen
 - servings on home page as well (more info on the detail page)
 - day before / after buttons
 - Content and images for detail pages with links to recipes 
+- drop down menu if logged in - log out or go home 
+- 
 
 ------------------------------------------------
 
