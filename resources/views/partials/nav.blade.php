@@ -8,19 +8,10 @@
         <ul>
             <li><a href="/resources">Resources</a></li>
             <li><a href="/vegan-recipes">Recipes</a></li>
-            <li><a href="/values">Values</a></li>
             @if ( Auth::guest() )
                 <li><a href="{{ url('/login') }}">Log In</a></li>
             @else
-                <li><a href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form></li>
+                <li><a href="/home">Dashboard</a></li>
             @endif
 
         </ul>

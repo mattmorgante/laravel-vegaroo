@@ -27,6 +27,7 @@
             ]);
 
             var options = {
+                title: 'Percentage Of Each Food\u0027s Recommended Servings Consumed In The Last 7 Days',
                 legend: { position: "none" },
 
                 hAxis: {
@@ -59,6 +60,7 @@
             ]);
 
             var options = {
+                title: 'Percentage of Total Recommended Servings Consumed In The Last 7 Days',
                 legend: { position: "none" },
                 vAxis: {minValue: 0, maxValue:100}
             };
@@ -102,9 +104,24 @@
         @endforeach
         </div>
 
-        <h2>Weekly Report</h2>
+        <h2>Last 7 Days Report</h2>
         <div id="chart_div2" style="width: 100%; height: 500px"></div>
         <div id="chart_div" style="width: 100%; height: 500px;"></div>
+
+        <div class="btn-wrapper">
+          <a class="btn" href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+              Logout
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+          </form>
+
+        </div>
+        <br>
+
 
 
     </div>
