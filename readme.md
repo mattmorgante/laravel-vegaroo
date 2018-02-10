@@ -13,7 +13,6 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
-- day before / after buttons
 - Gradient for boxes based off of percentage of daily servings finished
 - Content and images for detail pages with links to recipes
 - drop down menu if logged in - log out or go home

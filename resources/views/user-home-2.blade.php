@@ -89,10 +89,18 @@
 
         <div class="card-wrapper">
         @foreach ($foods as $food)
-            <div class="{{ ($today->{"$food->slug"} >= $food->recommended) ? 'green' : '' }} food-card">
+          @if ($today->{"$food->slug"} == $food->recommended)
+            <div class="food-card" style="background-color: #26ce81">
+          @elseif ( ($today->{"$food->slug"} / $food->recommended) >= .50 )
+            <div class="food-card" style="background-color: #92e6c0">
+          @elseif  ( ($today->{"$food->slug"} / $food->recommended) >= .33 )
+            <div class="food-card" style="background-color: #d3f5e5">
+          @else
+            <div class="food-card" style="background-color: white">
+          @endif
                 <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
                 <p>{{ $food->servingSize }}</p>
-                <br><br>
+                <br>
                 <i class="fas fa-minus-circle fa-2x" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
                 <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> <span class="table-recommended"> / {{ $food->recommended }} </span>
                 <i class="fas fa-plus-circle fa-2x" onclick='increment(1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}" )'></i>
@@ -157,10 +165,10 @@
           var urlParts = window.location.href.split('/');
           var lastPart = urlParts.pop();
           var date = new Date(lastPart);
-            date.setDate(date.getDate() + incrementor);
-            var newdate = formatDate(date);
-            console.log('/home/' + newdate);
-            window.location.href=('/home/' + newdate);
+          date.setDate(date.getDate() + incrementor);
+          var newdate = formatDate(date);
+          console.log('/home/' + newdate);
+          window.location.href=('/home/' + newdate);
         }
 
     </script>
@@ -173,10 +181,21 @@
         var value = parseInt(document.getElementById(target).value);
         value+=incrementor;
 
-        if (value < recommended) {
-            document.getElementById(target).parentElement.style.backgroundColor = "white";
+        if (value == 0) {
+          document.getElementById(target).parentElement.style.backgroundColor = "white";
         }
 
+        if ( (value / recommended) >= .33 ) {
+            document.getElementById(target).parentElement.style.backgroundColor = "#d3f5e5";
+        }
+
+        if ( (value / recommended) >= .50 ) {
+            document.getElementById(target).parentElement.style.backgroundColor = "#92e6c0";
+        }
+
+        if ( value == recommended ) {
+            document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
+        }
 
         if (value > recommended) {
 
@@ -185,10 +204,6 @@
             updateBar(incrementor);
 
             var data = target.split("-");
-
-            if ( value == recommended ) {
-                document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
-            }
 
             $.ajax({
                 url: "/save",
