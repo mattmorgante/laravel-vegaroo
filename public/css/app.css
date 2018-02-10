@@ -594,3 +594,7 @@ input .user-input #email {
   font-size: 40px;
 }
 
+.fixed-nav {
+  position: fixed;
+}
+

@@ -126,6 +126,7 @@
         </div>
         <br>
     </div>
+
     <script src="{{asset('js/pikaday.js')}}"></script>
     <script>
         var picker = new Pikaday({
@@ -176,6 +177,7 @@
 @endsection
 
 <script>
+
     function increment(incrementor, target, recommended) {
         console.log(target);
         var value = parseInt(document.getElementById(target).value);
@@ -238,6 +240,32 @@
         bar.style.width = newWidth;
         bar.firstChild.nodeValue = newWidth;
     }
+
+
+window.onLoad = function sticky() {
+  var nav = document.getElementById('myProgress');
+  const navTop = nav.offsetTop;
+}
+
+function stickyNavigation() {
+  var nav = document.getElementById('myProgress');
+  const navTop = nav.offsetTop;
+
+  console.log('navTop = ' + navTop);
+  console.log('scrollY = ' + window.scrollY);
+
+  if (window.scrollY >= navTop) {
+    // nav offsetHeight = height of nav
+    document.body.style.paddingTop = nav.offsetHeight + 'px';
+    document.body.classList.add('fixed-nav');
+  } else {
+    document.body.style.paddingTop = 0;
+    document.body.classList.remove('fixed-nav');
+  }
+}
+
+window.addEventListener('scroll', stickyNavigation);
+
 </script>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"/>

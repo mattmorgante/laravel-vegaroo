@@ -13,26 +13,22 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
-- Gradient for boxes based off of percentage of daily servings finished
-- Content and images for detail pages with links to recipes
-- drop down menu if logged in - log out or go home
-- food cards need to be refactored....very sloppy!
 - Make the daily progress bar sticky
+- Content and images for detail pages with links to recipes
+- food cards need to be refactored....very sloppy!
 - Opt in for daily email alerts if no fields are filled out yet
+- save recipe as favorite
+- Home: 4 sections = daily, weekly, links to recipes, what is this? Redirect to what is this on sign up
+ 1. on daily & weekly can have links to recipes to help you hit todays/weeks goal
+- inv $$$ scraping reipes from blogs 
+- Tool tip: hover, link to detail page
+- Do a refactoring day
 
-Feature #2
-- Upvote a recipe
-- Sort all recipes page by most popular
-- Do you have to be logged in to upvote a recipe? Not yet
-
-Feature #3
-- Join button
+Feature #3 - Community
 - Enter your email and get access to:
 - Personalized help via facebook messenger (vegaroo chat)
 - Access to slack group
-- log in
-- username email password
-- save recipe as favorite
+
 
 Feature #4
 - Recipe blueprint create your own

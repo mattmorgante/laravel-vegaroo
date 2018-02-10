@@ -536,6 +536,7 @@ input .user-input #email {
   margin: 40px 0px 40px;
 }
 
+
 #myBar {
   height: 30px;
   background-color: #26ce81;
@@ -553,4 +554,8 @@ input .user-input #email {
 #number_of_upvotes {
   margin-left: 25px;
   font-size: 40px;
+}
+
+.fixed-nav {
+  position: fixed;
 }
