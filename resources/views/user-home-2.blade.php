@@ -75,8 +75,10 @@
         <h2 style="text-align: center; color: #26ce81;">Your Daily Progress for {{ $displayDate }}</h2>
 
         <div class="datepicker-wrapper">
+          <i onclick="goToYesterday()" class="fas fa-chevron-left"></i>
           <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
           <button id="go-button">Go</button>
+          <i onclick="goToTomorrow()" class="fas fa-chevron-right"></i>
         </div>
 
       </div>
@@ -85,17 +87,11 @@
             <div id="myBar" style="width: {{ $today->percentage }}%;">{{ $today->percentage }}%</div>
         </div>
 
-        <br>
-        {{--<div id="daily-progress"style="width: 100%; height: 400px;"></div>--}}
-
-
-        {{--<p>TODO Date picker = on select, go to route with new date</p>--}}
-
-
         <div class="card-wrapper">
         @foreach ($foods as $food)
             <div class="{{ ($today->{"$food->slug"} >= $food->recommended) ? 'green' : '' }} food-card">
                 <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
+                <p>{{ $food->servingSize }}</p>
                 <br><br>
                 <i class="fas fa-minus-circle" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
                 <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> / {{ $food->recommended }}
@@ -121,9 +117,6 @@
 
         </div>
         <br>
-
-
-
     </div>
     <script src="{{asset('js/pikaday.js')}}"></script>
     <script>
@@ -217,6 +210,14 @@
         }
         bar.style.width = newWidth;
         bar.firstChild.nodeValue = newWidth;
+    }
+
+    function goToYesterday() {
+
+    }
+
+    function goToTomorrow() {
+
     }
 </script>
 

@@ -53,6 +53,8 @@ h3 {
   height: 30px;
   margin-top: 25px;
   font-size: 18px;
+  border: grey 1px solid;
+  border-radius: 4px;
 }
 
 .bold {
@@ -560,11 +562,13 @@ input .user-input #email {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  border: grey 1px solid;
 }
 
 #myProgress {
   width: 100%;
   background-color: #ddd;
+  margin: 40px 0px 40px;
 }
 
 #myBar {

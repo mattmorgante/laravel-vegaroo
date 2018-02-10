@@ -13,14 +13,14 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
-- servings on home page as well (more info on the detail page)
+- food cards need to be refactored....very sloppy!
 - day before / after buttons
-- Content and images for detail pages with links to recipes 
-- drop down menu if logged in - log out or go home 
-- 
-- serving sizes
-- next day / yesterday buttons
 - Content and images for detail pages with links to recipes
+- drop down menu if logged in - log out or go home
+- Content and images for detail pages with links to recipes
+- Gradient for boxes based off of percentage of daily servings finished
+- Make the daily progress bar sticky
+- Opt in for daily email alerts if no fields are filled out yet
 
 Feature #2
 - Upvote a recipe
