@@ -75,10 +75,10 @@
         <h2 style="text-align: center; color: #26ce81;">Your Daily Progress for {{ $displayDate }}</h2>
 
         <div class="datepicker-wrapper">
-          <i onclick="goToYesterday()" class="fas fa-chevron-left"></i>
+          <i onclick="changeDateByOne(-1)" class="fas fa-chevron-left"></i>
           <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
           <button id="go-button">Go</button>
-          <i onclick="goToTomorrow()" class="fas fa-chevron-right"></i>
+          <i onclick="changeDateByOne(1)" class="fas fa-chevron-right"></i>
         </div>
 
       </div>
@@ -93,9 +93,9 @@
                 <a href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
                 <p>{{ $food->servingSize }}</p>
                 <br><br>
-                <i class="fas fa-minus-circle" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
-                <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> / {{ $food->recommended }}
-                <i class="fas fa-plus-circle" onclick='increment(1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}" )'></i>
+                <i class="fas fa-minus-circle fa-2x" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
+                <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> <span class="table-recommended"> / {{ $food->recommended }} </span>
+                <i class="fas fa-plus-circle fa-2x" onclick='increment(1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}" )'></i>
             </div>
         @endforeach
         </div>
@@ -135,6 +135,7 @@
         document.getElementById("go-button").addEventListener("click", function(event){
             event.preventDefault();
             var date = picker.getDate();
+            console.log(date);
             var newdate = formatDate(date);
             console.log('/home/' + newdate);
             window.location.href=('/home/' + newdate);
@@ -151,6 +152,17 @@
 
             return [year, month, day].join('-');
         }
+
+        function changeDateByOne(incrementor){
+          var urlParts = window.location.href.split('/');
+          var lastPart = urlParts.pop();
+          var date = new Date(lastPart);
+            date.setDate(date.getDate() + incrementor);
+            var newdate = formatDate(date);
+            console.log('/home/' + newdate);
+            window.location.href=('/home/' + newdate);
+        }
+
     </script>
 
 @endsection
@@ -210,14 +222,6 @@
         }
         bar.style.width = newWidth;
         bar.firstChild.nodeValue = newWidth;
-    }
-
-    function goToYesterday() {
-
-    }
-
-    function goToTomorrow() {
-
     }
 </script>
 

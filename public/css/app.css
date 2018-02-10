@@ -513,9 +513,13 @@ input .user-input #email {
   text-align: center;
   border: 1px solid black;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 30px;
   border-radius: 7px;
   color: black;
+}
+
+.table-recommended {
+  font-size: 30px;
 }
 
 .card-wrapper {

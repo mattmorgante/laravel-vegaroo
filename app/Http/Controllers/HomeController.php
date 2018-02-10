@@ -26,9 +26,9 @@ class HomeController extends Controller
 
         $date = $request->date;
 
-        if ($date == null) {
-            $todayFormatted = Carbon::now()->toDateString();
-            return Redirect::to('home/' . $todayFormatted);
+        if ($date == null || $date > Carbon::now()->today()) {
+          $todayFormatted = Carbon::now()->toDateString();
+          return Redirect::to('home/' . $todayFormatted);
         }
 
         $date2 = explode('-', $date);
