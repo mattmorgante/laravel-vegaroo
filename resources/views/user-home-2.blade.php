@@ -143,8 +143,8 @@
             event.preventDefault();
             var date = picker.getDate();
             var newdate = formatDate(date);
-            console.log('/home2/' + newdate);
-            window.location.href=('/home2/' + newdate);
+            console.log('/home/' + newdate);
+            window.location.href=('/home/' + newdate);
         });
 
         function formatDate(date) {
@@ -186,7 +186,7 @@
             }
 
             $.ajax({
-                url: "/save2",
+                url: "/save",
                 cache: false,
                 data: {
                     food: data[0],

@@ -9,7 +9,7 @@
             <li><a href="/resources">Resources</a></li>
             <li><a href="/vegan-recipes">Recipes</a></li>
             @if ( Auth::guest() )
-                <li><a href="{{ url('/login') }}">Log In</a></li>
+                <li class="login-nav"><a href="{{ url('/login') }}">Log In</a></li>
             @else
                 <li><a href="/home">Dashboard</a></li>
             @endif

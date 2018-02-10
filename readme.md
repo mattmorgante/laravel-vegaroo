@@ -13,6 +13,11 @@ Bug Fixes
 - Fix micronutrient graph on mobile
 
 Data Feature / Daily Dozen
+- servings on home page as well (more info on the detail page)
+- day before / after buttons
+- Content and images for detail pages with links to recipes 
+- drop down menu if logged in - log out or go home 
+- 
 - serving sizes
 - next day / yesterday buttons
 - Content and images for detail pages with links to recipes
