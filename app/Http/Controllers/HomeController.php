@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Days;
 use App\Foods;
+use App\recipe;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -58,11 +59,21 @@ class HomeController extends Controller
 
         $recServings = Foods::all()->pluck('recommended');
 
+        $recommendedRecipes = [];
+        foreach ($foods as $food) {
+            if ($food->recommended > $today->{"$food->slug"} ) {
+              $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->get();
+              $recommendedRecipes[$food->name] = $recipes;
+            }
+        }
+
+
         return view('user-home-2')->with([
             'recServings' => $recServings,
             'foods' => $foods,
             'today' => $today,
-            'displayDate' => $displayDate
+            'displayDate' => $displayDate,
+            'recommendedRecipes' => $recommendedRecipes
         ]);
     }
 

@@ -1,12 +1,46 @@
-<h1>This is beans</h1>
+@extends('layouts.app')
 
-<p>Examples</p>
+@include('partials.nav')
+@section('content')
 
-<p>Servings</p>
-- 200 grams of normal beans (solid)
-- 1/4 cup of bean spread (liquid)
--
+<div class="container">
+  <h1>{{ $food->name}}</h1>
 
-<p>Why you should eat beans</p>
+  <div class="flexible_row">
+    <div class="row_item">
+      <h2>Examples</h2>
+    </div>
 
-<p>An image/images</p>
+    <div class="row_item">
+      <h2>Serving Size</h2>
+      <p>{{ $food->servingSize}}</p>
+      <h2>Recommended Servings Per Day</h2>
+      <p>{{ $food->recommended }}</p>
+    </div>
+
+  </div>
+
+  <div class="flexible_row">
+    <div class="row_item">
+        <h2>Health benefits</h2>
+    </div>
+
+  </div>
+
+  <p>images</p>
+
+  <h3>Recipes containing {{ $food->name }}</h3>
+  <div class="flexible_row">
+      @foreach ($recipes as $recipe)
+          @include('partials.recipe-box')
+      @endforeach
+  </div>
+
+
+
+
+
+
+</div>
+
+@endsection
