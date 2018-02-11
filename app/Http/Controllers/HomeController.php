@@ -55,18 +55,16 @@ class HomeController extends Controller
 
         $today->percentage = 100*(round($today->percentage, 2));
 
-        $foods = Foods::all();
-
         $recServings = Foods::all()->pluck('recommended');
 
-        $recommendedRecipes = [];
-        foreach ($foods as $food) {
-            if ($food->recommended > $today->{"$food->slug"} ) {
-              $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->get();
-              $recommendedRecipes[$food->name] = $recipes;
-            }
-        }
+        $foods = Foods::all();
 
+        foreach ($foods as $food) {
+          if ($food->recommended > $today->{"$food->slug"} ) {
+              $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->limit(4)->get();
+              $recommendedRecipes[$food->name] = $recipes;
+          }
+        }
 
         return view('user-home-2')->with([
             'recServings' => $recServings,
@@ -94,7 +92,7 @@ class HomeController extends Controller
           $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
           $weekRecommended = $food->recommended * 7;
           $weekPercentage = array_sum($weekData) / $weekRecommended;
-          $week[$food->slug] = 100*(round($weekPercentage, 2));
+          $week[$food->name] = 100*(round($weekPercentage, 2));
       }
 
       $percentages =[];
@@ -119,10 +117,24 @@ class HomeController extends Controller
           $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
       }
 
+      asort($week);
+
+
+      $recommendedRecipes = [];
+      foreach ($week as $food => $value) {
+        if ($value < 90) {
+          $slug = Foods::where('name', $food)->pluck('slug');
+
+          $recipes = recipe::where('tags', 'LIKE', '%'.$slug[0].'%')->limit(4)->get();
+          $recommendedRecipes[$food] = $recipes;
+        }
+      }
+
       return view('weekly')->with([
           'week' => $week,
           'percentage' => $percentages,
           'days' => $last7days,
+          'recommendedRecipes' => $recommendedRecipes
       ]);
     }
 

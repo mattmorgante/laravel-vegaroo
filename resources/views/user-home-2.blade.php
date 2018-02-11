@@ -46,16 +46,19 @@
         @endforeach
         </div>
 
-        <h2>Recommended Recipes</h2>
+        <br>
+        <h2 class="other-recipes">What else should you eat today?</h2>
+
 
         @foreach ($recommendedRecipes as $name => $recipeCollection)
-          <h2>Recipes with {{ $name }}</h2>
-          <div class="flexible_row">
-          @foreach ($recipeCollection as $recipe)
-              @include('partials.recipe-box')
-          @endforeach
-          </div>
-
+          @if (count($recipeCollection) != 0 )
+            <h2>Recipes with {{ $name }}</h2>
+            <div class="flexible_row">
+            @foreach ($recipeCollection as $recipe)
+                @include('partials.recipe-box')
+            @endforeach
+            </div>
+          @endif
         @endforeach
 
         <div class="btn-wrapper">

@@ -12,18 +12,18 @@
 
         var data = google.visualization.arrayToDataTable([
             ['Food', '% Consumed'],
-            ['Beans', {{ $week['beans'] }}],
-            ['Greens', {{ $week['greens'] }}],
-            ['Cruciferous', {{ $week['cruciferous'] }}],
-            ['Berries', {{ $week['berries'] }}],
-            ['Fruits', {{ $week['fruits'] }}],
-            ['Vegetables', {{ $week['vegetables'] }}],
-            ['Grains', {{ $week['grains'] }}],
-            ['Flaxseeds', {{ $week['flaxseeds'] }}],
-            ['Nuts', {{ $week['nuts'] }}],
-            ['Spices', {{ $week['spices'] }}],
-            ['Beverages', {{ $week['water'] }}],
-            ['Exercise', {{ $week['exercise'] }}]
+            ['Beans', {{ $week['Beans'] }}],
+            ['Greens', {{ $week['Greens'] }}],
+            ['Cruciferous', {{ $week['Cruciferous'] }}],
+            ['Berries', {{ $week['Berries'] }}],
+            ['Fruits', {{ $week['Fruits'] }}],
+            ['Vegetables', {{ $week['Vegetables'] }}],
+            ['Grains', {{ $week['Grains'] }}],
+            ['Flaxseeds', {{ $week['Flaxseeds'] }}],
+            ['Nuts', {{ $week['Nuts'] }}],
+            ['Spices', {{ $week['Spices'] }}],
+            ['Water', {{ $week['Water'] }}],
+            ['Exercise', {{ $week['Exercise'] }}]
         ]);
 
         var options = {
@@ -79,7 +79,32 @@
   <h2>Your Progress Over The Last 7 Days</h2>
   <div id="chart_div2" style="width: 100%; height: 500px"></div>
   <div id="chart_div" style="width: 100%; height: 500px;"></div>
+
+  <br>
+  <h2 class="other-recipes">What else should you eat this week?</h2>
+
+  <p>Your top 3 categories for improvement are</p>
+  <div class="tags">
+  @foreach ($recommendedRecipes as $name => $recipeCollection)
+    @if ($loop->index < 3)
+        <a href="/vegan-foods/{{$name}}"><div class="btn">{{ $name }}</div></a>
+    @endif
+  @endforeach
+  </div>
+
+
+  @foreach ($recommendedRecipes as $name => $recipeCollection)
+    @if (count($recipeCollection) != 0 )
+      <h2>Recipes with {{ $name }}</h2>
+      <div class="flexible_row">
+      @foreach ($recipeCollection as $recipe)
+          @include('partials.recipe-box')
+      @endforeach
+      </div>
+    @endif
+  @endforeach
 </div>
+<br>
 
 
 @endsection

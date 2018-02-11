@@ -73,6 +73,8 @@ class recipes_controller extends Controller
 
                 $ingredients = explode(',', $recipe->ingredients);
                 $instructions = explode(';', $recipe->instructions);
+                $allTags = str_replace(' ', '', $recipe->tags);
+                $tags = explode(',', $allTags);
                 $notes = explode(';', $recipe->notes);
                 $categoryName = ucwords($recipe->category);
 
@@ -80,6 +82,7 @@ class recipes_controller extends Controller
                     'recipe' => $recipe,
                     'ingredients' => $ingredients,
                     'instructions' => $instructions,
+                    'tags' => $tags,
                     'notes' => $notes,
                     'similarRecipes' => $similarRecipes,
                     'categoryName' => $categoryName,

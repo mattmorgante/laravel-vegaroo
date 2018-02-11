@@ -104,11 +104,20 @@
         </div>
     </div>
 
-    <div class="upvotes">
-        <button class="btn" onclick="upvote()">
-          <i class="fas fa-caret-up fa-2x"></i>
-          <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
-        </button>
+    <div class="header-inline-recipe">
+
+      <div class="tags">
+        @foreach ($tags as $tag)
+          <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
+        @endforeach
+      </div>
+
+      <div class="upvotes">
+          <button class="btn" onclick="upvote()">
+            <i class="fas fa-caret-up fa-2x"></i>
+            <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
+          </button>
+      </div>
     </div>
 
     <div class="container">

@@ -48,6 +48,21 @@ h3 {
 }
 
 
+@media (max-width: 767px) {
+  .header-inline-recipe {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .header-inline-recipe {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+
 #datepicker {
   height: 30px;
   margin-top: 25px;
@@ -588,4 +603,9 @@ input .user-input #email {
 .active-nav-item {
   color: black !important;
   border-bottom: black 3px solid !important;
+}
+
+.tags {
+  cursor: pointer;
+  margin: 40px;
 }
