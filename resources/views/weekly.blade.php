@@ -81,9 +81,8 @@
   <div id="chart_div" style="width: 100%; height: 500px;"></div>
 
   <br>
-  <h2 class="other-recipes">What else should you eat this week?</h2>
+  <h2 class="other-recipes">Your top 3 categories for improvement this week are:</h2>
 
-  <p>Your top 3 categories for improvement are</p>
   <div class="tags">
   @foreach ($recommendedRecipes as $name => $recipeCollection)
     @if ($loop->index < 3)

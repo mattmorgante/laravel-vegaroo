@@ -130,48 +130,53 @@
     function increment(incrementor, target, recommended) {
         console.log(target);
         var value = parseInt(document.getElementById(target).value);
-        value+=incrementor;
 
-        if (value == 0) {
-          document.getElementById(target).parentElement.style.backgroundColor = "white";
-        }
-
-        if ( (value / recommended) >= .33 ) {
-            document.getElementById(target).parentElement.style.backgroundColor = "#d3f5e5";
-        }
-
-        if ( (value / recommended) >= .50 ) {
-            document.getElementById(target).parentElement.style.backgroundColor = "#92e6c0";
-        }
-
-        if ( value >= recommended ) {
-            document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
-        }
-
-        if (value > recommended) {
+        if (value == 0 && incrementor == -1) {
 
         } else {
-            document.getElementById(target).value = value;
-            updateBar(incrementor);
+          value+=incrementor;
 
-            var data = target.split("-");
+          if (value == 0) {
+            document.getElementById(target).parentElement.style.backgroundColor = "white";
+          }
 
-            $.ajax({
-                url: "/save",
-                cache: false,
-                data: {
-                    food: data[0],
-                    dayId: data[1],
-                    value: value
-                }
-            })
-                    .done(function (response) {
-                        console.log(response);
-                        console.log('yes');
-                    })
-                    .fail(function () {
-                        console.log("error");
-                    });
+          if ( (value / recommended) >= .33 ) {
+              document.getElementById(target).parentElement.style.backgroundColor = "#d3f5e5";
+          }
+
+          if ( (value / recommended) >= .50 ) {
+              document.getElementById(target).parentElement.style.backgroundColor = "#92e6c0";
+          }
+
+          if ( value >= recommended ) {
+              document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
+          }
+
+          if (value > recommended ) {
+
+          } else {
+              document.getElementById(target).value = value;
+              updateBar(incrementor);
+
+              var data = target.split("-");
+
+              $.ajax({
+                  url: "/save",
+                  cache: false,
+                  data: {
+                      food: data[0],
+                      dayId: data[1],
+                      value: value
+                  }
+              })
+                      .done(function (response) {
+                          console.log(response);
+                          console.log('yes');
+                      })
+                      .fail(function () {
+                          console.log("error");
+                      });
+          }
         }
     }
 
@@ -190,31 +195,30 @@
         bar.firstChild.nodeValue = newWidth;
     }
 
+  window.onload = init;
 
-// window.onLoad = function sticky() {
-//   var nav = document.getElementById('myProgress');
-//   const navTop = nav.offsetTop;
-// }
-//
-// function stickyNavigation() {
-//   var nav = document.getElementById('myProgress');
-//   const navTop = nav.offsetTop;
-//
-//   console.log('navTop = ' + navTop);
-//   console.log('scrollY = ' + window.scrollY);
-//
-//   if (window.scrollY >= navTop) {
-//     // nav offsetHeight = height of nav
-//     document.body.style.paddingTop = nav.offsetHeight + 'px';
-//     document.body.classList.add('fixed-nav');
-//   } else {
-//     document.body.style.paddingTop = 0;
-//     document.body.classList.remove('fixed-nav');
-//   }
-// }
+  function init(){
+    const nav = document.getElementById('myProgress2');
+    const navTop = nav.offsetTop;
 
-window.addEventListener('scroll', stickyNavigation);
+    function stickyNavigation() {
+      console.log('navTop = ' + navTop);
+      console.log('scrollY = ' + window.scrollY);
+
+      if (window.scrollY >= navTop) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
+      }
+    }
+
+    window.addEventListener('scroll', stickyNavigation);
+  }
+
 
 </script>
+
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"/>

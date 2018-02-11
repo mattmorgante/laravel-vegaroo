@@ -21,6 +21,10 @@ h3 {
   margin: 10px;
 }
 
+.fixed-nav {
+  position: fixed;
+}
+
 // images
 .image_icon {
   max-height: 50px;
@@ -540,9 +544,9 @@ input .user-input #email {
 }
 
 .food-card a {
-  color: black;
   font-weight: 900;
   font-size: 18px;
+  padding: 10px;
 }
 
 #go-button {

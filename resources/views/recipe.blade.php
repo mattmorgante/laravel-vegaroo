@@ -106,13 +106,16 @@
 
     <div class="header-inline-recipe">
 
+
       <div class="tags">
+        <h2>Tags</h2>
         @foreach ($tags as $tag)
           <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
         @endforeach
       </div>
 
       <div class="upvotes">
+          <h2>Upvotes</h2>
           <button class="btn" onclick="upvote()">
             <i class="fas fa-caret-up fa-2x"></i>
             <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>

@@ -9,38 +9,27 @@
   <div class="flexible_row">
     <div class="row_item">
       <h2>Examples</h2>
+      <p>{{ $food->examples }}</p>
     </div>
 
     <div class="row_item">
       <h2>Serving Size</h2>
       <p>{{ $food->servingSize}}</p>
-      <h2>Recommended Servings Per Day</h2>
-      <p>{{ $food->recommended }}</p>
+      <h2>Recommended Servings Per Day: {{ $food->recommended }}</h2>
     </div>
-
   </div>
-
-  <div class="flexible_row">
-    <div class="row_item">
-        <h2>Health benefits</h2>
-    </div>
-
-  </div>
-
-  <p>images</p>
 
   <h3>Recipes containing {{ $food->name }}</h3>
-  <div class="flexible_row">
       @foreach ($recipes as $recipe)
+        @if ($loop->iteration % 4 == 1 )
+        <div class="flexible_row">
+          @endif
+
           @include('partials.recipe-box')
+          @if ( ($loop->iteration % 4 ==0) or ($loop->last) )
+            </div>
+          @endif
       @endforeach
-  </div>
-
-
-
-
-
-
 </div>
 
 @endsection
