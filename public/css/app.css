@@ -658,3 +658,7 @@ input .user-input #email {
   margin: 40px;
 }
 
+.tags .btn {
+  margin-bottom: 10px;
+}
+

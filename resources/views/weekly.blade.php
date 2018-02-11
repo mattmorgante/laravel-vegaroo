@@ -74,7 +74,7 @@
   <div class="user-nav">
     <a href="/home">Daily Dashboard</a>
     <a class="active-nav-item" href="#">Weekly Report</a>
-    <a href="/welcome">Welcome To Vegaroo</a>
+    <a href="/welcome">Welcome</a>
   </div>
   <h2>Your Progress Over The Last 7 Days</h2>
   <div id="chart_div2" style="width: 100%; height: 500px"></div>

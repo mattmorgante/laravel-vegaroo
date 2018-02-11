@@ -7,7 +7,7 @@
       <div class="user-nav">
         <a class="active-nav-item" href="#">Daily Dashboard</a>
         <a href="/weekly">Weekly Report</a>
-        <a href="/welcome">Welcome To Vegaroo</a>
+        <a href="/welcome">Welcome</a>
       </div>
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">{{ $displayDate }}</h2>

@@ -7,7 +7,7 @@
   <div class="user-nav">
     <a href="/home">Daily Dashboard</a>
     <a href="/weekly">Weekly Report</a>
-    <a class="active-nav-item" href="#">Welcome To Vegaroo</a>
+    <a class="active-nav-item" href="#">Welcome</a>
   </div>
   <h2>Welcome </h2>
 </div>
