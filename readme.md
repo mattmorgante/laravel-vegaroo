@@ -8,7 +8,7 @@ Z. Round Out daily dozen
 - user rating = percentage in the last week
 - total score: on dashboard along with total servings for all time
 
-- demo mode? video? compelling post on reddit and nutrition facts 
+- demo mode? video? compelling post on reddit and nutrition facts
 
 Published Feb 23rd?? track registration while building new features. Join button = build with me. Need at least 10 people to continue to phase 2.
 
@@ -16,7 +16,7 @@ Phase 2 = Expand Recipes
 A. Expand Recipes
 1. User has the ability to search and filter for recipes = Searchable recipes as SEO content
 Save a recipe
-- to recipe add fields
+- to recipe add field
 -- tags = explode on ,
 
 to user add field
@@ -73,7 +73,7 @@ B. Expand Community - increase registration
 - ability for user to submit a product and a review/rating
 - both brand and non-branded grocery items/foods
 - product reviews / endorsements
-- best vegan cookbooks, bloggers, youtube channels, podcasts, etc
+- best vegan cookbooks, bloggers, youtube channels, podcasts,
 egg replacements
 yogurt replacements
 milk replacements
@@ -81,9 +81,8 @@ burger replacements
 best meal preps
 butters
 chocolates
-
 best budget meal preps
-vegan retreats (none here yet)
+vegan retreats
 
 - new database table
 - Product
@@ -113,11 +112,6 @@ vegan food near me - filter google api reviews to mapbox coordinates : search fo
 - worldwide map of vegan restaurants
 - cover it city by city - do one city first (amsterdam!!)
 - automate the process
-
-- large internal linking structure and then you need backlinks from bloggers? product hunt? users who love it?
-
-
-
 
 join
 - login with google or facebook

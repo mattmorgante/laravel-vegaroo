@@ -509,6 +509,23 @@ input .user-input #email {
           justify-content: space-between;
 }
 
+.login-nav {
+  border-radius: 4px;
+  background-color: #26ce81;
+  padding: 0px 20px;
+}
+
+@media (max-width: 767px) {
+  .login-nav {
+    padding: 0px 15px;
+    width: 35px;
+  }
+}
+
+.login-nav a {
+  color: white;
+}
+
 .table-data {
   text-align: center;
   border: 1px solid black;
@@ -551,7 +568,6 @@ input .user-input #email {
 }
 
 .food-card a {
-  text-decoration: none;
   color: black;
   font-weight: 900;
   font-size: 18px;
@@ -592,5 +608,30 @@ input .user-input #email {
 #number_of_upvotes {
   margin-left: 25px;
   font-size: 40px;
+}
+
+.user-nav {
+  margin-bottom: 25px;
+}
+
+.user-nav a {
+  color: #26ce81;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 3px;
+  text-decoration: none;
+  border-bottom: #26ce81 3px solid;
+}
+
+@media (min-width: 767px) {
+  .user-nav a {
+    font-size: 18px;
+    margin: 10px;
+  }
+}
+
+.active-nav-item {
+  color: black !important;
+  border-bottom: black 3px solid !important;
 }
 

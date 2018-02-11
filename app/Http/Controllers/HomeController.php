@@ -56,51 +56,12 @@ class HomeController extends Controller
 
         $foods = Foods::all();
 
-        $foodNames = Foods::all()->pluck('name');
         $recServings = Foods::all()->pluck('recommended');
 
-        $daysOfUser = Days::where('user_id', $userId)->orderBy('day', 'desc')->get();
-
-        $week = [];
-        foreach ($foods as $food) {
-            $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
-            $weekRecommended = $food->recommended * 7;
-            $weekPercentage = array_sum($weekData) / $weekRecommended;
-            $week[$food->slug] = 100*(round($weekPercentage, 2));
-        }
-
-        $percentages =[];
-        $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
-        $i =0;
-        foreach ($days as $day) {
-
-            $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
-
-            $day->percentage = $day->sum / 25;
-            if ($day->percentage > 1){
-                $day->percentage = 1;
-            }
-
-            $day->percentage = 100*(round($day->percentage, 2));
-            $percentages[$i] = $day->percentage;
-            $i++;
-        }
-
-        $last7days = [];
-        for ($i=0;$i<7; $i++) {
-            $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
-        }
-
-
         return view('user-home-2')->with([
-            'foodNames' => $foodNames,
             'recServings' => $recServings,
-            'daysOfUser' => $daysOfUser,
             'foods' => $foods,
             'today' => $today,
-            'week' => $week,
-            'percentage' => $percentages,
-            'days' => $last7days,
             'displayDate' => $displayDate
         ]);
     }
@@ -110,6 +71,69 @@ class HomeController extends Controller
         $food = $request->input('food');
         $today->{$food} = $request->input('value');
         $today->save();
+    }
+
+    public function weekly() {
+      $userId = (Auth::user()->id);
+
+      $foods = Foods::all();
+
+      $week = [];
+      foreach ($foods as $food) {
+          $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
+          $weekRecommended = $food->recommended * 7;
+          $weekPercentage = array_sum($weekData) / $weekRecommended;
+          $week[$food->slug] = 100*(round($weekPercentage, 2));
+      }
+
+      $percentages =[];
+      $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
+      $i =0;
+      foreach ($days as $day) {
+
+          $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+
+          $day->percentage = $day->sum / 25;
+          if ($day->percentage > 1){
+              $day->percentage = 1;
+          }
+
+          $day->percentage = 100*(round($day->percentage, 2));
+          $percentages[$i] = $day->percentage;
+          $i++;
+      }
+
+      $last7days = [];
+      for ($i=0;$i<7; $i++) {
+          $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
+      }
+
+      return view('weekly')->with([
+          'week' => $week,
+          'percentage' => $percentages,
+          'days' => $last7days,
+      ]);
+    }
+
+    public function welcome() {
+      $userId = (Auth::user()->id);
+      $daysOfUser = Days::where('user_id', $userId)->get();
+
+      $totalScore = 98;
+      $weeks = [
+        '2018-02-03' => 65,
+        '2018-01-27' => 33,
+      ];
+
+      // to do: totalscore = days all summed from this week
+      // PLUS previous week's scores
+      // cronjob to build weekly total score
+
+      return view('welcome')->with([
+          'totalScore' => $totalScore,
+          'weeks' => $weeks,
+      ]);
+
     }
 
     private function createADay($userId, $day){

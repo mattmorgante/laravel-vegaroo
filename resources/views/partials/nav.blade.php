@@ -9,9 +9,10 @@
             <li><a href="/resources">Resources</a></li>
             <li><a href="/vegan-recipes">Recipes</a></li>
             @if ( Auth::guest() )
+                <li class="spacer"></li>
                 <li class="login-nav"><a href="{{ route('register') }}">Join</a></li>
             @else
-                <li><a href="/home">User Home</a></li>
+                <li><a href="/home">Dashboard</a></li>
             @endif
 
         </ul>

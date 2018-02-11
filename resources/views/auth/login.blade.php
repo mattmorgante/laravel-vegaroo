@@ -45,7 +45,7 @@
             <br>
             <div class="login-links">
                 <a href="{{ route('register') }}">
-                    Sign Up!
+                    Join
                 </a>
 
             </div>

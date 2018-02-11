@@ -1,2 +1,3 @@
+Sitemap: https://www.vegaroo.co/sitemap-vegaroo.xml
 User-agent: *
 Disallow:
