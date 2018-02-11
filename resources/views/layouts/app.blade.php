@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
+    <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{!! request()->fullUrl() !!}" />
     <meta property="og:locale" content="en_US" />
@@ -48,4 +50,3 @@
 </body>
 <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
 </html>
-

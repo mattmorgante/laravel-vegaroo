@@ -8,7 +8,9 @@ Z. Round Out daily dozen
 - user rating = percentage in the last week
 - total score: on dashboard along with total servings for all time
 
-Published Feb 23rd?? On reddit and nutrition facts, track registration while building new features. Join button = build with me. Need at least 10 people to continue to phase 2.
+- demo mode? video? compelling post on reddit and nutrition facts 
+
+Published Feb 23rd?? track registration while building new features. Join button = build with me. Need at least 10 people to continue to phase 2.
 
 Phase 2 = Expand Recipes
 A. Expand Recipes
@@ -32,7 +34,7 @@ Start charging once people save recipes / upvote and submit links
 4. User can share a recipe
 
 5. user has the ability to create a recipe with bowl/salad generator
-the script can power an empire of relevant content, then just build community features on top of it 
+the script can power an empire of relevant content, then just build community features on top of it
 Deadline = get 50 meals: Then you have an seo schedule
 vegan meals
 vegan recipes
