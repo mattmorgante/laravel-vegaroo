@@ -62,11 +62,11 @@
         @endforeach
 
         <div class="btn-wrapper">
-          <a class="btn" href="{{ route('logout') }}"
+          <button class="login-button" href="{{ route('logout') }}"
              onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
               Logout
-          </a>
+          </button>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}

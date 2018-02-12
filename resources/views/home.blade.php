@@ -40,6 +40,10 @@
 
     @include('partials.curries')
 
+    <div class="btn-wrapper">
+      <a class="btn" href="/register">Join Vegaroo</a>
+    </div>
+
     @include('partials.stir-fries')
 
     @include('partials.salads')
@@ -73,8 +77,13 @@
 
     @include('partials.why')
 
-    <div class="btn-wrapper">
-        <a class="btn" href="/calculator">Calculate The Environmental Impact Of Your Diet</a>
+    <div class="flexible_row">
+        <div class="row_item">
+            <h3><a href="/calculator">Calculate The Environmental Impact Of Your Diet</a></h3>
+        </div>
+        <div class="row_item">
+            <h3><a href="/values">Understand Vegaroo's Values</a></h3>
+        </div>
     </div>
 
     @include('partials.how')

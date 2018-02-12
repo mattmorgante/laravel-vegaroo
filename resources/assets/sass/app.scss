@@ -531,13 +531,7 @@ input .user-input #email {
   display: inline-block;
 }
 
-@media (min-width: 767px) {
-  .food-card {
-    max-width: 23%;
-  }
-}
-
-@media (min-width: 1160px) {
+@media (min-width: 1200px) {
   .food-card {
     max-width: 27%;
   }

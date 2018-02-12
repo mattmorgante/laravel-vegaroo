@@ -1,17 +1,20 @@
 @extends('layouts.app')
 @include('partials.nav')
 @section('content')
-<div class="container-login">
+<div class="container">
+
     <h2>Join Vegaroo</h2>
 
     <p>Vegaroo is a collection of tools, recipes, and resources to help aspiring vegans live healthier and more conscious lives. Join now to:</p>
     <ul>
-        <li>Track your daily and weekly consumption of the <a href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist">Daily Dozen</a>, the recommended healthiest disease preventing foods from the bestselling book
+        <li>Track your daily and weekly consumption of the <a href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist">Daily Dozen</a>, the healthiest recommended foods from the bestselling book
             <a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die.</a></li>
         <li>Influence the feature development on Vegaroo through providing feedback and suggestions.</li>
         <li>Literally nothing else. It's still a work in progress!</li>
     </ul>
+  </div>
 
+<div class="container-login">
 <h2>Let's Get Started!</h2>
     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
@@ -57,10 +60,12 @@
             </button>
 
             <br>
-
-            <a href="{{ route('login') }}">
+            <h2>Already a member?</h2>
+            <button class="login-button">
+            <a href="{{ route('login') }}" style="color:#26ce81; text-decoration: none;">
                Login Here
             </a>
+            </button>
         </div>
     </form>
 </div>
