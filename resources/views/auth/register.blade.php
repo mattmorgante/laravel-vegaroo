@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@include('partials.nav')
 @section('content')
 <div class="container-login">
     <h2>Join Vegaroo</h2>

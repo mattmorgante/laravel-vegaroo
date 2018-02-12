@@ -72,8 +72,8 @@
 
 <div class="container">
   <div class="user-nav">
-    <a href="/home">Daily Dashboard</a>
-    <a class="active-nav-item" href="#">Weekly Report</a>
+    <a href="/home">Daily</a>
+    <a class="active-nav-item" href="#">Weekly</a>
     <a href="/welcome">Welcome</a>
   </div>
   <h2>Your Progress Over The Last 7 Days</h2>
@@ -93,13 +93,15 @@
 
 
   @foreach ($recommendedRecipes as $name => $recipeCollection)
-    @if (count($recipeCollection) != 0 )
-      <h2>Recipes with {{ $name }}</h2>
-      <div class="flexible_row">
-      @foreach ($recipeCollection as $recipe)
-          @include('partials.recipe-box')
-      @endforeach
-      </div>
+    @if($loop->index < 3)
+        @if (count($recipeCollection) != 0 )
+          <h2>Recipes with {{ $name }}</h2>
+          <div class="flexible_row">
+          @foreach ($recipeCollection as $recipe)
+              @include('partials.recipe-box')
+          @endforeach
+          </div>
+        @endif
     @endif
   @endforeach
 </div>

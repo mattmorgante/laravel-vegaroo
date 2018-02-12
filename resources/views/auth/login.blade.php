@@ -1,11 +1,13 @@
 @extends('layouts.app')
+@include('partials.nav')
+@section('content')
 <div class="container-login">
 <h2>Welcome Back!</h2>
     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <input type="email" id="email" name="email" class="form__field form-control" placeholder="Your E-Mail Address" value="{{ old('email') }}" required autofocus />
+            <input type="email" id="email" name="email" class="form__field form-control" placeholder="Your E-Mail Address" value="{{ old('email') }}" required] autofocus />
 
             @if ($errors->has('email'))
                 <span class="help-block">
@@ -52,3 +54,4 @@
         </div>
     </form>
 </div>
+@endsection

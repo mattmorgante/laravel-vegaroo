@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="footer">
-    <p>Made with &#x2615 & &#x1F34E & &#x1F955 in Amsterdam by <a href="https://www.mattmorgante.com">Matt.</a>Questions? Suggestions? Feedback? <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">Get in touch</a></p>
+    <p>Made with &#x2615 & &#x1F34E & &#x1F955 in Amsterdam by <a href="https://www.mattmorgante.com">Matt</a>. <br>Questions? Suggestions? Feedback? <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">Get in touch</a></p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
