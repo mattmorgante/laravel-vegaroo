@@ -13,8 +13,7 @@
 
   <h3>Wut da heck is this?</h3>
   <ul>
-    <li>Vegaroo is my attempt to use technology to make it easier for people to go vegan. Is there something you'd like to see? Feel free to check out the
-      <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">Feature Pipeline</a> or <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">get in touch</a>.</li>
+    <li>Vegaroo is my attempt to use technology to make it easier for people to go vegan.</li>
   </ul>
 
   <h3>Why should I eat these foods?</h3>
@@ -29,6 +28,11 @@
   <h3>This shit is tough, I need help going Vegan!</h3>
   <ul>
     <li>May I not so humbly suggest our <a href="/resources">Vegan Resources</a> or <a href="/recipes">Vegan Recipes</a> to get you started in the right direction?</li>
+
+    <br>
+
+    <li>Is there something you'd like to see? Feel free to check out the
+      <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">Feature Pipeline</a> or <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">get in touch</a>.</li>
   </ul>
 
   <div class="btn-wrapper">

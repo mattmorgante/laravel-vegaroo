@@ -99,9 +99,7 @@ class HomeController extends Controller
       $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
       $i =0;
       foreach ($days as $day) {
-
           $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
-
           $day->percentage = $day->sum / 25;
           if ($day->percentage > 1){
               $day->percentage = 1;
@@ -130,17 +128,37 @@ class HomeController extends Controller
         }
       }
 
+      // week score
+      $weekScore = 0;
+      foreach ($days as $today) {
+          $sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
+          $weekScore = $weekScore + $sum;
+      }
+
+      $weekScore = $weekScore / 175;
+      $weekScore = 100*(round($weekScore, 2));
+
       return view('weekly')->with([
           'week' => $week,
           'percentage' => $percentages,
           'days' => $last7days,
-          'recommendedRecipes' => $recommendedRecipes
+          'recommendedRecipes' => $recommendedRecipes,
+          'weekScore' => $weekScore
       ]);
     }
 
     public function welcome() {
       $userId = (Auth::user()->id);
-      $daysOfUser = Days::where('user_id', $userId)->get();
+      $daysOfUser = Days::where('user_id', $userId)->limit(7)->get();
+
+      $weekScore = 0;
+      foreach ($daysOfUser as $today) {
+          $sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
+          $weekScore = $weekScore + $sum;
+      }
+
+      $weekScore = $weekScore / 175;
+      $weekScore = 100*(round($weekScore, 2));
 
       $totalScore = 98;
       $weeks = [
@@ -155,6 +173,7 @@ class HomeController extends Controller
       return view('welcome')->with([
           'totalScore' => $totalScore,
           'weeks' => $weeks,
+          'weekScore' => $weekScore
       ]);
 
     }

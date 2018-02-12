@@ -660,3 +660,9 @@ input .user-input #email {
   margin-bottom: 10px;
 }
 
+#week-score {
+  text-align: center;
+  font-size: 38px;
+  color: #26ce81;
+}
+

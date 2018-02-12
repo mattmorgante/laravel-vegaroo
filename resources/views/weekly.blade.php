@@ -27,7 +27,7 @@
         ]);
 
         var options = {
-            title: 'Percentage Of Each Food\u0027s Recommended Servings Consumed In The Last 7 Days',
+            title: 'Percentage Of Each Food\u0027s Recommended Servings Consumed (Last 7 Days)',
             legend: { position: "none" },
 
             hAxis: {
@@ -60,7 +60,7 @@
         ]);
 
         var options = {
-            title: 'Percentage of Total Recommended Servings Consumed In The Last 7 Days',
+            title: 'Percentage of Total Recommended Servings Consumed',
             legend: { position: "none" },
             vAxis: {minValue: 0, maxValue:100}
         };
@@ -76,20 +76,32 @@
     <a class="active-nav-item" href="#">Weekly</a>
     <a href="/welcome">Welcome</a>
   </div>
-  <h2>Your Progress Over The Last 7 Days</h2>
+  <div class="header-inline">
+      <div>
+        <h2 class="other-recipes">Week Score</h2>
+
+        <p id="week-score">{{ $weekScore }}%</p>
+      </div>
+
+    <div>
+      <h2 class="other-recipes">This week's top 3 categories for improvement:</h2>
+      <div class="tags">
+      @foreach ($recommendedRecipes as $name => $recipeCollection)
+        @if ($loop->index < 3)
+            <a href="/vegan-foods/{{$name}}"><div class="btn">{{ $name }}</div></a>
+        @endif
+      @endforeach
+      </div>
+    </div>
+
+  </div>
+
+
   <div id="chart_div2" style="width: 100%; height: 500px"></div>
   <div id="chart_div" style="width: 100%; height: 500px;"></div>
 
   <br>
-  <h2 class="other-recipes">Your top 3 categories for improvement this week are:</h2>
 
-  <div class="tags">
-  @foreach ($recommendedRecipes as $name => $recipeCollection)
-    @if ($loop->index < 3)
-        <a href="/vegan-foods/{{$name}}"><div class="btn">{{ $name }}</div></a>
-    @endif
-  @endforeach
-  </div>
 
 
   @foreach ($recommendedRecipes as $name => $recipeCollection)

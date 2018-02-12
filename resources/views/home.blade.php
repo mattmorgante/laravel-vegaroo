@@ -40,6 +40,8 @@
 
     @include('partials.curries')
 
+<br>
+    <h2 class="other-recipes">Tools, recipes, and resources to help aspiring vegans</h2>
     <div class="btn-wrapper">
       <a class="btn" href="/register">Join Vegaroo</a>
     </div>
