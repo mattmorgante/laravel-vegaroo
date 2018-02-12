@@ -9,7 +9,26 @@
     <a href="/weekly">Weekly Report</a>
     <a class="active-nav-item" href="#">Welcome</a>
   </div>
-  <h2>Welcome </h2>
+  <h2>Welcome To Vegaroo!</h2>
+
+  <h3>Da heck is this?</h3>
+  <ul>
+    <li>Vegaroo is my attempt to use technology to make it easier for people to go vegan. Is there something you'd like to see? Feel free to check out the
+      <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">Feature Pipeline</a> or <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">get in touch</a>.</li>
+  </ul>
+
+  <h3>Why should I eat these foods?</h3>
+
+  <ul>
+    <li>At the simplest possible level, these foods are scientifically proven to prevent the leading causes of death, as documented in the book <a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die</a></li>
+  </ul>
+
+  <h3>This shit is tough, I need help going Vegan!</h3>
+  <ul>
+    <li>May I humbly suggest our <a href="/resources">Vegan Resources</a> or <a href="/recipes">Vegan Recipes</a> to get you started in the right direction?</li>
+  </ul>
+
+  <p></p>
 </div>
 
 

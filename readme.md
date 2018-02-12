@@ -133,18 +133,13 @@ Mission: make it easier to go vegan
 
 Why: to improve the health of individual humans, the health of our planet, and the health of all other living things.
 
-Bug Fixes
-- Fix micronutrient graph on mobile
-
 Data Feature / Daily Dozen
-- Content and images for detail pages with links to recipes
 - food cards need to be refactored....very sloppy!
 - Opt in for daily email alerts if no fields are filled out yet
 - save recipe as favorite
-- Home: 4 sections = daily, weekly, links to recipes, what is this? Redirect to what is this on sign up
  1. on daily & weekly can have links to recipes to help you hit todays/weeks goal
 - inv $$$ scraping reipes from blogs
---> Scrape vegan food blogs (find veo google) and build links to their sites
+--> Scrape vegan food blogs (find via google) and link to their sites
 --> Searchable: filter based on time,
 - Tool tip: hover, link to detail page
 - Do a refactoring day
