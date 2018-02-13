@@ -4,11 +4,12 @@
 @section('content')
 
     <div class="container">
-      <div class="user-nav">
+    <div class="user-nav">
         <a class="active-nav-item" href="#">Daily</a>
         <a href="/weekly">Weekly</a>
         <a href="/welcome">Welcome</a>
-      </div>
+    </div>
+
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">{{ $displayDate }}</h2>
 
@@ -47,7 +48,7 @@
         </div>
 
         <br>
-        <h2 class="other-recipes">What else should you eat today?</h2>
+        <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload();">(Update)</a></h2>
 
 
         @foreach ($recommendedRecipes as $name => $recipeCollection)

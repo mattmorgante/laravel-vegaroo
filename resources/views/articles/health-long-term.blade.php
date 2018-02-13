@@ -25,7 +25,7 @@
 
         <p class="content research">For example, often when reading scientific research I run across a sentence like this:</p>
         <ul>
-        <li class="content research">Regarding cause-specific mortality, men and women had elevated risks for cancer mortality for red (HR, 1.22 [95% CI, 1.16-1.29], and HR, 1.20 [95% CI, 1.12-1.30], respectively) and processed meat (HR, 1.12 [95% CI, 1.06-1.19], and HR, 1.11 [95% CI 1.04-1.19], respectively) intakes. Furthermore, cardiovascular disease risk was elevated for men and women in the highest quintile of red (HR, 1.27 [95% CI, 1.20-1.35], and HR, 1.50 [95% CI, 1.37-1.65], respectively) and processed meat (HR, 1.09 [95% CI, 1.03-1.15], and HR, 1.38 [95% CI, 1.26-1.51], respectively) intakes. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">r</a> </li>
+        <li class="content research">Regarding cause-specific mortality, men and women had elevated risks for cancer mortality for red (HR, 1.22 [95% CI, 1.16-1.29], and HR, 1.20 [95% CI, 1.12-1.30], respectively) and processed meat (HR, 1.12 [95% CI, 1.06-1.19], and HR, 1.11 [95% CI 1.04-1.19], respectively) intakes. Furthermore, cardiovascular disease risk was elevated for men and women in the highest quintile of red (HR, 1.27 [95% CI, 1.20-1.35], and HR, 1.50 [95% CI, 1.37-1.65], respectively) and processed meat (HR, 1.09 [95% CI, 1.03-1.15], and HR, 1.38 [95% CI, 1.26-1.51], respectively) intakes. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307518">Source</a> </li>
         </ul>
 
         <p class="content research">Although to most people this means nothing, it can be translated from scientist-speak to human. What it really means is:</p>
