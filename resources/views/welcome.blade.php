@@ -13,15 +13,19 @@
 
   <h3>Wut da heck is this?</h3>
   <ul>
-    <li>Vegaroo is my attempt to use technology to make it easier for people to go vegan.</li>
-  </ul>
+    <li>Vegaroo is my attempt to use technology to make it easier for people to eat more fruits, vegetables and other plant-based foods.</li>
+  <br>
+
+  <li>Is there something you'd like to see? Feel free to check out the
+    <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">Feature Pipeline</a> or <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">get in touch</a>.</li>
+      </ul>
 
   <h3>Why should I eat these foods?</h3>
 
   <ul>
     <li>At the simplest possible level, these foods are scientifically proven to prevent the leading causes of death, as documented in the book <a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die</a></li>
     <br>
-    <li>However, there's a multitude of reasons to consider a vegan diet. Maybe you're interested in <a href="/environmental-benefits">fighting back against climate change,</a>
+    <li>However, there's a multitude of reasons to consider eating more plants and fewer animal products. Maybe you're interested in <a href="/environmental-benefits">fighting back against climate change,</a>
       <a href="/health-benefits-long-term">improving your health</a> or <a href="/stop-animal-cruelty"> preventing animal cruelty.</a> Whatever your reason, I'm glad to have you here at Vegaroo!</li>
   </ul>
 
@@ -29,10 +33,7 @@
   <ul>
     <li>May I not so humbly suggest our <a href="/resources">Vegan Resources</a> or <a href="/recipes">Vegan Recipes</a> to get you started in the right direction?</li>
 
-    <br>
 
-    <li>Is there something you'd like to see? Feel free to check out the
-      <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">Feature Pipeline</a> or <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">get in touch</a>.</li>
   </ul>
 
   <div class="btn-wrapper">

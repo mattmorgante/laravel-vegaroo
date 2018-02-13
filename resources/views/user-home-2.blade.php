@@ -10,6 +10,10 @@
         <a href="/welcome">Welcome</a>
     </div>
 
+    <h2>How does this work?</h2>
+
+    <p>The daily dozen is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
+
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">{{ $displayDate }}</h2>
 

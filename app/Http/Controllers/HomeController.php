@@ -97,7 +97,7 @@ class HomeController extends Controller
 
       $percentages =[];
       $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
-      $i =0;
+      $i = 0;
       foreach ($days as $day) {
           $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
           $day->percentage = $day->sum / 25;

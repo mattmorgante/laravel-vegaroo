@@ -50,13 +50,13 @@
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['Day', '% of Total'],
-            ['{{ $days[6] }}',  {{ $percentage[6] }}],
-            ['{{ $days[5] }}',  {{ $percentage[5] }}],
-            ['{{ $days[4] }}',  {{ $percentage[4] }}],
-            ['{{ $days[3] }}',  {{ $percentage[3] }}],
-            ['{{ $days[2] }}',  {{ $percentage[2] }}],
-            ['{{ $days[1] }}',  {{ $percentage[1] }}],
-            ['{{ $days[0] }}',  {{ $percentage[0] }}]
+            ['{{ $days[6] or 0 }}',  {{ $percentage[6] or 0 }}],
+            ['{{ $days[5] or 0 }}',  {{ $percentage[5] or 0 }}],
+            ['{{ $days[4] or 0 }}',  {{ $percentage[4] or 0 }}],
+            ['{{ $days[3] or 0 }}',  {{ $percentage[3] or 0 }}],
+            ['{{ $days[2] or 0 }}',  {{ $percentage[2] or 0 }}],
+            ['{{ $days[1] or 0 }}',  {{ $percentage[1] or 0 }}],
+            ['{{ $days[0] or 0 }}',  {{ $percentage[0] or 0 }}]
         ]);
 
         var options = {
