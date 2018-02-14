@@ -110,26 +110,10 @@ class recipes_controller extends Controller
         $recipe->save();
     }
 
-    public function sorted() {
-        // get all
-
-        // sort them
-
-        // return as $recipes
-
-    }
-
     public function blueprint() {
         return view('blueprint');
     }
 
-    private function showCategoryPage($category) {
-
-    }
-
-    /**
-     * @return array
-     */
     private function getAllCategories()
     {
         $breakfasts = recipe::where('category', 'breakfasts')->get();

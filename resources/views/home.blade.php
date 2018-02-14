@@ -11,7 +11,7 @@
         <h1 class="title">Simple, easy, cheap, nutritious and delicious plant-based meals</h1>
 
         <div class="hero-list-wrapper">
-            <h3>Vegaroo has a strict no-tolerance policy</h3>
+            <h3>Vegaroo recipes have a strict no-tolerance policy</h3>
             <ul class="hero-list">
                 <li>&#x1F644 <strong>No</strong> fancy ingredients</li>
                 <li>&#x23F1 <strong>No</strong> recipes longer than 30 minutes</li>
@@ -76,19 +76,6 @@
             {{--@include('partials.recipe-box')--}}
         {{--@endforeach--}}
     {{--</ul>--}}
-
-    @include('partials.why')
-
-    <div class="flexible_row">
-        <div class="row_item">
-            <h3><a href="/calculator">Calculate The Environmental Impact Of Your Diet</a></h3>
-        </div>
-        <div class="row_item">
-            <h3><a href="/values">Understand Vegaroo's Values</a></h3>
-        </div>
-    </div>
-
-    @include('partials.how')
 </div>
 
 @endsection

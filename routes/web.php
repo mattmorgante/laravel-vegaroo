@@ -15,8 +15,9 @@ Route::get('/calculator', function () {
     return view('calculator');
 });
 
-Route::get('/', 'recipes_controller@home');
-Route::get('/vegan-recipes', 'recipes_controller@index');
+Route::get('/', 'LandingController@home');
+Route::get('/vegan-recipes', 'recipes_controller@home');
+// Route::get('/vegan-recipes', 'recipes_controller@index');
 Route::get('/vegan-recipes/sorted', 'recipes_controller@sorted');
 
 Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');

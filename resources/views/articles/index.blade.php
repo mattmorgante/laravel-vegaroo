@@ -7,7 +7,6 @@
 
 @include('partials.nav')
 
-
 <div class="container">
     <h2>Resources</h2>
 
