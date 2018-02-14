@@ -27,23 +27,24 @@ class HomeController extends Controller
 
         $date = $request->date;
 
+        // redirect if on page without a date
         if ($date == null || $date > Carbon::now()->today()) {
           $todayFormatted = Carbon::now()->toDateString();
           return Redirect::to('home/' . $todayFormatted);
         }
 
+        // for header
         $date2 = explode('-', $date);
-
         $displayDate = Carbon::createFromDate($date2[0], $date2[1], $date2[2]);
-
         $displayDate = $displayDate->toFormattedDateString();
 
+        //
         $today = Days::where('day', $date)
             ->where('user_id', $userId)
             ->first();
 
         if (empty($today)) {
-            $today = $this->createADay($userId, $date);
+            $today = Days::createADay($userId, $date);
         }
 
         $today->sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
@@ -64,7 +65,7 @@ class HomeController extends Controller
               $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->limit(4)->get();
               $recommendedRecipes[$food->name] = $recipes;
           }
-        }
+        } 
 
         return view('user-home-2')->with([
             'recServings' => $recServings,
@@ -178,21 +179,5 @@ class HomeController extends Controller
 
     }
 
-    private function createADay($userId, $day){
-        $today = new Days();
-        $today->user_id = $userId;
-        $today->day = $day;
-        $today->save();
-        $today = $this->getADay($userId, $day);
-        return $today;
-    }
 
-    private function getAday($userId, $date = null) {
-      if ($date == null) {
-        $date = Carbon::now()->toDateString();
-      }
-        return Days::where('day', $date)
-            ->where('user_id', $userId)
-            ->first();
-    }
 }

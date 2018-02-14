@@ -11,7 +11,7 @@
     <h1 class="title">Easy recipes, helpful tools, and simple resources to help you eat more plant-based foods.</h1>
   </div>
 
-  <h3>What are you in the mood for?</h3>
+  <h2>Recipes: What are you in the mood for?</h2>
   <ul class="flexible_row">
       <div class="row_item"><a href="/vegan-recipes#grainbowls">Grain Bowls</a></div>
       <div class="row_item"><a href="/vegan-recipes#curry">Curries</a></div>
@@ -27,6 +27,22 @@
   <div class="btn-wrapper">
     <a class="btn" href="/vegan-recipes">All Recipes</a>
   </div>
+
+  <br>
+
+  @if ( Auth::guest() )
+    <h2>Tools: Are you eating enough nutrients? Track your progress</h2>
+    <p>The <a target="_blank" href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist/">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
+      @include('partials.daily-dozen')
+      <div class="btn-wrapper">
+        <a class="btn" href="/register">Join Vegaroo & Save Your Progress</a>
+      </div>
+  @else
+    <div class="btn-wrapper">
+      <a class="btn" href="/home">My Dashboard</a>
+    </div>
+  @endif
+
   @include('partials.why')
 
   <div class="flexible_row">

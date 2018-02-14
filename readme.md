@@ -1,11 +1,9 @@
 Vegaroo tools and resources to help people go vegan.
 could be a search engine for vegans - an authority, a place where people go to make decisions and get info
 
-Z. Round Out daily dozen
-1. All errors and bugs
+fucking gold mine of feature ideas
 
 2. points system
-- user rating = percentage in the last week
 - total score: on dashboard along with total servings for all time
 
 - demo mode? video? compelling post on reddit and nutrition facts
