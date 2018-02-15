@@ -32,8 +32,9 @@
   <br>
 
     <h2>Tools: Are you eating enough nutrients? Track your progress</h2>
-    <p>The <a target="_blank" href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist/">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
   @if ( Auth::guest() )
+        <p>The <a target="_blank" href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist/">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today! Note: this is just a sample version. For the real deal we need to save your information so
+            <a href="/register">register here.</a><p>
       @include('partials.daily-dozen')
       <div class="btn-wrapper">
         <a class="btn" href="/register">Join Vegaroo & Save Your Progress</a>
