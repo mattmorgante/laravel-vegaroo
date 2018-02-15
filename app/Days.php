@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Days extends Model
@@ -13,7 +14,7 @@ class Days extends Model
         return $weekData;
     }
 
-    public static function createADay($userId, $day){
+    public function createADay($userId, $day){
         $today = new Days();
         $today->user_id = $userId;
         $today->day = $day;

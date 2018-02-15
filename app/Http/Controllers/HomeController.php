@@ -44,7 +44,8 @@ class HomeController extends Controller
             ->first();
 
         if (empty($today)) {
-            $today = Days::createADay($userId, $date);
+            $days = new Days();
+            $today = $days->createADay($userId, $date);
         }
 
         $today->sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
@@ -60,6 +61,7 @@ class HomeController extends Controller
 
         $foods = Foods::all();
 
+        $recommendedRecipes = [];
         foreach ($foods as $food) {
           if ($food->recommended > $today->{"$food->slug"} ) {
               $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->limit(4)->get();
