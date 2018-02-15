@@ -53,8 +53,8 @@ class recipes_controller extends Controller
                     }
                 }
 
-                $recipe = new recipe();
-                list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipe->getAllCategories();
+                $recipeClass = new recipe();
+                list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipeClass->getAllCategories();
 
                 $ingredients = explode(',', $recipe->ingredients);
                 $instructions = explode(';', $recipe->instructions);
