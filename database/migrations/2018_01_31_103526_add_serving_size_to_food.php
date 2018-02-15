@@ -14,7 +14,7 @@ class AddServingSizeToFood extends Migration
     public function up()
     {
         Schema::table('foods', function (Blueprint $table) {
-            $table->string('serving-size');
+            $table->string('servingSize');
         });
     }
 

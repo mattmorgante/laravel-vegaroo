@@ -29,7 +29,7 @@
       @include('partials.daily-dozen')
 
       <br>
-      <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload();">(Update)</a></h2>
+      <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload(true);">(Update)</a></h2>
 
 
       @foreach ($recommendedRecipes as $name => $recipeCollection)
