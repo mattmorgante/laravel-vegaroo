@@ -27,6 +27,7 @@
         <div class="row_item"><a href="#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="#curry">Curries</a></div>
         <div class="row_item"><a href="#stir-fries">Stir Fries</a></div>
+        <div class="row_item"><a href="/vegan-recipes/popular">Most Popular</a></div>
     </ul>
     <ul class="flexible_row">
         <div class="row_item"><a href="#salads">Salads</a></div>

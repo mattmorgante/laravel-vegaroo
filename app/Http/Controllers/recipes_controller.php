@@ -7,26 +7,10 @@ use Illuminate\Http\Request;
 
 class recipes_controller extends Controller
 {
-    public function index()
-    {
-        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
-
-        return view('allrecipes')->with([
-            'breakfasts' => $breakfasts,
-            'salads' => $salads,
-            'bowls' => $bowls,
-            'curries' => $curries,
-            'stirFries' => $stirFries,
-            'classics' => $classics,
-            'snacks' => $snacks,
-            'smoothies' => $smoothies,
-            'sides' => $sides
-        ]);
-    }
-
     public function home()
     {
-        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
+        $recipe = new recipe();
+        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipe::getAllCategories();
 
         return view('home')->with([
             'breakfasts' => $breakfasts,
@@ -59,9 +43,8 @@ class recipes_controller extends Controller
             ]);
         } else {
             $recipe = recipe::where('slug', '=', $slug)->first();
-            $categoryDb = $recipe->category;
 
-            if ($category == $categoryDb) {
+            if ($category == $recipe->category) {
                 // all recipes of this category except the current one
                 $similarRecipes = recipe::where('category', $recipe->category)->get();
                 foreach ($similarRecipes as $key => $similarRecipe) {
@@ -69,7 +52,9 @@ class recipes_controller extends Controller
                         unset($similarRecipes[$key]);
                     }
                 }
-                list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $this->getAllCategories();
+
+                $recipe = new recipe();
+                list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipe->getAllCategories();
 
                 $ingredients = explode(',', $recipe->ingredients);
                 $instructions = explode(';', $recipe->instructions);
@@ -112,19 +97,5 @@ class recipes_controller extends Controller
 
     public function blueprint() {
         return view('blueprint');
-    }
-
-    private function getAllCategories()
-    {
-        $breakfasts = recipe::where('category', 'breakfasts')->get();
-        $salads = recipe::where('category', 'salads')->get();
-        $bowls = recipe::where('category', 'bowls')->get();
-        $curries = recipe::where('category', 'curries')->get();
-        $stirFries = recipe::where('category', 'stir-fries')->get();
-        $classics = recipe::where('category', 'classics')->get();
-        $snacks = recipe::where('category', 'snacks')->get();
-        $smoothies = recipe::where('category', 'smoothies')->get();
-        $sides = recipe::where('category', 'sides')->get();
-        return array($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides);
     }
 }

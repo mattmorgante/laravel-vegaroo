@@ -38,7 +38,6 @@ class HomeController extends Controller
         $displayDate = Carbon::createFromDate($date2[0], $date2[1], $date2[2]);
         $displayDate = $displayDate->toFormattedDateString();
 
-        //
         $today = Days::where('day', $date)
             ->where('user_id', $userId)
             ->first();
@@ -48,7 +47,7 @@ class HomeController extends Controller
             $today = $days->createADay($userId, $date);
         }
 
-        $today->sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
+        $today->sum = $this->sumADay($today);
 
         $today->percentage = $today->sum / 25;
         if ($today->percentage > 1){
@@ -67,7 +66,7 @@ class HomeController extends Controller
               $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->limit(4)->get();
               $recommendedRecipes[$food->name] = $recipes;
           }
-        } 
+        }
 
         return view('user-home-2')->with([
             'recServings' => $recServings,
@@ -86,6 +85,7 @@ class HomeController extends Controller
     }
 
     public function weekly() {
+      // todo: totalscore = days all summed from this week
       $userId = (Auth::user()->id);
 
       $foods = Foods::all();
@@ -102,7 +102,7 @@ class HomeController extends Controller
       $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
       $i = 0;
       foreach ($days as $day) {
-          $day->sum = $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+          $day->sum = $this->sumADay($day);
           $day->percentage = $day->sum / 25;
           if ($day->percentage > 1){
               $day->percentage = 1;
@@ -118,8 +118,8 @@ class HomeController extends Controller
           $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
       }
 
+      // sort by worst percentage first
       asort($week);
-
 
       $recommendedRecipes = [];
       foreach ($week as $food => $value) {
@@ -134,7 +134,7 @@ class HomeController extends Controller
       // week score
       $weekScore = 0;
       foreach ($days as $today) {
-          $sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
+          $sum = $this->sumADay($today);
           $weekScore = $weekScore + $sum;
       }
 
@@ -151,35 +151,10 @@ class HomeController extends Controller
     }
 
     public function welcome() {
-      $userId = (Auth::user()->id);
-      $daysOfUser = Days::where('user_id', $userId)->limit(7)->get();
-
-      $weekScore = 0;
-      foreach ($daysOfUser as $today) {
-          $sum = $today->beans + $today->greens + $today->cruciferous + $today->berries + $today->fruits + $today->vegetables + $today->grains + $today->flaxseeds + $today->nuts + $today->spices + $today->water;
-          $weekScore = $weekScore + $sum;
-      }
-
-      $weekScore = $weekScore / 175;
-      $weekScore = 100*(round($weekScore, 2));
-
-      $totalScore = 98;
-      $weeks = [
-        '2018-02-03' => 65,
-        '2018-01-27' => 33,
-      ];
-
-      // to do: totalscore = days all summed from this week
-      // PLUS previous week's scores
-      // cronjob to build weekly total score
-
-      return view('welcome')->with([
-          'totalScore' => $totalScore,
-          'weeks' => $weeks,
-          'weekScore' => $weekScore
-      ]);
-
+      return view('welcome');
     }
 
-
+    private function sumADay($day) {
+        return $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+    }
 }

@@ -7,7 +7,7 @@
     <div class="user-nav">
         <a class="active-nav-item" href="#">Daily</a>
         <a href="/weekly">Weekly</a>
-        <a href="/welcome">Welcome</a>
+        <a href="/profile">Profile</a>
     </div>
 
     <h2>How does this work?</h2>

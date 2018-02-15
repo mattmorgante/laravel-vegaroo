@@ -8,7 +8,6 @@
 @include('partials.nav')
 <div class="header-inline">
   <h2 class="other-recipes">Most Popular Recipes</h2>
-  <h4><a href="/vegan-recipes">Sort By Category</a></h4>
 </div>
 @foreach ($recipes as $recipe)
     <div class="container">

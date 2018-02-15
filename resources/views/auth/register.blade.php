@@ -9,8 +9,10 @@
     <ul>
         <li>Track your daily and weekly consumption of the <a href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist">Daily Dozen</a>, the healthiest recommended foods from the bestselling book
             <a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die.</a></li>
+        <br>
         <li>Influence the feature development on Vegaroo through providing feedback and suggestions.</li>
-        <li>Literally nothing else. It's still a work in progress!</li>
+        <br>
+        <li>Literally nothing else. It's still a <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">work in progress!</a></li>
     </ul>
   </div>
 

@@ -74,7 +74,7 @@
   <div class="user-nav">
     <a href="/home">Daily</a>
     <a class="active-nav-item" href="#">Weekly</a>
-    <a href="/welcome">Welcome</a>
+    <a href="/profile">Profile</a>
   </div>
   <div class="header-inline">
       <div>

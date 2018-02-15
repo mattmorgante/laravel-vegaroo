@@ -11,21 +11,17 @@
 |
 */
 
-Route::get('/calculator', function () {
-    return view('calculator');
-});
 
 Route::get('/', 'LandingController@home');
-Route::get('/vegan-recipes', 'recipes_controller@home');
-// Route::get('/vegan-recipes', 'recipes_controller@index');
-Route::get('/vegan-recipes/sorted', 'recipes_controller@sorted');
 
+// recipes
+Route::get('/vegan-recipes', 'recipes_controller@home');
 Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');
 Route::get('/vegan-foods/{food}', 'FoodsController@show');
 
 
+// resources
 Route::get('/resources', 'ArticlesController@index');
-
 Route::get('/environmental-benefits', 'ArticlesController@environment');
 Route::get('/health-benefits-long-term', 'ArticlesController@healthLongTerm');
 Route::get('/stop-animal-cruelty', 'ArticlesController@animals');
@@ -36,13 +32,17 @@ Route::get('/nutrition', 'ArticlesController@nutrition');
 Route::get('/small-steps', 'ArticlesController@smallSteps');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
 Route::get('/celebrities', 'ArticlesController@celebrities');
+Route::get('/calculator', function () {
+    return view('calculator');
+});
 
+// tools & user
 Route::get('/blueprint', 'recipes_controller@blueprint');
 Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'recipes_controller@upvote');
 
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
-Route::get('/welcome', 'HomeController@welcome')->name('welcome')->middleware('auth');
+Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
 Route::get('/home/{date?}', 'HomeController@userIndex')->name('home')->middleware('auth');
 Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
 

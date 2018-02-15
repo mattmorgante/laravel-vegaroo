@@ -7,10 +7,17 @@
   <div class="user-nav">
     <a href="/home">Daily</a>
     <a href="/weekly">Weekly</a>
-    <a class="active-nav-item" href="#">Welcome</a>
+    <a class="active-nav-item" href="#">Profile</a>
   </div>
-  <h2>Welcome To Vegaroo!</h2>
+  <h2>Welcome To Vegaroo, {{  Auth::user()->name }}!</h2>
 
+  {{--<h2 class="btn-wrapper">Settings</h2>--}}
+  {{--<ul>--}}
+    {{--<li>Binnenkort</li>--}}
+  {{--</ul>--}}
+
+
+  <h2 class="btn-wrapper">FAQ</h2>
   <h3>Wut da heck is this?</h3>
   <ul>
     <li>Vegaroo is my attempt to use technology to make it easier for people to eat more fruits, vegetables and other plant-based foods.</li>
