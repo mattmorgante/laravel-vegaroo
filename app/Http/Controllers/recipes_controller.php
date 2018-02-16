@@ -35,18 +35,18 @@ class recipes_controller extends Controller
         }
 
         if ($slug == null) {
-            $recipes = recipe::where('category', $category)->get();
+            $recipes = recipe::getRecipesByCategory($category);
 
             return view('recipeCategory')->with([
                 'category' => ucwords($category),
                 'recipes' => $recipes
             ]);
         } else {
-            $recipe = recipe::where('slug', '=', $slug)->first();
+            $recipe = recipe::getARecipe($slug);
 
             if ($category == $recipe->category) {
                 // all recipes of this category except the current one
-                $similarRecipes = recipe::where('category', $recipe->category)->get();
+                $similarRecipes = recipe::getRecipesByCategory($recipe->category);
                 foreach ($similarRecipes as $key => $similarRecipe) {
                     if ($similarRecipe->slug == $recipe->slug) {
                         unset($similarRecipes[$key]);

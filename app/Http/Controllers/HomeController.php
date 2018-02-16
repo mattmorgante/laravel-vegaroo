@@ -56,14 +56,14 @@ class HomeController extends Controller
 
         $today->percentage = 100*(round($today->percentage, 2));
 
-        $recServings = Foods::all()->pluck('recommended');
+        $recServings = Foods::getAttributeOfFoods('recommended');
 
-        $foods = Foods::all();
+        $foods = Foods::getAllFoods();
 
         $recommendedRecipes = [];
         foreach ($foods as $food) {
           if ($food->recommended > $today->{"$food->slug"} ) {
-              $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->limit(4)->get();
+              $recipes = recipe::getRecipeByTag($food->slug, 4);
               $recommendedRecipes[$food->name] = $recipes;
           }
         }
@@ -126,7 +126,7 @@ class HomeController extends Controller
         if ($value < 90) {
           $slug = Foods::where('name', $food)->pluck('slug');
 
-          $recipes = recipe::where('tags', 'LIKE', '%'.$slug[0].'%')->limit(4)->get();
+          $recipes = recipe::getRecipeByTag($slug, 4);
           $recommendedRecipes[$food] = $recipes;
         }
       }

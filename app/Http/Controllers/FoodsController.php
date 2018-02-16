@@ -8,16 +8,15 @@ use Illuminate\Http\Request;
 
 class FoodsController extends Controller
 {
-    public function show($food) {
-        $food = Foods::where('slug', $food)->first();
+    public function show($food)
+    {
+        $food = Foods::getAFood($food);
 
-        $recipes = recipe::where('tags', 'LIKE', '%'.$food->slug.'%')->get();
+        $recipes = recipe::getRecipeByTag($food->slug, 100);
 
         return view('foods/beans')->with([
             'food' => $food,
             'recipes' => $recipes
         ]);
-
-        return view();
     }
 }
