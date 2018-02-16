@@ -17,7 +17,7 @@ Route::get('/', 'LandingController@home');
 // recipes
 Route::get('/vegan-recipes', 'recipes_controller@home');
 Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');
-Route::get('/vegan-foods/{food}', 'FoodsController@show');
+Route::get('/vegan-foods/{food?}', 'FoodsController@show');
 
 
 // resources

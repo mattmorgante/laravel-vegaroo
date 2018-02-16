@@ -8,8 +8,14 @@ use Illuminate\Http\Request;
 
 class FoodsController extends Controller
 {
-    public function show($food)
+    public function show($food = null)
     {
+        if ($food == null) {
+            return view('allFoods')->with([
+                'foods' => Foods::getAllFoods()
+            ]);
+        }
+
         $food = Foods::getAFood($food);
 
         $recipes = recipe::getRecipeByTag($food->slug, 100);
