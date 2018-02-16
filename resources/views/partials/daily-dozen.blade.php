@@ -1,7 +1,7 @@
   <div id="myProgress">
       <div id="myBar" style="width: {{ $today->percentage }}%;">{{ $today->percentage }}%</div>
   </div>
-
+<div class="container">
   <div class="card-wrapper">
   @foreach ($foods as $food)
     @if ($today->{"$food->slug"} >= $food->recommended)
@@ -22,6 +22,7 @@
       </div>
   @endforeach
   </div>
+</div>
 
 
   <script type="text/javascript">

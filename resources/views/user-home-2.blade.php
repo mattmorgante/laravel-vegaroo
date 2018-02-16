@@ -25,9 +25,10 @@
         </div>
 
       </div>
+    </div>
 
       @include('partials.daily-dozen')
-
+    <div class="container">
       <br>
       <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload(true);">(Update)</a></h2>
 
@@ -102,6 +103,21 @@
           console.log('/home/' + newdate);
           window.location.href=('/home/' + newdate);
         }
+
+        const nav = document.querySelector('#myProgress');
+        const topOfNav = nav.offsetTop;
+        function fixNav() {
+            console.log(topOfNav);
+            if(window.scrollY >= topOfNav) {
+                document.body.style.paddingTop = nav.offsetHeight + 'px';
+                document.body.classList.add('fixed-nav');
+            } else {
+                document.body.style.paddingTop = 0;
+                document.body.classList.remove('fixed-nav');
+            }
+        }
+
+        window.addEventListener('scroll', fixNav)
 
     </script>
 
