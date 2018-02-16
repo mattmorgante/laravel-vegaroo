@@ -10,7 +10,7 @@ https://github.com/nutritionfactsorg/daily-dozen-ios/issues
 
 - demo mode? video? compelling post on reddit and nutrition facts
 
-Published Feb 23rd?? track registration while building new features. Join button = build with me. Need at least 10 people to continue to phase 2.
+Need at least 10 people to continue to phase 2.
 
 Phase 2 = Expand Recipes
 A. Expand Recipes

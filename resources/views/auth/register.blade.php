@@ -12,7 +12,7 @@
         <br>
         <li>Influence the feature development on Vegaroo through providing feedback and suggestions.</li>
         <br>
-        <li>Literally nothing else. It's still a <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">work in progress! b      </a></li>
+        <li>Literally nothing else. It's still a <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">work in progress!</a></li>
     </ul>
   </div>
 
