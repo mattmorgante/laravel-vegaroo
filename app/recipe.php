@@ -12,15 +12,15 @@ class recipe extends Model
 
     public static function getAllCategories()
     {
-        $breakfasts = recipe::where('category', 'breakfasts')->get();
-        $salads = recipe::where('category', 'salads')->get();
-        $bowls = recipe::where('category', 'bowls')->get();
-        $curries = recipe::where('category', 'curries')->get();
-        $stirFries = recipe::where('category', 'stir-fries')->get();
-        $classics = recipe::where('category', 'classics')->get();
-        $snacks = recipe::where('category', 'snacks')->get();
-        $smoothies = recipe::where('category', 'smoothies')->get();
-        $sides = recipe::where('category', 'sides')->get();
+        $breakfasts = recipe::getRecipesByCategory('breakfasts');
+        $salads = recipe::getRecipesByCategory('salads');
+        $bowls = recipe::getRecipesByCategory('bowls');
+        $curries = recipe::getRecipesByCategory('curries');
+        $stirFries = recipe::getRecipesByCategory('stir-fries');
+        $classics = recipe::getRecipesByCategory('classics');
+        $snacks = recipe::getRecipesByCategory('snacks');
+        $smoothies = recipe::getRecipesByCategory('smoothies');
+        $sides = recipe::getRecipesByCategory('sides');
         return array($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides);
     }
 
