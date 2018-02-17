@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Days;
 use App\Foods;
 use App\recipe;
+use App\savedRecipes;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -151,7 +152,18 @@ class HomeController extends Controller
     }
 
     public function welcome() {
-      return view('welcome');
+        $userId = (Auth::user()->id);
+        $savedRecipeRows = savedRecipes::where('user_id', $userId)->get();
+
+        $savedRecipes =[];
+        foreach ($savedRecipeRows as $row) {
+            $recipe = recipe::where('id', $row->recipe_id)->first();
+            $savedRecipes[] = $recipe;
+        }
+
+        return view('welcome')->with([
+            'savedRecipes' => $savedRecipes,
+        ]);
     }
 
     private function sumADay($day) {

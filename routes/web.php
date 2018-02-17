@@ -40,11 +40,14 @@ Route::get('/calculator', function () {
 Route::get('/blueprint', 'recipes_controller@blueprint');
 Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'recipes_controller@upvote');
+Route::get('/save-recipe', 'recipes_controller@save')->name('save_recipe')->middleware('auth');
 
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
 Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
 Route::get('/home/{date?}', 'HomeController@userIndex')->name('home')->middleware('auth');
 Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
+
+
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Auth::routes();

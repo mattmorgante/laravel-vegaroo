@@ -11,12 +11,17 @@
   </div>
   <h2>Welcome To Vegaroo, {{  Auth::user()->name }}!</h2>
 
-  {{--<h2 class="btn-wrapper">Settings</h2>--}}
-  {{--<ul>--}}
-    {{--<li>Binnenkort</li>--}}
-  {{--</ul>--}}
+  <h2 class="btn-wrapper">My Favorite Recipes</h2>
+  @foreach($savedRecipes as $recipe)
+    @if ($loop->iteration % 4 == 1 )
+      <div class="flexible_row">
+        @endif
 
-
+        @include('partials.recipe-box')
+        @if ( ($loop->iteration % 4 ==0) or ($loop->last) )
+      </div>
+    @endif
+  @endforeach
   <h2 class="btn-wrapper">FAQ</h2>
   <h3>Wut da heck is this?</h3>
   <ul>

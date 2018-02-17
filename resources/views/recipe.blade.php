@@ -108,7 +108,7 @@
     <div class="right-buttons">
         <div class="save" onclick="save()">
             <button class="btn">
-                <i class="far fa-star"></i><span id="save">Save</span>
+                <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
             </button>
         </div>
 
@@ -192,6 +192,33 @@
     }
 
     function save() {
-        alert('coming soon!');
+        var saveEl = document.getElementById("save-icon");
+        var iconType = saveEl.getAttribute("data-prefix");
+
+        if ( iconType === 'fas' ) {
+            console.log('12345');
+            document.getElementById("save-icon").classList.add("far");
+        } else {
+            document.getElementById("save-icon").classList.add("fas");
+        }
+
+        var recipeSlug = window.location.href;
+        recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
+
+        $.ajax({
+            url: "/save-recipe",
+            cache: false,
+            data: {
+                slug: recipeSlug,
+                userId: {{ Auth::user()->id }}
+            }
+        })
+            .done(function(response) {
+                console.log('success!');
+                console.log(response);
+            })
+            .fail(function() {
+                console.log('failure');
+            });
     }
 </script>

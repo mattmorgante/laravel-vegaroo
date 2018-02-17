@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\recipe;
+use App\savedRecipes;
+use App\User;
 use Illuminate\Http\Request;
 
 class recipes_controller extends Controller
@@ -93,6 +95,16 @@ class recipes_controller extends Controller
         $currentUpvotes = $recipe->upvotes;
         $recipe->upvotes = $currentUpvotes + 1;
         $recipe->save();
+    }
+
+    public function save(Request $request) {
+        $recipe = recipe::where('slug', $request->input('slug'))->first();
+
+        $savedRecipe = new savedRecipes();
+        $savedRecipe->user_id = $request->input('userId');
+        $savedRecipe->recipe_id = $recipe->id;
+        $savedRecipe->save();
+
     }
 
     public function blueprint() {
