@@ -104,23 +104,28 @@
         </div>
     </div>
 
-    <div class="header-inline-recipe">
+    <div class="recipe-buttons">
+    <div class="right-buttons">
+        <div class="save" onclick="save()">
+            <button class="btn">
+                <i class="far fa-star"></i><span id="save">Save</span>
+            </button>
+        </div>
 
-
+        <div class="upvote" onclick="upvote()">
+            <button class="btn">
+                <i class="fas fa-caret-up"></i>
+                <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
+            </button>
+        </div>
+    </div>
       <div class="tags">
-        <h2>Tags</h2>
         @foreach ($tags as $tag)
           <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
         @endforeach
       </div>
 
-      <div class="upvotes">
-          <h2>Upvotes</h2>
-          <button class="btn" onclick="upvote()">
-            <i class="fas fa-caret-up fa-2x"></i>
-            <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
-          </button>
-      </div>
+
     </div>
 
     <div class="container">
@@ -184,5 +189,9 @@
             .fail(function() {
                 console.log('failure');
         });
+    }
+
+    function save() {
+        alert('coming soon!');
     }
 </script>

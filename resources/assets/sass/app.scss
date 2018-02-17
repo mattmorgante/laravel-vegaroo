@@ -47,22 +47,6 @@ h3 {
   }
 }
 
-
-@media (max-width: 767px) {
-  .header-inline-recipe {
-    display: block;
-    text-align: center;
-  }
-}
-@media (min-width: 768px) {
-  .header-inline-recipe {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-
-
 #datepicker {
   height: 30px;
   margin-top: 25px;
@@ -577,17 +561,6 @@ input .user-input #email {
   color: white;
 }
 
-.upvotes {
-  text-align: center;
-  cursor: pointer;
-  margin: 30px;
-}
-
-#number_of_upvotes {
-  margin-left: 25px;
-  font-size: 40px;
-}
-
 .user-nav {
   margin-bottom: 25px;
 }
@@ -610,17 +583,50 @@ input .user-input #email {
   border-bottom: black 3px solid !important;
 }
 
-.tags {
-  cursor: pointer;
-  margin: 40px;
-}
-
-.tags .btn {
-  margin-bottom: 10px;
-}
-
 #week-score {
   text-align: center;
   font-size: 38px;
   color: #26ce81;
+}
+
+.recipe-buttons {
+  display: inline-flex;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.tags {
+  width: 50%;
+}
+
+.right-buttons {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.save {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .recipe-buttons {
+    display: block;
+    text-align: center;
+  }
+
+  .tags {
+    margin: 0 auto 30px;
+  }
+
+  .tags .btn {
+    margin-bottom: 10px;
+  }
+
+  .right-buttons {
+    margin: 0 auto 30px;
+    width: 100%;
+  }
 }
