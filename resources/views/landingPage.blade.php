@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<title>Tools, recipes and resources to make going plant-based easier</title>
+<title>Vegaroo | Tools, recipes and resources to make going plant-based easier</title>
 
 @section('content')
 
