@@ -193,7 +193,7 @@
             cache: false,
             data: {
                 slug: recipeSlug,
-                userId: {{ Auth::user()->id }}
+                {{--userId: {{ Auth::user()->id }}--}}
             }
         })
             .done(function(response) {

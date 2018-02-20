@@ -19,7 +19,6 @@ Route::get('/vegan-recipes', 'RecipesController@home');
 Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');
 Route::get('/vegan-foods/{food?}', 'FoodsController@show');
 
-
 // resources
 Route::get('/resources', 'ArticlesController@index');
 Route::get('/environmental-benefits', 'ArticlesController@environment');
@@ -46,8 +45,6 @@ Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth
 Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
 Route::get('/home/{date?}', 'HomeController@userIndex')->name('home')->middleware('auth');
 Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
-
-
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Auth::routes();
