@@ -29,8 +29,8 @@ class BasicTests extends TestCase
         $response = $this->get('/vegan-foods');
         $response->assertStatus(200);
 
-//        $response = $this->get('/vegan-foods/beans');
-//        $response->assertStatus(200);
+        $response = $this->get('/vegan-foods/beans');
+        $response->assertStatus(200);
 
         $response = $this->get('/resources');
         $response->assertStatus(200);

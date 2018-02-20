@@ -38,7 +38,7 @@
   @endif
     <br>
 
-    <h2>What are you in the mood for?</h2>
+    <h2 style="margin: 20px;">What are you in the mood for?</h2>
     <ul class="flexible_row">
         <div class="row_item"><a href="/vegan-recipes#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="/vegan-recipes#curry">Curries</a></div>
@@ -51,6 +51,10 @@
         <div class="row_item"><a href="/vegan-recipes#snacks">Snacks</a></div>
         <div class="row_item"><a href="/vegan-recipes#smoothies">Smoothies</a></div>
     </ul>
+
+    @include('partials.grain-bowls')
+    @include('partials.curries')
+    @include('partials.stir-fries')
 
     <div class="btn-wrapper">
         <a class="btn" href="/vegan-recipes">All Recipes</a>
