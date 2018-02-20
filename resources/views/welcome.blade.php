@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Vegaroo User Profile</title>
+<meta name="description" content="Access all your personal account information on Vegaroo"/>
+
 @include('partials.nav')
 @section('content')
 

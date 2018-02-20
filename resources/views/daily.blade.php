@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Vegaroo Daily Dashboard</title>
+<meta name="description" content="Track the daily dozen and save your progress over time using Vegaroo"/>
+
 @include('partials.nav')
 @section('content')
 

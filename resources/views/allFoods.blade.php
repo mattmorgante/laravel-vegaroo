@@ -9,6 +9,8 @@
 
     <div class="container">
     <h1 class="other-recipes">The Daily Dozen</h1>
+
+        <p>The <a target="_blank" href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist/">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health.</p>
         {{--todo: explain why these foods? --}}
     @foreach ($foods as $food)
         @if ($loop->iteration % 4 == 1 )
