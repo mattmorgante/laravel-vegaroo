@@ -45,6 +45,8 @@ class RecipesController extends Controller
             ]);
         } else {
             $recipe = recipe::getARecipe($slug);
+            // dont cache upvotes!
+            $recipe->upvotes = recipe::getUpvotes($slug);
 
             if ($category == $recipe->category) {
                 // all recipes of this category except the current one

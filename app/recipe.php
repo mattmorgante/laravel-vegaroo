@@ -57,4 +57,8 @@ class recipe extends Model
         return $response;
     }
 
+    public static function getUpvotes($slug) {
+        return recipe::where('slug', $slug)->pluck('upvotes')[0];
+    }
+
 }
