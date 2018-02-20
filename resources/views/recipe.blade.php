@@ -149,22 +149,6 @@
     </div>
 
 <br>
-
-    {{--<div class="notes">--}}
-        {{--<h4>Additional Notes</h4>--}}
-    {{--<ul>--}}
-        {{--@foreach($notes as $note)--}}
-            {{--<li>{{$note}}</li>--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-
-    {{--<div class="related">--}}
-        {{--<h4>Related Links</h4>--}}
-        {{--<ul>--}}
-            {{--<li>Either from around the web or internal links? .... not sure yet , probably both</li>--}}
-        {{--</ul>--}}
-    {{--</div>--}}
 @endsection
 
 <script>
@@ -196,7 +180,6 @@
         var iconType = saveEl.getAttribute("data-prefix");
 
         if ( iconType === 'fas' ) {
-            console.log('12345');
             document.getElementById("save-icon").classList.add("far");
         } else {
             document.getElementById("save-icon").classList.add("fas");

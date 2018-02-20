@@ -7,7 +7,7 @@ use App\savedRecipes;
 use App\User;
 use Illuminate\Http\Request;
 
-class recipes_controller extends Controller
+class RecipesController extends Controller
 {
     public function home()
     {

@@ -15,8 +15,8 @@
 Route::get('/', 'LandingController@home');
 
 // recipes
-Route::get('/vegan-recipes', 'recipes_controller@home');
-Route::get('/vegan-recipes/{category}/{slug?}', 'recipes_controller@show');
+Route::get('/vegan-recipes', 'RecipesController@home');
+Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');
 Route::get('/vegan-foods/{food?}', 'FoodsController@show');
 
 
@@ -37,10 +37,10 @@ Route::get('/calculator', function () {
 });
 
 // tools & user
-Route::get('/blueprint', 'recipes_controller@blueprint');
+Route::get('/blueprint', 'RecipesController@blueprint');
 Route::post('/addEmail', 'EmailController@create');
-Route::get('/upvote', 'recipes_controller@upvote');
-Route::get('/save-recipe', 'recipes_controller@save')->name('save_recipe')->middleware('auth');
+Route::get('/upvote', 'RecipesController@upvote');
+Route::get('/save-recipe', 'RecipesController@save')->name('save_recipe')->middleware('auth');
 
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
 Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');

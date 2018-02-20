@@ -69,7 +69,7 @@ class HomeController extends Controller
           }
         }
 
-        return view('user-home-2')->with([
+        return view('daily')->with([
             'recServings' => $recServings,
             'foods' => $foods,
             'today' => $today,
