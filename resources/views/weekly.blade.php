@@ -91,7 +91,7 @@
       <div class="tags">
       @foreach ($recommendedRecipes as $name => $recipeCollection)
         @if ($loop->index < 3)
-            <a href="/vegan-foods/{{$name}}"><div class="btn">{{ $name }}</div></a>
+            <a href="/vegan-foods/{{$name}}"><div class="btn food-button">{{ $name }}</div></a>
         @endif
       @endforeach
       </div>

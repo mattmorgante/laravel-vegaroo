@@ -39,11 +39,16 @@
       @foreach ($recommendedRecipes as $name => $recipeCollection)
         @if (count($recipeCollection) != 0 )
           <h2>Recipes with {{ $name }}</h2>
-          <div class="flexible_row">
           @foreach ($recipeCollection as $recipe)
-              @include('partials.recipe-box')
+              @if ($loop->iteration % 4 == 1 )
+                  <div class="flexible_row">
+                      @endif
+
+                      @include('partials.recipe-box')
+                      @if ( ($loop->iteration % 4 ==0) or ($loop->last) )
+                  </div>
+              @endif
           @endforeach
-          </div>
         @endif
       @endforeach
 
