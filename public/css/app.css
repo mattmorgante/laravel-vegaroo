@@ -517,8 +517,7 @@ input .user-input #email {
 
 @media (max-width: 767px) {
   .login-nav {
-    padding: 0px 15px;
-    width: 35px;
+    padding: 0 10px;
   }
 }
 
