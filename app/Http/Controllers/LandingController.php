@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\recipe;
 use Illuminate\Http\Request;
 use App\Foods;
 
@@ -22,10 +23,16 @@ class LandingController extends Controller
       $today->id = 0;
       $today->percentage = 0;
 
+      $recipe = new recipe();
+      list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipe::getAllCategories();
+
       return view('landingPage')->with([
         'recServings' => $recServings,
         'foods' => $foods,
-        'today' => $today
+        'today' => $today,
+          'bowls' => $bowls,
+          'curries' => $curries,
+          'stirFries' => $stirFries
 
       ]);
 

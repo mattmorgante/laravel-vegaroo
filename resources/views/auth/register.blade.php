@@ -3,19 +3,22 @@
 @section('content')
 <div class="container">
 
-    <h2>Join Vegaroo</h2>
+    <h2 style="text-align: center">Join Vegaroo</h2>
 
-    <p>Vegaroo is a collection of tools, recipes, and resources to help aspiring vegans live healthier and more conscious lives. Join now to:</p>
-    <ul>
-        <li>Track your daily and weekly consumption of the <a href="https://nutritionfacts.org/video/dr-gregers-daily-dozen-checklist">Daily Dozen</a>, the healthiest recommended foods from the bestselling book
-            <a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die.</a></li>
-        <br>
-        <li>Save your favorite recipes</li>
-        <br>
-        <li>Influence the feature development on Vegaroo through providing feedback and suggestions.</li>
-        <br>
-        <li>Literally nothing else. It's still a <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">work in progress!</a></li>
-    </ul>
+    <div class="hero">
+        <div class="hero-list-wrapper">
+            Vegaroo is a collection of tools, recipes, and resources to help aspiring vegans live healthier and more conscious lives.
+            <br>
+            <br>
+            Join now to:
+            <ul class="hero-list">
+                <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
+                <li>&#x1F4C8 Get Weekly Nutrition Reports</li>
+                <li>&#x2B50 Save Favorite Recipes</li>
+                <li>&#x1F477 Influence <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">new feature development</a></li>
+            </ul>
+        </div>
+    </div>
   </div>
 
 <div class="container-login">

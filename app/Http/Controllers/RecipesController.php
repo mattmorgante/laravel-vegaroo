@@ -6,6 +6,7 @@ use App\recipe;
 use App\savedRecipes;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RecipesController extends Controller
 {
@@ -48,6 +49,17 @@ class RecipesController extends Controller
             // dont cache upvotes!
             $recipe->upvotes = recipe::getUpvotes($slug);
 
+            $saved = false;
+            $userId = false;
+            if (Auth::id()) {
+                $userId = Auth::id();
+                $savedRecipe = savedRecipes::where([
+                    ['user_id', Auth::id()],
+                    ['recipe_id', $recipe->id]
+                    ])->first();
+                $saved = is_null($savedRecipe) ? false : true;
+            }
+
             if ($category == $recipe->category) {
                 // all recipes of this category except the current one
                 $similarRecipes = recipe::getRecipesByCategory($recipe->category);
@@ -83,7 +95,10 @@ class RecipesController extends Controller
                     'classics' => $classics,
                     'snacks' => $snacks,
                     'smoothies' => $smoothies,
-                    'sides' => $sides
+                    'sides' => $sides,
+                    'saved' => $saved,
+                    'userId' => $userId
+
                 ]);
 
             } else {
@@ -106,7 +121,16 @@ class RecipesController extends Controller
         $savedRecipe->user_id = $request->input('userId');
         $savedRecipe->recipe_id = $recipe->id;
         $savedRecipe->save();
+    }
 
+    public function unsave(Request $request) {
+        $recipe = recipe::where('slug', $request->input('slug'))->first();
+        $savedRecipe = savedRecipes::where([
+            ['user_id', $request->input('userId')],
+            ['recipe_id', $recipe->id]
+        ])->first();
+
+        $savedRecipe->delete();
     }
 
     public function blueprint() {

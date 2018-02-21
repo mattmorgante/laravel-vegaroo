@@ -106,11 +106,24 @@
 
     <div class="recipe-buttons">
     <div class="right-buttons">
+        @if ($userId == true)
         <div class="save" onclick="save()">
             <button class="btn">
-                <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
+                @if ($saved == true)
+                    <i id="save-icon" class="fas fa-star"></i><span id="save">Saved!</span>
+                @else
+                    <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
+                @endif
             </button>
         </div>
+        @else
+            <div class="save" onclick="logIn()">
+                <button class="btn">
+                    <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
+                </button>
+            </div>
+        @endif
+
 
         <div class="upvote" onclick="upvote()">
             <button class="btn">
@@ -152,12 +165,16 @@
 @endsection
 
 <script>
+    function logIn() {
+        window.location.href = "/register";
+    }
+
     function upvote() {
-      var recipeSlug = window.location.href;
-      recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
-      var currentVotes = document.getElementById('number_of_upvotes').innerHTML;
-      currentVotes++;
-      document.getElementById('number_of_upvotes').innerHTML = currentVotes;
+        var recipeSlug = window.location.href;
+        recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
+        var currentVotes = document.getElementById('number_of_upvotes').innerHTML;
+        currentVotes++;
+        document.getElementById('number_of_upvotes').innerHTML = currentVotes;
 
         $.ajax({
             url: "/upvote",
@@ -169,39 +186,61 @@
             .done(function(response) {
                 console.log('success!');
                 console.log(response);
-        })
-            .fail(function() {
-                console.log('failure');
-        });
-    }
-
-    function save() {
-        var saveEl = document.getElementById("save-icon");
-        var iconType = saveEl.getAttribute("data-prefix");
-
-        if ( iconType === 'fas' ) {
-            document.getElementById("save-icon").classList.add("far");
-        } else {
-            document.getElementById("save-icon").classList.add("fas");
-        }
-
-        var recipeSlug = window.location.href;
-        recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
-
-        $.ajax({
-            url: "/save-recipe",
-            cache: false,
-            data: {
-                slug: recipeSlug,
-                {{--userId: {{ Auth::user()->id }}--}}
-            }
-        })
-            .done(function(response) {
-                console.log('success!');
-                console.log(response);
             })
             .fail(function() {
                 console.log('failure');
             });
+    }
+</script>
+
+<script>
+    function save() {
+        var saveEl = document.getElementById("save-icon");
+        var iconType = saveEl.getAttribute("data-prefix");
+
+        var recipeSlug = window.location.href;
+        recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
+
+        if ( iconType === 'fas' ) {
+            // already saved, unsave
+            document.getElementById("save-icon").classList.add("far");
+            document.getElementById("save").innerHTML="Save";
+
+            $.ajax({
+                url: "/unsave-recipe",
+                cache: false,
+                data: {
+                    slug: recipeSlug,
+                    userId: {{ $userId }}
+                }
+            })
+                .done(function (response) {
+                    console.log('success!');
+                    console.log(response);
+                })
+                .fail(function () {
+                    console.log('failure');
+                });
+        } else {
+            document.getElementById("save-icon").classList.add("fas");
+            document.getElementById("save").innerHTML = "Saved!";
+
+            $.ajax({
+                url: "/save-recipe",
+                cache: false,
+                data: {
+                    slug: recipeSlug,
+                    userId: {{ $userId }}
+                }
+            })
+                .done(function (response) {
+                    console.log('success!');
+                    console.log(response);
+                })
+                .fail(function () {
+                    console.log('failure');
+                });
+        }
+
     }
 </script>

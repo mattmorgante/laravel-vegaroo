@@ -12,19 +12,33 @@
   </div>
   <br>
 
-    <h2>Tools: Track your <a href="/daily-dozen">Daily Dozen</a> progress</h2>
+    <h2 style="margin: 20px;">Track the <a href="/vegan-foods">Daily Dozen</a>: what have you eaten today?</h2>
   @if ( Auth::guest() )
       @include('partials.daily-dozen')
+        <div class="hero">
+
+            <h1 class="title">Why Join Vegaroo?</h1>
+
+            <div class="hero-list-wrapper">
+                <ul class="hero-list">
+                    <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
+                    <li>&#x1F4C8 Get Weekly Nutrition Reports</li>
+                    <li>&#x2B50 Save Favorite Recipes</li>
+                    <li>&#x1F477 Influence new feature development</li>
+                </ul>
+            </div>
+        </div>
       <div class="btn-wrapper">
-        <a class="btn" href="/register">Join Vegaroo & Save Your Progress</a>
+        <a class="btn" href="/register">Join Vegaroo</a>
       </div>
   @else
     <div class="btn-wrapper">
       <a class="btn" href="/home">My Dashboard</a>
     </div>
   @endif
+    <br>
 
-    <h2>Recipes: What are you in the mood for?</h2>
+    <h2 style="margin: 20px;">What are you in the mood for?</h2>
     <ul class="flexible_row">
         <div class="row_item"><a href="/vegan-recipes#grainbowls">Grain Bowls</a></div>
         <div class="row_item"><a href="/vegan-recipes#curry">Curries</a></div>
@@ -37,6 +51,10 @@
         <div class="row_item"><a href="/vegan-recipes#snacks">Snacks</a></div>
         <div class="row_item"><a href="/vegan-recipes#smoothies">Smoothies</a></div>
     </ul>
+
+    @include('partials.grain-bowls')
+    @include('partials.curries')
+    @include('partials.stir-fries')
 
     <div class="btn-wrapper">
         <a class="btn" href="/vegan-recipes">All Recipes</a>
