@@ -7,7 +7,7 @@
         {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <input type="email" id="email" name="email" class="form__field form-control" placeholder="Your E-Mail Address" value="{{ old('email') }}" required] autofocus />
+            <input type="email" id="email" name="email" class="form__field form-control" placeholder="Your E-Mail Address" value="{{ old('email') }}" required autofocus />
 
             @if ($errors->has('email'))
                 <span class="help-block">
@@ -45,13 +45,13 @@
             </a>
 
             <br>
-            <div class="login-links">
-                <a href="{{ route('register') }}">
-                    Join
-                </a>
-
-            </div>
         </div>
     </form>
+    <h2>Not yet a member?</h2>
+    <div class="btn-wrapper">
+        <a class="btn" href="/register">Join Vegaroo</a>
+    </div>
+    <br>
+    <br>
 </div>
 @endsection
