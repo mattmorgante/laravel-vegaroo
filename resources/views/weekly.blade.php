@@ -105,8 +105,6 @@
 
   <br>
 
-
-
   @foreach ($recommendedRecipes as $name => $recipeCollection)
     @if($loop->index < 3)
         @if (count($recipeCollection) != 0 )
