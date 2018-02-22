@@ -33,9 +33,10 @@
       @include('partials.daily-dozen')
     <div class="container">
       <br>
-      <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload(true);">(Update)</a></h2>
-
-
+@if ($categoriesComplete == 12 )
+    <h2 class="other-recipes">You rockstar! Nothing left to eat or drink today. Get a good night's sleep, then come back tomorrow and crush it again</h2>
+        @else
+    <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload(true);">(Update)</a></h2>
       @foreach ($recommendedRecipes as $name => $recipeCollection)
         @if (count($recipeCollection) != 0 )
           <h2>Recipes with {{ $name }}</h2>
@@ -43,7 +44,6 @@
               @if ($loop->iteration % 4 == 1 )
                   <div class="flexible_row">
                       @endif
-
                       @include('partials.recipe-box')
                       @if ( ($loop->iteration % 4 ==0) or ($loop->last) )
                   </div>
@@ -51,6 +51,7 @@
           @endforeach
         @endif
       @endforeach
+@endif
 
         <div class="btn-wrapper">
           <button class="login-button" href="{{ route('logout') }}"

@@ -9,10 +9,6 @@ use App\Foods;
 class LandingController extends Controller
 {
     public function home() {
-      // dont need this until save!
-      // $date = Carbon::now()->today();
-      // $today = Days::createADay($userId, $date);
-
       $recServings = Foods::all()->pluck('recommended');
       $foods = Foods::all();
       $today = new \stdClass();
@@ -33,7 +29,6 @@ class LandingController extends Controller
           'bowls' => $bowls,
           'curries' => $curries,
           'stirFries' => $stirFries
-
       ]);
 
     }

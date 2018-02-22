@@ -10,7 +10,7 @@
             <li><a href="/vegan-recipes">Recipes</a></li>
             @if ( Auth::guest() )
                 <li class="spacer"></li>
-                <li class="login-nav"><a href="{{ route('login') }}">LogIn</a></li>
+                <li class="login-nav"><a href="{{ route('login') }}">Login</a></li>
             @else
                 <li><a href="/home">Dashboard</a></li>
             @endif

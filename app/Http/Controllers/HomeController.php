@@ -62,10 +62,13 @@ class HomeController extends Controller
         $foods = Foods::getAllFoods();
 
         $recommendedRecipes = [];
+        $categoriesComplete = 0;
         foreach ($foods as $food) {
           if ($food->recommended > $today->{"$food->slug"} ) {
               $recipes = recipe::getRecipeByTag($food->slug, 4);
               $recommendedRecipes[$food->name] = $recipes;
+          } else {
+              $categoriesComplete++;
           }
         }
 
@@ -74,7 +77,8 @@ class HomeController extends Controller
             'foods' => $foods,
             'today' => $today,
             'displayDate' => $displayDate,
-            'recommendedRecipes' => $recommendedRecipes
+            'recommendedRecipes' => $recommendedRecipes,
+            'categoriesComplete' => $categoriesComplete
         ]);
     }
 
@@ -125,8 +129,7 @@ class HomeController extends Controller
       $recommendedRecipes = [];
       foreach ($week as $food => $value) {
         if ($value < 90) {
-          $slug = Foods::where('name', $food)->pluck('slug');
-
+          $slug = Foods::where('name', $food)->pluck('slug')[0];
           $recipes = recipe::getRecipeByTag($slug, 4);
           $recommendedRecipes[$food] = $recipes;
         }
@@ -141,7 +144,6 @@ class HomeController extends Controller
 
       $weekScore = $weekScore / 175;
       $weekScore = 100*(round($weekScore, 2));
-
       return view('weekly')->with([
           'week' => $week,
           'percentage' => $percentages,
@@ -167,6 +169,6 @@ class HomeController extends Controller
     }
 
     private function sumADay($day) {
-        return $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water;
+        return $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water + $day->exercise;
     }
 }
