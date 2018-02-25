@@ -302,3 +302,7 @@ Documentation
 
 to run migrations on production
 /usr/local/bin/heroku run php artisan migrate
+
+page has expired due to inactivity?
+- chmod storage/framework/sessions on production 
+- check csrf tokens are the same
