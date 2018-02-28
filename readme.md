@@ -1,6 +1,10 @@
 Vegaroo tools and resources to help people go vegan.
 could be a search engine for vegans - an authority, a place where people go to make decisions and get info
 
+Module:
+- help people for 1-4 weeks
+- 30 day program?
+
 - total score: on dashboard along with total servings for all time
 - demo mode? video? compelling post on reddit and nutrition facts
 

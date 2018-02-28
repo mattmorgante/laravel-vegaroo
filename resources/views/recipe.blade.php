@@ -222,6 +222,7 @@
                     console.log('failure');
                 });
         } else {
+            // save that thang!
             document.getElementById("save-icon").classList.add("fas");
             document.getElementById("save").innerHTML = "Saved!";
 
