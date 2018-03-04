@@ -6,6 +6,8 @@
 <div class="container">
   <h1>{{ $food->name}}</h1>
 
+    <h2 class="food-description">{{ $food->description }}</h2>
+
   <div class="flexible_row">
     <div class="row_item">
       <h2>Examples</h2>

@@ -26,7 +26,7 @@
     @endif
   @endforeach
   <h2 class="btn-wrapper">FAQ</h2>
-  <h3>Wut da heck is this?</h3>
+  <h3>What is this?</h3>
   <ul>
     <li>Vegaroo is my attempt to use technology to make it easier for people to eat more fruits, vegetables and other plant-based foods.</li>
   <br>

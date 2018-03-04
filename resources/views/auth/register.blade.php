@@ -13,7 +13,8 @@
             Join now to:
             <ul class="hero-list">
                 <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
-                <li>&#x1F4C8 Get Weekly Nutrition Reports</li>
+                <li>&#x1F4A1 Receive personalized recipe suggestions</li>
+                <li>&#x1F4C8 Weekly Nutrition Reports</li>
                 <li>&#x2B50 Save Favorite Recipes</li>
                 <li>&#x1F477 Influence <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">new feature development</a></li>
             </ul>

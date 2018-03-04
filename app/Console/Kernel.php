@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\GenerateSiteMap::class
+        Commands\GenerateSiteMap::class,
+        Commands\SendReminder::class
     ];
 
     /**
@@ -27,6 +28,7 @@ class Kernel extends ConsoleKernel
          $schedule->command('sitemap:generate')
                   ->daily();
         $schedule->command('create:newDay');
+//        $schedule->command('send:reminder')->dailyAt('20:00');
     }
 
     /**

@@ -11,7 +11,7 @@ class Foods extends Model
     const DEFAULT_CACHE_TIME = 1440;
 
     public static function getAFood($slug){
-        $key = md5('food'.$slug);
+        $key = md5('1food'.$slug);
         if (Cache::has( $key )) {
             $response = Cache::get( $key );
         } else {
