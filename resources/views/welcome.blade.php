@@ -25,6 +25,32 @@
       </div>
     @endif
   @endforeach
+
+  {{--<h2>Settings</h2>--}}
+  {{--<form>--}}
+    {{--<div>--}}
+      {{--<input type="checkbox" id="reminder">--}}
+      {{--<label for="reminder">Get a reminder every evening if you haven't entered your daily dozen yet</label>--}}
+    {{--</div>--}}
+    {{--<div>--}}
+      {{--<input type="checkbox" id="public">--}}
+      {{--<label for="public">Make my dashboard open to the public</label>--}}
+    {{--</div>--}}
+    {{--<p>Metric system?</p>--}}
+    {{--<div>--}}
+      {{--<input type="radio" id="metric"--}}
+             {{--name="metric" title="imperial">--}}
+      {{--<label for="contactChoice1">Metric</label>--}}
+
+      {{--<input type="radio" id="imperial"--}}
+             {{--name="contact">--}}
+      {{--<label for="imperial">Imperial</label>--}}
+    {{--</div>--}}
+    {{--<div>--}}
+      {{--<button type="submit" class="btn">Update Settings</button>--}}
+    {{--</div>--}}
+  {{--</form>--}}
+
   <h2 class="btn-wrapper">FAQ</h2>
   <h3>What is this?</h3>
   <ul>
