@@ -38,6 +38,6 @@ class GenerateSiteMap extends Command
      */
     public function handle()
     {
-        SitemapGenerator::create('https://vegaroo.co')->writeToFile('public/sitemap-vegaroo.xml');
+        SitemapGenerator::create('https://vegaroo.co')->writeToFile('public/sitemap.xml');
     }
 }

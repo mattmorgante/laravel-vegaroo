@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-<title>Vegaroo | Tools, recipes and resources to make going plant-based easier</title>
+<title>Vegaroo | Tools, recipes and resources to make going plant-based easy</title>
+@include('includes.seo')
 
 @section('content')
 
@@ -38,7 +39,7 @@
 
     <div class="hero">
 
-        <h1 class="title">Vegaroo has only simple, easy, cheap, nutritious and delicious plant-based meals</h1>
+        <h2 class="title">Vegaroo has simple, easy, cheap, nutritious and delicious plant-based meals</h2>
 
         <div class="hero-list-wrapper">
             <h3>Vegaroo recipes have a strict no-tolerance policy</h3>
