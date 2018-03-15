@@ -96,7 +96,6 @@
       @endforeach
       </div>
     </div>
-
   </div>
 
 
@@ -119,6 +118,8 @@
   @endforeach
 </div>
 <br>
+
+    <h2>Historical scores</h2>
 
 
 @endsection

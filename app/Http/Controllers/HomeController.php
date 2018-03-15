@@ -90,7 +90,6 @@ class HomeController extends Controller
     }
 
     public function weekly() {
-      // todo: totalscore = days all summed from this week
       $userId = (Auth::user()->id);
 
       $foods = Foods::all();
@@ -144,12 +143,17 @@ class HomeController extends Controller
 
       $weekScore = $weekScore / 175;
       $weekScore = 100*(round($weekScore, 2));
+
+      $historicalScores = [];
+
+
       return view('weekly')->with([
           'week' => $week,
           'percentage' => $percentages,
           'days' => $last7days,
           'recommendedRecipes' => $recommendedRecipes,
-          'weekScore' => $weekScore
+          'weekScore' => $weekScore,
+          'historicalScores' => $historicalScores
       ]);
     }
 

@@ -28,6 +28,7 @@ class Kernel extends ConsoleKernel
          $schedule->command('sitemap:generate')
                   ->daily();
         $schedule->command('create:newDay');
+        $schedule->command('fill:historical')->weekly()->mondays()->at('01:00');
 //        $schedule->command('send:reminder')->dailyAt('20:00');
     }
 
