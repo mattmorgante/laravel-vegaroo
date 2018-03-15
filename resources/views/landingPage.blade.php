@@ -12,23 +12,20 @@
   </div>
   <br>
 
-    <h2 style="margin: 20px;">Track the <a href="/vegan-foods">Daily Dozen</a>: what have you eaten today?</h2>
   @if ( Auth::guest() )
-      @include('partials.daily-dozen')
         <div class="hero">
-
-            <h1 class="title">Why Join Vegaroo?</h1>
-
             <div class="hero-list-wrapper">
                 <ul class="hero-list">
                     <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
                     <li>&#x1F4A1 Receive personalized recipe suggestions</li>
-                    <li>&#x1F4C8 Get Weekly Nutrition Reports</li>
-                    <li>&#x2B50 Save Favorite Recipes</li>
+                    <li>&#x1F4C8 Track weekly nutrition reports</li>
+                    <li>&#x2B50 Save favorite recipes</li>
                     <li>&#x1F477 Influence new feature development</li>
                 </ul>
             </div>
         </div>
+    <h2 style="margin: 20px;">What have you eaten today?</h2>
+      @include('partials.daily-dozen')
       <div class="btn-wrapper">
         <a class="btn" href="/register">Join Vegaroo</a>
       </div>
@@ -38,6 +35,22 @@
     </div>
   @endif
     <br>
+
+    <div class="hero">
+
+        <h1 class="title">Vegaroo has only simple, easy, cheap, nutritious and delicious plant-based meals</h1>
+
+        <div class="hero-list-wrapper">
+            <h3>Vegaroo recipes have a strict no-tolerance policy</h3>
+            <ul class="hero-list">
+                <li>&#x1F644 <strong>No</strong> fancy ingredients</li>
+                <li>&#x23F1 <strong>No</strong> recipes longer than 30 minutes</li>
+                <li>&#x1F35A <strong>No</strong> bland meals</li>
+                <li>&#x1F914 <strong>No</strong> complicated cooking techniques</li>
+                <li>&#x1F346 <strong>No</strong> food porn</li>
+            </ul>
+        </div>
+    </div>
 
     <h2 style="margin: 20px;">What are you in the mood for?</h2>
     <ul class="flexible_row">
@@ -52,6 +65,9 @@
         <div class="row_item"><a href="/vegan-recipes#snacks">Snacks</a></div>
         <div class="row_item"><a href="/vegan-recipes#smoothies">Smoothies</a></div>
     </ul>
+
+
+
 
     @include('partials.grain-bowls')
     @include('partials.curries')
