@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Days;
 use App\Foods;
+use App\HistoricalScore;
 use App\recipe;
 use App\savedRecipes;
 use Carbon\Carbon;
@@ -144,8 +145,12 @@ class HomeController extends Controller
       $weekScore = $weekScore / 175;
       $weekScore = 100*(round($weekScore, 2));
 
-      $historicalScores = [];
+      $historicalScores = HistoricalScore::getScoresOfAUser($userId);
 
+      $totalScore = 0;
+      foreach ($historicalScores as $historicalScore) {
+          $totalScore = $totalScore + $historicalScore->score;
+      }
 
       return view('weekly')->with([
           'week' => $week,
@@ -153,7 +158,8 @@ class HomeController extends Controller
           'days' => $last7days,
           'recommendedRecipes' => $recommendedRecipes,
           'weekScore' => $weekScore,
-          'historicalScores' => $historicalScores
+          'historicalScores' => $historicalScores,
+          'totalScore' => $totalScore
       ]);
     }
 

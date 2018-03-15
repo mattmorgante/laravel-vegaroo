@@ -121,5 +121,13 @@
 
     <h2>Historical scores</h2>
 
+    @foreach ($historicalScores as $historicalScore)
+        <h3>Week of {{ $historicalScore->startDate }}</h3>
+        <h3>Score: {{ $historicalScore->score }}</h3>
+    @endforeach
+
+    <h2>Total score</h2>
+    <h3>{{ $totalScore }}</h3>
+
 
 @endsection
