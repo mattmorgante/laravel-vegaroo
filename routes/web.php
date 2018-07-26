@@ -13,7 +13,7 @@
 
 
 Route::get('/', 'LandingController@home');
-
+Route::get('/dashboard', 'LandingController@dashboard');
 // recipes
 Route::get('/vegan-recipes', 'RecipesController@home');
 Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');

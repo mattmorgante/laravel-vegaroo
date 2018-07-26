@@ -1,3 +1,10 @@
+/quiz 
+Personalized Tips To Reduce Your Environmental Impact 
+
+/homepage
+Remove dashboard put it somewhere else - too much info! 
+
+
 Vegaroo tools and resources to help people go vegan.
 could be a search engine for vegans - an authority, a place where people go to make decisions and get info
 
@@ -243,10 +250,7 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
      https://nutritionfacts.org/open-source/ 
      https://github.com/nutritionfactsorg/daily-dozen-ios/issues
 
-     
-
 How to make a tree that grows every time you do something well? - in javascript
-
 
 Documentation
 

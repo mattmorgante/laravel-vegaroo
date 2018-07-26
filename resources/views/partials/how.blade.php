@@ -4,3 +4,5 @@
     <li class="row_item article_item"><a class="article_link" href="/nutrition"><img class="tiny_img" src="/img/veg_tn.jpg" alt="What to eat and why: the Vegaroo Nutrition Manifesto">What Are The Healthiest Foods To Eat?</a></li>
     <li class="row_item article_item"><a class="article_link" href="/blogs-books-documentaries"><img class="tiny_img" src="/img/bookshelf_tn.jpg" alt="Eating Vegan is easier than ever">The Best Blogs, Books and Documentaries to understand Veganism</a></li>
 </ul>
+
+</div>

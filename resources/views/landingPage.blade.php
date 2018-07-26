@@ -9,38 +9,11 @@
 
 <div class="container">
   <div class="hero">
-    <h1 class="title">Tools, recipes and resources to help you eat more plant-based foods.</h1>
+    <h1 class="title">Recipes, tools, and resources to help you eat more plant-based foods.</h1>
   </div>
   <br>
 
-  @if ( Auth::guest() )
-        <div class="hero">
-            <div class="hero-list-wrapper">
-                <ul class="hero-list">
-                    <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
-                    <li>&#x1F4A1 Receive personalized recipe suggestions</li>
-                    <li>&#x1F4C8 Track weekly nutrition reports</li>
-                    <li>&#x2B50 Save favorite recipes</li>
-                    <li>&#x1F477 Influence new feature development</li>
-                </ul>
-            </div>
-        </div>
-    <h2 style="margin: 20px;">What have you eaten today?</h2>
-      @include('partials.daily-dozen')
-      <div class="btn-wrapper">
-        <a class="btn" href="/register">Join Vegaroo</a>
-      </div>
-  @else
-    <div class="btn-wrapper">
-      <a class="btn" href="/home">My Dashboard</a>
-    </div>
-  @endif
-    <br>
-
     <div class="hero">
-
-        <h2 class="title">Vegaroo has simple, easy, cheap, nutritious and delicious plant-based meals</h2>
-
         <div class="hero-list-wrapper">
             <h3>Vegaroo recipes have a strict no-tolerance policy</h3>
             <ul class="hero-list">
@@ -73,22 +46,18 @@
     @include('partials.grain-bowls')
     @include('partials.curries')
     @include('partials.stir-fries')
+    @include('partials.salads')
+    @include('partials.breakfasts')
+    @include('partials.snacks')
+    @include('partials.smoothies')
 
     <div class="btn-wrapper">
         <a class="btn" href="/vegan-recipes">All Recipes</a>
     </div>
 
+  @include('partials.tools')
 
-    @include('partials.why')
-
-  <div class="flexible_row">
-      <div class="row_item">
-          <h3><a href="/calculator">Calculate The Environmental Impact Of Your Diet</a></h3>
-      </div>
-      <div class="row_item">
-          <h3><a href="/values">Understand Vegaroo's Values</a></h3>
-      </div>
-  </div>
+  @include('partials.why')
 
   @include('partials.how')
 
@@ -98,7 +67,6 @@
   <br>
 
 </div>
-
 
 
 

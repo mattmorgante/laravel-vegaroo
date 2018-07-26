@@ -26,10 +26,31 @@ class LandingController extends Controller
         'recServings' => $recServings,
         'foods' => $foods,
         'today' => $today,
-          'bowls' => $bowls,
-          'curries' => $curries,
-          'stirFries' => $stirFries
+        'bowls' => $bowls,
+        'curries' => $curries,
+        'stirFries' => $stirFries,
+        'salads' => $salads,
+        'breakfasts' => $breakfasts,
+        'snacks' => $snacks,
+        'smoothies' => $smoothies,
       ]);
+    }
 
+    public function dashboard() {
+        $recServings = Foods::all()->pluck('recommended');
+        $foods = Foods::all();
+        $today = new \stdClass();
+        foreach ($foods as $food) {
+            $slug = $food->slug;
+            $today->$slug = 0;
+        }
+        $today->id = 0;
+        $today->percentage = 0;
+
+        return view('dashboard')->with([
+            'recServings' => $recServings,
+            'foods' => $foods,
+            'today' => $today,
+        ]);
     }
 }

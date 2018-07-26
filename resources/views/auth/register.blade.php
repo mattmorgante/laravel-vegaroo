@@ -3,14 +3,10 @@
 @section('content')
 <div class="container">
 
-    <h2 style="text-align: center">Join Vegaroo</h2>
+    <h2 style="text-align: center">Vegaroo is a collection of tools, recipes, and resources to help aspiring vegans live healthier and more conscious lives.</h2>
 
     <div class="hero">
         <div class="hero-list-wrapper">
-            Vegaroo is a collection of tools, recipes, and resources to help aspiring vegans live healthier and more conscious lives.
-            <br>
-            <br>
-            Join now to:
             <ul class="hero-list">
                 <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
                 <li>&#x1F4A1 Receive personalized recipe suggestions</li>
@@ -66,14 +62,7 @@
             <button class="login-button" type="submit">
                 Register
             </button>
-
             <br>
-            <h2>Already a member?</h2>
-            <button class="login-button">
-            <a href="{{ route('login') }}" style="color:#26ce81; text-decoration: none;">
-               Login Here
-            </a>
-            </button>
         </div>
     </form>
 </div>
