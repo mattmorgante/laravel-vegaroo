@@ -35,6 +35,9 @@ Route::get('/calculator', function () {
     return view('calculator');
 });
 
+Route::get('/quiz', 'QuizController@index');
+Route::get('/quiz/{number}', 'QuizController@takeQuiz');
+
 // tools & user
 Route::get('/blueprint', 'RecipesController@blueprint');
 Route::post('/addEmail', 'EmailController@create');

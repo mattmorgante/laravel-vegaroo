@@ -1,10 +1,6 @@
 /quiz 
 Personalized Tips To Reduce Your Environmental Impact 
 
-/homepage
-Remove dashboard put it somewhere else - too much info! 
-
-
 Vegaroo tools and resources to help people go vegan.
 could be a search engine for vegans - an authority, a place where people go to make decisions and get info
 
