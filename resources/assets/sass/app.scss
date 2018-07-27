@@ -632,3 +632,41 @@ input .user-input #email {
 .food-button {
   margin: 5px;
 }
+
+
+//QQQQ Quiz
+.start-quiz {
+  text-align: center;
+}
+
+.quiz-btn{
+  cursor: pointer;
+}
+
+.quiz_item {
+  flex: 1;
+  list-style: none;
+  padding: 30px;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.15);
+  border: 1px solid #e0e0e0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz_item input {
+  margin: 15px 0;
+  height: 20px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  border-radius: 7px;
+  border: grey 1px solid;
+}
+
+.quiz_item .btn-wrapper {
+  justify-content: space-around;
+  display: flex;
+}

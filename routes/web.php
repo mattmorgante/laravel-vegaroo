@@ -35,8 +35,9 @@ Route::get('/calculator', function () {
     return view('calculator');
 });
 
-Route::get('/quiz', 'QuizController@index');
-Route::get('/quiz/{number}', 'QuizController@takeQuiz');
+Route::get('/vegan-quiz', 'QuizController@index');
+Route::get('/vegan-quiz/{number}', 'QuizController@takeQuiz');
+Route::get('/vegan-quiz/suggestions/{hashed_id}', 'QuizController@suggestions');
 
 // tools & user
 Route::get('/blueprint', 'RecipesController@blueprint');
