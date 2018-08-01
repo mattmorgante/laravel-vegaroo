@@ -11,10 +11,13 @@
         </a>
         <a href="/resources">Resources</a>
         <a href="/vegan-recipes">Recipes</a>
+        <a href="/vegan-foods">Foods</a>
+        <a href="/calculator">Calculator</a>
         @if ( Auth::guest() )
-            <a href="{{ route('login') }}">Login</a>
+            <a id="join-burger" href="{{ route('register') }}">Join Vegaroo</a>
         @else
-            <a href="/home">Dashboard</a>
+            <a href="/home">Daily Dozen</a>
+
         @endif
     </div>
 </nav>

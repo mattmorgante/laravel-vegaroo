@@ -728,7 +728,7 @@ input .user-input #email {
 #mytopnav {
   position: absolute;
   right: 20px;
-  border: .5px solid grey;
+  border: .5px solid lightgray;
   border-radius: 5px;
 }
 
@@ -742,7 +742,12 @@ input .user-input #email {
 }
 
 .topnav.responsive {
-  background-color:  #ffffff;
+  background-color: #ffffff;
+}
+
+#join-burger {
+  background-color: #26ce81;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
