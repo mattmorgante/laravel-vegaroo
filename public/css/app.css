@@ -750,3 +750,22 @@ input .user-input #email {
   display: flex;
 }
 
+#share-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px 0px 0px 0px;
+}
+
+#share-buttons img {
+  width: 35px;
+  padding: 5px;
+  border: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  display: inline;
+}
+

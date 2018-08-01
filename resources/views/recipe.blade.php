@@ -105,40 +105,57 @@
     </div>
 
     <div class="recipe-buttons">
-    <div class="right-buttons">
-        @if ($userId == true)
-        <div class="save" onclick="save()">
-            <button class="btn">
-                @if ($saved == true)
-                    <i id="save-icon" class="fas fa-star"></i><span id="save">Saved!</span>
-                @else
-                    <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
-                @endif
-            </button>
-        </div>
-        @else
-            <div class="save" onclick="logIn()">
+        <div class="right-buttons">
+            @if ($userId == true)
+            <div class="save" onclick="save()">
                 <button class="btn">
-                    <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
+                    @if ($saved == true)
+                        <i id="save-icon" class="fas fa-star"></i><span id="save">Saved!</span>
+                    @else
+                        <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
+                    @endif
                 </button>
             </div>
-        @endif
+            @else
+                <div class="save" onclick="logIn()">
+                    <button class="btn">
+                        <i id="save-icon" class="far fa-star"></i><span id="save">Save</span>
+                    </button>
+                </div>
+            @endif
 
 
-        <div class="upvote" onclick="upvote()">
-            <button class="btn">
-                <i class="fas fa-caret-up"></i>
-                <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
-            </button>
+            <div class="upvote" onclick="upvote()">
+                <button class="btn">
+                    <i class="fas fa-caret-up"></i>
+                    <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
+                </button>
+            </div>
         </div>
+          <div class="tags">
+            @foreach ($tags as $tag)
+              <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
+            @endforeach
+          </div>
     </div>
-      <div class="tags">
-        @foreach ($tags as $tag)
-          <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
-        @endforeach
-      </div>
 
+    <div id="share-buttons">
+        <a href="http://www.facebook.com/sharer.php?u={{ Request::url() }}" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+        </a>
 
+        <a href="https://twitter.com/share?url={{ Request::url() }}&amp;text=Check%20Out%20This%20Recipe%20From%20Vegaroo&amp;hashtags=#vegaroo" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+        </a>
+
+        <a href="mailto:?Subject=Recipe From Vegaroo&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20
+        {{ Request::url() }}">
+            <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+        </a>
+
+        <a href="http://reddit.com/submit?url={{ Request::url() }}" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+        </a>
     </div>
 
     <div class="container">

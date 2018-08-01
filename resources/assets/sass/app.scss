@@ -687,3 +687,19 @@ input .user-input #email {
   justify-content: space-around;
   display: flex;
 }
+
+/// Sharing
+
+#share-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px 0px 0px;
+}
+
+#share-buttons img {
+  width: 35px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+}
