@@ -9,7 +9,6 @@
 
 <div class="container">
       @if ( Auth::guest() )
-        @include('partials.daily-dozen')
         <h2>How does this work?</h2>
 
         <p>The <a href="/vegan-foods">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
@@ -24,6 +23,8 @@
             <a class="btn" href="/home">My Dashboard</a>
         </div>
     @endif
+    <br>
+        @include('partials.daily-dozen')
     <br>
 </div>
 

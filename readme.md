@@ -1,29 +1,20 @@
+Mission: make it easier to go vegan
+
+Why: to improve the health of individual humans, the health of our planet, and the health of all other living things.
+
 /quiz 
 Personalized Tips To Reduce Your Environmental Impact 
+3 things you're doing well
+3 things you could improve 
 
-Vegaroo tools and resources to help people go vegan.
-could be a search engine for vegans - an authority, a place where people go to make decisions and get info
-
-Module:
-- help people for 1-4 weeks
-- 30 day program?
-
-- total score: on dashboard along with total servings for all time
-- demo mode? video? compelling post on reddit and nutrition facts
-
-Phase 2 = Expand Recipes
-A. Expand Recipes
+Expand Recipes
 1. User has the ability to search and filter for recipes
 
-3. build a script to scrape external websites for websites
+3. build a script to scrape external websites for recipes
 - get pictures and details from bloggers
 - parse time, title, calories, etc into current db structure
-- to recipe add fields external (0 or 1), seo description,
-
-4. User can share a recipe
-
-5. user has the ability to create a recipe with bowl/salad generator
-the script can power an empire of relevant content, then just build community features on top of it
+- to recipe add fields external (0 or 1), seo description
+a script can power an empire of relevant content, then just build community features on top of it
 Deadline = get 50 meals: Then you have an seo schedule
 vegan meals
 vegan recipes
@@ -38,9 +29,9 @@ vegan pizzas
 vegan bowls
 
 - commuicate with bloggers - this can help them!
-- ask for backlinks on recipes that use them (widget or link)
-
-simple homepage with a search bar and background images (find your next favorite vegan recipe)
+- ask for backlinks on recipes (widget or link)
+Site becomes a search engine: simple homepage with a search bar and background images (find your next favorite vegan 
+recipe)
 - at the bottom suggestions / tags to SEO pages
 - results = first search for title, then description
 - show link with photo, description (just like google), but on the right you can share or save!
@@ -52,10 +43,9 @@ B. Expand Community - increase registration
 - create a Front Page with three categories (just like the dashboard)
 - environment impact, nutritional impact, uplifting impact (supportive socially or saving animals - veganism has the power to bring compassion to the world in a profound way)
 
-
 2. Users can Review products (like nomadlist gear)
 - Ranking System for Products === Affiliate marketing
-- what about a ranking system for vegan cookbooks? milk substitutes? burgers / meat replacements? <-- this is an expanding field
+- a ranking system for vegan cookbooks? milk substitutes? burgers / meat replacements? <-- this is an expanding field
 - ability for a user to give a review/rating to a vegan meat / dairy replacements
 - ability for user to submit a product and a review/rating
 - both brand and non-branded grocery items/foods
@@ -81,6 +71,8 @@ Articles
 - buckwheat
 - bulgur
 * Article: best vegan dairy substitutes (coconut milk, coco yogurt, soy milk, soy yogurt, almond milk, oat milk)
+* Article: what should a vegan eat in a day?
+* Article: what nutrients is the vegan diet lacking?  
 
 - new database table
 - Product
@@ -106,27 +98,12 @@ detail pages for foods: the vegan superfoods - shareable digital cards
 - why they healthy, which minerals they got, studies they are used in, then which recipes you can find them
 
 C. Longer term idea:
-vegan food near me - filter google api reviews to mapbox coordinates : search for vegan, raw, vegeterian options in title, description, tags, or reviews
+vegan food near me (happy cow)- filter google api reviews to mapbox coordinates : search for vegan, raw, vegeterian 
+options in 
+title, description, tags, or reviews
 - worldwide map of vegan restaurants
 - cover it city by city - do one city first (amsterdam!!)
 - automate the process
-
-Mission: make it easier to go vegan
-
-Why: to improve the health of individual humans, the health of our planet, and the health of all other living things.
-
-Ideas:
---> Scrape vegan food blogs (find via google) and link to their sites
---> Searchable recipes: filter based on time, ingredients, etc
-
-Feature #3 - Community
-- Enter your email and get access to:
-- Personalized help via facebook messenger (vegaroo chat)
-- Access to slack group
-
-Feature #4
-- Recipe blueprint create your own
-- Share blueprint
 
 # Create a page with a form
 - Vegaroo Beta
@@ -142,25 +119,7 @@ Feature #4
  - How can I prepare it?
  - How can I get enough nutrients in my diet?
  - How can I deal with social pressures?
-2. Recipes
-- Blueprints: saveable, shareable
-3. Community
-- Community = Commenting on recipes, uploading a recipe, or asking a question in a forum style   
 -------------------------------------
-- Personalized Assistance
-- Limited time offer: answer your questions and come up with new feature requests based on your wants & needs
-- Meal planning advice & shopping lists
-- 24/7 chat support
-- Help you take steps towards veganism
-- This is how you get feedback and feature requests
-
-Recipe ToDo list
-Asian Inspired Salad: 2 cups bok choy, 1/2 cucumber, 2 cups edamame, 2 oz peanuts
-Teriyaki Tempeh Stir Fry
-Verry Berry Smoothie
-The most nutritious fruit, berries are chock full of antioxidants and adding a serving to your daily diet can improve your health and reduce the risk of disease. Try this recipe to easily squeeze some berries into your day
-Classics 
-Easy Bake Oven 
 
 * Article: glossary (weird foods that people might not know)
 * At the end of each article, extra notes about possible substitutes and notes about the nutritional content (description at top must be short)
@@ -173,12 +132,11 @@ Easy Bake Oven
 - Trent Williams (redskins ol )
 https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan--and-stayed-strong/2016/11/22/58c2e674-865c-11e6-92c2-14b64f3d453f_story.html?utm_term=.a447586d9a95
 - Kendrick Farris (weightlifter)
+- Tom Brady https://www.purplecarrot.com/tb12
 
-* Article: short-term health effects
-- Lose weight
-- Poop better
-- Heartburn
-- Energy
+* Celebrities 
+- moby
+- alicia silverstone 
 
 
 * Blueprints: each category should have a blueprint about how to make a generic version of the recipe with anything
@@ -216,7 +174,6 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
  - seeds
  - oatmeal (optional)
  https://www.reddit.com/r/veganfitness/comments/7ihg79/i_keep_making_the_same_vegan_protein_shake_and/
-
 
   Luca's ideas:
   - more trees means less C02
