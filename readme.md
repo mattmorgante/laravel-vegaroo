@@ -136,7 +136,11 @@ https://www.washingtonpost.com/national/health-science/these-athletes-went-vegan
 
 * Celebrities 
 - moby
-- alicia silverstone 
+- alicia silverstone
+- woody harrelson
+- ellen
+- peter dinklage
+- zooey deschanel 
 
 
 * Blueprints: each category should have a blueprint about how to make a generic version of the recipe with anything

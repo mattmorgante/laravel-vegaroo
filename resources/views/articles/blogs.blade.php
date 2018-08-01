@@ -46,6 +46,8 @@
             <li class="content research"><a target="_blank" href="http://www.imdb.com/title/tt6039284/">Food Choices</a> - Explores the impact of food on health, the environment, and more.</li>
             <li class="content research"><a href="https://www.eatingyoualive.com/">Eating You Alive</a> - Investigates how to treat chronic diseases through lifestyle changes and why doctors are not trained in nutrition.</li>
             <li class="content research"><a target="_blank" href="http://www.imdb.com/title/tt1227378/?ref_=tt_rec_tt">Fat, Sick & Nearly Dead</a> - The inspiring story of an obese Australian man who turns his health around by drinking only fresh fruit and vegetable juice for 60 days.</li>
+            <li class="content research"><a target="_blank" href="https://www.imdb.com/title/tt0358456/">Earthlings</a> - Using hidden cameras and never-before-seen footage, Earthlings
+                chronicles the day-to-day practices of the largest industries in the world, all of which rely entirely on animals for profit..</li>
         </ul>
 
         <h2 class="subtitle">Vegan Cooking Blogs</h2>
@@ -58,6 +60,10 @@
             <li class="content research"><a href="http://ohsheglows.com/">Oh She Glows</a> - One of the oldest and most prolific vegan blogs in terms of sheer number of recipes, you can definitely find something to your liking within this deep archive.</li>
             <li class="content research"><a href="https://www.budgetbytes.com/category/recipes/vegetarian/vegan/">Budget Bytes</a> - Not specifically vegan, this website still contains a wide variety of vegan and vegetarian options. The best part is that it's easy to see the cost of each recipe or serving, proving that eating vegan on a budget doesn't mean eating bland.</li>
             <li class="content research"><a href="http://www.veganricha.com/">Vegan Richa</a> - Plenty of delicious recipes across a wide spectrum, although some meals are undeniably complicated. Also a treasure trove of vegan indian recipes.</li>
+            <li class="content research"><a href="https://konikoffdental
+            .com/healthy-vegan-recipes-for-the-family/">Healthy Vegan Recipes for the Family</a> - An excellent
+                collection of resources and recipes for anyone interested in learning more about veganism.</li>
+
         </ul>
         <br>
     </div>
