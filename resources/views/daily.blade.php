@@ -55,8 +55,7 @@
 
         <div class="btn-wrapper">
           <button class="login-button" href="{{ route('logout') }}"
-             onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
+             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
               Logout
           </button>
 

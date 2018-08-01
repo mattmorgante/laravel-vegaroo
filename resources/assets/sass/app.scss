@@ -111,6 +111,23 @@ h3 {
   padding: 0;
 }
 
+.button_row {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.styled-link {
+  color: #26ce81;
+  font-weight: 900;
+  font-size: 24px;
+  cursor:pointer;
+}
+
+.button_row a {
+  text-decoration: none;
+}
+
 .row_item {
   flex: 1;
   list-style: none;

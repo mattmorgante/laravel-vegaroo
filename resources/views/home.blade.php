@@ -7,9 +7,7 @@
 @include('partials.nav')
 <div class="container">
     <div class="hero">
-
         <h1 class="title">Simple, easy, cheap, nutritious and delicious plant-based meals</h1>
-
     </div>
 
     <h3>What are you in the mood for?</h3>
@@ -46,27 +44,6 @@
     @include('partials.snacks')
 
     @include('partials.smoothies')
-
-
-    {{--<h3>Classics</h3>--}}
-    {{--<ul class="flexible_row">--}}
-        {{--@foreach ($classics as $recipe)--}}
-            {{--@include('partials.recipe-box')--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
-
-    {{--<div id="footer"><!-- flex container -->--}}
-        {{--<div class="join_slack"><!-- flex item -->--}}
-            {{--<h3><a class="article_link" href="https://vegaroo.slack.com">Join The Community</a></h3>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<h3>Sides</h3>--}}
-    {{--<ul class="flexible_row">--}}
-        {{--@foreach ($sides as $recipe)--}}
-            {{--@include('partials.recipe-box')--}}
-        {{--@endforeach--}}
-    {{--</ul>--}}
 </div>
 
 @endsection

@@ -1,4 +1,6 @@
-<a href="/vegan-recipes/bowls"><h3 class="section-title" id="grainbowls">Grain Bowls</h3></a>
+<div class="button_row">
+    <a href="/vegan-recipes/bowls"><span class="styled-link" id="grainbowls">Grain Bowls</span></a>
+</div>
 <ul class="flexible_row">
     @foreach ($bowls as $recipe)
         @include('partials.recipe-box')
