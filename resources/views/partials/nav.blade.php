@@ -5,8 +5,8 @@
         </ul>
     </div>
 
-    <div class="topnav" id="myTopnav">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu &nbsp;
+    <div class="topnav" id="navId">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">Menu &nbsp;
             <i class="fa fa-bars"></i>
         </a>
         <a href="/resources">Resources</a>
@@ -23,14 +23,33 @@
     </div>
 </nav>
 
-
 <script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
+    function toggleNav() {
+        var x = document.getElementById("navId");
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {
             x.className = "topnav";
         }
     }
+
+    function closeNav() {
+        var x = document.getElementById("navId");
+        if (x.className === "topnav") {
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    var specifiedElement = document.getElementById('navId');
+
+    document.addEventListener('click', function(event) {
+        console.log(specifiedElement);
+        var isClickInside = specifiedElement.contains(event.target);
+
+        if (!isClickInside) {
+            closeNav();
+        }
+    });
+
 </script>

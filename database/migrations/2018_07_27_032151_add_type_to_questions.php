@@ -15,10 +15,10 @@ class AddTypeToQuestions extends Migration
     {
         Schema::table('questions', function (Blueprint $table) {
             $table->string('type');
-            $table->string('option-1');
-            $table->string('option-2');
-            $table->string('option-3');
-            $table->string('option-4');
+            $table->string('option1');
+            $table->string('option2');
+            $table->string('option3');
+            $table->string('option4');
         });
     }
 

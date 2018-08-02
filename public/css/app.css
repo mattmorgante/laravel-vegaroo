@@ -792,7 +792,7 @@ input .user-input #email {
   display: block;
 }
 
-#mytopnav {
+#navId {
   position: absolute;
   right: 20px;
   border: .5px solid lightgray;

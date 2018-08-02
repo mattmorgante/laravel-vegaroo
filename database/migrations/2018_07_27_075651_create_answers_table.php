@@ -16,17 +16,17 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('hashed_id');
-            $table->integer('answer1');
-            $table->integer('answer2');
-            $table->integer('answer3');
-            $table->integer('answer4');
-            $table->integer('answer5');
-            $table->string('answer6');
-            $table->integer('answer7');
-            $table->integer('answer8');
-            $table->string('answer9');
-            $table->string('answer10');
-            $table->string('answer11');
+            $table->integer('answer1')->nullable();
+            $table->integer('answer2')->nullable();
+            $table->integer('answer3')->nullable();
+            $table->integer('answer4')->nullable();
+            $table->integer('answer5')->nullable();
+            $table->string('answer6')->nullable();
+            $table->integer('answer7')->nullable();
+            $table->integer('answer8')->nullable();
+            $table->string('answer9')->nullable();
+            $table->string('answer10')->nullable();
+            $table->string('answer11')->nullable();
             $table->timestamps();
         });
     }
