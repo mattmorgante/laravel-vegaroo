@@ -126,7 +126,6 @@
         }
 
         window.addEventListener('scroll', fixNav)
-
     </script>
 
 @endsection

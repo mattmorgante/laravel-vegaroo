@@ -36,6 +36,7 @@ Route::get('/calculator', function () {
 });
 
 Route::get('/vegan-quiz', 'QuizController@index');
+Route::get('/vegan-quiz/save', 'QuizController@saveAnswer');
 Route::get('/vegan-quiz/{number}', 'QuizController@takeQuiz');
 Route::get('/vegan-quiz/suggestions/{hashed_id}', 'QuizController@suggestions');
 

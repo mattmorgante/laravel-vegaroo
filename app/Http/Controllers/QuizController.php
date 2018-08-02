@@ -20,6 +20,13 @@ class QuizController extends Controller
         ]);
     }
 
+    public function saveAnswer(Request $request) {
+        $answer = Answers::where('hashed_id', $request->input('hashed_id'))->first();
+        $answer_nr = 'answer' . $request->input('answer_nr');
+        $answer->{$answer_nr} = $request->input('data');
+        $answer->save();
+    }
+
     public function suggestions($hashedId) {
         $suggestions = [];
         $answers = Answers::where('hashed_id', $hashedId)->first();
@@ -44,6 +51,6 @@ class QuizController extends Controller
         return view('quiz/suggestions')->with([
             'suggestions' => $suggestions,
         ]);
-
     }
+
 }
