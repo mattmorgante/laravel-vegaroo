@@ -43,23 +43,28 @@ class QuizController extends Controller
     public function suggestions($hashedId) {
         $suggestions = [];
         $answers = Answers::where('hashed_id', $hashedId)->first();
+        // person eats beef
+        $answers->answer1 >= 1 ? $suggestions[] = Suggestions::where('id', 1)->first(): null;
+        // reduce serving size
+        $answers->answer1 >= 1 ? $suggestions[] = Suggestions::where('id', 10)->first(): null;
+        // person drinks milk
+        $answers->answer8 >= 1 ? $suggestions[] = Suggestions::where('id', 3)->first(): null;
+        // person eats chicken
+        $answers->answer1 >= 1 ? $suggestions[] = Suggestions::where('id', 1)->first(): null;
+        // person eats less than 5 servings of meat per week, try one week veggie
+        $answers->answer1 <= 5 ? $suggestions[] = Suggestions::where('id', 9)->first(): null;
+        // person uses cheese
+        $answers->answer8 >= 1 ? $suggestions[] = Suggestions::where('id', 14)->first(): null;
 
-        if ($answers->answer1 >= 1) {
-            // person eats meat
-            $suggestions[] = Suggestions::where('id', 1)->first();
-        }
+        // normally eats meat for breakfast or lunch
 
-        if ($answers->answer8 >= 1 ) {
-            $suggestions[] = Suggestions::where('id', 3)->first();
-        }
+        //
 
         if (strpos($answers->answer6, 'c') !== false) {
+            // person uses eggs to bake
             $suggestions[] = Suggestions::where('id', 4)->first();
         }
 
-        if (strpos($answers->answer6, 'c') !== false) {
-            $suggestions[] = Suggestions::where('id', 4)->first();
-        }
 
         return view('quiz/suggestions')->with([
             'suggestions' => $suggestions,

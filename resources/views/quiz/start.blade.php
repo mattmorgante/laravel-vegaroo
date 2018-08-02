@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('header.javascript')
-
-@endsection
-
 @section('content')
 
 @include('partials.nav')
