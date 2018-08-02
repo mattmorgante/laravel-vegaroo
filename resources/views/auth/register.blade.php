@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <h2 style="text-align: center">Vegaroo is a collection of tools, recipes, and resources to help aspiring vegans live healthier and more conscious lives.</h2>
+    <h2 style="text-align: center"> Why Join Vegaroo?</h2>
 
     <div class="hero">
         <div class="hero-list-wrapper">

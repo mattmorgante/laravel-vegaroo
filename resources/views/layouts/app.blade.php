@@ -30,9 +30,14 @@
 @section('header.javascript')
     @show
 </head>
-<body>
-    @yield('content')
-    @include('partials.footer')
+<body class="page">
+    <div class="content">
+        @yield('content')
+    </div>
+
+    <div class="sticky_footer_wrappers">
+        @include('partials.footer')
+    </div>
 
     @if (env('APP_ENV') == 'production')
         <!-- Global site tag (gtag.js) - Google Analytics -->

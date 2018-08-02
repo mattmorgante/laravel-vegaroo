@@ -8,13 +8,14 @@
 
 @include('partials.nav')
 
-<div class="container">
+<div class="quiz-container">
     <div class="flexible_row">
         <div class="quiz_item">
             <p>Question {{ $question->id }} of 11</p>
             <h2>{{ $question->text }}</h2>
                 @if($question->type == "input")
-                    # of servings: <input name="answer" id="answer-value" type="text"><br>
+                    <span class="input_prompt"># of servings:</span><input name="answer" id="answer-value"
+                                                                         type="text"><br>
                     <div class="btn-wrapper">
                         @if ($question->id == 1)
                         @else
