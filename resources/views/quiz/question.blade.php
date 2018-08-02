@@ -14,23 +14,40 @@
             <p>Question {{ $question->id }} of 11</p>
             <h2>{{ $question->text }}</h2>
                 @if($question->type == "input")
-                    # of servings: <input type="text"><br>
+                    # of servings: <input name="answer" id="answer-value" type="text"><br>
+                    <div class="btn-wrapper">
+                        @if ($question->id == 1)
+                        @else
+                            <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
+                        @endif
+                        <button onclick="getInputAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
+                    </div>
                 @elseif($question->type == "select")
-                    <input  type="checkbox" value="1">{{ $question->option1 }}<br>
-                    <input class="quiz-input" type="checkbox" value="1">{{ $question->option2 }}<br>
-                    <input class="quiz-input" type="checkbox" value="1">{{ $question->option3 }}<br>
-                    <input class="quiz-input" type="checkbox" value="1">{{ $question->option4 }}<br>
+                    <input class="quiz-input" id="a" type="checkbox" value="1">{{ $question->option1 }}<br>
+                    <input class="quiz-input" id="b" type="checkbox" value="1">{{ $question->option2 }}<br>
+                    <input class="quiz-input" id="c" type="checkbox" value="1">{{ $question->option3 }}<br>
+                    <input class="quiz-input" id="d" type="checkbox" value="1">{{ $question->option4 }}<br>
+
+                    <div class="btn-wrapper">
+                        <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
+
+                        @if ($question->id == 11)
+                            <button onclick="finish()" class="quiz-btn btn">Finish</button>
+                        @else
+                            <button onclick="getCheckboxAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
+                        @endif
+                    </div>
                 @elseif($question->type == "multiple-choice")
-                    <input class="quiz-input" type="radio" value="1">{{ $question->option1 }}<br>
-                    <input class="quiz-input" type="radio" value="1">{{ $question->option2 }}<br>
-                    <input class="quiz-input" type="radio" value="1">{{ $question->option3 }}<br>
-                    <input class="quiz-input" type="radio" value="1">{{ $question->option4 }}<br>
+                    <input class="quiz-input" name="radio" type="radio" value="a">{{ $question->option1 }}<br>
+                    <input class="quiz-input" name="radio" type="radio" value="b">{{ $question->option2 }}<br>
+                    <input class="quiz-input" name="radio" type="radio" value="c">{{ $question->option3 }}<br>
+                    <input class="quiz-input" name="radio" type="radio" value="d">{{ $question->option4 }}<br>
+
+                    <div class="btn-wrapper">
+                        <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
+                        <button onclick="getRadioAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
+                    </div>
                 @endif
-            <div class="btn-wrapper">
-                <button onclick="sendAnswer(3)" class="quiz-btn btn">Save answer</button>
-                <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
-                <button onclick="changeQuestion(1)" class="quiz-btn btn">Next</button>
-            </div>
         </div>
     </div>
 </div>
@@ -43,12 +60,41 @@
         var urlParts = window.location.href.split('/');
         var currentQuestion = parseInt(urlParts.pop());
         var nextQuestion = parseInt(currentQuestion)+ incrementor;
-        window.location.href=('/vegan-quiz/' + nextQuestion);
+        var hashed_id = urlParts[4];
+        window.location.href=('/vegan-quiz/' + hashed_id + '/' + nextQuestion);
+    }
+
+    function finish() {
+        var urlParts = window.location.href.split('/');
+        var hashed_id = urlParts[4];
+        window.location.href=('/suggestions/' + hashed_id );
+    }
+
+    function getInputAnswer() {
+        var answer = document.getElementById('answer-value').value;
+        sendAnswer(answer);
+    }
+
+    function getCheckboxAnswer() {
+        var a = document.querySelector('#a').checked;
+        var b = document.querySelector('#b').checked;
+        var c = document.querySelector('#c').checked;
+        var d = document.querySelector('#d').checked;
+        var answer = a + ", " + b + ", " + c + ", " + d;
+        sendAnswer(answer);
+    }
+
+    function getRadioAnswer() {
+        var answer = document.querySelector('input[name = "radio"]:checked').value;
+        sendAnswer(answer);
     }
 
     function sendAnswer(answer) {
-        var answer_nr = 1;
-        var hashed_id = 12345;
+
+        var urlParts = window.location.href.split('/');
+        var answer_nr = urlParts.pop();
+        var hashed_id = urlParts[4];
+
         $.ajax({
             url: "/vegan-quiz/save",
             cache: false,
@@ -65,60 +111,7 @@
             .fail(function () {
                 console.log("error");
             });
-
-
     }
 
 
-    function increment(incrementor, target, recommended) {
-        var value = parseInt(document.getElementById(target).value);
-
-        if (value == 0 && incrementor == -1) {
-
-        } else {
-            value+=incrementor;
-
-            if (value == 0) {
-                document.getElementById(target).parentElement.style.backgroundColor = "white";
-            }
-
-            if ( (value / recommended) >= .33 ) {
-                document.getElementById(target).parentElement.style.backgroundColor = "#d3f5e5";
-            }
-
-            if ( (value / recommended) >= .50 ) {
-                document.getElementById(target).parentElement.style.backgroundColor = "#92e6c0";
-            }
-
-            if ( value >= recommended ) {
-                document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
-            }
-
-            if (value > recommended ) {
-
-            } else {
-                document.getElementById(target).value = value;
-                updateBar(incrementor);
-
-                var data = target.split("-");
-
-                $.ajax({
-                    url: "/save",
-                    cache: false,
-                    data: {
-                        food: data[0],
-                        dayId: data[1],
-                        value: value
-                    }
-                })
-                    .done(function (response) {
-                        console.log(response);
-                        console.log('yes');
-                    })
-                    .fail(function () {
-                        console.log("error");
-                    });
-            }
-        }
-    }
 </script>

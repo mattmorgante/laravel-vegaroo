@@ -5,16 +5,29 @@ namespace App\Http\Controllers;
 use App\Answers;
 use App\Questions;
 use App\Suggestions;
+use DateTime;
 use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
     public function index() {
-        return view('quiz/start');
+        $date = date('m/d/Y-h:i:s-a', time());
+        $hashed_id = md5($date);
+
+        return view('quiz/start')->with([
+            'hashed_id' => $hashed_id
+        ]);
     }
 
-    public function takeQuiz($number) {
+    public function takeQuiz($hashed_id, $number) {
         $question = Questions::where('id', $number)->first();
+        $answer = Answers::where('hashed_id', $hashed_id)->first();
+        if ($answer == null) {
+            $answer = new Answers();
+            $answer->hashed_id = $hashed_id;
+            $answer->save();
+        }
+
         return view('quiz/question')->with([
             'question' => $question,
         ]);

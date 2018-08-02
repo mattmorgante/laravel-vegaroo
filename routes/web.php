@@ -37,8 +37,8 @@ Route::get('/calculator', function () {
 
 Route::get('/vegan-quiz', 'QuizController@index');
 Route::get('/vegan-quiz/save', 'QuizController@saveAnswer');
-Route::get('/vegan-quiz/{number}', 'QuizController@takeQuiz');
-Route::get('/vegan-quiz/suggestions/{hashed_id}', 'QuizController@suggestions');
+Route::get('/vegan-quiz/{hashed_id}/{number}', 'QuizController@takeQuiz');
+Route::get('/suggestions/{hashed_id}', 'QuizController@suggestions');
 
 // tools & user
 Route::get('/blueprint', 'RecipesController@blueprint');
