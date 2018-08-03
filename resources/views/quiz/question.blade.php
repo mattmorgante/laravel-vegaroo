@@ -11,19 +11,19 @@
 <div class="quiz-container">
     <div class="flexible_row">
         <div class="quiz_item">
-            <p>Question {{ $question->id }} of 13</p>
+            <p>Question {{ $question->id }} of 14</p>
             <h2>{{ $question->text }}</h2>
                 @if($question->type == "input")
-                    <span class="input_prompt"># of servings:</span><input name="answer" id="answer-value"
-                                                                         type="text"><br>
+                    <span class="input_prompt"># of servings:</span><input name="answer" id="answer-value" type="text" maxlength="2"><br>
                     <div class="btn-wrapper">
                         @if ($question->id == 1)
                         @else
                             <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
                         @endif
-                        <button onclick="getInputAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
+                        <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
                     </div>
                 @elseif($question->type == "select")
+                <div class="select-wrapper">
                     <input name="cb-input" class="quiz-input" value="a" type="checkbox">{{ $question->option1 }} <br>
                     <input name="cb-input" class="quiz-input" value="b" type="checkbox">{{ $question->option2 }}<br>
                     <input name="cb-input" class="quiz-input" value="c" type="checkbox">{{ $question->option3 }}<br>
@@ -31,13 +31,15 @@
 
                     <div class="btn-wrapper">
                         <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
-                        @if ($question->id == 13)
+                        @if ($question->id == 14)
                             <button onclick="finish()" class="quiz-btn btn">Finish</button>
                         @else
-                            <button onclick="getCheckboxAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
+                            <button onclick="getCheckboxAnswer()" class="quiz-btn btn">Next</button>
                         @endif
                     </div>
+                </div>
                 @elseif($question->type == "multiple-choice")
+                <div class="select-wrapper">
                     <input class="quiz-input" name="radio" type="radio" value="a">{{ $question->option1 }}<br>
                     <input class="quiz-input" name="radio" type="radio" value="b">{{ $question->option2 }}<br>
                     <input class="quiz-input" name="radio" type="radio" value="c">{{ $question->option3 }}<br>
@@ -45,8 +47,9 @@
 
                     <div class="btn-wrapper">
                         <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
-                        <button onclick="getRadioAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
+                        <button onclick="getRadioAnswer()" class="quiz-btn btn">Next</button>
                     </div>
+                </div>
                 @endif
         </div>
     </div>
@@ -72,7 +75,17 @@
 
     function getInputAnswer() {
         var answer = document.getElementById('answer-value').value;
-        sendAnswer(answer);
+        answer = Number(answer);
+        console.log(answer);
+
+        if (answer > -1 && answer < 100) {
+            console.log('greater');
+            sendAnswer(answer);
+            changeQuestion(1);
+        } else {
+            alert("Please enter a number between 0 and 99");
+            return false;
+        }
     }
 
     function getCheckboxAnswer() {
@@ -81,20 +94,31 @@
             values.push(el.value);
         });
         values = values.toString();
-        sendAnswer(values);
+        if (values) {
+            sendAnswer(values);
+            changeQuestion(1);
+        } else {
+            alert("Please select at least one option");
+            return false;
+        }
     }
 
     function getRadioAnswer() {
-        var answer = document.querySelector('input[name = "radio"]:checked').value;
-        sendAnswer(answer);
+        var answer = document.querySelector('input[name = "radio"]:checked');
+        if (answer) {
+            sendAnswer(answer.value);
+            changeQuestion(1);
+        } else {
+            alert("Please select an option");
+            return false;
+        }
+
     }
 
     function sendAnswer(answer) {
-
         var urlParts = window.location.href.split('/');
         var answer_nr = urlParts.pop();
         var hashed_id = urlParts[4];
-
 
         $.ajax({
             url: "/vegan-quiz/save",

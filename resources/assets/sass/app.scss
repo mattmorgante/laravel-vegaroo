@@ -676,6 +676,11 @@ input .user-input #email {
   display: flex;
 }
 
+.select-wrapper {
+  text-align: left;
+  margin-left: 4em;
+}
+
 .input_prompt {
   margin: 10px;
   font-size: 20px;
@@ -700,10 +705,4 @@ input .user-input #email {
   border: 0;
   box-shadow: 0;
   display: inline;
-}
-
-
-// footer
-.sticky_footer_wrapper {
-
 }
