@@ -119,14 +119,11 @@ class QuizController extends Controller
             $suggestions[] = Suggestions::where('id', 17)->first();
         }
 
-
         // eats meat for breakfast
         if ((strpos($answers->answer12, 'a') !== false))  {
             $suggestions[] = Suggestions::where('id', 21)->first();
-        }
-
-        // eats dairy for breakfast
-        if ((strpos($answers->answer13, 'a') !== false))  {
+        } elseif ((strpos($answers->answer13, 'a') !== false)) {
+            // dairy 4 breakfast
             $suggestions[] = Suggestions::where('id', 21)->first();
         }
 

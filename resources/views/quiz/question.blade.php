@@ -75,8 +75,11 @@
 
     function getInputAnswer() {
         var answer = document.getElementById('answer-value').value;
+        if (answer == "" || answer == null){
+            alert("Please enter a number between 0 and 99");
+            return false;
+        }
         answer = Number(answer);
-        console.log(answer);
 
         if (answer > -1 && answer < 100) {
             console.log('greater');
@@ -115,10 +118,12 @@
 
     }
 
-    function sendAnswer(answer) {
+    function sendAnswer(data) {
         var urlParts = window.location.href.split('/');
         var answer_nr = urlParts.pop();
         var hashed_id = urlParts[4];
+
+        console.log(data);
 
         $.ajax({
             url: "/vegan-quiz/save",
@@ -126,15 +131,16 @@
             data: {
                 answer_nr: answer_nr,
                 hashed_id: hashed_id,
-                data: answer
+                data: data
             }
         })
             .done(function (response) {
                 console.log(response);
                 console.log('success');
             })
-            .fail(function () {
-                console.log("error");
+            .fail(function (response) {
+                console.log(response);
+                console.log('error');
             });
     }
 

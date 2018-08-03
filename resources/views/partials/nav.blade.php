@@ -44,7 +44,6 @@
     var specifiedElement = document.getElementById('navId');
 
     document.addEventListener('click', function(event) {
-        console.log(specifiedElement);
         var isClickInside = specifiedElement.contains(event.target);
 
         if (!isClickInside) {
