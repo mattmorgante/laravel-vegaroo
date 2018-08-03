@@ -13,7 +13,8 @@
     @else
       <div class="food-card" style="background-color: white">
     @endif
-          <a class="food-link" href="/vegan-foods/{{ $food->slug }}">{{ $food->name }}</a>
+          <a class="link-text" style="text-decoration: none;" href="/vegan-foods/{{ $food->slug }}">{{ $food->name
+              }}</a>
           <p>{{ $food->servingSize }}</p>
           <br>
           <i class="fas fa-minus-circle fa-2x" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>

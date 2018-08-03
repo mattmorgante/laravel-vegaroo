@@ -15,7 +15,9 @@
 
     <h2>How does this work?</h2>
 
-    <p>The <a href="/vegan-foods">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
+    <p>The <a class="link-text" href="/vegan-foods">Daily Dozen</a> is a collection of daily recommendations to prevent
+        the 14
+        biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
 
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">{{ $displayDate }}</h2>
@@ -36,7 +38,9 @@
 @if ($categoriesComplete == 12 )
     <h2 class="other-recipes">You rockstar! Nothing left to eat or drink today. Get a good night's sleep, then come back tomorrow and crush it again</h2>
         @else
-    <h2 class="other-recipes">What else should you eat today? <a href="javascript:window.location.reload(true);">(Update)</a></h2>
+    <h2 class="other-recipes">What else should you eat today? <a class="link-text" href="javascript:window.location
+    .reload(true);">
+            (Update)</a></h2>
       @foreach ($recommendedRecipes as $name => $recipeCollection)
         @if (count($recipeCollection) != 0 )
           <h2>Recipes with {{ $name }}</h2>
