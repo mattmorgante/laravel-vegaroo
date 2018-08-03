@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="hero">
-    <h1 class="title">Recipes, tools, and resources to help you eat more plant-based foods.</h1>
+    <h1 class="title">Vegaroo Makes It Easier To Eat More Plant-Based Foods</h1>
   </div>
   <br>
 

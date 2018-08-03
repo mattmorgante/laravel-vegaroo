@@ -11,7 +11,7 @@
 <div class="quiz-container">
     <div class="flexible_row">
         <div class="quiz_item">
-            <p>Question {{ $question->id }} of 11</p>
+            <p>Question {{ $question->id }} of 13</p>
             <h2>{{ $question->text }}</h2>
                 @if($question->type == "input")
                     <span class="input_prompt"># of servings:</span><input name="answer" id="answer-value"
@@ -24,15 +24,14 @@
                         <button onclick="getInputAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
                     </div>
                 @elseif($question->type == "select")
-                    <input class="quiz-input" id="a" type="checkbox" value="1">{{ $question->option1 }}<br>
-                    <input class="quiz-input" id="b" type="checkbox" value="1">{{ $question->option2 }}<br>
-                    <input class="quiz-input" id="c" type="checkbox" value="1">{{ $question->option3 }}<br>
-                    <input class="quiz-input" id="d" type="checkbox" value="1">{{ $question->option4 }}<br>
+                    <input name="cb-input" class="quiz-input" value="a" type="checkbox">{{ $question->option1 }} <br>
+                    <input name="cb-input" class="quiz-input" value="b" type="checkbox">{{ $question->option2 }}<br>
+                    <input name="cb-input" class="quiz-input" value="c" type="checkbox">{{ $question->option3 }}<br>
+                    <input name="cb-input" class="quiz-input" value="d" type="checkbox">{{ $question->option4 }}<br>
 
                     <div class="btn-wrapper">
                         <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
-
-                        @if ($question->id == 11)
+                        @if ($question->id == 13)
                             <button onclick="finish()" class="quiz-btn btn">Finish</button>
                         @else
                             <button onclick="getCheckboxAnswer(); changeQuestion(1)" class="quiz-btn btn">Next</button>
@@ -77,12 +76,12 @@
     }
 
     function getCheckboxAnswer() {
-        var a = document.querySelector('#a').checked;
-        var b = document.querySelector('#b').checked;
-        var c = document.querySelector('#c').checked;
-        var d = document.querySelector('#d').checked;
-        var answer = a + ", " + b + ", " + c + ", " + d;
-        sendAnswer(answer);
+        var checkboxes = document.querySelectorAll('input[name="cb-input"]:checked'), values = [];
+        Array.prototype.forEach.call(checkboxes, function(el) {
+            values.push(el.value);
+        });
+        values = values.toString();
+        sendAnswer(values);
     }
 
     function getRadioAnswer() {
@@ -95,6 +94,7 @@
         var urlParts = window.location.href.split('/');
         var answer_nr = urlParts.pop();
         var hashed_id = urlParts[4];
+
 
         $.ajax({
             url: "/vegan-quiz/save",

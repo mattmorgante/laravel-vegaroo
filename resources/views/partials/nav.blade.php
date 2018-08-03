@@ -9,15 +9,15 @@
         <a href="javascript:void(0);" class="icon" onclick="toggleNav()">Menu &nbsp;
             <i class="fa fa-bars"></i>
         </a>
-        <a href="/resources">Resources</a>
         <a href="/vegan-recipes">Recipes</a>
+        <a href="/resources">Resources</a>
         <a href="/vegan-foods">Foods</a>
         <a href="/vegan-quiz">Quiz</a>
         <a href="/calculator">Calculator</a>
         @if ( Auth::guest() )
-            <a id="join-burger" href="{{ route('register') }}">Join Vegaroo</a>
+            <a class="join-burger" href="{{ route('register') }}">Join Vegaroo</a>
         @else
-            <a href="/home">Daily Dozen</a>
+            <a class="join-burger" href="/home">Dashboard</a>
 
         @endif
     </div>

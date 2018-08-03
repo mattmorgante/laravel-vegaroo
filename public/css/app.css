@@ -493,6 +493,11 @@ h3 {
           justify-content: center;
 }
 
+.link-text {
+  color: #26ce81;
+  font-weight: 900;
+}
+
 .form__field {
   width: 360px;
   background: #fff;
@@ -665,6 +670,10 @@ input .user-input #email {
 
 .tags {
   width: 50%;
+}
+
+.tags a {
+  text-transform: capitalize;
 }
 
 .right-buttons {

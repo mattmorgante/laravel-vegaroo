@@ -12,7 +12,7 @@
                 <li>&#x1F4A1 Receive personalized recipe suggestions</li>
                 <li>&#x1F4C8 Weekly Nutrition Reports</li>
                 <li>&#x2B50 Save Favorite Recipes</li>
-                <li>&#x1F477 Influence <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">new feature development</a></li>
+                <li>&#x1F477 Influence new feature development</li>
             </ul>
         </div>
     </div>
@@ -62,7 +62,7 @@
             <button class="login-button" type="submit">
                 Register
             </button>
-            <br>
+            <p>Already a member? <a href="{{ route('login') }}" class="link-text">Login here.</a></p>
         </div>
     </form>
 </div>

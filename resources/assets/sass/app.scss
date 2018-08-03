@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
+$vegaroo-primary-color: #26ce81;
+
 body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
@@ -81,7 +83,7 @@ h3 {
 }
 .btn {
   padding: 10px 20px;
-  background-color: #26ce81;
+  background-color: $vegaroo-primary-color;
   margin: 0 auto;
   display: inline-block;
   text-align: center;
@@ -118,7 +120,7 @@ h3 {
 }
 
 .styled-link {
-  color: #26ce81;
+  color: $vegaroo-primary-color;
   font-weight: 900;
   font-size: 24px;
   cursor:pointer;
@@ -152,7 +154,7 @@ h3 {
 
 .row_item a {
   text-decoration: none;
-  color: #26ce81;
+  color: $vegaroo-primary-color;
   font-weight: 900;
   font-size: 18px;
 }
@@ -249,7 +251,7 @@ h3 {
 
 .call_to_action {
   width: 100%;
-  background-color: #26ce81;
+  background-color: $vegaroo-primary-color;
   height: 200px;
   text-align: center;
   display: flex;
@@ -302,7 +304,7 @@ h3 {
 .call_to_action .button {
   height: 50px;
   background-color: white;
-  color: #26ce81;
+  color: $vegaroo-primary-color;
   padding: 13px 40px;
   margin: 15px;
   border-radius: 4px;
@@ -412,32 +414,8 @@ h3 {
   text-align: center;
 }
 
-//
-
-//table {
-//  font-family: arial, sans-serif;
-//  border-collapse: collapse;
-//  width: 95%;
-//  margin: 0 auto;
-//  margin-top: 20px;
-//}
-//
-//td, th {
-//  border: 1px solid #dddddd;
-//  padding: 6px;
-//  min-width: 76px;
-//}
-//th {
-//  text-align: left;
-//}
-//
-//td {
-//  text-align: center;
-//}
-
-
 .green {
-  background-color: #26ce81;
+  background-color: $vegaroo-primary-color;
   text-align: center;
 }
 
@@ -452,6 +430,11 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.link-text {
+  color: $vegaroo-primary-color;
+  font-weight: 900;
 }
 
 .form {
@@ -473,7 +456,7 @@ input .user-input #email {
 .login-button {
   height: 50px;
   background-color: white;
-  color: #26ce81;
+  color: $vegaroo-primary-color;
   padding: 13px 40px;
   margin: 15px;
   border-radius: 4px;
@@ -488,7 +471,7 @@ input .user-input #email {
 
 .login-nav {
   border-radius: 4px;
-  background-color: #26ce81;
+  background-color: $vegaroo-primary-color;
   padding: 0px 20px;
   @media (max-width: 767px) {
     padding: 0 10px;
@@ -540,7 +523,7 @@ input .user-input #email {
 
 #go-button {
   background-color: white;
-  color: #26ce81;
+  color: $vegaroo-primary-color;
   height: 30px;
   width: 50px;
   margin: 15px;
@@ -570,7 +553,7 @@ input .user-input #email {
 
 #myBar {
   height: 30px;
-  background-color: #26ce81;
+  background-color: $vegaroo-primary-color;
   text-align: center;
   line-height: 30px;
   color: white;
@@ -581,12 +564,12 @@ input .user-input #email {
 }
 
 .user-nav a {
-  color: #26ce81;
+  color: $vegaroo-primary-color;
   font-size: 12px;
   font-weight: bold;
   margin: 3px;
   text-decoration: none;
-  border-bottom: #26ce81 3px solid;
+  border-bottom: $vegaroo-primary-color 3px solid;
   @media (min-width: 767px) {
     font-size: 18px;
     margin: 10px;
@@ -601,7 +584,7 @@ input .user-input #email {
 #week-score {
   text-align: center;
   font-size: 38px;
-  color: #26ce81;
+  color: $vegaroo-primary-color;
 }
 
 .recipe-buttons {
@@ -613,6 +596,10 @@ input .user-input #email {
 
 .tags {
   width: 50%;
+}
+
+.tags a{
+  text-transform: capitalize;
 }
 
 .right-buttons {
