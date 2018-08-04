@@ -14,7 +14,8 @@
             <p>Question {{ $question->id }} of 14</p>
             <h2>{{ $question->text }}</h2>
                 @if($question->type == "input")
-                    <span class="input_prompt"># of servings:</span><input name="answer" id="answer-value" type="text" maxlength="2"><br>
+                    <span class="input_prompt"># of servings:</span><input style="height: 20px;" name="answer" id="answer-value"
+                                                                           type="text" maxlength="2"><br>
                     <div class="btn-wrapper">
                         @if ($question->id == 1)
                         @else

@@ -143,6 +143,10 @@ h3 {
   border: 1px solid #e0e0e0;
 }
 
+.calculator_item {
+  padding: 0;
+}
+
 @media (max-width: 767px) {
   .flexible_row {
     flex-wrap: wrap;
@@ -200,6 +204,14 @@ h3 {
   text-align: left;
 }
 
+#calculator label {
+  text-align: left;
+  margin: 10px;
+}
+
+.quiz_item #calculator input {
+  margin: 0;
+}
 .recipe_extras {
   //display: flex;
   //justify-content: space-between;
@@ -659,11 +671,13 @@ input .user-input #email {
   max-width: 600px;
   margin: 0 auto;
 }
+.quiz-input {
+  height: 16px;
+  margin-bottom: 10px;
+}
 
 .quiz_item input {
-  margin: 15px 0;
   padding: 15px 0;
-  height: 20px;
   font-size: 20px;
   width: 40px;
   text-align: center;
@@ -690,6 +704,11 @@ input .user-input #email {
   max-width: 1220px;
   margin: 0 auto;
   padding: 10px;
+}
+
+#update_text {
+  color: $vegaroo-primary-color;
+  font-weight: bold;
 }
 
 /// Sharing

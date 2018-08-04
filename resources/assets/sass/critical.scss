@@ -56,6 +56,10 @@ nav ul li a {
     font-size: 20px;
   }
 
+  .landing-page-title {
+    font-size: 40px !important;
+  }
+
   nav {
     height: 58px !important;
   }
@@ -81,7 +85,7 @@ nav ul li a {
 
 .title {
   max-width: 700px;
-  font-size: 40px;
+  font-size: 28px;
   text-align: center;
   display: inline-block;
 }
@@ -95,10 +99,11 @@ nav ul li a {
 
 .hero-list-wrapper {
   border: 3px solid #e2e2e2;
-  padding: 10px;
   border-radius: 4px;
   max-width: 500px;
   margin: 0 auto;
+  padding: 10px 10px 10px 20px;
+  text-align: left;
 }
 
 .hero-list-wrapper h3 {
