@@ -13,7 +13,8 @@
     @else
       <div class="food-card" style="background-color: white">
     @endif
-          <a class="link-text" style="text-decoration: none;" href="/vegan-foods/{{ $food->slug }}">{{ $food->name
+          <a style="text-decoration: none;" href="/vegan-foods/{{ $food->slug }}">{{
+          $food->name
               }}</a>
           <p>{{ $food->servingSize }}</p>
           <br>

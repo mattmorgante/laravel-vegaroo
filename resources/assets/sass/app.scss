@@ -324,6 +324,18 @@ h3 {
   font-size: 16px;
 }
 
+.call_to_action_quiz .button {
+
+    height: 50px;
+    background-color: $vegaroo-primary-color;
+    color: white;
+    padding: 13px 40px;
+    margin: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 // article page styling
 .article_wrapper {
   text-align: center;

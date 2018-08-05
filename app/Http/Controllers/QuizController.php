@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Answers;
+use App\Email;
 use App\Questions;
 use App\Suggestions;
 use Illuminate\Http\Request;
@@ -27,30 +28,6 @@ class QuizController extends Controller
             $answer->save();
         }
 
-//        if ($number == 12 ) {
-//            // check to see if they eat meat
-//            $answers = Answers::where('hashed_id', $hashed_id)->first();
-//            if (array_sum([$answers->answer1, $answers->answer2, $answers->answer3, $answers->answer4]) > 1) {
-//                return view('quiz/question')->with([
-//                    'question' => $question,
-//                ]);
-//            } else {
-//                return redirect('/vegan-quiz/' . $hashed_id . '/13');
-//            }
-//        }
-//
-//        if ($number == 13 ) {
-//            // check to see if they eat dairy
-//            $answers = Answers::where('hashed_id', $hashed_id)->first();
-//            if (array_sum([$answers->answer5, $answers->answer7, $answers->answer8]) > 1) {
-//                return view('quiz/question')->with([
-//                    'question' => $question,
-//                ]);
-//            } else {
-//                return redirect('/suggestions/' . $hashed_id);
-//            }
-//        }
-
         return view('quiz/question')->with([
             'question' => $question,
         ]);
@@ -61,6 +38,12 @@ class QuizController extends Controller
         $answer_nr = 'answer' . $request->input('answer_nr');
         $answer->{$answer_nr} = $request->input('data');
         $answer->save();
+    }
+
+    public function emailCapture($hashedId) {
+        return view('quiz/emailCapture')->with([
+            'hashedId' => $hashedId,
+        ]);
     }
 
     public function suggestions($hashedId) {

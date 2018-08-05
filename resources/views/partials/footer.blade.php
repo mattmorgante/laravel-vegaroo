@@ -8,7 +8,8 @@
       </a>
     </div>
   @else
-    <div class="email_capture"><p>Stay tuned for updates from Vegaroo</p>
+    <div class="email_capture">
+        <p>Stay tuned for updates from Vegaroo</p>
 
       <div class="input_button">
         <form onsubmit="return doSomething();">

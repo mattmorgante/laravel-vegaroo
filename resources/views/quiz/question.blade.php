@@ -69,9 +69,7 @@
     }
 
     function finish() {
-        var urlParts = window.location.href.split('/');
-        var hashed_id = urlParts[4];
-        window.location.href=('/suggestions/' + hashed_id );
+        getCheckboxAnswer(true);
     }
 
     function getInputAnswer() {
@@ -92,7 +90,7 @@
         }
     }
 
-    function getCheckboxAnswer() {
+    function getCheckboxAnswer(lastQuestion = false) {
         var checkboxes = document.querySelectorAll('input[name="cb-input"]:checked'), values = [];
         Array.prototype.forEach.call(checkboxes, function(el) {
             values.push(el.value);
@@ -100,7 +98,13 @@
         values = values.toString();
         if (values) {
             sendAnswer(values);
-            changeQuestion(1);
+            if (lastQuestion === true) {
+                var urlParts = window.location.href.split('/');
+                var hashed_id = urlParts[4];
+                window.location.href=('/suggestions/email/' + hashed_id );
+            } else {
+                changeQuestion(1);
+            }
         } else {
             alert("Please select at least one option");
             return false;
