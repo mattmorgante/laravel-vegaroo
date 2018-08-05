@@ -53,4 +53,12 @@ class LandingController extends Controller
             'today' => $today,
         ]);
     }
+
+    public function homeNew() {
+        return view('landingPage');
+    }
+
+    public function tools() {
+        return view('tools');
+    }
 }

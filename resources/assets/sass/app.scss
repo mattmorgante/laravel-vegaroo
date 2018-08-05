@@ -23,6 +23,50 @@ h3 {
   margin: 10px;
 }
 
+// HOMEPAGE
+.homepage-hero-wrapper {
+  display: flex;
+  text-align: center;
+}
+
+.homepage-hero {
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  height: 250px;
+  font-size: 24px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.homepage-hero h3 {
+  color: $vegaroo-primary-color;
+}
+
+#homepage-2 {
+  margin-top: 200px;
+}
+
+#homepage-3 {
+  margin-top: 400px;
+}
+
+
+@media (max-width: 400px) {
+  .homepage-hero-wrapper {
+    display: block;
+    min-height: 0;
+  }
+
+  #homepage-2 {
+    margin-top: 0;
+  }
+
+  #homepage-3 {
+    margin-top: 0;
+  }
+}
+
 // images
 .image_icon {
   max-height: 50px;

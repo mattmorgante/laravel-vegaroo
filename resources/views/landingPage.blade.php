@@ -11,60 +11,31 @@
   <div class="hero">
     <h1 class="landing-page-title title">Vegaroo Makes It Easier To Eat More Plant-Based Foods</h1>
   </div>
-  <br>
-
-    <div class="hero">
-        <div class="hero-list-wrapper">
-            <h3>Vegaroo recipes have a strict no-tolerance policy</h3>
-            <ul class="hero-list">
-                <li>&#x1F644 <strong>No</strong> fancy ingredients</li>
-                <li>&#x23F1 <strong>No</strong> recipes longer than 30 minutes</li>
-                <li>&#x1F35A <strong>No</strong> bland meals</li>
-                <li>&#x1F914 <strong>No</strong> complicated cooking techniques</li>
-                <li>&#x1F346 <strong>No</strong> food porn</li>
-            </ul>
-        </div>
-    </div>
-
-    <h2 style="margin: 20px;">What are you in the mood for?</h2>
-    <ul class="flexible_row">
-        <div class="row_item"><a href="/vegan-recipes#grainbowls">Grain Bowls</a></div>
-        <div class="row_item"><a href="/vegan-recipes#curry">Curries</a></div>
-        <div class="row_item"><a href="/vegan-recipes#stir-fries">Stir Fries</a></div>
-        <div class="row_item"><a href="/vegan-recipes/popular">Most Popular</a></div>
-    </ul>
-    <ul class="flexible_row">
-        <div class="row_item"><a href="/vegan-recipes#salads">Salads</a></div>
-        <div class="row_item"><a href="/vegan-recipes#breakfasts">Breakfasts</a></div>
-        <div class="row_item"><a href="/vegan-recipes#snacks">Snacks</a></div>
-        <div class="row_item"><a href="/vegan-recipes#smoothies">Smoothies</a></div>
-    </ul>
-
-
-
-
-    @include('partials.grain-bowls')
-    @include('partials.curries')
-    @include('partials.stir-fries')
-    @include('partials.salads')
-    @include('partials.breakfasts')
-    @include('partials.snacks')
-    @include('partials.smoothies')
 
     <div class="btn-wrapper">
-        <a class="btn" href="/vegan-recipes">All Recipes</a>
+        <a class="btn" href="/register">Join Vegaroo</a>
     </div>
 
-  @include('partials.tools')
+    <div class="homepage-hero-wrapper" id="homepage-1">
+        <div class="homepage-hero">
+            <h3>Recipes</h3>
+            <p>Deadly simple and lightning quick vegan recipes that won't break the bank</p>
+            <a href="/vegan-recipes">Let's Get Cooking!</a>
+        </div>
 
-  @include('partials.why')
+        <div class="homepage-hero" id="homepage-2">
+            <h3>Resources</h3>
+            <p>Why should you consider eating more plant-based foods? How is it even possible?</p>
+            <a href="/resources">Start Here!</a>
+        </div>
 
-  @include('partials.how')
-
-  <div class="btn-wrapper">
-    <a class="btn" href="/resources">All Resources</a>
-  </div>
-  <br>
+        <div class="homepage-hero" id="homepage-3">
+            <h3>Tools</h3>
+            <p>Reduce your environmental impact and improve your health starting today</p>
+            <a href="/tools">Feel Better!</a>
+        </div>
+    </div>
+    <br>
 
 </div>
 

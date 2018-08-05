@@ -8,7 +8,7 @@
     <div class="hero">
         <div class="hero-list-wrapper">
             <ul class="hero-list">
-                <li>&#x2705	Track the <a href="/vegan-foods">Daily Dozen</a></li>
+                <li>&#x2705	Track the <a href="/dashboard">Daily Dozen</a></li>
                 <li>&#x1F4A1 Receive personalized recipe suggestions</li>
                 <li>&#x1F4C8 Weekly Nutrition Reports</li>
                 <li>&#x2B50 Save Favorite Recipes</li>

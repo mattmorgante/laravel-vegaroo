@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/', 'LandingController@home');
+Route::get('/', 'LandingController@homeNew');
 Route::get('/dashboard', 'LandingController@dashboard');
 // recipes
 Route::get('/vegan-recipes', 'RecipesController@home');
@@ -42,6 +42,7 @@ Route::get('/suggestions/email/{hashed_id}', 'QuizController@emailCapture');
 Route::get('/suggestions/saveEmail', 'QuizController@saveEmail');
 
 // tools & user
+Route::get('/tools', 'LandingController@tools');
 Route::get('/blueprint', 'RecipesController@blueprint');
 Route::post('/addEmail', 'EmailController@create');
 Route::get('/upvote', 'RecipesController@upvote');
