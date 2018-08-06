@@ -8,6 +8,7 @@
 @include('partials.nav')
 
 <div class="container">
+    <h3 class="section-title">Tools from Vegaroo</h3>
     @include('partials.tools')
 </div>
 @endsection

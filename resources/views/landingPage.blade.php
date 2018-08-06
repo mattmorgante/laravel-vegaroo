@@ -52,6 +52,12 @@
         </ul>
     </div>
 
+    <div class="hero">
+        <h2 class="landing-page-title title">Vegaroo is here to help</h2>
+    </div>
+
+    @include('partials.tools')
+    <br>
     <!--    Links to calculator, quiz, one line of sample recipes (random??), one sample article -->
 </div>
 

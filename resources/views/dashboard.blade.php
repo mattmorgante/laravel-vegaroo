@@ -9,9 +9,11 @@
 
 <div class="container">
       @if ( Auth::guest() )
-        <h2>How does this work?</h2>
+        <div class="hero">
+        <h2>What is this?</h2>
 
         <p>The <a href="/vegan-foods">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
+        </div>
 
 
         <div class="btn-wrapper">
