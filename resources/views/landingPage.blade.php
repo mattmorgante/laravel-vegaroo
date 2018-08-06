@@ -18,22 +18,22 @@
 
     <div class="homepage-hero-wrapper" id="homepage-1">
         <div class="homepage-hero">
-            <h3><a href="/vegan-recipes"></a>Recipes</h3>
+            <h3><a href="/vegan-recipes">Recipes</a></h3>
             <p>Deadly simple and lightning quick vegan recipes that won't break the bank</p>
         </div>
 
         <div class="homepage-hero" id="homepage-2">
-            <h3><a href="/resources"></a>Resources</h3>
+            <h3><a href="/resources">Resources</a></h3>
             <p>Why should you consider eating more plant-based foods? How is it even possible?</p>
         </div>
 
         <div class="homepage-hero" id="homepage-3">
-            <h3><a href="/tools"></a>Tools</h3>
+            <h3><a href="/tools">Tools</a></h3>
             <p>Reduce your environmental impact and improve your health starting today</p>
         </div>
     </div>
     <div class="hero">
-        <h2 class="landing-page-title title">Why?</h2>
+        <h1 class="title">Why?</h1>
     </div>
 
     <div class="flexible_row">
@@ -53,12 +53,25 @@
     </div>
 
     <div class="hero">
-        <h2 class="landing-page-title title">Vegaroo is here to help</h2>
+        <h1 class="title">Let's get started</h1>
     </div>
 
     @include('partials.tools')
     <br>
-    <!--    Links to calculator, quiz, one line of sample recipes (random??), one sample article -->
+
+    <div class="hero">
+        <h1 class="title">Our recipes are simple, cheap, and delicious</h1>
+    </div>
+
+    @include('partials.grain-bowls')
+    @include('partials.curries')
+    @include('partials.smoothies')
+
+    <div class="btn-wrapper">
+        <a class="btn" href="/vegan-recipes">All Recipes</a>
+    </div>
+    <br>
+
 </div>
 
 

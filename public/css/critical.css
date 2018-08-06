@@ -219,9 +219,10 @@ nav ul li a {
   border-radius: 5px;
 }
 
-.homepage-hero h3 {
+.homepage-hero h3 a {
   color: #26ce81;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #homepage-2 {

@@ -55,6 +55,19 @@ class LandingController extends Controller
     }
 
     public function homeNew() {
+        $recipe = new recipe();
+        list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipe::getAllCategories();
+
+        return view('landingPage')->with([
+            'bowls' => $bowls,
+            'curries' => $curries,
+            'stirFries' => $stirFries,
+            'salads' => $salads,
+            'breakfasts' => $breakfasts,
+            'snacks' => $snacks,
+            'smoothies' => $smoothies,
+        ]);
+
         return view('landingPage');
     }
 
