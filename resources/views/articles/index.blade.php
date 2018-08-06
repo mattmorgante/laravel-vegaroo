@@ -8,9 +8,7 @@
 @include('partials.nav')
 
 <div class="container">
-    @include('partials.tools')
     @include('partials.why')
-
     @include('partials.how')
 </div>
 @endsection

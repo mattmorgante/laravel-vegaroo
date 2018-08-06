@@ -59,8 +59,6 @@ class QuizController extends Controller
         $answers->answer1 <= 5 && $answers->answer1 > 0 ? $suggestions[] = Suggestions::where('id', 9)->first(): null;
         // person uses cheese
         $answers->answer8 >= 1 ? $suggestions[] = Suggestions::where('id', 14)->first(): null;
-        // person eats pork, recommend chicken
-        $answers->answer3 >= 1 ? $suggestions[] = Suggestions::where('id', 2)->first(): null;
         // person eats chicken, switch to plant-based alternative
         $answers->answer2 >= 1 ? $suggestions[] = Suggestions::where('id', 15)->first(): null;
         // person eats yogurt

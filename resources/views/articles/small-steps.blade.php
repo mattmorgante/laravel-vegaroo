@@ -17,9 +17,9 @@
 <br>
 
 <img class="article_header_image" src="/img/step.jpg" alt="Taking small steps towards veganism can easily add up over time">
-
 <div class="article_wrapper">
     <div class="article_container">
+        <br>
         <p class="content">Even for those with the strongest willpower, going vegan overnight is generally not recommended. To make switching away from a plant-based diet easier, commit to taking small actions that can be repeated everyday.</p>
 
         <p class="content">Over time, even small changes can create big differences in your well-being and environmental impact. Then once you feel comfortable and ready to take on the next step in the progression, add a new habit to your vegan lifestyle.</p>

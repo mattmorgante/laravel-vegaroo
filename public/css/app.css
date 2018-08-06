@@ -33,7 +33,7 @@ h3 {
           flex: 1;
   margin: 10px;
   padding: 15px;
-  height: 250px;
+  height: 200px;
   font-size: 24px;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -51,7 +51,7 @@ h3 {
   margin-top: 400px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 992px) {
   .homepage-hero-wrapper {
     display: block;
     min-height: 0;
@@ -66,6 +66,10 @@ h3 {
   }
 }
 
+.large_title {
+  font-size: 24px !important;
+}
+
 .image_icon {
   max-height: 50px;
 }
@@ -73,6 +77,7 @@ h3 {
 .tiny_img {
   width: 100%;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 @media (max-width: 767px) {
@@ -386,7 +391,7 @@ h3 {
 
 @media (min-width: 992px) {
   .tiny_img {
-    height: 160px;
+    height: 200px;
   }
 }
 
