@@ -108,6 +108,14 @@ h3 {
   border-radius: 4px;
 }
 
+.read-more {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+
 
 .bold {
   font-weight: bold;
@@ -192,6 +200,7 @@ h3 {
   border-radius: 4px;
   box-shadow: 0 2px 20px rgba(0,0,0,.15);
   border: 1px solid #e0e0e0;
+  background-color: white;
 }
 
 .calculator_item {

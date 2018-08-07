@@ -6,6 +6,8 @@ body {
   height: 100%;
 }
 
+$vegaroo-primary-color: #26ce81;
+
 .page {
   display: flex;
   min-height: 100vh;
@@ -79,6 +81,21 @@ nav ul li a {
   padding: 10px;
 }
 
+.homepage_container_grey {
+  background-color: #F8F8F8;
+  a {
+    color: $vegaroo-primary-color;
+    text-decoration: none;
+  }
+}
+
+.homepage_container_white {
+  a {
+    color: $vegaroo-primary-color;
+    text-decoration: none;
+  }
+}
+
 .hero {
   text-align: center;
 }
@@ -89,6 +106,7 @@ nav ul li a {
   text-align: center;
   display: inline-block;
 }
+
 
 .hero_text {
   display: flex;
@@ -185,6 +203,11 @@ nav ul li a {
 }
 
 // HOMEPAGE
+.hero p {
+  font-size: 18px;
+}
+
+
 .homepage-hero-wrapper {
   display: flex;
   text-align: center;

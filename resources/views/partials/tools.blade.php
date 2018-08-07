@@ -1,11 +1,6 @@
-<div class="flexible_row">
-    <div class="row_item">
-        <h3><a href="/dashboard">Track Your Progress with the Daily Dozen</a></h3>
-    </div>
-    <div class="row_item">
-        <h3><a href="/calculator">Calculate The Environmental Impact Of Your Diet</a></h3>
-    </div>
-    <div class="row_item">
-        <h3><a href="/vegan-quiz">Personalized Suggestions To Reduce Your Environmental Impact</a></h3>
-    </div>
-</div>
+<ul class="flexible_row">
+    <li class="row_item article_item"><a href="/dashboard"><img class="tiny_img" src="/img/veg_tn.jpg" alt="Track
+    Your Progress with the Daily Dozen">Track Your Progress with the Daily Dozen</a></li>
+    <li class="row_item article_item"><a href="/calculator"><img class="tiny_img" src="/img/charts_tn.jpg" alt="Calculate The Environmental Impact Of Your Dieto">Calculate The Environmental Impact Of Your Diet</a></li>
+    <li class="row_item article_item"><a href="/small-steps"><img class="tiny_img" src="/img/step_tn.jpg" alt="Taking small steps towards veganism can easily add up over time">7 Small Steps To Begin Your Vegan Journey</a></li>
+</ul>

@@ -84,6 +84,20 @@ nav ul li a {
   padding: 10px;
 }
 
+.homepage_container_grey {
+  background-color: #F8F8F8;
+}
+
+.homepage_container_grey a {
+  color: #26ce81;
+  text-decoration: none;
+}
+
+.homepage_container_white a {
+  color: #26ce81;
+  text-decoration: none;
+}
+
 .hero {
   text-align: center;
 }
@@ -198,6 +212,10 @@ nav ul li a {
   .topnav a:not(first-child) {
     padding: 10px;
   }
+}
+
+.hero p {
+  font-size: 18px;
 }
 
 .homepage-hero-wrapper {

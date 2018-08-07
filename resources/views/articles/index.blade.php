@@ -10,5 +10,9 @@
 <div class="container">
     @include('partials.why')
     @include('partials.how')
+    <div class="hero">
+        <h3 class="title">Tools</h3>
+    </div>
+    @include('partials.tools')
 </div>
 @endsection
