@@ -19,7 +19,7 @@
     <div class="container">
         <div class="hero">
             <h2 class="title"><a href="/vegan-recipes">Simple, easy, cheap, nutritious and delicious vegan
-                    meals</a></h2>
+                    recipes</a></h2>
         </div>
         <ul class="flexible_row">
             @foreach ($recipes as $recipe)

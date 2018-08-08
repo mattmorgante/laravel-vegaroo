@@ -35,9 +35,14 @@
         @yield('content')
     </div>
 
+
+
+    @if(Route::current()->getName() == 'email-capture')
+    @else
     <div class="sticky_footer_wrappers">
         @include('partials.footer')
     </div>
+    @endif
 
     @if (env('APP_ENV') == 'production')
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,4 +56,6 @@
     @endif
 </body>
 <link rel="stylesheet" type="text/css" href="{{asset('/css/app.css')}}"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </html>
