@@ -35,8 +35,6 @@
         @yield('content')
     </div>
 
-
-
     @if(Route::current()->getName() == 'email-capture')
     @else
     <div class="sticky_footer_wrappers">
