@@ -9,13 +9,8 @@
 
 <div class="container">
   <div class="hero">
-    <h1 class="landing-page-title title">It's Easier To Eat Plant-Based Foods With Vegaroo</h1>
+    <h1 class="landing-page-title title">Vegaroo Makes It Easier To Eat Plant-Based Foods</h1>
   </div>
-
-    <div class="btn-wrapper">
-        <a class="btn" href="/register">Join Vegaroo</a>
-    </div>
-    <br>
     <br>
 
 </div>
@@ -23,9 +18,8 @@
 <div class="homepage_container_grey">
     <div class="container">
         <div class="hero">
-            <h2 class="title"><a href="/vegan-recipes">Recipes</a></h2>
-            <p>Deadly simple and lightning quick vegan recipes that won't break the bank. Here are the most
-                popular:</p>
+            <h2 class="title"><a href="/vegan-recipes">Simple, easy, cheap, nutritious and delicious vegan
+                    meals</a></h2>
         </div>
         <ul class="flexible_row">
             @foreach ($recipes as $recipe)
@@ -42,8 +36,7 @@
 <div class="homepage_container_white">
     <div class="container">
         <div class="hero">
-            <h2 class="title"><a href="/resources">Why?</a></h2>
-            <p>Why should you consider eating more plant-based foods? How is it even possible?</p>
+            <h2 class="title"><a href="/resources">Why should you consider eating more plant-based foods? How is it even possible?</a></h2>
         </div>
         <div class="flexible_row">
             <ul class="flexible_row">
@@ -72,8 +65,8 @@
 <div class="homepage_container_grey">
     <div class="container">
     <div class="hero">
-        <h2 class="title"><a href="/register">Let's Get Started</a></h2>
-        <p>Reduce your environmental impact and improve your health starting today</p>
+        <h2 class="title"><a href="/register">Reduce your environmental impact, improve your health, and save
+                animal lives starting today</a></h2>
     </div>
     <div class="flexible_row">
         <ul class="flexible_row">
@@ -92,7 +85,6 @@
     </div>
 
     <br>
-</div>
 
 </div>
 @endsection
