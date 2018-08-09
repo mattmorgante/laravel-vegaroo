@@ -35,35 +35,6 @@
     <br>
 </div>
 
-<div class="homepage_container_white">
-    <div class="container">
-        <div class="hero">
-            <h2 class="title">Why should you consider eating more plant-based foods?</h2>
-        </div>
-        <div class="flexible_row">
-            <ul class="flexible_row">
-                <li class="row_item article_item"><a class="large_title" href="/environmental-benefits">For our
-                        planet<img
-                                class="tiny_img" src="/img/plants_tn.jpg" alt="Plants reduce carbon dioxide in the
-                                atmosphere"></a></li>
-                <li class="row_item article_item"><a class="large_title" href="/health-benefits-long-term">For your health<img
-                                class="tiny_img" src="/img/berries_tn.jpg" alt="Eating Vegan is the easiest way to avoid
-                                disease"></a></li>
-                <li class="row_item article_item"><a class="large_title" href="/stop-animal-cruelty">
-                        <span class="homepage_articles_text">For the
-                        animals</span><br><img
-                                class="tiny_img" src="/img/cow_tn.jpg" alt="Billions of animals are killed each year to
-                                feed humans"></a></li>
-            </ul>
-        </div>
-        <div class="read-more">
-            <a href="/resources">All Resources<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
-        </div>
-        <br>
-    </div>
-</div>
-
-
 <div class="homepage_container_grey">
     <div class="container">
     <div class="hero">
@@ -71,9 +42,8 @@
     </div>
     <div class="flexible_row">
         <ul class="flexible_row">
-            <li class="row_item article_item"><a class="large_title" href="/dashboard">Track Your Progress With
-                    The Daily
-                    Dozen<img
+            <li class="row_item article_item"><a class="large_title" href="/dashboard">Am I Getting Enough
+                    Nutrients?<img
                             class="tiny_img" src="/img/veg_tn.jpg" alt="Track
     Your Progress with the Daily Dozen"></a></li>
             <li class="row_item article_item"><a class="large_title" href="/calculator">Environmental
@@ -88,4 +58,34 @@
     <br>
 
 </div>
+
+
+<div class="homepage_container_white">
+    <div class="container">
+        <div class="hero">
+            <h2 class="title">Why should you consider eating more plant-based foods?</h2>
+        </div>
+        <div class="flexible_row">
+            <ul class="flexible_row">
+                <li class="row_item article_item"><a class="large_title" href="/environmental-benefits">For our
+                        planet<img
+                                class="tiny_img" src="/img/plants_tn.jpg" alt="Plants reduce carbon dioxide in the
+                            atmosphere"></a></li>
+                <li class="row_item article_item"><a class="large_title" href="/health-benefits-long-term">For your health<img
+                                class="tiny_img" src="/img/berries_tn.jpg" alt="Eating Vegan is the easiest way to avoid
+                            disease"></a></li>
+                <li class="row_item article_item"><a class="large_title" href="/stop-animal-cruelty">
+                    <span class="homepage_articles_text">For the
+                    animals</span><br><img
+                                class="tiny_img" src="/img/cow_tn.jpg" alt="Billions of animals are killed each year to
+                            feed humans"></a></li>
+            </ul>
+        </div>
+        <div class="read-more">
+            <a href="/resources">All Resources<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
+        </div>
+        <br>
+    </div>
+</div>
+
 @endsection

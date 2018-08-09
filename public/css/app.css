@@ -227,6 +227,9 @@ h3 {
 
 .calculator_item {
   padding: 0;
+}
+
+#calculator {
   border-top: 6px solid #26ce81;
 }
 
@@ -662,7 +665,7 @@ input .user-input #email {
 }
 
 .food-card {
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   margin: 5px;
   border-radius: 4px;

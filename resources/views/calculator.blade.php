@@ -7,7 +7,7 @@
 
 @include('partials.nav')
 <h2 style="text-align: center">Calculate your environmental impact</h2>
-<div class="quiz-container">
+<div class="quiz-container" >
     <div class="flexible_row">
         <div class="quiz_item" id="calculator">
                 <h3 style="margin: 0;">Which of the following best describes your diet?</h3>
@@ -15,16 +15,17 @@
                 <input type="radio" name="diet" onchange="updateValue(0)" checked>Average American (4 servings of meat and dairy per day)
             </label>
             <label>
-                <input type="radio" name="diet" onchange="updateValue(1)">Average European (3)
+                <input type="radio" name="diet" onchange="updateValue(1)">Average European (3 servings of meat and dairy per day)
             </label>
             <label>
-                <input type="radio" name="diet" onchange="updateValue(2)">Pescatarian (2)
+                <input type="radio" name="diet" onchange="updateValue(2)">Pescatarian (2 servings of fish and dairy per
+                day)
             </label>
             <label>
-                <input type="radio" name="diet" onchange="updateValue(3)">Vegetarian (1)
+                <input type="radio" name="diet" onchange="updateValue(3)">Vegetarian (1 servings of dairy per day)
             </label>
             <label>
-                <input type="radio" name="diet" onchange="updateValue(4)">Vegan (0)
+                <input type="radio" name="diet" onchange="updateValue(4)">Vegan (0 servings of meat and dairy per day)
             </label>
     </div>
 </div>
@@ -79,12 +80,7 @@
                 <li><a target="_blank" href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
             </ul>
         </div>
-    @include('partials.why')
-
-    @include('partials.how')
-</div>
-
-
+    </div>
 </div>
 
 <script>
