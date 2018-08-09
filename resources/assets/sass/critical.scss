@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
+$almost-black: hsl(0, 0%, 13%);
+$grey-text: hsl(0, 0%, 29%);
+$grey-background: hsl(0, 0%, 97%);
+
 body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   height: 100%;
+  color: $almost-black;
 }
 
 $vegaroo-primary-color: #26ce81;
@@ -16,6 +21,7 @@ $vegaroo-primary-color: #26ce81;
 
 .content {
   flex: 1;
+  line-height: 1.5;
 }
 
 nav {
@@ -81,8 +87,15 @@ nav ul li a {
   padding: 10px;
 }
 
+#landing-page-sub {
+  color: $grey-text;
+}
+
 .homepage_container_grey {
-  background-color: #F8F8F8;
+  background-color: $grey-background;
+  h2 {
+    color: $almost-black;
+  }
   a {
     color: $vegaroo-primary-color;
     text-decoration: none;
@@ -90,6 +103,9 @@ nav ul li a {
 }
 
 .homepage_container_white {
+  h2 {
+    color: $almost-black;
+  }
   a {
     color: $vegaroo-primary-color;
     text-decoration: none;
@@ -116,7 +132,8 @@ nav ul li a {
 }
 
 .hero-list-wrapper {
-  border: 3px solid #e2e2e2;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, .2);
+  border-top: 4px solid $vegaroo-primary-color;
   border-radius: 4px;
   max-width: 500px;
   margin: 0 auto;

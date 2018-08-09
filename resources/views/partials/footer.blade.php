@@ -50,6 +50,5 @@
 </div>
 <div class="footer">
     <p style="margin: 10px;">Made with &#x2615 & &#x1F34E & &#x1F955 in Amsterdam by <a href="https://www.mattmorgante.com">Matt</a>.
-        <br>Questions? Suggestions? Feedback? <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">Get in touch</a></p>
 </div>
 

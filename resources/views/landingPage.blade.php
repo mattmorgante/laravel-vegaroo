@@ -10,6 +10,8 @@
 <div class="container">
   <div class="hero">
     <h1 class="landing-page-title title">Vegaroo Makes It Easier To Eat Plant-Based Foods</h1>
+
+      <h3 id="landing-page-sub">Recipes, information, and tools for the aspiring vegan </h3>
   </div>
     <br>
 
@@ -18,8 +20,8 @@
 <div class="homepage_container_grey">
     <div class="container">
         <div class="hero">
-            <h2 class="title"><a href="/vegan-recipes">Simple, easy, cheap, nutritious and delicious vegan
-                    recipes</a></h2>
+            <h2 class="title">Eating vegan should be easy, cheap, nutritious and delicious
+                    </h2>
         </div>
         <ul class="flexible_row">
             @foreach ($recipes as $recipe)
@@ -36,7 +38,7 @@
 <div class="homepage_container_white">
     <div class="container">
         <div class="hero">
-            <h2 class="title"><a href="/resources">Why should you consider eating more plant-based foods? How is it even possible?</a></h2>
+            <h2 class="title">Why should you consider eating more plant-based foods?</h2>
         </div>
         <div class="flexible_row">
             <ul class="flexible_row">
@@ -65,8 +67,7 @@
 <div class="homepage_container_grey">
     <div class="container">
     <div class="hero">
-        <h2 class="title"><a href="/register">Reduce your environmental impact, improve your health, and save
-                animal lives starting today</a></h2>
+        <h2 class="title">Tools to get you started</h2>
     </div>
     <div class="flexible_row">
         <ul class="flexible_row">

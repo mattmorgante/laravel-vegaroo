@@ -65,6 +65,7 @@
 @include('partials.nav')
 
 <br>
+<div class="container">
     <div class="flexible_row">
         <div class="row_item recipe_detail">
             <h1>{{ $recipe->title }}</h1>
@@ -98,7 +99,7 @@
             <h3>{{ $recipe->calories }} Calories</h3>
             <div id="piechart" style="width: 100%; height: 400px;"></div>
         </div>
-        <div class="row_item">
+        <div class="row_item" id="micro_graph">
             <h2>Micro Nutrient Information</h2>
             <div id="chart_div" style="width: 100%; height: 300px;"></div>
         </div>
@@ -106,6 +107,8 @@
 
     <div class="recipe-buttons">
         <div class="right-buttons">
+            <div class="save-wrapper">
+                <h3>Save this recipe</h3>
             @if ($userId == true)
             <div class="save" onclick="save()">
                 <button class="btn">
@@ -123,20 +126,26 @@
                     </button>
                 </div>
             @endif
+            </div>
 
-
-            <div class="upvote" onclick="upvote()">
-                <button class="btn">
-                    <i class="fas fa-caret-up"></i>
-                    <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
-                </button>
+            <div class="upvote-wrapper">
+                <h3>Upvote</h3>
+                <div class="upvote" onclick="upvote()">
+                    <button class="btn">
+                        <i class="fas fa-caret-up"></i>
+                        <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
+                    </button>
+                </div>
             </div>
         </div>
+      <div class="right-buttons">
           <div class="tags">
-            @foreach ($tags as $tag)
-              <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
-            @endforeach
+          <h3>Tags</h3>
+        @foreach ($tags as $tag)
+          <a href="/vegan-foods/{{$tag}}"><div class="btn">{{ $tag }}</div></a>
+        @endforeach
           </div>
+      </div>
     </div>
 
     <div id="share-buttons">
@@ -160,7 +169,7 @@
 
     <div class="container">
 
-        <h3>More {{ $categoryName }}</h3>
+        <h2 class="other-recipes">More {{ $categoryName }}</h2>
         <div class="flexible_row">
             @foreach ($similarRecipes as $recipe)
                 @include('partials.recipe-box')
@@ -179,6 +188,7 @@
     </div>
 
 <br>
+</div>
 @endsection
 
 <script>

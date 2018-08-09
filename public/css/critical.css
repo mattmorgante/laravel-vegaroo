@@ -2,6 +2,7 @@
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   height: 100%;
+  color: #212121;
 }
 
 .page {
@@ -19,6 +20,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  line-height: 1.5;
 }
 
 nav {
@@ -84,13 +86,25 @@ nav ul li a {
   padding: 10px;
 }
 
+#landing-page-sub {
+  color: #4a4a4a;
+}
+
 .homepage_container_grey {
-  background-color: #F8F8F8;
+  background-color: #f7f7f7;
+}
+
+.homepage_container_grey h2 {
+  color: #212121;
 }
 
 .homepage_container_grey a {
   color: #26ce81;
   text-decoration: none;
+}
+
+.homepage_container_white h2 {
+  color: #212121;
 }
 
 .homepage_container_white a {
@@ -123,7 +137,9 @@ nav ul li a {
 }
 
 .hero-list-wrapper {
-  border: 3px solid #e2e2e2;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #26ce81;
   border-radius: 4px;
   max-width: 500px;
   margin: 0 auto;
