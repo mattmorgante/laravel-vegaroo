@@ -12,7 +12,10 @@
         <div class="hero">
         <h2>What is this?</h2>
 
-        <p>The <a href="/vegan-foods">Daily Dozen</a> is a collection of daily recommendations to prevent the 14 biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
+        <p>Eat <a href="/vegan-foods">these 12 vegan foods</a> every day to ensure you are getting enough nutrients and
+                avoiding the 14 leading causes
+            of death.</p>
+            <p><p>Fill in what you've eaten today!<p></p>
         </div>
 
 

@@ -12,12 +12,7 @@
         <a href="/weekly">Weekly</a>
         <a href="/profile">Profile</a>
     </div>
-
-    <h2>How does this work?</h2>
-
-    <p>The <a class="link-text" href="/vegan-foods">Daily Dozen</a> is a collection of daily recommendations to prevent
-        the 14
-        biggest causes of death and improve your health. Get started by filling in what you've eaten today!<p>
+    <h2>What have you eaten today?</h2>
 
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">{{ $displayDate }}</h2>

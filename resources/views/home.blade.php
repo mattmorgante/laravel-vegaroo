@@ -16,7 +16,7 @@
             <ul class="hero-list">
                 <li>&#x1F644 <strong>No</strong> fancy ingredients</li>
                 <li>&#x23F1 <strong>No</strong> recipes longer than 30 minutes</li>
-                <li>&#x1F35A <strong>No</strong> bland meals</li>
+                <li>&#x1F35A <strong>No</strong> tasteless meals</li>
                 <li>&#x1F914 <strong>No</strong> complicated cooking techniques</li>
                 <li>&#x1F346 <strong>No</strong> food porn</li>
             </ul>

@@ -11,7 +11,18 @@
   <div class="hero">
     <h1 class="landing-page-title title">Vegaroo Makes It Easier To Eat Plant-Based Foods</h1>
 
-      <h3 id="landing-page-sub">Recipes, information, and tools for the aspiring vegan </h3>
+      <div class="hero">
+          <div class="hero-list-wrapper">
+              <h3>Recipes, information, and tools for the aspiring vegan</h3>
+              <ul class="hero-list">
+                  <li>Lose weight</li>
+                  <li>Eat ethically</li>
+                  <li>Clear up your skin</li>
+                  <li>Lower your body fat</li>
+                  <li>Save the environment</li>
+              </ul>
+          </div>
+      </div>
   </div>
     <br>
 

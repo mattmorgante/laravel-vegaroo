@@ -74,6 +74,10 @@
                 {{--<p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>--}}
                 <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p><br>
                 <p><span class="call-out-small">Calories: </span><br>{{ $recipe->calories }}</p>
+                <p><span class="call-out-small">Carbs: </span><br>{{ $recipe->carbs }}</p>
+                <p><span class="call-out-small">Protein: </span><br>{{ $recipe->protein }}</p>
+                <p><span class="call-out-small">Fat: </span><br>{{ $recipe->fat }}</p>
+
                 {{--<p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>--}}
             </div>
         </div>
