@@ -35,7 +35,7 @@
         @else
     <h2 class="other-recipes">What else should you eat today? <a class="link-text" href="javascript:window.location
     .reload(true);">
-            (Update)</a></h2>
+            (Click To Update)</a></h2>
       @foreach ($recommendedRecipes as $name => $recipeCollection)
         @if (count($recipeCollection) != 0 )
           <h2>Recipes with {{ $name }}</h2>

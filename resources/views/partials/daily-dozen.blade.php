@@ -9,9 +9,9 @@
     @elseif ( ($today->{"$food->slug"} / $food->recommended) >= .50 )
       <div class="food-card" style="background-color: #92e6c0">
     @elseif  ( ($today->{"$food->slug"} / $food->recommended) >= .33 )
-      <div class="food-card" style="background-color: #d3f5e5">
+      <div class="food-card" style="background-color: #ffff7e">
     @else
-      <div class="food-card" style="background-color: white">
+      <div class="food-card" style="background-color: #ef5757">
     @endif
           <a style="text-decoration: none;" href="/vegan-foods/{{ $food->slug }}">{{
           $food->name
@@ -39,14 +39,14 @@
             value+=incrementor;
 
             if (value == 0) {
-              document.getElementById(target).parentElement.style.backgroundColor = "white";
+              document.getElementById(target).parentElement.style.backgroundColor = "#ef5757";
             }
 
             if ( (value / recommended) >= .33 ) {
-                document.getElementById(target).parentElement.style.backgroundColor = "#d3f5e5";
+                document.getElementById(target).parentElement.style.backgroundColor = "#ffff7e";
             }
 
-            if ( (value / recommended) >= .50 ) {
+            if ( (value / recommended) > .50 ) {
                 document.getElementById(target).parentElement.style.backgroundColor = "#92e6c0";
             }
 

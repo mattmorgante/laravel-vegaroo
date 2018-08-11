@@ -9,17 +9,18 @@
 
 <div class="container">
   <div class="hero">
+    <div class="wrapper">
     <h1 class="landing-page-title title">Vegaroo Makes It Easier To Eat Plant-Based Foods</h1>
-
+      <h3>Recipes, information, and tools for the aspiring vegan.</h3>
+      <br><br>
+        </div>
       <div class="hero">
-          <div class="hero-list-wrapper">
-              <h3>Recipes, information, and tools for the aspiring vegan</h3>
+          <div class="hero-list-wrapper" style="text-align: center">
+              <h3>Why Vegaroo?</h3>
               <ul class="hero-list">
-                  <li>Lose weight</li>
-                  <li>Eat ethically</li>
-                  <li>Clear up your skin</li>
-                  <li>Lower your body fat</li>
-                  <li>Save the environment</li>
+                  <li>&#x1F3CB Lose weight</li>
+                  <li>&#x1F42E Eat ethically</li>
+                  <li>&#x1F331 Save the environment</li>
               </ul>
           </div>
       </div>
@@ -49,7 +50,7 @@
 <div class="homepage_container_grey">
     <div class="container">
     <div class="hero">
-        <h2 class="title">Tools to get you started</h2>
+        <h2 class="title">Get started</h2>
     </div>
     <div class="flexible_row">
         <ul class="flexible_row">
