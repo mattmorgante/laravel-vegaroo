@@ -74,6 +74,29 @@ nav ul li a {
   .image_icon {
     max-height: 58px !important;
   }
+
+  .homepage-header {
+    margin-top: 80px !important;
+  }
+
+  .hero {
+    min-width: 450px;
+  }
+}
+
+@media (min-width: 992px) {
+  .homepage-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .wrapper {
+    margin: 0 100px 0 0;
+  }
 }
 
 .nav-left ul li {
@@ -99,7 +122,6 @@ nav ul li a {
 }
 
 .homepage_container_grey a {
-  color: #26ce81;
   text-decoration: none;
 }
 
@@ -234,6 +256,10 @@ nav ul li a {
   font-size: 18px;
 }
 
+.homepage-header {
+  margin-top: 40px;
+}
+
 .homepage-hero-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,5 +306,66 @@ nav ul li a {
   #homepage-3 {
     margin-top: 0;
   }
+}
+
+@media (max-width: 676px) {
+  .custom-flex-grid {
+    display: block;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  .custom-flex-grid .col {
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-flex-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+
+  .custom-flex-grid .col {
+    width: 24%;
+    margin-bottom: 20px;
+  }
+}
+
+.col {
+  background-color: white;
+  margin: 7px;
+  border-radius: 4px;
+  border: .5px solid #e0e0e0;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+}
+
+.col:hover {
+  cursor: pointer;
+  background-color: #26ce81;
+}
+
+.col:hover p {
+  color: white;
+}
+
+.homepage_goals p {
+  font-size: 20px;
+  color: #26ce81;
+  font-weight: bold;
 }
 
