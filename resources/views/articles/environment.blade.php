@@ -206,11 +206,4 @@
     </div>
 </div>
 
-          {{--<h2 class="subtitle">More Resources</h2>--}}
-        {{--<p class="content">If you're interested in learning more about this topic, please check out the following resources:</p>--}}
-
-        {{--<div class="videoWrapper">--}}
-            {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/ut3URdEzlKQ" frameborder="0" allowfullscreen></iframe>--}}
-        {{--</div>--}}
-
 @endsection

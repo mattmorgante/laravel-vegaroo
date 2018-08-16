@@ -21,6 +21,10 @@ h3 {
   margin: 10px;
 }
 
+.white {
+  color: white;
+}
+
 .homepage-hero-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

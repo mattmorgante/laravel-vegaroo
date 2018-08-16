@@ -12,10 +12,12 @@
         <div class="quiz_item" id="calculator">
                 <h3 style="margin: 0;">Which of the following best describes your diet?</h3>
             <label>
-                <input type="radio" name="diet" onchange="updateValue(0)" checked>Average American (4 servings of meat and dairy per day)
+                <input type="radio" name="diet" onchange="updateValue(0)" checked>Normal American (4 servings of meat
+                and dairy per day)
             </label>
             <label>
-                <input type="radio" name="diet" onchange="updateValue(1)">Average European (3 servings of meat and dairy per day)
+                <input type="radio" name="diet" onchange="updateValue(1)">Normal European (3 servings of meat and dairy
+                per day)
             </label>
             <label>
                 <input type="radio" name="diet" onchange="updateValue(2)">Pescatarian (2 servings of fish and dairy per
@@ -32,7 +34,7 @@
 <div id="calculator-results" style="display: none">
     <div class="container" style="text-align: center">
             <h3>
-                Every day a(n) <br><span id="update_text">Average
+                Every day a <br><span id="update_text">Normal
                     American</span> will save:
             </h3>
 
@@ -65,7 +67,7 @@
         </div>
 
         <h3>
-            compared to an Average American diet!
+            compared to a Normal American diet!
         </h3>
 
     </div>
@@ -83,7 +85,7 @@
 
         </div>
         <div class="btn-wrapper">
-            <a class="btn" href="/environmental-benefits">Learn more about the environmental impact of animal products</a>
+            <a class="btn" href="/environmental-benefits">Learn more about the environmental impact of animal foods</a>
         </div>
         <br><br>
     </div>
@@ -102,7 +104,7 @@
     // this should all be divided by four
     const values = [100, 2250, 7.5, 62.5 , .25];
 
-    const phrase = ['Average American', 'Average European', 'Pescatarian','Vegetarian','Vegan'];
+    const phrase = ['Normal American', 'Normal European', 'Pescatarian','Vegetarian','Vegan'];
     var phraseEl = document.getElementById('update_text');
     var widgets = document.getElementsByClassName('widget');
     var newValues = [];

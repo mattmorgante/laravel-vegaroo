@@ -57,6 +57,23 @@ nav ul li a {
     height: 30px;
   }
 }
+.veg-green {
+  color: $vegaroo-primary-color;
+}
+
+#phone-pic {
+  height: auto;
+  width: auto;
+  max-width: 550px;
+  max-height: 550px;
+}
+
+#desktop-pic {
+  height: auto;
+  width: auto;
+  max-width: 800px;
+  max-height: 800px;
+}
 
 // not mobile
 @media (min-width: 768px) {
@@ -85,10 +102,17 @@ nav ul li a {
   }
 }
 
+.homepage-flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (min-width: 992px) {
   .homepage-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .wrapper {
     margin: 0 100px 0 0;
@@ -124,7 +148,6 @@ nav ul li a {
     color: $almost-black;
   }
   a {
-    color: $vegaroo-primary-color;
     text-decoration: none;
   }
 }
