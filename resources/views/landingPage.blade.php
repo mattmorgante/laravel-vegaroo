@@ -42,7 +42,7 @@
                 </div>
                 <div class="text_wrapper">
                     <h2 class="title">1. Track</h2>
-                    <p>The 12 most important food groups to eat as a vegan</p>
+                    <p>Make sure you are getting enough nutrients</p>
                 </div>
 
             </div>
@@ -57,10 +57,11 @@
             <div class="homepage-flex-wrapper">
                 <div class="text_wrapper">
                     <h2 class="title">2. Analyze</h2>
-                    <p>Find the holes in your diet.</p>
+                    <p>Find the holes in your diet</p>
                 </div>
 
                 <img id="desktop-pic" src="/img/desktop.png">
+            </div>
         </div>
     </div>
 </div>
@@ -88,19 +89,27 @@
 <div class="homepage_container_white">
     <div class="container">
         <div class="hero">
-            <h2 class="title">4. Achieve your goals!</h2>
-            <h3>What do you want to do with Vegaroo?</h3>
+            <h2 class="title">4. Achieve your goals</h2>
+            <h3>Why do you want to go Vegan?</h3>
         </div>
 
         <div class="custom-flex-grid">
             <div class="col homepage_goals" id="box-1" onclick="selectBox(1)">
                 <p>Lose Weight</p>
             </div>
-            <div class="col homepage_goals" id="box-2" onclick="selectBox(2)">
-                <p>Reduce Blood Pressure</p>
+            <div class="col homepage_goals" id="box-1" onclick="selectBox(1)">
+                <p>Save The Environment</p>
             </div>
             <div class="col homepage_goals" id="box-3" onclick="selectBox(3)">
                 <p>Have More Energy</p>
+            </div>
+        </div>
+        <div class="custom-flex-grid">
+            <div class="col homepage_goals" id="box-1" onclick="selectBox(1)">
+                <p>Reduce Animal Suffering</p>
+            </div>
+            <div class="col homepage_goals" id="box-3" onclick="selectBox(3)">
+                <p>Lose Body Fat</p>
             </div>
         </div>
 

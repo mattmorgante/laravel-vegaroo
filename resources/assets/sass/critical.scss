@@ -60,21 +60,6 @@ nav ul li a {
 .veg-green {
   color: $vegaroo-primary-color;
 }
-
-#phone-pic {
-  height: auto;
-  width: auto;
-  max-width: 550px;
-  max-height: 550px;
-}
-
-#desktop-pic {
-  height: auto;
-  width: auto;
-  max-width: 800px;
-  max-height: 800px;
-}
-
 // not mobile
 @media (min-width: 768px) {
   nav ul li a {
@@ -102,11 +87,7 @@ nav ul li a {
   }
 }
 
-.homepage-flex-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 @media (min-width: 992px) {
   .homepage-header {
@@ -114,6 +95,20 @@ nav ul li a {
     justify-content: space-between;
     align-items: center;
   }
+
+  .homepage-flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #desktop-pic {
+    height: auto;
+    width: auto;
+    max-width: 800px;
+    max-height: 800px;
+  }
+
   .wrapper {
     margin: 0 100px 0 0;
   }
@@ -316,7 +311,7 @@ nav ul li a {
 
 
 // mobile
-@media (max-width: 676px) {
+@media (max-width: 767px) {
   .custom-flex-grid {
     display: block;
     margin-top: 20px;
@@ -325,6 +320,14 @@ nav ul li a {
       margin: 0 0 10px 0;
       text-align: center;
     }
+  }
+  #desktop-pic {
+    height: auto;
+    width: 100%;
+  }
+  #phone-pic {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -340,6 +343,13 @@ nav ul li a {
     width: 24%;
     margin-bottom: 20px;
   }
+
+  #phone-pic {
+    height: auto;
+    width: auto;
+    max-width: 550px;
+    max-height: 550px;
+  }
 }
 
 .col {
@@ -353,15 +363,14 @@ nav ul li a {
 }
 
 .col:hover {
-  cursor: pointer;
-  background-color: $vegaroo-primary-color;
+  //cursor: pointer;
+  //background-color: $vegaroo-primary-color;
   p {
-    color: white;
+    //color: white;
   }
 }
 
 .homepage_goals {
-
   p {
     font-size: 20px;
     color: $vegaroo-primary-color;

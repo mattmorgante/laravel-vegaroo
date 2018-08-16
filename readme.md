@@ -220,25 +220,6 @@ page has expired due to inactivity?
 
 
 ###### 
-Old homepage
-<!---->
-<!--<div class="homepage_container_grey">-->
-<!--    <div class="container">-->
-<!--        <div class="hero">-->
-<!--            <h2 class="title">Eating vegan should be easy, cheap, nutritious and delicious-->
-<!--                    </h2>-->
-<!--        </div>-->
-<!--        <ul class="flexible_row">-->
-<!--            @foreach ($recipes as $recipe)-->
-<!--                @include('partials.recipe-box')-->
-<!--            @endforeach-->
-<!--        </ul>-->
-<!--        <div class="read-more">-->
-<!--            <a href="/vegan-recipes">All Recipes<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <br>-->
-<!--</div>-->
 <!---->
 <!--<div class="homepage_container_grey">-->
 <!--    <div class="container">-->

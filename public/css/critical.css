@@ -62,20 +62,6 @@ nav ul li a {
   color: #26ce81;
 }
 
-#phone-pic {
-  height: auto;
-  width: auto;
-  max-width: 550px;
-  max-height: 550px;
-}
-
-#desktop-pic {
-  height: auto;
-  width: auto;
-  max-width: 800px;
-  max-height: 800px;
-}
-
 @media (min-width: 768px) {
   nav ul li a {
     font-size: 20px;
@@ -102,18 +88,6 @@ nav ul li a {
   }
 }
 
-.homepage-flex-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 @media (min-width: 992px) {
   .homepage-header {
     display: -webkit-box;
@@ -125,6 +99,25 @@ nav ul li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .homepage-flex-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  #desktop-pic {
+    height: auto;
+    width: auto;
+    max-width: 800px;
+    max-height: 800px;
   }
 
   .wrapper {
@@ -340,7 +333,7 @@ nav ul li a {
   }
 }
 
-@media (max-width: 676px) {
+@media (max-width: 767px) {
   .custom-flex-grid {
     display: block;
     margin-top: 20px;
@@ -350,6 +343,16 @@ nav ul li a {
   .custom-flex-grid .col {
     margin: 0 0 10px 0;
     text-align: center;
+  }
+
+  #desktop-pic {
+    height: auto;
+    width: 100%;
+  }
+
+  #phone-pic {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -373,6 +376,13 @@ nav ul li a {
     width: 24%;
     margin-bottom: 20px;
   }
+
+  #phone-pic {
+    height: auto;
+    width: auto;
+    max-width: 550px;
+    max-height: 550px;
+  }
 }
 
 .col {
@@ -384,15 +394,6 @@ nav ul li a {
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   text-align: center;
   padding: 20px;
-}
-
-.col:hover {
-  cursor: pointer;
-  background-color: #26ce81;
-}
-
-.col:hover p {
-  color: white;
 }
 
 .homepage_goals p {
