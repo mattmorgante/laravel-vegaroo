@@ -29,63 +29,64 @@
             </label>
     </div>
 </div>
+<div id="calculator-results" style="display: none">
+    <div class="container" style="text-align: center">
+            <h3>
+                Every day a(n) <br><span id="update_text">Average
+                    American</span> will save:
+            </h3>
 
-<div class="container" style="text-align: center">
+        <div class="flexible_row">
+            <div class="row_item calculator_item">
+                <p class="title">Carbon Dioxide</p>
+                <div class="content widget" style="font-size: 2.5em">0</div>
+                <p>Grams</p>
+            </div>
+            <div class="row_item calculator_item">
+                <p class="title">Water</p>
+                <div class="content widget" style="font-size: 2.5em">0</div>
+                <p>Liters</p>
+            </div>
+            <div class="row_item calculator_item">
+                <p class="title">Forest</p>
+                <div class="content widget" style="font-size: 2.5em">0</div>
+                <p>Square Feet</p>
+            </div>
+            <div class="row_item calculator_item">
+                <p class="title">Waste</p>
+                <div class="content widget" style="font-size: 2.5em">0</div>
+                <p>Kilograms</p>
+            </div>
+            <div class="row_item calculator_item">
+                <p class="title">Animal Lives</p>
+                <div class="content widget" style="font-size: 2.5em">0</div>
+                <p>Lives</p>
+            </div>
+        </div>
+
         <h3>
-            Every day a(n) <br><span id="update_text">Average
-                American</span> will save:
+            compared to an Average American diet!
         </h3>
 
-    <div class="flexible_row">
-        <div class="row_item calculator_item">
-            <p class="title">Carbon Dioxide</p>
-            <div class="content widget" style="font-size: 2.5em">0</div>
-            <p>Grams</p>
-        </div>
-        <div class="row_item calculator_item">
-            <p class="title">Water</p>
-            <div class="content widget" style="font-size: 2.5em">0</div>
-            <p>Liters</p>
-        </div>
-        <div class="row_item calculator_item">
-            <p class="title">Forest</p>
-            <div class="content widget" style="font-size: 2.5em">0</div>
-            <p>Square Feet</p>
-        </div>
-        <div class="row_item calculator_item">
-            <p class="title">Waste</p>
-            <div class="content widget" style="font-size: 2.5em">0</div>
-            <p>Kilograms</p>
-        </div>
-        <div class="row_item calculator_item">
-            <p class="title">Animal Lives</p>
-            <div class="content widget" style="font-size: 2.5em">0</div>
-            <p>Lives</p>
-        </div>
     </div>
+    <div class="container">
+        <div class="sources_wrapper">
+            <div class="sources">
+                <h3>Sources</h3>
+                <ul>
+                    <li><a target="_blank" href="https://link.springer.com/article/10.1007/s10584-014-1169-1/fulltext.html">Scarborough, Peter, et al. Dietary greenhouse gas emissions of meat-eaters, fish-eaters, vegetarians and vegans in the UK</a></li>
+                    <li><a target="_blank" href="http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf">Meat Eater's Guide to Climate Change and Health</a></li>
+                    <li><a target="_blank" href="http://www.wri.org/blog/2016/04/sustainable-diets-what-you-need-know-12-charts">Ranganathan, Janet & Waite, Richard. Sustainable Diets: What You Need to Know in 12 Charts</a></li>
+                    <li><a target="_blank" href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
+                </ul>
+            </div>
 
-    <h3>
-        compared to an Average American diet!
-    </h3>
-
-</div>
-<div class="container">
-    <div class="sources_wrapper">
-        <div class="sources">
-            <h3>Sources</h3>
-            <ul>
-                <li><a target="_blank" href="https://link.springer.com/article/10.1007/s10584-014-1169-1/fulltext.html">Scarborough, Peter, et al. Dietary greenhouse gas emissions of meat-eaters, fish-eaters, vegetarians and vegans in the UK</a></li>
-                <li><a target="_blank" href="http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf">Meat Eater's Guide to Climate Change and Health</a></li>
-                <li><a target="_blank" href="http://www.wri.org/blog/2016/04/sustainable-diets-what-you-need-know-12-charts">Ranganathan, Janet & Waite, Richard. Sustainable Diets: What You Need to Know in 12 Charts</a></li>
-                <li><a target="_blank" href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
-            </ul>
         </div>
-
+        <div class="btn-wrapper">
+            <a class="btn" href="/environmental-benefits">Learn more about the environmental impact of animal products</a>
+        </div>
+        <br><br>
     </div>
-    <div class="btn-wrapper">
-        <a class="btn" href="/environmental-benefits">Learn more about the environmental impact of animal products</a>
-    </div>
-    <br><br>
 </div>
 
 
@@ -107,6 +108,7 @@
     var newValues = [];
 
     function updateValue(slider) {
+        document.getElementById("calculator-results").style.display = "block";
         // first get the value from the input event listener
         console.log(slider);
         // iterate through $values, defined above
