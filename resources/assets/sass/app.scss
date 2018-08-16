@@ -129,6 +129,13 @@ h3 {
   margin: 0 auto;
 }
 
+#learn-more {
+  font-size: 24px;
+  text-decoration: none;
+  color: $vegaroo-primary-color;
+  text-align: center;
+}
+
 .sources {
   text-align: left;
   color: $grey-text;
@@ -280,18 +287,15 @@ h3 {
 .quiz_item #calculator input {
   margin: 0;
 }
-.recipe_extras {
-  //display: flex;
-  //justify-content: space-between;
-}
-
-.recipe_extras p {
-  flex: 1;
-  padding: 0px 15px;
-}
 
 .recipe_extras p:nth-child(3) {
   border: 0;
+}
+
+.macro_wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 230px;
 }
 
 .footer {
@@ -602,6 +606,10 @@ input .user-input #email {
   border: 1px solid #e0e0e0;
   width: 80%;
   display: inline-block;
+}
+
+#food-name{
+  font-size: 24px;
 }
 
 @media (min-width: 1200px) {

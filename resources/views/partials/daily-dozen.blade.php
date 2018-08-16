@@ -13,14 +13,13 @@
     @else
       <div class="food-card" style="background-color: #ef5757">
     @endif
-          <a style="text-decoration: none;" href="/vegan-foods/{{ $food->slug }}">{{
-          $food->name
-              }}</a>
+          <p id="food-name">{{ $food->name }}</p>
           <p>{{ $food->servingSize }}</p>
           <br>
           <i class="fas fa-minus-circle fa-2x" onclick='increment(-1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}")'></i>
           <input class="table-data" disabled size=3 id='{{$food->slug }}-{{$today->id}}' value='{{ $today->{"$food->slug"} }}'> <span class="table-recommended"> / {{ $food->recommended }} </span>
           <i class="fas fa-plus-circle fa-2x" onclick='increment(1, "{{ $food->slug }}-{{ $today->id }}", "{{ $food->recommended }}" )'></i>
+          <br><br><a style="text-decoration: none" href="/vegan-foods/{{ $food->slug }}">Read More</a>
       </div>
   @endforeach
   </div>

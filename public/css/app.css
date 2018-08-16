@@ -129,6 +129,13 @@ h3 {
   margin: 0 auto;
 }
 
+#learn-more {
+  font-size: 24px;
+  text-decoration: none;
+  color: #26ce81;
+  text-align: center;
+}
+
 .sources {
   text-align: left;
   color: #4a4a4a;
@@ -315,15 +322,18 @@ h3 {
   margin: 0;
 }
 
-.recipe_extras p {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0px 15px;
-}
-
 .recipe_extras p:nth-child(3) {
   border: 0;
+}
+
+.macro_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 230px;
 }
 
 .footer {
@@ -674,6 +684,10 @@ input .user-input #email {
   border: 1px solid #e0e0e0;
   width: 80%;
   display: inline-block;
+}
+
+#food-name {
+  font-size: 24px;
 }
 
 @media (min-width: 1200px) {

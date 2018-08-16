@@ -80,8 +80,15 @@
                 <li><a target="_blank" href="http://www.cowspiracy.com/facts">Cowspiracy:</a> Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.</li>
             </ul>
         </div>
+
     </div>
+    <div class="btn-wrapper">
+        <a class="btn" href="/environmental-benefits">Learn more about the environmental impact of animal products</a>
+    </div>
+    <br><br>
 </div>
+
+
 
 <script>
     // Source: Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal’s life.

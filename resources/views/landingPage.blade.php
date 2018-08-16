@@ -62,8 +62,6 @@
             <a class="btn" href="/register">Get Started</a>
         </div>
         <br><br>
-
-
     </div>
 </div>
 

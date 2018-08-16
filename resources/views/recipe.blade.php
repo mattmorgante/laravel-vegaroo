@@ -74,9 +74,13 @@
                 {{--<p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>--}}
                 <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p><br>
                 <p><span class="call-out-small">Calories: </span><br>{{ $recipe->calories }}</p>
-                <p><span class="call-out-small">Carbs: </span><br>{{ $recipe->carbs }}</p>
-                <p><span class="call-out-small">Protein: </span><br>{{ $recipe->protein }}</p>
-                <p><span class="call-out-small">Fat: </span><br>{{ $recipe->fat }}</p>
+                <div class="macro_wrapper">
+                    <p>Carbs: </span><br>{{ $recipe->carbs }}g |  {{ 100 * round($recipe->carbs / 280 , 3) }}%&nbsp;&nbsp;&nbsp;
+                    </p>
+                    <p>Protein: </span><br>{{ $recipe->protein }}g |  {{ 100 * round($recipe->protein / 52 , 3)
+                        }}%&nbsp;&nbsp;&nbsp;</p>
+                    <p>Fat: </span><br>{{ $recipe->fat }}g |  {{ 100 * round($recipe->fat / 82 , 3) }}%</p>
+                </div>
 
                 {{--<p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>--}}
             </div>
@@ -99,12 +103,12 @@
 
     <div class="flexible_row">
         <div class="row_item">
-            <h2>Macro Nutrient Information</h2>
+            <h2>Macro Nutrients</h2>
             <h3>{{ $recipe->calories }} Calories</h3>
             <div id="piechart" style="width: 100%; height: 400px;"></div>
         </div>
         <div class="row_item" id="micro_graph">
-            <h2>Micro Nutrient Information</h2>
+            <h2>Micro Nutrients</h2>
             <div id="chart_div" style="width: 100%; height: 300px;"></div>
         </div>
     </div>
@@ -134,7 +138,7 @@
 
             <div class="upvote-wrapper">
                 <h3>Upvote</h3>
-                <div class="upvote" onclick="upvote()">
+                <div class="upvote" onclick="isUpvoted()">
                     <button class="btn">
                         <i class="fas fa-caret-up"></i>
                         <span id="number_of_upvotes">{{ $recipe->upvotes }}</span>
@@ -196,8 +200,18 @@
 @endsection
 
 <script>
+    var upvoted = false;
+
     function logIn() {
         window.location.href = "/register";
+    }
+
+    function isUpvoted() {
+        if (upvoted === true) {
+            alert('oh hey you already did that');
+        } else {
+            upvote();
+        }
     }
 
     function upvote() {
@@ -206,6 +220,7 @@
         var currentVotes = document.getElementById('number_of_upvotes').innerHTML;
         currentVotes++;
         document.getElementById('number_of_upvotes').innerHTML = currentVotes;
+        upvoted = true;
 
         $.ajax({
             url: "/upvote",
