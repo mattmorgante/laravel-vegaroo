@@ -11,9 +11,7 @@
   <div class="hero homepage-header">
     <div class="wrapper">
     <h1 class="landing-page-title title" style="margin: 0">Vegaroo Makes It Easier To Eat A <span
-                class="veg-green">Healthy</span>
-        Plant-Based
-        Diet</h1>
+                style="color: #26ce81;">Healthy</span> Plant-Based Diet</h1>
       <br><br>
         </div>
       <div class="hero">

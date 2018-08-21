@@ -1,10 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);body {
-  font-family: 'Noto Sans', sans-serif;
-  margin: 0;
-  color: #212121;
-}
-
-svg:not(:root).svg-inline--fa {
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);svg:not(:root).svg-inline--fa {
   cursor: pointer;
   margin-left: -2px;
   margin-right: 14px;
@@ -23,52 +17,6 @@ h3 {
 
 .white {
   color: white;
-}
-
-.homepage-hero-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.homepage-hero {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 10px;
-  padding: 15px;
-  height: 200px;
-  font-size: 24px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-}
-
-.homepage-hero h3 {
-  color: #26ce81;
-}
-
-#homepage-2 {
-  margin-top: 200px;
-}
-
-#homepage-3 {
-  margin-top: 400px;
-}
-
-@media (max-width: 992px) {
-  .homepage-hero-wrapper {
-    display: block;
-    min-height: 0;
-  }
-
-  #homepage-2 {
-    margin-top: 0;
-  }
-
-  #homepage-3 {
-    margin-top: 0;
-  }
 }
 
 .large_title {
@@ -263,22 +211,6 @@ h3 {
   font-size: 18px;
 }
 
-.row_header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 5px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 5px;
-}
-
 .recipe_detail {
   padding: 20px;
   display: -webkit-box;
@@ -369,22 +301,6 @@ h3 {
           align-items: center;
 }
 
-.join_slack {
-  max-width: 300px;
-  margin: 20px;
-  background-color: #10CF7D;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  /* will center text in <p>, which is not a flex item */
-}
-
-.join_slack a {
-  text-decoration: none;
-  color: white;
-}
-
 .call_to_action {
   width: 100%;
   background-color: #26ce81;
@@ -455,17 +371,6 @@ h3 {
   height: 50px;
   background-color: white;
   color: #26ce81;
-  padding: 13px 40px;
-  margin: 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.call_to_action_quiz .button {
-  height: 50px;
-  background-color: #26ce81;
-  color: white;
   padding: 13px 40px;
   margin: 15px;
   border-radius: 4px;

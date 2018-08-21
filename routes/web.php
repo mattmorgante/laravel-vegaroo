@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::get('/', 'LandingController@home');
 Route::get('/dashboard', 'LandingController@dashboard');
 // recipes

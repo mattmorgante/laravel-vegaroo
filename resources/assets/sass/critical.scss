@@ -29,6 +29,7 @@ nav {
   border-bottom: 1px solid lightgray;
   height: 50px;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -263,53 +264,6 @@ nav ul li a {
   margin-top: 40px;
 }
 
-
-.homepage-hero-wrapper {
-  display: flex;
-  text-align: center;
-}
-
-.homepage-hero {
-  flex: 1;
-  margin: 10px;
-  padding: 15px;
-  height: 250px;
-  font-size: 24px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-}
-
-.homepage-hero h3 a {
-  color: #26ce81;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-#homepage-2 {
-  margin-top: 200px;
-}
-
-#homepage-3 {
-  margin-top: 400px;
-}
-
-
-@media (max-width: 992px) {
-  .homepage-hero-wrapper {
-    display: block;
-    min-height: 0;
-  }
-
-  #homepage-2 {
-    margin-top: 0;
-  }
-
-  #homepage-3 {
-    margin-top: 0;
-  }
-}
-
-
 // mobile
 @media (max-width: 767px) {
   .custom-flex-grid {
@@ -360,14 +314,6 @@ nav ul li a {
   box-shadow: 0 4px 10px rgba(0,0,0,.15);
   text-align: center;
   padding: 20px;
-}
-
-.col:hover {
-  //cursor: pointer;
-  //background-color: $vegaroo-primary-color;
-  p {
-    //color: white;
-  }
 }
 
 .homepage_goals {

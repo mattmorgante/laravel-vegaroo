@@ -6,11 +6,6 @@ $almost-black: hsl(0, 0%, 13%);
 $grey-text: hsl(0, 0%, 29%);
 $grey-background: hsl(0, 0%, 97%);
 
-body {
-  font-family: 'Noto Sans', sans-serif;
-  margin: 0;
-  color: $almost-black;
-}
 svg:not(:root).svg-inline--fa {
   cursor: pointer;
   margin-left: -2px;
@@ -30,50 +25,6 @@ h3 {
 
 .white {
   color: white;
-}
-
-// HOMEPAGE
-.homepage-hero-wrapper {
-  display: flex;
-  text-align: center;
-}
-
-.homepage-hero {
-  flex: 1;
-  margin: 10px;
-  padding: 15px;
-  height: 200px;
-  font-size: 24px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-}
-
-.homepage-hero h3 {
-  color: $vegaroo-primary-color;
-}
-
-#homepage-2 {
-  margin-top: 200px;
-}
-
-#homepage-3 {
-  margin-top: 400px;
-}
-
-
-@media (max-width: 992px) {
-  .homepage-hero-wrapper {
-    display: block;
-    min-height: 0;
-  }
-
-  #homepage-2 {
-    margin-top: 0;
-  }
-
-  #homepage-3 {
-    margin-top: 0;
-  }
 }
 
 .large_title {
@@ -122,8 +73,6 @@ h3 {
   text-decoration: underline;
 }
 
-
-
 .bold {
   font-weight: bold;
 }
@@ -155,6 +104,7 @@ h3 {
   text-align: center;
   padding-top: 25px;
 }
+
 .btn {
   padding: 10px 20px;
   background-color: $vegaroo-primary-color;
@@ -242,15 +192,6 @@ h3 {
   font-size: 18px;
 }
 
-.row_header {
-  flex: 1;
-  padding: 5px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-}
-
 .recipe_detail {
   padding: 20px;
   display: flex;
@@ -321,22 +262,6 @@ h3 {
   align-items: center;
 }
 
-.join_slack {
-    max-width: 300px;
-    margin: 20px;
-    background-color: #10CF7D;
-    border-radius: 4px;
-    box-shadow: 0 2px 20px rgba(0,0,0,.15);
-    text-align: center;     /* will center text in <p>, which is not a flex item */
-}
-
-.join_slack a {
-  text-decoration: none;
-  color: white;
-}
-
-// cta
-
 .call_to_action {
   width: 100%;
   background-color: $vegaroo-primary-color;
@@ -347,6 +272,7 @@ h3 {
   align-items: center;
   color: white;
 }
+
 // mobile
 @media (max-width: 767px) {
   .call_to_action {
@@ -401,18 +327,6 @@ h3 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-}
-
-.call_to_action_quiz .button {
-
-    height: 50px;
-    background-color: $vegaroo-primary-color;
-    color: white;
-    padding: 13px 40px;
-    margin: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
 }
 
 // article page styling
@@ -490,6 +404,7 @@ h3 {
   padding-top: 25px;
   height: 0;
 }
+
 .videoWrapper iframe {
   position: absolute;
   top: 0;
@@ -740,8 +655,7 @@ input .user-input #email {
   margin: 5px;
 }
 
-
-//QQQQ Quiz
+// Quiz
 .start-quiz {
   text-align: center;
 }
