@@ -2,6 +2,10 @@ Mission: make it easier to go vegan
 
 Why: to improve the health of individual humans, the health of our planet, and the health of all other living things.
 
+Learnings: 
+- more people are motivated by health reasons and animal welfare than by environmental 
+- once you switch because of your health, then you start caring about the environment and animals  
+
 /quiz 
 Personalized Tips To Reduce Your Environmental Impact 
 3 things you're doing well
@@ -15,7 +19,6 @@ Expand Recipes
 - parse time, title, calories, etc into current db structure
 - to recipe add fields external (0 or 1), seo description
 a script can power an empire of relevant content, then just build community features on top of it
-Deadline = get 50 meals: Then you have an seo schedule
 vegan meals
 vegan recipes
 best vegan recipes
@@ -62,8 +65,6 @@ best budget meal preps
 vegan retreats
 
 Articles
-* Ingredients series:
-    - Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
 * Article: meal-planning (why you should make two servings of any dinner, bring it for lunch the next day)
 * Article: all about grains
 - brown rice
@@ -90,20 +91,13 @@ Articles
 - comment
 
 4. Food and Food Category food detail pages = Research about vegan foods as SEO content
-detail pages for food groups: starting with cruciferous
 detail pages for foods: the vegan superfoods - shareable digital cards
+* Ingredients series:
+    - Best way to prepare and consume...(mushrooms, cauliflower, sprouts, etc.)
 - not automatable, not high seo wise, but i want to do it
 - everything you need to know about kale
 - everything about cauliflower, broccoli, chia seeds  
 - why they healthy, which minerals they got, studies they are used in, then which recipes you can find them
-
-C. Longer term idea:
-vegan food near me (happy cow)- filter google api reviews to mapbox coordinates : search for vegan, raw, vegeterian 
-options in 
-title, description, tags, or reviews
-- worldwide map of vegan restaurants
-- cover it city by city - do one city first (amsterdam!!)
-- automate the process
 
 # Create a page with a form
 - Vegaroo Beta
@@ -217,59 +211,3 @@ to run migrations on production
 page has expired due to inactivity?
 - chmod storage/framework/sessions on production 
 - check csrf tokens are the same
-
-
-###### 
-<!---->
-<!--<div class="homepage_container_grey">-->
-<!--    <div class="container">-->
-<!--    <div class="hero">-->
-<!--        <h2 class="title">Get started</h2>-->
-<!--    </div>-->
-<!--    <div class="flexible_row">-->
-<!--        <ul class="flexible_row">-->
-<!--            <li class="row_item article_item"><a class="large_title" href="/dashboard">Am I Getting Enough-->
-<!--                    Nutrients?<img-->
-<!--                            class="tiny_img" src="/img/veg_tn.jpg" alt="Track-->
-<!--    Your Progress with the Daily Dozen"></a></li>-->
-<!--            <li class="row_item article_item"><a class="large_title" href="/calculator">Environmental-->
-<!--                    Impact Calculator-->
-<!--                    <img class="tiny_img" src="/img/charts_tn.jpg" alt="Calculate The Environmental Impact Of Your Diet"></a></li>-->
-<!--            <li class="row_item article_item"><a class="large_title" href="/small-steps">-->
-<!--                    <span class="homepage_articles_text">7 Small Steps To Begin Your Vegan Journey</span><br><img-->
-<!--                            class="tiny_img" src="/img/step_tn.jpg" alt="Taking small steps towards veganism can easily add up over time"></a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!---->
-<!--    <br>-->
-<!---->
-<!--</div>-->
-<!---->
-<!---->
-<!--<div class="homepage_container_white">-->
-<!--    <div class="container">-->
-<!--        <div class="hero">-->
-<!--            <h2 class="title">Why should you consider eating more plant-based foods?</h2>-->
-<!--        </div>-->
-<!--        <div class="flexible_row">-->
-<!--            <ul class="flexible_row">-->
-<!--                <li class="row_item article_item"><a class="large_title" href="/environmental-benefits">For our-->
-<!--                        planet<img-->
-<!--                                class="tiny_img" src="/img/plants_tn.jpg" alt="Plants reduce carbon dioxide in the-->
-<!--                            atmosphere"></a></li>-->
-<!--                <li class="row_item article_item"><a class="large_title" href="/health-benefits-long-term">For your health<img-->
-<!--                                class="tiny_img" src="/img/berries_tn.jpg" alt="Eating Vegan is the easiest way to avoid-->
-<!--                            disease"></a></li>-->
-<!--                <li class="row_item article_item"><a class="large_title" href="/stop-animal-cruelty">-->
-<!--                    <span class="homepage_articles_text">For the-->
-<!--                    animals</span><br><img-->
-<!--                                class="tiny_img" src="/img/cow_tn.jpg" alt="Billions of animals are killed each year to-->
-<!--                            feed humans"></a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--        <div class="read-more">-->
-<!--            <a href="/resources">All Resources<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--    </div>-->
-<!--</div>-->

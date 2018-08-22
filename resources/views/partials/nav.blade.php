@@ -11,7 +11,7 @@
         </a>
         <a href="/vegan-recipes">Recipes</a>
         <a href="/resources">Resources</a>
-        <a href="/calculator">Environmental Calculator</a>
+        <a href="/calculator">Env. Calc.</a>
         <a href="/values">About</a>
         @if ( Auth::guest() )
             <a class="join-burger" href="{{ route('register') }}">Join Vegaroo</a>
