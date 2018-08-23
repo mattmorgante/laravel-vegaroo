@@ -262,6 +262,35 @@ h3 {
   align-items: center;
 }
 
+.quotes {
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.homepage-quote {
+  margin: 25px;
+  font-size: 20px;
+  font-style: italic;
+  color: $vegaroo-secondary-color;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.single-benefit {
+  text-align: center;
+}
+
 .call_to_action {
   width: 100%;
   background-color: $vegaroo-primary-color;
@@ -290,6 +319,12 @@ h3 {
   }
   #micro_graph {
     display: none;
+  }
+  .quotes {
+    display: block;
+  }
+  .features-wrapper {
+    display: block;
   }
 }
 
