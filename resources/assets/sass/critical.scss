@@ -299,6 +299,13 @@ nav ul li a {
   }
 }
 
+@media(min-width: 1200px) {
+  #phone-pic {
+    padding-right: 100px;
+  }
+
+}
+
 @media (min-width: 768px) {
   .custom-flex-grid {
     display: flex;
@@ -309,7 +316,7 @@ nav ul li a {
 
   .custom-flex-grid .col {
     width: 24%;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
   }
 
   #phone-pic {
@@ -317,6 +324,7 @@ nav ul li a {
     width: auto;
     max-width: 550px;
     max-height: 550px;
+
   }
 }
 
@@ -332,7 +340,7 @@ nav ul li a {
 
 .homepage_goals {
   p {
-    font-size: 20px;
+    font-size: 24px;
     color: white;
     font-weight: bold;
   }

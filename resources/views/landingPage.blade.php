@@ -35,7 +35,7 @@
 
 
 <div class="homepage_container_grey">
-
+    <div class="container">
     <div class="hero">
         <h2 class="title">Eating less animal products helps you...</h2>
     </div>
@@ -45,7 +45,7 @@
             <p>Lose Weight</p>
         </div>
         <div class="col homepage_goals">
-            <p>Lower your risk of disease</p>
+            <p>Lower the risk of disease</p>
         </div>
 
         <div class="col homepage_goals">
@@ -61,6 +61,7 @@
         </div>
     </div>
     <br><br>
+    </div>
 </div>
 
 <div class="homepage_container_white">
@@ -90,11 +91,13 @@
 
 <div class="homepage_container_grey">
    <div class="container">
-       <div class="landing-page-title" style="text-align: center;">How does it work?</div>
+       <div class="hero">
+        <div class="title">How does it work?</div>
+       </div>
        <div class="features-wrapper">
            <div>
                <h2 class="landing-page-h2">&#x2705 Track</h2>
-               <h3 class="features-text">It can be tough to get enough nutrients on a Vegan diet. Vegaroo has you
+               <p class="features-text">It can be tough to get enough nutrients on a plant-based diet. Vegaroo has you
                    covered with food group tracking to make sure you get enough Protein, Iron, B12, and more.</h3>
            </div>
            <div class="photo">
@@ -104,28 +107,30 @@
    </div>
 </div>
 
-    <div class="homepage_container_white">
-        <div class="container">
-            <div class="hero">
-                <h2 class="landing-page-h2">&#x1F60B Eat</h2>
-                <h3 style="font-size: 24px; line-height: 2;">Based on your diet and goals, Vegaroo will provide personalized recipe
-                    recommendations.
-                    <br>Here are
-                    some of the most popular:</h3>
-            </div>
-            <ul class="flexible_row">
-                @foreach ($recipes as $recipe)
-                @include('partials.recipe-box')
-                @endforeach
-            </ul>
-            <div class="read-more">
-                <a href="/vegan-recipes">All Recipes<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
-            </div>
+<div class="homepage_container_white">
+    <div class="container">
+        <div class="hero">
+            <h2 class="landing-page-h2">&#x1F60B Eat</h2>
+            <p style="font-size: 24px; line-height: 2;">Based on your diet and goals, Vegaroo will provide
+                personalized recipe
+                recommendations.
+                <br>Here are
+                some of the most popular:</>
         </div>
-        <br>
+        <ul class="flexible_row">
+            @foreach ($recipes as $recipe)
+            @include('partials.recipe-box')
+            @endforeach
+        </ul>
+        <div class="read-more">
+            <a href="/vegan-recipes">All Recipes<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
+        </div>
     </div>
+    <br>
+</div>
 
 <div class="homepage_container_grey">
+    <div class="container">
     <div class="features-wrapper">
         <div>
             <h2 class="landing-page-h2">&#x1F4C8 Improve</h2>
@@ -139,6 +144,7 @@
         <a class="btn" href="/register">Get Started For Free</a>
     </div>
     <br>
+    </div>
 </div>
 
 
@@ -147,7 +153,7 @@
 @endsection
 
 <script>
-    var keywords = ["healthy", "sustainable", "ethical", "cheap"];
+    var keywords = ["healthy", "sustainable", "conscious", "cheap", "simple"];
     var colours = ["#26ce81", "#26ce81", "#26ce81", "#26ce81"];
     var count = 1;
     setInterval(function(){
