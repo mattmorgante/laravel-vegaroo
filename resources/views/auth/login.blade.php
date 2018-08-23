@@ -47,7 +47,7 @@
             <br>
         </div>
     </form>
-    <h2>Not yet a member?</h2>
+    <h2>Not a member yet?</h2>
     <div class="btn-wrapper">
         <a class="btn" href="/register">Join Vegaroo</a>
     </div>

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class QuizController extends Controller
 {
     public function index() {
+
         $date = date('m/d/Y-h:i:s-a', time());
         $hashed_id = md5($date);
 

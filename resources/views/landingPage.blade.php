@@ -73,7 +73,7 @@
 
         <div class="hero">
             <div class="hero-list-wrapper">
-                <h3>Vegaroo recipes have a strict no-tolerance policy</h3>
+                <h3>Vegaroo has a strict no-tolerance policy</h3>
                 <ul class="hero-list">
                     <li>&#x23F1 <strong>No</strong> recipes longer than 30 minutes</li>
                     <li>&#x1F644 <strong>No</strong> fancy ingredients</li>

@@ -8,11 +8,11 @@
     <div class="hero">
         <div class="hero-list-wrapper">
             <ul class="hero-list">
-                <li>&#x2705	Track the <a href="/dashboard">Daily Dozen</a></li>
-                <li>&#x1F4A1 Receive personalized recipe suggestions</li>
-                <li>&#x1F4C8 Weekly Nutrition Reports</li>
+                <li>&#x2705 Track your foods</li>
+                <li>&#x1F60B Get recipe recommendations</li>
+                <li>&#x1F4C8 Analyze your diet</li>
                 <li>&#x2B50 Save Favorite Recipes</li>
-                <li>&#x1F477 Influence new feature development</li>
+                <li>&#x1F64C Achieve your goals</li>
             </ul>
         </div>
     </div>
