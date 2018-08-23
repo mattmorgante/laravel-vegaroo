@@ -7,25 +7,64 @@ use App\Email;
 use App\Questions;
 use App\Suggestions;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class QuizController extends Controller
 {
-    public function index() {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index() {
         $date = date('m/d/Y-h:i:s-a', time());
         $hashed_id = md5($date);
+        $userId = Auth::user()->id;
 
         return view('quiz/start')->with([
-            'hashed_id' => $hashed_id
+            'hashed_id' => $hashed_id,
+            'user_id' => $userId
         ]);
     }
 
+    // when a user clicks on next the answer is first saved via ajax
+    public function saveAnswer(Request $request) {
+        $answer = Answers::where('hashed_id', $request->input('hashed_id'))->first();
+        $answer_nr = 'answer' . $request->input('answer_nr');
+        $answer->{$answer_nr} = $request->input('data');
+        $answer->save();
+    }
+
+    // and then they get redirected to the next question
     public function takeQuiz($hashed_id, $number) {
-        $question = Questions::where('id', $number)->first();
         $answer = Answers::where('hashed_id', $hashed_id)->first();
+        if ($number == '3') {
+            if ((strpos($answer->answer2, 'a') !== false))  {
+                $question = Questions::where('id', $number)->first();
+                return view('quiz/question')->with([
+                    'question' => $question,
+                ]);
+            }
+
+            if ((strpos($answer->answer2, 'b') !== false))  {
+                return redirect('vegan-quiz/' . $hashed_id . '/4');
+            }
+
+            if ((strpos($answer->answer2, 'c') !== false))  {
+                return redirect('vegan-quiz/' . $hashed_id . '/5');
+            }
+
+            if ((strpos($answer->answer2, 'd') !== false))  {
+                return redirect('vegan-quiz/' . $hashed_id . '/6');
+            }
+        }
+
+        $question = Questions::where('id', $number)->first();
         if ($answer == null) {
             $answer = new Answers();
             $answer->hashed_id = $hashed_id;
+            $answer->user_id = Auth::user()->id;
             $answer->save();
         }
 
@@ -34,12 +73,7 @@ class QuizController extends Controller
         ]);
     }
 
-    public function saveAnswer(Request $request) {
-        $answer = Answers::where('hashed_id', $request->input('hashed_id'))->first();
-        $answer_nr = 'answer' . $request->input('answer_nr');
-        $answer->{$answer_nr} = $request->input('data');
-        $answer->save();
-    }
+
 
     public function emailCapture($hashedId) {
         return view('quiz/emailCapture')->with([

@@ -11,15 +11,14 @@
 <div class="quiz-container">
     <div class="flexible_row">
         <div class="quiz_item">
-            <p>Question {{ $question->id }} of 14</p>
             <h2>{{ $question->text }}</h2>
                 @if($question->type == "input")
-                    <span class="input_prompt"># of servings:</span><input style="height: 20px;" name="answer" id="answer-value"
-                                                                           type="text" maxlength="2"><br>
+                    <span class="input_prompt"></span><input style="height: 20px;" name="answer" id="answer-value"
+                                                                           type="text" maxlength="7"><br>
                     <div class="btn-wrapper">
                         @if ($question->id == 1)
                         @else
-                            <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
+                            <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
                         @endif
                         <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
                     </div>
@@ -31,7 +30,7 @@
                     <input name="cb-input" class="quiz-input" value="d" type="checkbox">{{ $question->option4 }}<br>
 
                     <div class="btn-wrapper">
-                        <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
+                        <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
                         @if ($question->id == 14)
                             <button onclick="finish()" class="quiz-btn btn">Finish</button>
                         @else
@@ -47,7 +46,7 @@
                     <input class="quiz-input" name="radio" type="radio" value="d">{{ $question->option4 }}<br>
 
                     <div class="btn-wrapper">
-                        <button onclick="changeQuestion(-1)" class="quiz-btn btn">Previous</button>
+                        <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
                         <button onclick="getRadioAnswer()" class="quiz-btn btn">Next</button>
                     </div>
                 </div>
@@ -60,6 +59,11 @@
 @endsection
 
 <script>
+    function goBack() {
+        console.log('go back');
+        window.history.back();
+    }
+
     function changeQuestion(incrementor){
         var urlParts = window.location.href.split('/');
         var currentQuestion = parseInt(urlParts.pop());
@@ -72,7 +76,7 @@
         getCheckboxAnswer(true);
     }
 
-    function getInputAnswer() {
+    function getValidatedInputAnswer() {
         var answer = document.getElementById('answer-value').value;
         if (answer == "" || answer == null){
             alert("Please enter a number between 0 and 99");
@@ -88,6 +92,16 @@
             alert("Please enter a number between 0 and 99");
             return false;
         }
+    }
+
+    function getInputAnswer() {
+        var answer = document.getElementById('answer-value').value;
+        if (answer == "" || answer == null){
+            alert("Please enter a number between 0 and 99");
+            return false;
+        }
+        sendAnswer(answer);
+        changeQuestion(1);
     }
 
     function getCheckboxAnswer(lastQuestion = false) {

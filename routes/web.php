@@ -35,11 +35,8 @@ Route::get('/calculator', function () {
 });
 
 Route::get('/vegan-quiz', 'QuizController@index')->middleware('auth');
-Route::get('/vegan-quiz/save', 'QuizController@saveAnswer');
-Route::get('/vegan-quiz/{hashed_id}/{number}', 'QuizController@takeQuiz');
-Route::get('/suggestions/email/{hashed_id}', 'QuizController@emailCapture')->name('email-capture');
-Route::get('/suggestions/saveEmail', 'QuizController@saveEmail');
-Route::get('/display-suggestions/{hashed_id}', 'QuizController@suggestions');
+Route::get('/vegan-quiz/save', 'QuizController@saveAnswer')->middleware('auth');
+Route::get('/vegan-quiz/{hashed_id}/{question_number}', 'QuizController@takeQuiz')->middleware('auth');
 
 // tools & user
 Route::get('/tools', 'LandingController@tools');

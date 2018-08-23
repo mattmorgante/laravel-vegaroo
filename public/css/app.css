@@ -839,7 +839,7 @@ input .user-input #email {
 .quiz_item input {
   padding: 15px 0;
   font-size: 20px;
-  width: 40px;
+  width: 80px;
   text-align: center;
   border-radius: 7px;
   border: grey 1px solid;
