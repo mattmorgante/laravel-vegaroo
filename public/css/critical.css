@@ -67,6 +67,10 @@ nav ul li a {
     font-size: 20px;
   }
 
+  .features-text {
+    max-width: 500px;
+  }
+
   .landing-page-title {
     font-size: 40px !important;
   }
@@ -77,6 +81,10 @@ nav ul li a {
 
   nav {
     height: 58px !important;
+  }
+
+  #subtitle {
+    font-size: 40px;
   }
 
   .image_icon {
@@ -172,6 +180,10 @@ nav ul li a {
 }
 
 .hero {
+  text-align: center;
+}
+
+.hero-2 {
   text-align: center;
 }
 
@@ -316,11 +328,15 @@ nav ul li a {
 
   #phone-pic {
     height: auto;
-    width: 100%;
+    max-width: 350px;
   }
 
-  .features-text {
-    font-size: 18px !important;
+  .photo {
+    text-align: center;
+  }
+
+  #subtitle {
+    font-size: 28px;
   }
 }
 

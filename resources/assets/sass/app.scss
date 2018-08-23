@@ -289,7 +289,10 @@ h3 {
 
 .features-text {
   font-size: 24px;
-  max-width: 500px;
+}
+
+.recipes-text {
+  font-size: 24px;
 }
 
 .single-benefit {
@@ -329,6 +332,25 @@ h3 {
     display: block;
   }
   .features-wrapper {
+    display: block;
+  }
+  
+  
+
+  .features-text {
+    font-size: 18px !important;
+    line-height: 1.8;
+  }
+
+  .recipes-text {
+    font-size: 18px !important;
+    line-height: 1.8;
+    text-align: left;
+  }
+}
+
+@media(max-width: 992px) {
+  #desktop-wrapper {
     display: block;
   }
 }

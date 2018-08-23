@@ -27,8 +27,6 @@
           </div>
       </div>
   </div>
-    <br>
-    <br>
     <br><br>
 </div>
 </div>
@@ -92,30 +90,30 @@
 <div class="homepage_container_grey">
    <div class="container">
        <div class="hero">
-        <div class="title">How does it work?</div>
+        <div class="title" id="subtitle">How does it work?</div>
        </div>
-       <div class="features-wrapper">
-           <div>
-               <h2 class="landing-page-h2">&#x2705 Track</h2>
-               <p class="features-text">It can be tough to get enough nutrients on a plant-based diet. Vegaroo has you
-                   covered with food group tracking to make sure you get enough Protein, Iron, B12, and more.</h3>
+           <div class="features-wrapper">
+               <div>
+                   <h2 class="landing-page-h2">&#x2705 Track</h2>
+                   <p class="features-text">It can be tough to get enough nutrients on a plant-based diet. Vegaroo has you
+                       covered with food group tracking to make sure you get enough Protein, Iron, B12, and more.</h3>
+               </div>
+               <div class="photo">
+                   <img id="phone-pic" src="/img/iphone-3.png">
+               </div>
            </div>
-           <div class="photo">
-               <img id="phone-pic" src="/img/iphone-3.png">
-           </div>
-       </div>
    </div>
 </div>
 
 <div class="homepage_container_white">
     <div class="container">
-        <div class="hero">
+        <div class="hero-2">
             <h2 class="landing-page-h2">&#x1F60B Eat</h2>
-            <p style="font-size: 24px; line-height: 2;">Based on your diet and goals, Vegaroo will provide
+            <p class="recipes-text">Based on your diet and goals, Vegaroo will provide
                 personalized recipe
                 recommendations.
                 <br>Here are
-                some of the most popular:</>
+                some of the most popular:</p>
         </div>
         <ul class="flexible_row">
             @foreach ($recipes as $recipe)
@@ -131,7 +129,7 @@
 
 <div class="homepage_container_grey">
     <div class="container">
-    <div class="features-wrapper">
+    <div class="features-wrapper" id="desktop-wrapper">
         <div>
             <h2 class="landing-page-h2">&#x1F4C8 Improve</h2>
             <p class="features-text">Need to eat more fruits? More nuts? Vegaroo's nutrition reporting helps you to
