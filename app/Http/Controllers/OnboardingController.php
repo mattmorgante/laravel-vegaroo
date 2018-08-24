@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class OnboardingController extends Controller
 {
+    const WEIGHT_LOSS_QUESTION = 3;
+    const BODY_FAT_QUESTION = 4;
+    const BLOOD_PRESSURE_QUESTION = 5;
+    const CHOLESTEROL_QUESTION = 6;
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -27,35 +32,15 @@ class OnboardingController extends Controller
 
     public function saveAnswerAjax(Request $request) {
         $answer = Answers::where('hashed_id', $request->input('hashed_id'))->first();
-        $answer_nr = 'answer' . $request->input('answer_nr');
-        $answer->{$answer_nr} = $request->input('data');
+        $answer_number = 'answer' . $request->input('answer_nr');
+        $answer->{$answer_number} = $request->input('data');
         $answer->save();
     }
 
     public function findNextQuestion($hashed_id, $nextQuestion) {
         $answer = Answers::where('hashed_id', $hashed_id)->first();
         if ($nextQuestion == '3') {
-            $healthReason = $answer->answer2;
-            if ($this->isWeightLoss($healthReason))  {
-                return view('onboarding/question')->with([
-                    'question' => Questions::where('id', $nextQuestion)->first(),
-                ]);
-            }
-            if ($this->isBodyFat($healthReason))  {
-                return view('onboarding/question')->with([
-                    'question' => Questions::where('id', 4)->first(),
-                ]);
-            }
-            if ($this->isBloodPressure($healthReason))  {
-                return view('onboarding/question')->with([
-                    'question' => Questions::where('id', 5)->first(),
-                ]);
-            }
-            if ($this->isCholesterol($healthReason))  {
-                return view('onboarding/question')->with([
-                    'question' => Questions::where('id', 6)->first(),
-                ]);
-            }
+            return $this->calculateHealthReason($answer);
         } else {
             if ($answer == null) {
                 $answer = new Answers();
@@ -85,4 +70,27 @@ class OnboardingController extends Controller
         return (strpos($healthReason, 'd') !== false);
     }
 
+    public function calculateHealthReason($answer) {
+        $healthReason = $answer->answer2;
+        if ($this->isWeightLoss($healthReason)) {
+            return view('onboarding/question')->with([
+                'question' => Questions::where('id', self::WEIGHT_LOSS_QUESTION)->first(),
+            ]);
+        }
+        if ($this->isBodyFat($healthReason)) {
+            return view('onboarding/question')->with([
+                'question' => Questions::where('id', self::BODY_FAT_QUESTION)->first(),
+            ]);
+        }
+        if ($this->isBloodPressure($healthReason)) {
+            return view('onboarding/question')->with([
+                'question' => Questions::where('id', self::BLOOD_PRESSURE_QUESTION)->first(),
+            ]);
+        }
+        if ($this->isCholesterol($healthReason)) {
+            return view('onboarding/question')->with([
+                'question' => Questions::where('id', self::CHOLESTEROL_QUESTION)->first(),
+            ]);
+        }
+    }
 }

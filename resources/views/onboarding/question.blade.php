@@ -12,17 +12,17 @@
     <div class="flexible_row">
         <div class="quiz_item">
             <h2>{{ $question->text }}</h2>
-                @if($question->type == "input")
-                    <span class="input_prompt"></span><input style="height: 20px;" name="answer" id="answer-value"
-                                                                           type="text" maxlength="7"><br>
-                    <div class="btn-wrapper">
-                        @if ($question->id == 1)
-                        @else
-                            <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
-                        @endif
-                        <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
-                    </div>
-                @elseif($question->type == "select")
+            @if($question->type == "input")
+                <span class="input_prompt"></span><input style="height: 20px;" name="answer" id="answer-value"
+                                                                       type="text" maxlength="7"><br>
+                <div class="btn-wrapper">
+                    @if ($question->id == 1)
+                    @else
+                        <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
+                    @endif
+                    <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
+                </div>
+            @elseif($question->type == "select")
                 <div class="select-wrapper">
                     <input name="cb-input" class="quiz-input" value="a" type="checkbox">{{ $question->option1 }} <br>
                     <input name="cb-input" class="quiz-input" value="b" type="checkbox">{{ $question->option2 }}<br>
@@ -38,7 +38,7 @@
                         @endif
                     </div>
                 </div>
-                @elseif($question->type == "multiple-choice")
+            @elseif($question->type == "multiple-choice")
                 <div class="select-wrapper">
                     <input class="quiz-input" name="radio" type="radio" value="a">{{ $question->option1 }}<br>
                     <input class="quiz-input" name="radio" type="radio" value="b">{{ $question->option2 }}<br>
@@ -50,19 +50,14 @@
                         <button onclick="getRadioAnswer()" class="quiz-btn btn">Next</button>
                     </div>
                 </div>
-                @endif
+            @endif
         </div>
     </div>
 </div>
-
 <br>
 @endsection
 
 <script>
-    function goBack() {
-        window.history.back();
-    }
-
     function changeQuestion(incrementor){
         var urlParts = window.location.href.split('/');
         var currentQuestion = parseInt(urlParts.pop());
@@ -115,7 +110,6 @@
             alert("Please select an option");
             return false;
         }
-
     }
 
     function sendAnswer(data) {
@@ -143,6 +137,4 @@
                 console.log('error');
             });
     }
-
-
 </script>
