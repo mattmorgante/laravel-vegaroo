@@ -20,7 +20,12 @@
                     @else
                         <button onclick="goBack()" class="quiz-btn btn">Previous</button>
                     @endif
-                    <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
+
+                    @if ($question->id == 8)
+                        <button onclick="finish()" class="quiz-btn btn">Finish</button>
+                    @else
+                        <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
+                    @endif
                 </div>
             @elseif($question->type == "select")
                 <p class="quiz-details">Select all that apply</p>
@@ -32,11 +37,7 @@
 
                     <div class="btn-wrapper">
                         <button onclick="goBack()" class="quiz-btn btn">Previous</button>
-                        @if ($question->id == 14)
-                            <button onclick="finish()" class="quiz-btn btn">Finish</button>
-                        @else
-                            <button onclick="getCheckboxAnswer()" class="quiz-btn btn">Next</button>
-                        @endif
+                        <button onclick="getCheckboxAnswer()" class="quiz-btn btn">Next</button>
                     </div>
                 </div>
             @elseif($question->type == "multiple-choice")
@@ -64,23 +65,29 @@
     function changeQuestion(incrementor){
         var urlParts = window.location.href.split('/');
         var currentQuestion = parseInt(urlParts.pop());
-        var nextQuestion = parseInt(currentQuestion)+ incrementor;
         var hashed_id = urlParts[4];
-        window.location.href=('/onboarding-quiz/' + hashed_id + '/' + nextQuestion);
+        if (currentQuestion === 3 || currentQuestion === 4 || currentQuestion === 5 || currentQuestion === 6 ) {
+            window.location.href=('/onboarding-quiz/' + hashed_id + '/' + 7);
+        } else {
+            var nextQuestion = parseInt(currentQuestion)+ incrementor;
+            window.location.href=('/onboarding-quiz/' + hashed_id + '/' + nextQuestion);
+        }
     }
-
     function finish() {
-        getCheckboxAnswer(true);
+        getInputAnswer(true);
     }
 
-    function getInputAnswer() {
+    function getInputAnswer(lastQuestion = false) {
         var answer = document.getElementById('answer-value').value;
         if (answer === "" || answer == null){
-            alert("Please enter a number between 0 and 99");
+            alert("Please enter a number between 0 and 999");
             return false;
         }
-        sendAnswer(answer);
-        changeQuestion(1);
+        if (lastQuestion === true) {
+            window.location.href=('/home');
+        } else {
+            changeQuestion(1);
+        }
     }
 
     function getCheckboxAnswer(lastQuestion = false) {

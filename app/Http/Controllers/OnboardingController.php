@@ -40,6 +40,7 @@ class OnboardingController extends Controller
                 $answer->user_id = Auth::user()->id;
                 $answer->save();
             }
+
             return view('onboarding/question')->with([
                 'question' => $question = Questions::where('id', $nextQuestion)->first(),
             ]);
