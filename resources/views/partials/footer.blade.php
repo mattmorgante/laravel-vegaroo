@@ -1,54 +1,60 @@
-<div class="call_to_action">
-  @if ( Auth::guest() )
-    <div class="email_capture"><p>Interested in living a healthier and more eco-conscious life?</p>
-      <a href="/register">
-      <button class="login-button">
-          Join Vegaroo
-      </button>
-      </a>
+<div class="green_footer">
+    <div class="footer_category" id="recipes_footer">
+        <h4>Recipes</h4>
+        <ul>
+            <li><a href="/vegan-recipes">All Recipes</a></li>
+            <li><a href="/vegan-recipes/popular">Most Popular Recipes</a></li>
+            <li><a href="/vegan-recipes#grain-bowls">Grain Bowls</a></li>
+            <li><a href="/vegan-recipes#curry">Curries</a></li>
+            <li><a href="/vegan-recipes#stir-fries">Stir-Fries</a></li>
+            <li><a href="/vegan-recipes#salads">Salads</a></li>
+            <li><a href="/vegan-re  cipes#breakfasts">Breakfasts</a></li>
+            <li><a href="/vegan-recipes#snacks">Snacks</a></li>
+            <li><a href="/vegan-recipes#smoothies">Smoothies</a></li>
+        </ul>
     </div>
-  @else
-    <div class="email_capture">
-        <p>Stay tuned for updates from Vegaroo</p>
-
-      <div class="input_button">
-        <form onsubmit="return doSomething();">
-              <span class="enter_email">
-                  <input class="email-submit" type="text" placeholder="Enter Your Email Address" name="email">
-              </span>
-              <input type="submit" class="button">
-          </form>
-      </div>
+    <div class="footer_category" id="resources_footer">
+        <h4>Resources</h4>
+        <p>Why should I eat fewer animal products?</p>
+        <ul>
+            <li><a href="/health-benefits-long-term">For your health</a></li>
+            <li><a href="/environmental-benefits">For the planet</a></li>
+            <li><a href="/stop-animal-cruelty">For the animals</a></li>
+        </ul>
+        <p>How can I eat fewer animal products?</p>
+        <ul>
+            <li><a href="/small-steps">7 Small Steps To Get Started</a></li>
+            <li><a href="/nutrition">What foods should I eat?</a></li>
+            <li><a href="/blogs-books-documentaries">Blogs, Books, and Documentaries</a></li>
+        </ul>
     </div>
-
-    <script>
-
-        function doSomething() {
-            var data = $('form').serialize();
-            console.log(data);
-            $.ajax({
-                url: '/addEmail',
-                type: 'POST',
-                dataType: "json",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                data: data,
-            success: function(response) {
-                console.log(response);
-                alert('Thanks! We will be in touch soon!');
-                $('.input_button').fadeOut();
-            }
-            });
-
-
-            return false;
-        }
-    </script>
-
-  @endif
+    <div class="footer_category" id="tools_footer">
+        <h4>Tools</h4>
+        <ul>
+            <li><a href="/dashboard">Track the Daily Dozen</a></li>
+            <li><a href="/calculator">Environmental Impact Calculator</a></li>
+            <li><a href="/vegan-quiz">Personalized suggestions to reduce your impact</a></li>
+        </ul>
+        <h4>Get Started</h4>
+        <ul>
+            @if ( Auth::guest() )
+                <li><a href="/register">Join Vegaroo</a></li>
+                <li><a href="/login">Login</a></li>
+            @else
+                <li><a href="/home">Daily Dashboard</a></li>
+                <li><a href="/weekly">Weekly Report</a></li>
+                <li><a href="/profile">Profile</a></li>
+            @endif
+        </ul>
+    </div>
+    <div class="footer_category" id="about_footer">
+        <h4>About</h4>
+        <ul>
+            <li><a href="/values">Why Vegaroo?</a></li>
+            <li style="padding-bottom: 5px;"><a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo">Contact Me</a></li>
+            <li><a href="https://www.mattmorgante.com">Made by &#x2615 & &#x1F34E & &#x1F955 & Matt</a></li>
+        </ul>
+    </div>
 </div>
-<div class="footer">
-    <p style="margin: 10px;">Made with &#x2615 & &#x1F34E & &#x1F955 in Amsterdam by <a href="https://www.mattmorgante.com">Matt</a>.
-</div>
+
 

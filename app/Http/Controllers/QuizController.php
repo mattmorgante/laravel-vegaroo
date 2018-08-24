@@ -12,19 +12,12 @@ use Illuminate\Support\Facades\Auth;
 class QuizController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index() {
         $date = date('m/d/Y-h:i:s-a', time());
         $hashed_id = md5($date);
-        $userId = Auth::user()->id;
 
         return view('quiz/start')->with([
             'hashed_id' => $hashed_id,
-            'user_id' => $userId
         ]);
     }
 
@@ -72,8 +65,6 @@ class QuizController extends Controller
             'question' => $question,
         ]);
     }
-
-
 
     public function emailCapture($hashedId) {
         return view('quiz/emailCapture')->with([

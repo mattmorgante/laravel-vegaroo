@@ -37,16 +37,17 @@
         <div class="row_item"><a href="#smoothies">Smoothies</a></div>
     </ul>
 
-
     @include('partials.grain-bowls')
 
     @include('partials.curries')
 
 <br>
-    <h2 class="other-recipes">Tools, recipes and resources to help you eat more plant-based foods.</h2>
-    <div class="btn-wrapper">
-      <a class="btn" href="/register">Join Vegaroo</a>
-    </div>
+    @if ( Auth::guest() )
+        <h2 class="other-recipes">Tools, recipes and resources to help you eat more plant-based foods.</h2>
+        <div class="btn-wrapper">
+            <a class="btn" href="/register">Join Vegaroo</a>
+        </div>
+    @endif
 
     @include('partials.stir-fries')
 

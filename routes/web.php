@@ -34,9 +34,13 @@ Route::get('/calculator', function () {
     return view('calculator');
 });
 
-Route::get('/vegan-quiz', 'QuizController@index')->middleware('auth');
-Route::get('/vegan-quiz/save', 'QuizController@saveAnswer')->middleware('auth');
-Route::get('/vegan-quiz/{hashed_id}/{question_number}', 'QuizController@takeQuiz')->middleware('auth');
+Route::get('/onboarding-quiz', 'OnboardingController@start')->middleware('auth');
+Route::get('/onboarding-quiz/save', 'OnboardingController@saveAnswerAjax')->middleware('auth');
+Route::get('/onboarding-quiz/{hashed_id}/{question_number}', 'OnboardingController@findNextQuestion')->middleware('auth');
+
+Route::get('/vegan-quiz', 'QuizController@index');
+Route::get('/vegan-quiz/save', 'QuizController@saveAnswer');
+Route::get('/vegan-quiz/{hashed_id}/{question_number}', 'QuizController@takeQuiz');
 
 // tools & user
 Route::get('/tools', 'LandingController@tools');

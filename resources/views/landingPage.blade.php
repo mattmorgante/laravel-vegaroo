@@ -133,7 +133,7 @@
         <div>
             <h2 class="landing-page-h2">&#x1F4C8 Improve</h2>
             <p class="features-text">Need to eat more fruits? More nuts? Vegaroo's nutrition reporting helps you to
-                identify the holes in your diet and find recipes to improve.</p>
+                identify the holes in your diet and find ways to improve.</p>
 
         </div>
         <img id="desktop-pic" src="/img/desktop.png">
@@ -144,9 +144,6 @@
     <br>
     </div>
 </div>
-
-
-
 
 @endsection
 

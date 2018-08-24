@@ -334,6 +334,14 @@ h3 {
   .features-wrapper {
     display: block;
   }
+
+  .footer_category {
+    width: 100% !important;
+  }
+  
+  .green_footer {
+    display: block !important;
+  }
   
   
 
@@ -791,4 +799,50 @@ input .user-input #email {
   border: 0;
   box-shadow: 0;
   display: inline;
+}
+
+.green_footer {
+  display: flex;
+  background-color: $vegaroo-primary-color;
+  justify-content: center;
+  padding: 15px 50px 30px 50px;
+  h4 {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    padding-bottom: 10px;
+  }
+  a {
+    color: $grey-text;
+  }
+}
+
+.footer_category {
+  margin: 0 10px 0 10px;
+
+  p {
+    font-size: 18px;
+    color: $grey-text;
+  }
+}
+
+// not mobile
+@media (min-width: 768px) {
+  #recipes_footer {
+    width: 18%;
+  }
+  #resources_footer { width: 28%;}
+  #tools_footer { width: 23%;}
+  #about_footer { width: 23%;}
+
+  .green_footer {
+    padding: 15px 50px 30px 80px;
+  }
+
 }
