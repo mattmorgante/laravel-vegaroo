@@ -19,7 +19,7 @@
               <div class="hero-list-wrapper" style="text-align: center">
                   <h3>How does it work?</h3>
                   <ul class="hero-list">
-                      <li>&#x2705 Track your foods</li>
+                      <li>&#x2705 Track food groups</li>
                       <li>&#x1F60B Get recipe recommendations</li>
                       <li>&#x1F4C8 Analyze your diet</li>
                       <li>&#x1F64C Achieve your goals</li>
@@ -40,22 +40,22 @@
 
         <div class="custom-flex-grid">
             <div class="col homepage_goals">
-                <p>Lose Weight</p>
+                <p>Lose weight</p>
             </div>
             <div class="col homepage_goals">
                 <p>Lower the risk of disease</p>
             </div>
 
             <div class="col homepage_goals">
-                <p>Have More Energy</p>
+                <p>Have more energy</p>
             </div>
         </div>
         <div class="custom-flex-grid">
             <div class="col homepage_goals">
-                <p>Protect The Environment</p>
+                <p>Protect the environment</p>
             </div>
             <div class="col homepage_goals">
-                <p>Reduce Animal Suffering</p>
+                <p>Reduce animal suffering</p>
             </div>
         </div>
         <br><br>
@@ -94,7 +94,7 @@
        </div>
        <div class="features-wrapper">
            <div>
-               <h2 class="landing-page-h2">&#x2705 Track</h2>
+               <h2 class="landing-page-h2">1. Track &nbsp;&#x2705</h2>
                <p class="features-text">It can be tough to get enough nutrients on a plant-based diet. Vegaroo has you
                    covered with food group tracking to make sure you get enough Protein, Iron, B12, and more.</h3>
            </div>
@@ -107,20 +107,20 @@
 
 <div class="homepage_container_white">
     <div class="container">
-        <div class="hero-2">
-            <h2 class="landing-page-h2">&#x1F60B Eat</h2>
+        <div style="padding: 30px;">
+            <h2 class="landing-page-h2">2. Eat &nbsp;&#x1F60B</h2>
             <p class="recipes-text">Based on your diet and goals, Vegaroo will provide
                 personalized recipe
                 recommendations.
                 <br>Here are some of the most popular:</p>
-        </div>
-        <ul class="flexible_row">
-            @foreach ($recipes as $recipe)
-            @include('partials.recipe-box')
-            @endforeach
-        </ul>
-        <div class="read-more">
-            <a href="/vegan-recipes">All Recipes<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
+            <ul class="flexible_row">
+                @foreach ($recipes as $recipe)
+                @include('partials.recipe-box')
+                @endforeach
+            </ul>
+            <div class="read-more">
+                <a href="/vegan-recipes">All Recipes<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </div>
     <br>
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="features-wrapper" id="desktop-wrapper">
             <div>
-                <h2 class="landing-page-h2">&#x1F4C8 Improve</h2>
+                <h2 class="landing-page-h2">3. Improve &nbsp;&#x1F4C8</h2>
                 <p class="features-text">Need to eat more fruits? More nuts? Vegaroo's nutrition reporting helps you to
                     identify the holes in your diet and find ways to improve.</p>
 
@@ -138,7 +138,7 @@
             <img id="desktop-pic" src="/img/desktop.png">
             </div>
         <div class="btn-wrapper">
-            <a class="btn" href="/register">Get Started For Free</a>
+            <a id="call_to_action_btn" class="btn" href="/register">Get started for free</a>
         </div>
         <br>
     </div>

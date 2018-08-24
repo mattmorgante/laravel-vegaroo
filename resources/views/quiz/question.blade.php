@@ -133,6 +133,7 @@
             alert("Please select an option");
             return false;
         }
+
     }
 
     function sendAnswer(data) {

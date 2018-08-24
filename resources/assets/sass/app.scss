@@ -71,6 +71,10 @@ h3 {
   justify-content: flex-end;
   font-size: 18px;
   text-decoration: underline;
+  a {
+    color: $vegaroo-primary-color;
+    font-weight: bold;
+  }
 }
 
 .bold {
@@ -342,8 +346,6 @@ h3 {
   .green_footer {
     display: block !important;
   }
-  
-  
 
   .features-text {
     font-size: 18px !important;
@@ -734,6 +736,11 @@ input .user-input #email {
   cursor: pointer;
 }
 
+.quiz-details {
+  font-size: 18px;
+  font-style: italic;
+}
+
 .quiz_item {
   flex: 1;
   list-style: none;
@@ -844,5 +851,7 @@ input .user-input #email {
   .green_footer {
     padding: 15px 50px 30px 80px;
   }
-
+}
+#call_to_action_btn {
+  background-color: $vegaroo-secondary-color;
 }

@@ -72,6 +72,11 @@ h3 {
   text-decoration: underline;
 }
 
+.read-more a {
+  color: #26ce81;
+  font-weight: bold;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -820,6 +825,11 @@ input .user-input #email {
   cursor: pointer;
 }
 
+.quiz-details {
+  font-size: 18px;
+  font-style: italic;
+}
+
 .quiz_item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -959,5 +969,9 @@ input .user-input #email {
   .green_footer {
     padding: 15px 50px 30px 80px;
   }
+}
+
+#call_to_action_btn {
+  background-color: #ff672f;
 }
 

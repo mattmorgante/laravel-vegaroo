@@ -15,9 +15,16 @@ class cacheheaders
      */
     public function handle($request, Closure $next)
     {
-        $response = $next($request);
-        $response->header('Cache-Control', 'max-age=36000, public');
+        $currentUrl = url()->current();
+        if (strpos($currentUrl, 'onboarding-quiz') !== false) {
+            $response = $next($request);
+            return $response;
+        } else {
+            $response = $next($request);
+            $response->header('Cache-Control', 'max-age=36000, public');
+            return $response;
+        }
 
-        return $response;
+
     }
 }

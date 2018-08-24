@@ -18,11 +18,12 @@
                 <div class="btn-wrapper">
                     @if ($question->id == 1)
                     @else
-                        <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
+                        <button onclick="goBack()" class="quiz-btn btn">Previous</button>
                     @endif
                     <button onclick="getInputAnswer()" class="quiz-btn btn">Next</button>
                 </div>
             @elseif($question->type == "select")
+                <p class="quiz-details">Select all that apply</p>
                 <div class="select-wrapper">
                     <input name="cb-input" class="quiz-input" value="a" type="checkbox">{{ $question->option1 }} <br>
                     <input name="cb-input" class="quiz-input" value="b" type="checkbox">{{ $question->option2 }}<br>
@@ -30,7 +31,7 @@
                     <input name="cb-input" class="quiz-input" value="d" type="checkbox">{{ $question->option4 }}<br>
 
                     <div class="btn-wrapper">
-                        <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
+                        <button onclick="goBack()" class="quiz-btn btn">Previous</button>
                         @if ($question->id == 14)
                             <button onclick="finish()" class="quiz-btn btn">Finish</button>
                         @else
@@ -46,7 +47,7 @@
                     <input class="quiz-input" name="radio" type="radio" value="d">{{ $question->option4 }}<br>
 
                     <div class="btn-wrapper">
-                        <button onclick="goBack(-1)" class="quiz-btn btn">Previous</button>
+                        <button onclick="goBack()" class="quiz-btn btn">Previous</button>
                         <button onclick="getRadioAnswer()" class="quiz-btn btn">Next</button>
                     </div>
                 </div>
@@ -58,6 +59,8 @@
 @endsection
 
 <script>
+    function goBack() { window.history.back(); }
+
     function changeQuestion(incrementor){
         var urlParts = window.location.href.split('/');
         var currentQuestion = parseInt(urlParts.pop());
