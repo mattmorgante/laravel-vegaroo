@@ -14,6 +14,8 @@
             <p class="quiz-details">Question {{ $number }} of 5</p>
             <h2>{{ $question->text }}</h2>
             @if($question->type == "input")
+                <div class="quiz-details">{{ $question->details }}</div>
+                <br>
                 <span class="input_prompt"></span><input style="height: 20px;" name="answer" id="answer-value"
                                                                        type="text" maxlength="7"><br>
                 <div class="btn-wrapper">
@@ -30,6 +32,7 @@
                 </div>
             @elseif($question->type == "select")
                 <p class="quiz-details">Select all that apply</p>
+
                 <div class="select-wrapper">
                     <input name="cb-input" class="quiz-input" value="a" type="checkbox">{{ $question->option1 }} <br>
                     <input name="cb-input" class="quiz-input" value="b" type="checkbox">{{ $question->option2 }}<br>
@@ -84,6 +87,7 @@
             alert("Please enter a number between 0 and 999");
             return false;
         }
+        sendAnswer(answer);
         if (lastQuestion === true) {
             window.location.href=('/home');
         } else {

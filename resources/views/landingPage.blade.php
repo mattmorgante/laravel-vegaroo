@@ -99,7 +99,7 @@
                    covered with food group tracking to make sure you get enough Protein, Iron, B12, and more.</h3>
            </div>
            <div class="photo">
-               <img id="phone-pic" src="/img/iphone-3.png">
+               <img id="phone-pic" alt="Use Vegaroo to track the daily dozen"src="/img/iphone-3.png">
            </div>
        </div>
    </div>
@@ -134,7 +134,7 @@
                     identify the holes in your diet and find ways to improve.</p>
 
             </div>
-            <img id="desktop-pic" src="/img/desktop.png">
+            <img id="desktop-pic" alt="Visualize your improvement over time" src="/img/desktop.png">
             </div>
         <div class="btn-wrapper">
             <a id="call_to_action_btn" class="btn" href="/register">Get started for free</a>

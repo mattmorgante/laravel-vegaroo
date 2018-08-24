@@ -1,5 +1,5 @@
 <div class="hero">
-    <h3 class="title">How?</h3>
+    <h3 class="title">How to eat fewer animal products</h3>
 </div>
 <ul class="flexible_row">
     <li class="row_item article_item"><a href="/small-steps"><img class="tiny_img" src="/img/step_tn.jpg" alt="Taking small steps towards veganism can easily add up over time">7 Small Steps To Begin Your Vegan Journey</a></li>

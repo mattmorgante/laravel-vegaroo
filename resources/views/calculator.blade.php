@@ -31,6 +31,8 @@
             </label>
     </div>
 </div>
+    <br><br>
+
 <div id="calculator-results" style="display: none">
     <div class="container" style="text-align: center">
             <h3>
