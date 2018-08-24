@@ -2,6 +2,5 @@
     <div class="recipe_extras">
         <span class="price">Calories: {{ $recipe->calories }}</span><br>
         <span class="time">Time: {{ $recipe->time }}</span>
-        {{--<span class="nutrition_score">{{ $recipe->score }}/10</span>--}}
     </div>
 </li>

@@ -111,8 +111,7 @@
             <h2 class="landing-page-h2">2. Eat &nbsp;&#x1F60B</h2>
             <p class="recipes-text">Based on your diet and goals, Vegaroo will provide
                 personalized recipe
-                recommendations.
-                <br>Here are some of the most popular:</p>
+                recommendations. Here are some of the most popular:</p>
             <ul class="flexible_row">
                 @foreach ($recipes as $recipe)
                 @include('partials.recipe-box')
@@ -121,7 +120,7 @@
             <div class="read-more">
                 <a href="/vegan-recipes">All Recipes<i style="margin-left: 6px;" class="fas fa-arrow-right"></i></a>
             </div>
-        </div>
+    </div>
     </div>
     <br>
 </div>
