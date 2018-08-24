@@ -10,20 +10,32 @@
     <div class="user-nav">
         <a class="active-nav-item" href="#">Daily</a>
         <a href="/weekly">Weekly</a>
-        <a href="/profile">Profile</a>
+        <a href="/profile">Saved Recipes</a>
     </div>
-    <h2>What have you eaten today?</h2>
+    @if ($message == true )
+        <h2>Welcome to Vegaroo, {{  Auth::user()->name }}</h2>
+
+        <p class="onboarding-instructions">Looks like it's your first day here, so let's take a look around!</p>
+            <ul>
+                <li>Below you can fill in what you have eaten so far today.</li>
+                <li>Don't miss the recipe suggestions that will update once you get going.</li>
+                <li>Once you're finished with a few days, check out your <a href="/weekly">Weekly Report</a></li>
+                <li>Once you save a recipe it will appear in <a href="/profile">Saved Recipes</a></li>
+                <li>Looking for some more info about the blant-based diet? Check out our <a href="/resources">Resources</a></li>
+            </ul>
+
+    @else
+        <h2>What have you eaten today?</h2>
+    @endif
 
       <div class="header-inline">
         <h2 style="text-align: center; color: #26ce81;">{{ $displayDate }}</h2>
-
         <div class="datepicker-wrapper">
           <i onclick="changeDateByOne(-1)" class="fas fa-chevron-left"></i>
           <input placeholder="Pick a different date" type="text" id="datepicker" onchange="retrieveDate()">
           <button id="go-button">Go</button>
           <i onclick="changeDateByOne(1)" class="fas fa-chevron-right"></i>
         </div>
-
       </div>
     </div>
 

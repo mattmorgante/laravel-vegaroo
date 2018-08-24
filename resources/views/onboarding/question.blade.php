@@ -11,6 +11,7 @@
 <div class="quiz-container">
     <div class="flexible_row">
         <div class="quiz_item">
+            <p class="quiz-details">Question {{ $number }} of 5</p>
             <h2>{{ $question->text }}</h2>
             @if($question->type == "input")
                 <span class="input_prompt"></span><input style="height: 20px;" name="answer" id="answer-value"

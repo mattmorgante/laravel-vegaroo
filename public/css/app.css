@@ -830,6 +830,10 @@ input .user-input #email {
   font-style: italic;
 }
 
+.onboarding-instructions {
+  font-size: 18px;
+}
+
 .quiz_item {
   -webkit-box-flex: 1;
       -ms-flex: 1;

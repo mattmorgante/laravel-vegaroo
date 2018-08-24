@@ -10,11 +10,13 @@
   <div class="user-nav">
     <a href="/home">Daily</a>
     <a href="/weekly">Weekly</a>
-    <a class="active-nav-item" href="#">Profile</a>
+    <a class="active-nav-item" href="#">Saved Recipes</a>
   </div>
-  <h2>Welcome To Vegaroo, {{  Auth::user()->name }}!</h2>
-
   <h2 class="btn-wrapper">My Favorite Recipes</h2>
+  @if(count($savedRecipes) == 0 )
+    <h2>Head on over to the <a href="/vegan-recipes">recipes page</a> and save your favorites to see them here</h2>
+  @endif
+
   @foreach($savedRecipes as $recipe)
     @if ($loop->iteration % 4 == 1 )
       <div class="flexible_row">
@@ -25,64 +27,6 @@
       </div>
     @endif
   @endforeach
-
-  {{--<h2>Settings</h2>--}}
-  {{--<form>--}}
-    {{--<div>--}}
-      {{--<input type="checkbox" id="reminder">--}}
-      {{--<label for="reminder">Get a reminder every evening if you haven't entered your daily dozen yet</label>--}}
-    {{--</div>--}}
-    {{--<div>--}}
-      {{--<input type="checkbox" id="public">--}}
-      {{--<label for="public">Make my dashboard open to the public</label>--}}
-    {{--</div>--}}
-    {{--<p>Metric system?</p>--}}
-    {{--<div>--}}
-      {{--<input type="radio" id="metric"--}}
-             {{--name="metric" title="imperial">--}}
-      {{--<label for="contactChoice1">Metric</label>--}}
-
-      {{--<input type="radio" id="imperial"--}}
-             {{--name="contact">--}}
-      {{--<label for="imperial">Imperial</label>--}}
-    {{--</div>--}}
-    {{--<div>--}}
-      {{--<button type="submit" class="btn">Update Settings</button>--}}
-    {{--</div>--}}
-  {{--</form>--}}
-
-  <h2 class="btn-wrapper">FAQ</h2>
-  <h3>What is this?</h3>
-  <ul>
-    <li>Vegaroo is my attempt to use technology to make it easier for people to eat more fruits, vegetables and other plant-based foods.</li>
-  <br>
-
-  <li>Is there something you'd like to see? Feel free to check out the
-    <a href="https://trello.com/b/x8TcQZOi/vegaroo-pipeline">Feature Pipeline</a> or <a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo" target="_top">get in touch</a>.</li>
-      </ul>
-
-  <h3>Why should I eat these foods?</h3>
-
-  <ul>
-    <li>At the simplest possible level, these foods are scientifically proven to prevent the leading causes of death, as documented in the book <a target="_blank" href="http://amzn.to/2AZGPxU">How Not To Die</a></li>
-    <br>
-    <li>However, there's a multitude of reasons to consider eating more plants and fewer animal products. Maybe you're interested in <a href="/environmental-benefits">fighting back against climate change,</a>
-      <a href="/health-benefits-long-term">improving your health</a> or <a href="/stop-animal-cruelty"> preventing animal cruelty.</a> Whatever your reason, I'm glad to have you here at Vegaroo!</li>
-  </ul>
-
-  <h3>This shit is tough, I need help going Vegan!</h3>
-  <ul>
-    <li>May I not so humbly suggest our <a href="/resources">Vegan Resources</a> or <a href="/recipes">Vegan Recipes</a> to get you started in the right direction?</li>
-
-
-  </ul>
-
-  <div class="btn-wrapper">
-    <a class="btn" href="/home">
-      My Dashboard
-    </a>
-  </div>
-
   <br>
 
   </div>

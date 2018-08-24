@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Psy\CodeCleaner\AbstractClassPass;
 
 class HomeController extends Controller
 {
@@ -73,13 +74,20 @@ class HomeController extends Controller
           }
         }
 
+        $message = false;
+        $daysOfUser = Days::where('user_id', $userId)->count();
+        if ($daysOfUser == 1) {
+            $message = true;
+        }
+
         return view('daily')->with([
             'recServings' => $recServings,
             'foods' => $foods,
             'today' => $today,
             'displayDate' => $displayDate,
             'recommendedRecipes' => $recommendedRecipes,
-            'categoriesComplete' => $categoriesComplete
+            'categoriesComplete' => $categoriesComplete,
+            'message' => $message
         ]);
     }
 

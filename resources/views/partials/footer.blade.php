@@ -33,7 +33,7 @@
         <ul>
             <li><a href="/dashboard">Track the Daily Dozen</a></li>
             <li><a href="/calculator">Environmental Impact Calculator</a></li>
-            <li><a href="/vegan-quiz">Personalized suggestions to reduce your impact</a></li>
+            <li><a href="/vegan-quiz">Personalized suggestions to reduce your environmental impact</a></li>
         </ul>
         <h4>Get Started</h4>
         <ul>

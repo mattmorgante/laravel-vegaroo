@@ -41,8 +41,19 @@ class OnboardingController extends Controller
                 $answer->save();
             }
 
+            if ( $nextQuestion == 4 or $nextQuestion == 5 or $nextQuestion == 6) {
+                $number = 3;
+            } elseif ($nextQuestion == 7) {
+                $number = 4;
+            } elseif ($nextQuestion == 8) {
+                $number = 5;
+            } else {
+                $number = $nextQuestion;
+            }
+
             return view('onboarding/question')->with([
                 'question' => $question = Questions::where('id', $nextQuestion)->first(),
+                'number' => $number
             ]);
         }
     }
@@ -58,6 +69,7 @@ class OnboardingController extends Controller
         if ($this->isWeightLoss($healthReason)) {
             return view('onboarding/question')->with([
                 'question' => $question = Questions::where('id', 3)->first(),
+                'number' => 3
             ]);
         }
         if ($this->isBodyFat($healthReason)) {
