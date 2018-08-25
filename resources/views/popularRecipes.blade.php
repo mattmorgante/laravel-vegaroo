@@ -9,20 +9,26 @@
 <div class="header-inline">
   <h2 class="other-recipes">Most Popular Recipes</h2>
 </div>
-@foreach ($recipes as $recipe)
-    <div class="container">
+<div class="container">
+@foreach($recipes as $recipe)
+    @if ($loop->iteration % 4 == 1 )
         <div class="flexible_row">
-            <div class="row_item">
-                <a href="/vegan-recipes/{{$recipe->category}}/{{ $recipe->slug }}">
-                    <h1>{{ $recipe->title }}</h1>
-                    <p style="color:black;">{{ $recipe->description }}</p>
-                    <p>Upvotes: {{ $recipe->upvotes }}</p>
-                </a>
+            @endif
+            <li class="row_item">
+                <h3># {{ $loop->iteration }}</h3>
+                <a class="article_link" href="/vegan-recipes/{{ $recipe->category }}/{{ $recipe->slug }}">{{ $recipe->title }}</a><br>
+                <div class="recipe_extras">
+                    <span class="upvotes">Upvotes: {{ $recipe->upvotes }}</span><br>
+                    <span class="price">Calories: {{ $recipe->calories }}</span><br>
+                    <span class="time">Time: {{ $recipe->time }}</span>
                 </div>
-            </div>
+            </li>
+
+            @if ( ($loop->iteration % 4 ==0) or ($loop->last) )
         </div>
-    </div>
+    @endif
 @endforeach
+</div>
 <br>
 
 
