@@ -15,11 +15,10 @@ use Psy\CodeCleaner\AbstractClassPass;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
+    const dailyTotal = 25;
+    const weeklyTotal = 175;
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -41,30 +40,12 @@ class HomeController extends Controller
         $displayDate = Carbon::createFromDate($date2[0], $date2[1], $date2[2]);
         $displayDate = $displayDate->toFormattedDateString();
 
-        $today = Days::where('day', $date)
-            ->where('user_id', $userId)
-            ->first();
-
-        if (empty($today)) {
-            $days = new Days();
-            $today = $days->createADay($userId, $date);
-        }
-
-        $today->sum = $this->sumADay($today);
-
-        $today->percentage = $today->sum / 25;
-        if ($today->percentage > 1){
-            $today->percentage = 1;
-        }
-
-        $today->percentage = 100*(round($today->percentage, 2));
-
-        $recServings = Foods::getAttributeOfFoods('recommended');
-
-        $foods = Foods::getAllFoods();
+        $today = $this->createToday($date, $userId);
 
         $recommendedRecipes = [];
         $categoriesComplete = 0;
+
+        $foods = Foods::getAllFoods();
         foreach ($foods as $food) {
           if ($food->recommended > $today->{"$food->slug"} ) {
               $recipes = recipe::getRecipeByTag($food->slug, 4);
@@ -81,7 +62,7 @@ class HomeController extends Controller
         }
 
         return view('daily')->with([
-            'recServings' => $recServings,
+            'recServings' => Foods::getAttributeOfFoods('recommended'),
             'foods' => $foods,
             'today' => $today,
             'displayDate' => $displayDate,
@@ -99,29 +80,15 @@ class HomeController extends Controller
     }
 
     public function weekly() {
-      $userId = (Auth::user()->id);
-
+      $userId = Auth::user()->id;
       $foods = Foods::all();
+      $week = $this->createWeek($foods, $userId);
 
-      $week = [];
-      foreach ($foods as $food) {
-          $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
-          $weekRecommended = $food->recommended * 7;
-          $weekPercentage = array_sum($weekData) / $weekRecommended;
-          $week[$food->name] = 100*(round($weekPercentage, 2));
-      }
-
-      $percentages =[];
       $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
-      $i = 0;
+      $percentages =[]; $i = 0;
       foreach ($days as $day) {
           $day->sum = $this->sumADay($day);
-          $day->percentage = $day->sum / 25;
-          if ($day->percentage > 1){
-              $day->percentage = 1;
-          }
-
-          $day->percentage = 100*(round($day->percentage, 2));
+          $day->percentage = $this->calculatePercentage($day);
           $percentages[$i] = $day->percentage;
           $i++;
       }
@@ -131,26 +98,16 @@ class HomeController extends Controller
           $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
       }
 
-      // sort by worst percentage first
       asort($week);
+      $recommendedRecipes = $this->getRecommendedRecipes($week);
 
-      $recommendedRecipes = [];
-      foreach ($week as $food => $value) {
-        if ($value < 90) {
-          $slug = Foods::where('name', $food)->pluck('slug')[0];
-          $recipes = recipe::getRecipeByTag($slug, 4);
-          $recommendedRecipes[$food] = $recipes;
-        }
-      }
-
-      // week score
       $weekScore = 0;
       foreach ($days as $today) {
           $sum = $this->sumADay($today);
           $weekScore = $weekScore + $sum;
       }
 
-      $weekScore = $weekScore / 175;
+      $weekScore = $weekScore / self::weeklyTotal;
       $weekScore = 100*(round($weekScore, 2));
 
       $historicalScores = HistoricalScore::getScoresOfAUser($userId);
@@ -188,5 +145,54 @@ class HomeController extends Controller
 
     private function sumADay($day) {
         return $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water + $day->exercise;
+    }
+
+    private function createToday($date, $userId) {
+        $today = Days::where('day', $date)
+            ->where('user_id', $userId)
+            ->first();
+
+        if (empty($today)) {
+            $today = $this->makeADay($userId, $date);
+        }
+
+        $today->sum = $this->sumADay($today);
+        $today->percentage = $this->calculatePercentage($today);
+
+        return $today;
+    }
+
+    private function calculatePercentage($today) {
+        $percentage = $today->sum / self::dailyTotal;
+        if ($percentage > 1){
+            $percentage = 1;
+        }
+        return 100*(round($percentage, 2));
+    }
+
+    private function makeADay($userId, $date) {
+        $days = new Days();
+        return $days->createADay($userId, $date);
+    }
+
+    private function createWeek($foods, $userId) {
+        $week = [];
+        foreach ($foods as $food) {
+            $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
+            $weekPercentage = array_sum($weekData) / ($food->recommended * 7);
+            $week[$food->name] = 100*(round($weekPercentage, 2));
+        }
+        return $week;
+    }
+    private function getRecommendedRecipes($week) {
+        $recommendedRecipes = [];
+        foreach ($week as $food => $value) {
+            if ($value < 90) {
+                $slug = Foods::where('name', $food)->pluck('slug')[0];
+                $recipes = recipe::getRecipeByTag($slug, 4);
+                $recommendedRecipes[$food] = $recipes;
+            }
+        }
+        return $recommendedRecipes;
     }
 }
