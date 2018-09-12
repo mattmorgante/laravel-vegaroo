@@ -61,4 +61,17 @@ class recipe extends Model
         return recipe::where('slug', $slug)->pluck('upvotes')[0];
     }
 
+    public static function getRecommendedRecipes($week) {
+        asort($week);
+        $recommendedRecipes = [];
+        foreach ($week as $food => $value) {
+            if ($value < 90) {
+                $slug = Foods::where('name', $food)->pluck('slug')[0];
+                $recipes = recipe::getRecipeByTag($slug, 4);
+                $recommendedRecipes[$food] = $recipes;
+            }
+        }
+        return $recommendedRecipes;
+    }
+
 }

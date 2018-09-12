@@ -51,7 +51,7 @@ Route::get('/unsave-recipe', 'RecipesController@unsave')->name('save_recipe')->m
 
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
 Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
-Route::get('/home/{date?}', 'HomeController@userIndex')->name('home')->middleware('auth');
+Route::get('/home/{date?}', 'HomeController@daily')->name('home')->middleware('auth');
 Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );

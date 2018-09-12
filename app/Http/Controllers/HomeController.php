@@ -15,7 +15,6 @@ use Psy\CodeCleaner\AbstractClassPass;
 
 class HomeController extends Controller
 {
-
     const dailyTotal = 25;
     const weeklyTotal = 175;
 
@@ -24,28 +23,45 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function userIndex(Request $request){
+    public function daily(Request $request){
         $userId = (Auth::user()->id);
         if ($request->date == null || $request->date > Carbon::now()->today()) {
             return Redirect::to('home/' . Carbon::now()->toDateString());
         }
-
-        $displayDate = $this->createDisplayDate($request->date);
         $today = $this->createToday($request->date, $userId);
         $foods = Foods::getAllFoods();
 
         list($recommendedRecipes, $categoriesComplete) = $this->assembleRecipes($foods, $today);
 
-        $message = Days::where('user_id', $userId)->count() == 1 ? true : false;
-
         return view('daily')->with([
             'recServings' => Foods::getAttributeOfFoods('recommended'),
             'foods' => $foods,
             'today' => $today,
-            'displayDate' => $displayDate,
+            'displayDate' => $this->createDisplayDate($request->date),
             'recommendedRecipes' => $recommendedRecipes,
             'categoriesComplete' => $categoriesComplete,
-            'message' => $message
+            'message' => Days::where('user_id', $userId)->count() == 1 ? true : false
+        ]);
+    }
+
+    public function weekly() {
+      $days = Days::where('user_id', Auth::user()->id)->orderBy('day', 'desc')->limit(7)->get();
+      $percentages = $this->calculatePercentagesOfAWeek($days);
+      $weekScore = $this->calculateWeekScore($days);
+      $week = $this->createWeek(Auth::user()->id);
+      return view('weekly')->with([
+          'week' => $week,
+          'percentage' => $percentages,
+          'days' => $this->createLast7Days(),
+          'recommendedRecipes' => recipe::getRecommendedRecipes($week),
+          'weekScore' => $weekScore,
+          'historicalScores' => HistoricalScore::getScoresOfAUser(Auth::user()->id),
+      ]);
+    }
+
+    public function welcome() {
+        return view('welcome')->with([
+            'savedRecipes' => savedRecipes::getSavedRecipesOfAUser(Auth::user()->id)
         ]);
     }
 
@@ -53,70 +69,6 @@ class HomeController extends Controller
         $today = Days::where('id', $request->input('dayId'))->first();
         $today->{$request->input('food')} = $request->input('value');
         $today->save();
-    }
-
-    public function weekly() {
-      $userId = Auth::user()->id;
-      $foods = Foods::all();
-      $week = $this->createWeek($foods, $userId);
-
-      $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
-      $percentages =[]; $i = 0;
-      foreach ($days as $day) {
-          $day->sum = $this->sumADay($day);
-          $day->percentage = $this->calculatePercentage($day);
-          $percentages[$i] = $day->percentage;
-          $i++;
-      }
-
-      $last7days = [];
-      for ($i=0;$i<7; $i++) {
-          $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
-      }
-
-      asort($week);
-      $recommendedRecipes = $this->getRecommendedRecipes($week);
-
-      $weekScore = 0;
-      foreach ($days as $today) {
-          $sum = $this->sumADay($today);
-          $weekScore = $weekScore + $sum;
-      }
-
-      $weekScore = $weekScore / self::weeklyTotal;
-      $weekScore = 100*(round($weekScore, 2));
-
-      $historicalScores = HistoricalScore::getScoresOfAUser($userId);
-
-      $totalScore = 0;
-      foreach ($historicalScores as $historicalScore) {
-          $totalScore = $totalScore + $historicalScore->score;
-      }
-
-      return view('weekly')->with([
-          'week' => $week,
-          'percentage' => $percentages,
-          'days' => $last7days,
-          'recommendedRecipes' => $recommendedRecipes,
-          'weekScore' => $weekScore,
-          'historicalScores' => $historicalScores,
-          'totalScore' => $totalScore
-      ]);
-    }
-
-    public function welcome() {
-        $userId = (Auth::user()->id);
-        $savedRecipeRows = savedRecipes::where('user_id', $userId)->get();
-
-        $savedRecipes =[];
-        foreach ($savedRecipeRows as $row) {
-            $recipe = recipe::where('id', $row->recipe_id)->first();
-            $savedRecipes[] = $recipe;
-        }
-
-        return view('welcome')->with([
-            'savedRecipes' => $savedRecipes,
-        ]);
     }
 
     private function sumADay($day) {
@@ -151,7 +103,8 @@ class HomeController extends Controller
         return $days->createADay($userId, $date);
     }
 
-    private function createWeek($foods, $userId) {
+    private function createWeek($userId) {
+        $foods = Foods::all();
         $week = [];
         foreach ($foods as $food) {
             $weekData = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->pluck($food->slug)->toArray();
@@ -160,34 +113,15 @@ class HomeController extends Controller
         }
         return $week;
     }
-    private function getRecommendedRecipes($week) {
-        $recommendedRecipes = [];
-        foreach ($week as $food => $value) {
-            if ($value < 90) {
-                $slug = Foods::where('name', $food)->pluck('slug')[0];
-                $recipes = recipe::getRecipeByTag($slug, 4);
-                $recommendedRecipes[$food] = $recipes;
-            }
-        }
-        return $recommendedRecipes;
-    }
 
     private function createDisplayDate($date) {
         $explodedDate = explode('-', $date);
         $displayDate = Carbon::createFromDate($explodedDate[0], $explodedDate[1], $explodedDate[2]);
         return $displayDate->toFormattedDateString();
-
     }
 
-    /**
-     * @param $foods
-     * @param $today
-     * @return array
-     */
-    private function assembleRecipes($foods, $today): array
-    {
-        $recommendedRecipes = [];
-        $categoriesComplete = 0;
+    private function assembleRecipes($foods, $today) {
+        $recommendedRecipes = []; $categoriesComplete = 0;
         foreach ($foods as $food) {
             if ($food->recommended > $today->{"$food->slug"}) {
                 $recipes = recipe::getRecipeByTag($food->slug, 4);
@@ -197,5 +131,36 @@ class HomeController extends Controller
             }
         }
         return array($recommendedRecipes, $categoriesComplete);
+    }
+
+    private function calculateWeekScore($days) {
+        $weekScore = 0;
+        foreach ($days as $today) {
+            $sum = $this->sumADay($today);
+            $weekScore = $weekScore + $sum;
+        }
+
+        $weekScore = $weekScore / self::weeklyTotal;
+        $weekScore = 100 * (round($weekScore, 2));
+        return $weekScore;
+    }
+
+    private function createLast7Days() {
+        $last7days = [];
+        for ($i=0;$i<7; $i++) {
+            $last7days[$i] = Carbon::now()->subDays($i)->format('M d');
+        }
+        return $last7days;
+    }
+
+    private function calculatePercentagesOfAWeek($days) {
+        $percentages = []; $i = 0;
+        foreach ($days as $day) {
+            $day->sum = $this->sumADay($day);
+            $day->percentage = $this->calculatePercentage($day);
+            $percentages[$i] = $day->percentage;
+            $i++;
+        }
+        return $percentages;
     }
 }
