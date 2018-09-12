@@ -26,40 +26,17 @@ class HomeController extends Controller
 
     public function userIndex(Request $request){
         $userId = (Auth::user()->id);
-
-        $date = $request->date;
-
-        // redirect if on page without a date
-        if ($date == null || $date > Carbon::now()->today()) {
-          $todayFormatted = Carbon::now()->toDateString();
-          return Redirect::to('home/' . $todayFormatted);
+        if ($request->date == null || $request->date > Carbon::now()->today()) {
+            return Redirect::to('home/' . Carbon::now()->toDateString());
         }
 
-        // for header
-        $date2 = explode('-', $date);
-        $displayDate = Carbon::createFromDate($date2[0], $date2[1], $date2[2]);
-        $displayDate = $displayDate->toFormattedDateString();
-
-        $today = $this->createToday($date, $userId);
-
-        $recommendedRecipes = [];
-        $categoriesComplete = 0;
-
+        $displayDate = $this->createDisplayDate($request->date);
+        $today = $this->createToday($request->date, $userId);
         $foods = Foods::getAllFoods();
-        foreach ($foods as $food) {
-          if ($food->recommended > $today->{"$food->slug"} ) {
-              $recipes = recipe::getRecipeByTag($food->slug, 4);
-              $recommendedRecipes[$food->name] = $recipes;
-          } else {
-              $categoriesComplete++;
-          }
-        }
 
-        $message = false;
-        $daysOfUser = Days::where('user_id', $userId)->count();
-        if ($daysOfUser == 1) {
-            $message = true;
-        }
+        list($recommendedRecipes, $categoriesComplete) = $this->assembleRecipes($foods, $today);
+
+        $message = Days::where('user_id', $userId)->count() == 1 ? true : false;
 
         return view('daily')->with([
             'recServings' => Foods::getAttributeOfFoods('recommended'),
@@ -74,8 +51,7 @@ class HomeController extends Controller
 
     public function save(Request $request) {
         $today = Days::where('id', $request->input('dayId'))->first();
-        $food = $request->input('food');
-        $today->{$food} = $request->input('value');
+        $today->{$request->input('food')} = $request->input('value');
         $today->save();
     }
 
@@ -194,5 +170,32 @@ class HomeController extends Controller
             }
         }
         return $recommendedRecipes;
+    }
+
+    private function createDisplayDate($date) {
+        $explodedDate = explode('-', $date);
+        $displayDate = Carbon::createFromDate($explodedDate[0], $explodedDate[1], $explodedDate[2]);
+        return $displayDate->toFormattedDateString();
+
+    }
+
+    /**
+     * @param $foods
+     * @param $today
+     * @return array
+     */
+    private function assembleRecipes($foods, $today): array
+    {
+        $recommendedRecipes = [];
+        $categoriesComplete = 0;
+        foreach ($foods as $food) {
+            if ($food->recommended > $today->{"$food->slug"}) {
+                $recipes = recipe::getRecipeByTag($food->slug, 4);
+                $recommendedRecipes[$food->name] = $recipes;
+            } else {
+                $categoriesComplete++;
+            }
+        }
+        return array($recommendedRecipes, $categoriesComplete);
     }
 }
