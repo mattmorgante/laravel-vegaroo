@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class RecipesController extends Controller
 {
-    public function home()
-    {
+    public function index() {
         $recipe = new recipe();
         list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides) = $recipe::getAllCategories();
-
         return view('home')->with([
             'breakfasts' => $breakfasts,
             'salads' => $salads,
@@ -36,7 +34,7 @@ class RecipesController extends Controller
               'recipes' => $recipes
           ]);
         }
-
+        
         if ($slug == null) {
             $recipes = recipe::getRecipesByCategory($category);
 
@@ -46,7 +44,6 @@ class RecipesController extends Controller
             ]);
         } else {
             $recipe = recipe::getARecipe($slug);
-            // dont cache upvotes!
             $recipe->upvotes = recipe::getUpvotes($slug);
 
             $saved = false;
@@ -98,9 +95,7 @@ class RecipesController extends Controller
                     'sides' => $sides,
                     'saved' => $saved,
                     'userId' => $userId
-
                 ]);
-
             } else {
                 dd('Uh Oh! Could not find that right now. We will try to fix this as soon as possible.');
             }

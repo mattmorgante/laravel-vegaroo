@@ -1,6 +1,6 @@
 <?php
 Route::get('/', 'LandingController@home');
-Route::get('/vegan-recipes', 'RecipesController@home');
+Route::get('/vegan-recipes', 'RecipesController@index');
 Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');
 Route::get('/upvote', 'RecipesController@upvote');
 Route::get('/save-recipe', 'RecipesController@save')->name('save_recipe')->middleware('auth');
