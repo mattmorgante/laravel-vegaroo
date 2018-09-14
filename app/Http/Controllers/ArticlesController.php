@@ -7,7 +7,6 @@ class ArticlesController extends Controller
 {
 
     public function environment() {
-
         return view('articles/environment');
     }
 

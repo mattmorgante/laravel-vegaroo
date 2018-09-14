@@ -29,7 +29,6 @@ Route::get('/values', 'ArticlesController@about');
 Route::get('/nutrition', 'ArticlesController@nutrition');
 Route::get('/small-steps', 'ArticlesController@smallSteps');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
-Route::get('/celebrities', 'ArticlesController@celebrities');
 Route::get('/calculator', function () {
     return view('calculator');
 });
@@ -41,7 +40,6 @@ Route::get('/vegan-quiz', 'QuizController@index');
 Route::get('/vegan-quiz/save', 'QuizController@saveAnswer');
 Route::get('/vegan-quiz/{hashed_id}/{question_number}', 'QuizController@takeQuiz');
 
-// tools & user
 Route::get('/tools', 'LandingController@tools');
 Route::get('/blueprint', 'RecipesController@blueprint');
 Route::post('/addEmail', 'EmailController@create');
@@ -52,7 +50,7 @@ Route::get('/unsave-recipe', 'RecipesController@unsave')->name('save_recipe')->m
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
 Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
 Route::get('/home/{date?}', 'HomeController@daily')->name('home')->middleware('auth');
-Route::get('/save', 'HomeController@save')->name('save')->middleware('auth');
+Route::get('/save', 'DashboardController@save')->name('save')->middleware('auth');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Auth::routes();

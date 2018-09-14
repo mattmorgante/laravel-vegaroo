@@ -65,12 +65,6 @@ class HomeController extends Controller
         ]);
     }
 
-    public function save(Request $request) {
-        $today = Days::where('id', $request->input('dayId'))->first();
-        $today->{$request->input('food')} = $request->input('value');
-        $today->save();
-    }
-
     private function sumADay($day) {
         return $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water + $day->exercise;
     }
