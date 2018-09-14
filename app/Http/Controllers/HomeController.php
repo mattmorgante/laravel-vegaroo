@@ -30,9 +30,7 @@ class HomeController extends Controller
         }
         $today = $this->createToday($request->date, $userId);
         $foods = Foods::getAllFoods();
-
         list($recommendedRecipes, $categoriesComplete) = $this->assembleRecipes($foods, $today);
-
         return view('daily')->with([
             'recServings' => Foods::getAttributeOfFoods('recommended'),
             'foods' => $foods,
@@ -45,17 +43,18 @@ class HomeController extends Controller
     }
 
     public function weekly() {
-      $days = Days::where('user_id', Auth::user()->id)->orderBy('day', 'desc')->limit(7)->get();
+      $userId = Auth::user()->id;
+      $days = Days::where('user_id', $userId)->orderBy('day', 'desc')->limit(7)->get();
       $percentages = $this->calculatePercentagesOfAWeek($days);
       $weekScore = $this->calculateWeekScore($days);
-      $week = $this->createWeek(Auth::user()->id);
+      $week = $this->createWeek($userId);
       return view('weekly')->with([
           'week' => $week,
           'percentage' => $percentages,
           'days' => $this->createLast7Days(),
           'recommendedRecipes' => recipe::getRecommendedRecipes($week),
           'weekScore' => $weekScore,
-          'historicalScores' => HistoricalScore::getScoresOfAUser(Auth::user()->id),
+          'historicalScores' => HistoricalScore::getScoresOfAUser($userId),
       ]);
     }
 

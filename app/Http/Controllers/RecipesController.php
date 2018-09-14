@@ -132,8 +132,4 @@ class RecipesController extends Controller
 
         $savedRecipe->delete();
     }
-
-    public function blueprint() {
-        return view('blueprint');
-    }
 }

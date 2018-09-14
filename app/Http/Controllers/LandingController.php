@@ -32,8 +32,4 @@ class LandingController extends Controller
             'today' => $today,
         ]);
     }
-
-    public function tools() {
-        return view('tools');
-    }
 }

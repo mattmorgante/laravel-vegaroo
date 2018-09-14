@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 class ArticlesController extends Controller
 {
-
     public function environment() {
         return view('articles/environment');
     }

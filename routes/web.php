@@ -1,24 +1,12 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', 'LandingController@home');
-Route::get('/dashboard', 'LandingController@dashboard');
-// recipes
 Route::get('/vegan-recipes', 'RecipesController@home');
 Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');
+Route::get('/upvote', 'RecipesController@upvote');
+Route::get('/save-recipe', 'RecipesController@save')->name('save_recipe')->middleware('auth');
+Route::get('/unsave-recipe', 'RecipesController@unsave')->name('save_recipe')->middleware('auth');
 Route::get('/vegan-foods/{food?}', 'FoodsController@show');
 
-// resources
 Route::get('/resources', 'ArticlesController@index');
 Route::get('/environmental-benefits', 'ArticlesController@environment');
 Route::get('/health-benefits-long-term', 'ArticlesController@healthLongTerm');
@@ -29,28 +17,15 @@ Route::get('/values', 'ArticlesController@about');
 Route::get('/nutrition', 'ArticlesController@nutrition');
 Route::get('/small-steps', 'ArticlesController@smallSteps');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
-Route::get('/calculator', function () {
-    return view('calculator');
-});
+Route::get('/tools', 'ToolsController@tools');
+Route::get('/calculator', 'ToolsController@calculator');
 
 Route::get('/onboarding-quiz/save', 'OnboardingController@saveAnswerAjax')->middleware('auth');
 Route::get('/onboarding-quiz/{hashed_id?}/{question_number?}', 'OnboardingController@findNextQuestion')->middleware('auth');
-
-Route::get('/vegan-quiz', 'QuizController@index');
-Route::get('/vegan-quiz/save', 'QuizController@saveAnswer');
-Route::get('/vegan-quiz/{hashed_id}/{question_number}', 'QuizController@takeQuiz');
-
-Route::get('/tools', 'LandingController@tools');
-Route::get('/blueprint', 'RecipesController@blueprint');
-Route::post('/addEmail', 'EmailController@create');
-Route::get('/upvote', 'RecipesController@upvote');
-Route::get('/save-recipe', 'RecipesController@save')->name('save_recipe')->middleware('auth');
-Route::get('/unsave-recipe', 'RecipesController@unsave')->name('save_recipe')->middleware('auth');
-
+Route::get('/home/{date?}', 'HomeController@daily')->name('home')->middleware('auth');
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
 Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
-Route::get('/home/{date?}', 'HomeController@daily')->name('home')->middleware('auth');
 Route::get('/save', 'DashboardController@save')->name('save')->middleware('auth');
-
+Route::get('/dashboard', 'LandingController@dashboard');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Auth::routes();
