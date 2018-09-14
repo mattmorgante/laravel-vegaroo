@@ -4,9 +4,7 @@
 <meta name="description" content="Vegaroo has easy and nutritious plant-based meals you can prepare in 30 minutes or less without using any fancy ingredients "/>
 
 @section('content')
-
     @include('partials.nav')
-
 <h2 class="other-recipes">{{ $category }}</h2>
 @foreach ($recipes as $recipe)
     <div class="container">
@@ -21,6 +19,4 @@
     </div>
 @endforeach
 <br>
-
-
 @endsection

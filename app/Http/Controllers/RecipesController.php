@@ -10,7 +10,7 @@ class RecipesController extends Controller
     public function index()
     {
         list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies) = recipe::getAllCategories();
-        return view('home')->with([
+        return view('all-recipes')->with([
             'breakfasts' => $breakfasts,
             'salads' => $salads,
             'bowls' => $bowls,
