@@ -2,9 +2,9 @@
 Route::get('/', 'LandingController@home');
 Route::get('/vegan-recipes', 'RecipesController@index');
 Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');
-Route::get('/upvote', 'RecipesController@upvote');
-Route::get('/save-recipe', 'RecipesController@save')->name('save_recipe')->middleware('auth');
-Route::get('/unsave-recipe', 'RecipesController@unsave')->name('save_recipe')->middleware('auth');
+Route::get('/upvote', 'RecipeActionsController@upvote');
+Route::get('/save-recipe', 'RecipeActionsController@save')->name('save_recipe')->middleware('auth');
+Route::get('/unsave-recipe', 'RecipeActionsController@unsave')->name('save_recipe')->middleware('auth');
 Route::get('/vegan-foods/{food?}', 'FoodsController@show');
 
 Route::get('/resources', 'ArticlesController@index');

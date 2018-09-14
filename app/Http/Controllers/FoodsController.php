@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Foods;
 use App\recipe;
-use Illuminate\Http\Request;
 
 class FoodsController extends Controller
 {
@@ -14,15 +13,12 @@ class FoodsController extends Controller
             return view('allFoods')->with([
                 'foods' => Foods::getAllFoods()
             ]);
+        } else {
+            $foodObject = Foods::getAFood($food);
+            return view('foods/beans')->with([
+                'food' => $foodObject,
+                'recipes' => recipe::getRecipeByTag($foodObject->slug, 100)
+            ]);
         }
-
-        $food = Foods::getAFood($food);
-
-        $recipes = recipe::getRecipeByTag($food->slug, 100);
-
-        return view('foods/beans')->with([
-            'food' => $food,
-            'recipes' => $recipes
-        ]);
     }
 }

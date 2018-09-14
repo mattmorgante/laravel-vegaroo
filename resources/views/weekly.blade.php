@@ -12,7 +12,6 @@
     google.charts.setOnLoadCallback(drawBasic);
 
     function drawBasic() {
-
         var data = google.visualization.arrayToDataTable([
             ['Food', '% Consumed'],
             ['Beans', {{ $week['Beans'] }}],

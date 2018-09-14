@@ -3,67 +3,10 @@
 @include('includes.recipe-seo')
 
 @section('header.javascript')
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart', 'bar']});
-        google.charts.setOnLoadCallback(drawChart);
-        google.charts.setOnLoadCallback(drawBasic);
-
-        var carbs = {!! $recipe->carbs !!};
-        var protein ={!! $recipe->protein !!};
-        var fat = {!! $recipe->fat !!};
-
-        function drawChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Nutrient', 'Grams'],
-                ['Carbs',     carbs],
-                ['Protein',      protein],
-                ['Fat',  fat]
-            ]);
-
-            var options = {
-                legend: {position: 'top'}
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-            chart.draw(data, options);
-        }
-
-
-        function drawBasic() {
-
-            var fiber ={!! $recipe->fiber!!};
-            var sugar = {!! $recipe->sugar !!};
-
-            var data = google.visualization.arrayToDataTable([
-                ['Nutrient', 'Grams'],
-                ['Fiber', fiber],
-                ['Sugar', sugar]
-            ]);
-
-            var options = {
-                legend: {position: 'none'},
-                chartArea: {width: '25%'},
-                hAxis: {
-                    minValue: 0,
-                }
-            };
-
-            var chart = new google.visualization.ColumnChart(
-                    document.getElementById('chart_div'));
-
-            chart.draw(data, options);
-        }
-    </script>
-
+    @include('partials.recipe-charts')
 @endsection
-
 @section('content')
-
 @include('partials.nav')
-
 <br>
 <div class="container">
     <div class="flexible_row">
@@ -71,18 +14,13 @@
             <h1>{{ $recipe->title }}</h1>
             <p>{{ $recipe->description }}</p>
             <div class="recipe_extras">
-                {{--<p><span class="call-out-small">Cost: </span><br>{{ $recipe->cost }}</p>--}}
                 <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p><br>
                 <p><span class="call-out-small">Calories: </span><br>{{ $recipe->calories }}</p>
                 <div class="macro_wrapper">
-                    <p>Carbs: </span><br>{{ $recipe->carbs }}g |  {{ 100 * round($recipe->carbs / 280 , 3) }}%&nbsp;&nbsp;&nbsp;
-                    </p>
-                    <p>Protein: </span><br>{{ $recipe->protein }}g |  {{ 100 * round($recipe->protein / 52 , 3)
-                        }}%&nbsp;&nbsp;&nbsp;</p>
-                    <p>Fat: </span><br>{{ $recipe->fat }}g |  {{ 100 * round($recipe->fat / 82 , 3) }}%</p>
+                    <p>Carbs:<br>{{ $recipe->carbs }}g |  {{ $recipe->carbsPercent }}%&nbsp;&nbsp;&nbsp;</p>
+                    <p>Protein:<br>{{ $recipe->protein }}g |  {{ $recipe->proteinPercent }}%&nbsp;&nbsp;</p>
+                    <p>Fat:<br>{{ $recipe->fat }}g |  {{ $recipe->fatPercent }}%</p>
                 </div>
-
-                {{--<p><span class="call-out-small">Nutritional Quality:</span> <br>{{ $recipe->score }} / 10</p>--}}
             </div>
         </div>
         <div class="row_item instructions">
@@ -100,19 +38,17 @@
             @endforeach
         </div>
     </div>
-
     <div class="flexible_row">
         <div class="row_item">
             <h2>Macro Nutrients</h2>
             <h3>{{ $recipe->calories }} Calories</h3>
-            <div id="piechart" style="width: 100%; height: 400px;"></div>
+            <div id="macro_chart" style="width: 100%; height: 400px;"></div>
         </div>
         <div class="row_item" id="micro_graph">
             <h2>Micro Nutrients</h2>
-            <div id="chart_div" style="width: 100%; height: 300px;"></div>
+            <div id="micro_chart" style="width: 100%; height: 300px;"></div>
         </div>
     </div>
-
     <div class="recipe-buttons">
         <div class="right-buttons">
             <div class="save-wrapper">
@@ -135,7 +71,6 @@
                 </div>
             @endif
             </div>
-
             <div class="upvote-wrapper">
                 <h3>Upvote</h3>
                 <div class="upvote" onclick="isUpvoted()">
@@ -155,37 +90,15 @@
           </div>
       </div>
     </div>
-
-    <div id="share-buttons">
-        <a href="http://www.facebook.com/sharer.php?u={{ Request::url() }}" target="_blank">
-            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-        </a>
-
-        <a href="https://twitter.com/share?url={{ Request::url() }}&amp;text=Check%20Out%20This%20Recipe%20From%20Vegaroo&amp;hashtags=#vegaroo" target="_blank">
-            <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
-        </a>
-
-        <a href="mailto:?Subject=Recipe From Vegaroo&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20
-        {{ Request::url() }}">
-            <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
-        </a>
-
-        <a href="http://reddit.com/submit?url={{ Request::url() }}" target="_blank">
-            <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
-        </a>
-    </div>
-
+    @include('partials.share-buttons')
     <div class="container">
-
         <h2 class="other-recipes">More {{ $categoryName }}</h2>
         <div class="flexible_row">
             @foreach ($similarRecipes as $recipe)
                 @include('partials.recipe-box')
             @endforeach
         </div>
-
         <h2 class="other-recipes">Other Recipes</h2>
-
         @include('partials.breakfasts')
         @include('partials.grain-bowls')
         @include('partials.curries')
@@ -194,7 +107,6 @@
         @include('partials.stir-fries')
         @include('partials.smoothies')
     </div>
-
 <br>
 </div>
 @endsection
@@ -208,7 +120,7 @@
 
     function isUpvoted() {
         if (upvoted === true) {
-            alert('oh hey you already did that');
+            alert('You already did that!');
         } else {
             upvote();
         }
@@ -243,15 +155,12 @@
     function save() {
         var saveEl = document.getElementById("save-icon");
         var iconType = saveEl.getAttribute("data-prefix");
-
         var recipeSlug = window.location.href;
         recipeSlug = recipeSlug.substring(recipeSlug.lastIndexOf("/") + 1, recipeSlug.length);
 
         if ( iconType === 'fas' ) {
-            // already saved, unsave
             document.getElementById("save-icon").classList.add("far");
             document.getElementById("save").innerHTML="Save";
-
             $.ajax({
                 url: "/unsave-recipe",
                 cache: false,
@@ -268,7 +177,6 @@
                     console.log('failure');
                 });
         } else {
-            // save that thang!
             document.getElementById("save-icon").classList.add("fas");
             document.getElementById("save").innerHTML = "Saved!";
 
@@ -288,6 +196,5 @@
                     console.log('failure');
                 });
         }
-
     }
 </script>

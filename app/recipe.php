@@ -20,8 +20,7 @@ class recipe extends Model
         $classics = recipe::getRecipesByCategory('classics');
         $snacks = recipe::getRecipesByCategory('snacks');
         $smoothies = recipe::getRecipesByCategory('smoothies');
-        $sides = recipe::getRecipesByCategory('sides');
-        return array($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies, $sides);
+        return array($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies);
     }
 
     public static function getRecipeByTag($tag, $limit = 4) {
