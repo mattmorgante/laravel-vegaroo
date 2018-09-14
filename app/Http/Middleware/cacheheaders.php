@@ -19,6 +19,12 @@ class cacheheaders
         if (strpos($currentUrl, 'onboarding-quiz') !== false) {
             $response = $next($request);
             return $response;
+        } elseif (strpos($currentUrl, 'home') !== false) {
+            $response = $next($request);
+            return $response;
+        } elseif (strpos($currentUrl, 'weekly') !== false) {
+            $response = $next($request);
+            return $response;
         } else {
             $response = $next($request);
             $response->header('Cache-Control', 'max-age=36000, public');
