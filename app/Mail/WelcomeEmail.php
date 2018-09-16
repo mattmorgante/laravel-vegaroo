@@ -19,7 +19,7 @@ class WelcomeEmail extends Mailable
 
     public function build()
     {
-        return $this->from(env('MAIL_USERNAME'))
+        return $this->from('matthewmorgante@gmail.com')
             ->view('mails.welcome')
             ->text('mails.welcome_plain');
     }

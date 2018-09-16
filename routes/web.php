@@ -28,5 +28,4 @@ Route::get('/profile', 'HomeController@profile')->name('profile')->middleware('a
 Route::get('/save', 'DashboardController@save')->name('save')->middleware('auth');
 Route::get('/dashboard', 'LandingController@dashboard');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
-Route::get('mail/welcome', 'MailController@welcome');
 Auth::routes();

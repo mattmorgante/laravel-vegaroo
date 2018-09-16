@@ -2,41 +2,34 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\WelcomeEmail;
+use App\User;
 use Illuminate\Console\Command;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class sendWelcomeEmails extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'mail:welcome';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
     protected $description = 'Send welcome emails to new users';
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         parent::__construct();
     }
 
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
     public function handle()
     {
+        $newUsers = User::where('welcome_email', 0)->get();
 
+        foreach ($newUsers as $user) {
+            $mailInfo = new \stdClass();
+            $mailInfo->receiver = $user->name;
+            $mailInfo->sender = 'Matt from Vegaroo';
+            Mail::to($user->email)->send(new WelcomeEmail($mailInfo));
+            $user->welcome_email = 1;
+            $user->save();
+        }
     }
 }

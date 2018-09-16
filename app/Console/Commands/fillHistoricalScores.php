@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Days;
 use App\HistoricalScore;
+use App\Http\Helpers\DashboardHelper;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
@@ -42,11 +43,12 @@ class fillHistoricalScores extends Command
     public function handle()
     {
         $users = User::all();
+        $dashboardHelper = new DashboardHelper();
         foreach ($users as $user) {
             $score = 0;
             $days = Days::where('user_id', $user->id)->orderBy('day', 'desc')->limit(7)->get();
             foreach ($days as $day) {
-                $sum = $this->sumADay($day);
+                $sum = $dashboardHelper->sumADay($day);
                 $score = $score + $sum;
             }
             $historicalScore = new HistoricalScore();
@@ -56,8 +58,5 @@ class fillHistoricalScores extends Command
             $historicalScore->save();
         }
     }
-
-    private function sumADay($day) {
-        return $day->beans + $day->greens + $day->cruciferous + $day->berries + $day->fruits + $day->vegetables + $day->grains + $day->flaxseeds + $day->nuts + $day->spices + $day->water + $day->exercise;
-    }
 }
+

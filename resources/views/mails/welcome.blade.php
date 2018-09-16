@@ -3,6 +3,6 @@ Hey there <i>{{ $mailInfo->receiver }}</i>,
 
 <p><a href="https://vegaroo.co/?ref=email">Vegaroo</a></p>
 
-Happy eating!
+Happy
 <br/>
 {{ $mailInfo->sender }}
