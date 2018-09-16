@@ -30,7 +30,5 @@ class cacheheaders
             $response->header('Cache-Control', 'max-age=36000, public');
             return $response;
         }
-
-
     }
 }

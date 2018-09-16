@@ -28,9 +28,6 @@
     @endif
   @endforeach
   <br>
-
   </div>
 </div>
-
-
 @endsection

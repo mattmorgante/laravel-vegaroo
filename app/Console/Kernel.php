@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\GenerateSiteMap::class,
-        Commands\SendReminder::class
+        Commands\SendReminder::class,
+        Commands\SendWelcomeEmails::class
     ];
 
     /**
@@ -29,7 +30,7 @@ class Kernel extends ConsoleKernel
                   ->daily();
         $schedule->command('create:newDay');
         $schedule->command('fill:historical')->weekly()->mondays()->at('01:00');
-//        $schedule->command('send:reminder')->dailyAt('20:00');
+        $schedule->command('mail:welcome')->daily()->at('09:00');
     }
 
     /**

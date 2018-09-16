@@ -24,8 +24,9 @@ Route::get('/onboarding-quiz/save', 'OnboardingController@saveAnswerAjax')->midd
 Route::get('/onboarding-quiz/{hashed_id?}/{question_number?}', 'OnboardingController@findNextQuestion')->middleware('auth');
 Route::get('/home/{date?}', 'HomeController@daily')->name('home')->middleware('auth');
 Route::get('/weekly', 'HomeController@weekly')->name('weekly')->middleware('auth');
-Route::get('/profile', 'HomeController@welcome')->name('welcome')->middleware('auth');
+Route::get('/profile', 'HomeController@profile')->name('profile')->middleware('auth');
 Route::get('/save', 'DashboardController@save')->name('save')->middleware('auth');
 Route::get('/dashboard', 'LandingController@dashboard');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+Route::get('mail/welcome', 'MailController@welcome');
 Auth::routes();
