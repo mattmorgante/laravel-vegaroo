@@ -27,7 +27,8 @@ class HomeController extends Controller
         }
         $dashboard = new DashboardHelper();
         $today = $dashboard->createToday($request->date, $userId);
-        $foods = Foods::getAllFoods();
+        $foodObject = new Foods();
+        $foods = $foodObject->getAllFoods();
         list($recommendedRecipes, $categoriesComplete) = $dashboard->assembleRecipes($foods, $today);
         return view('daily')->with([
             'recServings' => Foods::getAttributeOfFoods('recommended'),

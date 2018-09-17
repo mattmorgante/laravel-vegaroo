@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use App\Mail\WelcomeEmail;
 use App\User;
 use Illuminate\Console\Command;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class sendWelcomeEmails extends Command

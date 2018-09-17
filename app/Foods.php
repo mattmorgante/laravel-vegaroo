@@ -21,15 +21,9 @@ class Foods extends Model
         return $response;
     }
 
-    public static function getAllFoods(){
+    public function getAllFoods(){
         $key = md5('foods');
-        if (Cache::has( $key )) {
-            $response = Cache::get( $key );
-        } else {
-            $response = Foods::all();
-            Cache::put( $key, $response, self::DEFAULT_CACHE_TIME );
-        }
-        return $response;
+        return $this->getCachedData($key);
     }
 
     public static function getAttributeOfFoods($attribute) {
@@ -38,6 +32,16 @@ class Foods extends Model
             $response = Cache::get( $key );
         } else {
             $response = Foods::all()->pluck($attribute);
+            Cache::put( $key, $response, self::DEFAULT_CACHE_TIME );
+        }
+        return $response;
+    }
+
+    private function getCachedData($key) {
+        if (Cache::has( $key)) {
+            $response = Cache::get( $key );
+        } else {
+            $response = Foods::all();
             Cache::put( $key, $response, self::DEFAULT_CACHE_TIME );
         }
         return $response;

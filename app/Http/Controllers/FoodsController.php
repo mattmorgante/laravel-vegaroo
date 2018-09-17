@@ -9,15 +9,16 @@ class FoodsController extends Controller
 {
     public function show($food = null)
     {
+        $foodObject = new Foods();
         if ($food == null) {
             return view('allFoods')->with([
-                'foods' => Foods::getAllFoods()
+                'foods' => $foodObject->getAllFoods()
             ]);
         } else {
-            $foodObject = Foods::getAFood($food);
+            $foodData = Foods::getAFood($food);
             return view('foods/beans')->with([
-                'food' => $foodObject,
-                'recipes' => recipe::getRecipeByTag($foodObject->slug, 100)
+                'food' => $foodData,
+                'recipes' => recipe::getRecipeByTag($foodData->slug, 100)
             ]);
         }
     }
