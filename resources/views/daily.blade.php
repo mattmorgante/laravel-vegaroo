@@ -16,8 +16,7 @@
         <h2>Welcome to Vegaroo, {{  Auth::user()->name }}</h2>
         <p class="onboarding-instructions">Looks like it's your first day here, so let's take a look around!</p>
             <ul>
-                <li>Below you can fill in what you have eaten so far today.</li>
-                <li>Don't miss the recipe suggestions that will update once you get going.</li>
+                <li>Below you can fill in what you have eaten so far today or on previous days.</li>
                 <li>Once you're finished with a few days, check out your <a href="/weekly">Weekly Report</a></li>
                 <li>Once you save a recipe it will appear in <a href="/profile">Saved Recipes</a></li>
                 <li>Looking for some more info about the blant-based diet? Check out our <a href="/resources">Resources</a></li>

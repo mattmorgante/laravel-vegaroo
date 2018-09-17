@@ -58,7 +58,7 @@ class HomeController extends Controller
       ]);
     }
 
-    public function welcome() {
+    public function profile() {
         return view('profile')->with([
             'savedRecipes' => savedRecipes::getSavedRecipesOfAUser(Auth::user()->id)
         ]);
