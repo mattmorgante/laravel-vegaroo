@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<title>Why plant-based foods are the healthiest for your health</title>
+<title>Why plant-based foods are the healthiest for your body</title>
 <meta name="description" content="What are the healthiest and most nutritious food groups for your short and long-term health and what foods do vegans eat?"/>
 
 @section('content')

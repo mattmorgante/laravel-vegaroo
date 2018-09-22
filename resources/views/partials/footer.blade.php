@@ -33,24 +33,28 @@
         <ul>
             <li><a href="/dashboard">Track the Daily Dozen</a></li>
             <li><a href="/calculator">Environmental Impact Calculator</a></li>
-            <li><a href="/vegan-quiz">Personalized suggestions to reduce your environmental impact</a></li>
         </ul>
-        <h4>Get Started</h4>
-        <ul>
-            @if ( Auth::guest() )
+        @if ( Auth::guest() )
+            <h4>Get Started</h4>
+            <ul>
                 <li><a href="/register">Join Vegaroo</a></li>
                 <li><a href="/login">Login</a></li>
-            @else
+            </ul>
+        @else
+            <h4>My Vegaroo</h4>
+            <ul>
                 <li><a href="/home">Daily Dashboard</a></li>
                 <li><a href="/weekly">Weekly Report</a></li>
                 <li><a href="/profile">Profile</a></li>
-            @endif
-        </ul>
+            </ul>
+
+        @endif
     </div>
     <div class="footer_category" id="about_footer">
         <h4>About</h4>
         <ul>
             <li><a href="/values">Why Vegaroo?</a></li>
+            <li><a href="https://www.facebook.com/vegaroo.co">Connect With Us On Facebook</a></li>
             <li style="padding-bottom: 5px;"><a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo">Contact Me</a></li>
             <li><a href="https://www.mattmorgante.com">Made by &#x2615 & &#x1F34E & &#x1F955 & Matt</a></li>
         </ul>

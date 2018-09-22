@@ -1,7 +1,7 @@
 <nav class="nav">
     <div class="nav-left">
         <ul>
-            <a href="/"><img src="/img/logo.png" alt="Vegaroo" class="image_icon"></a>
+            <a href="/"><img src="/img/logo.png" alt="Vegaroo Logo" class="image_icon" title="Vegaroo"></a>
         </ul>
     </div>
 

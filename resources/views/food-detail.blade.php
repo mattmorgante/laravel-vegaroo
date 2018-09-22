@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<title>Vegan Recipes With {{ $food->name }}</title>
+<title>Easy & Cheap Vegan Recipes With {{ $food->name }}</title>
 <meta name="description" content="Vegaroo has easy and nutritious plant-based recipes containing {{ $food->name }} you can prepare in 30 minutes or less without using any fancy ingredients "/>
 
 @include('partials.nav')
