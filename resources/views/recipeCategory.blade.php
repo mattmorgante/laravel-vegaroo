@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 <title>Vegan {{ $category }} recipes</title>
-<meta name="description" content="Vegaroo has easy and nutritious plant-based {{ $category }} you can prepare in 30 minutes or less without using any fancy ingredients "/>
+<meta name="description" content="Vegaroo has easy and nutritious plant-based {{ $category }} recipes you can prepare in 30 minutes or less without using any fancy ingredients "/>
 
 @section('content')
     @include('partials.nav')

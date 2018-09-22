@@ -16,7 +16,7 @@ class FoodsController extends Controller
             ]);
         } else {
             $foodData = Foods::getAFood($food);
-            return view('foods/beans')->with([
+            return view('food-detail')->with([
                 'food' => $foodData,
                 'recipes' => recipe::getRecipeByTag($foodData->slug, 100)
             ]);

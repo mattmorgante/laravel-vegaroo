@@ -1,17 +1,20 @@
 @extends('layouts.app')
 
+<title>Vegan Recipes With {{ $food->name }}</title>
+<meta name="description" content="Vegaroo has easy and nutritious plant-based recipes containing {{ $food->name }} you can prepare in 30 minutes or less without using any fancy ingredients "/>
+
 @include('partials.nav')
 @section('content')
 
 <div class="container">
-  <h1>{{ $food->name}}</h1>
+  <h1 style="margin: 10px;">{{ $food->name}}</h1>
 
-    <h2 class="food-description">{{ $food->description }}</h2>
+    <h3 class="food-description">{{ $food->description }}</h3>
 
   <div class="flexible_row">
     <div class="row_item">
       <h2>Examples</h2>
-      <p>{{ $food->examples }}</p>
+      <p>{{ ucwords($food->examples) }}</p>
     </div>
 
     <div class="row_item">

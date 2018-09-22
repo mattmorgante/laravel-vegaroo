@@ -29,7 +29,8 @@
         ]);
 
         var options = {
-            title: 'Percentage Of Each Food\u0027s Recommended Servings Consumed (Last 7 Days)',
+            title: 'Score For Each Category',
+            titleTextStyle: { fontSize: 26 },
             legend: { position: "none" },
 
             hAxis: {
@@ -62,11 +63,10 @@
         ]);
 
         var options = {
-            title: 'Percentage of Total Recommended Servings Consumed',
+            title: 'Score For Each Day',
             legend: { position: "none" },
-            vAxis: {minValue: 0, maxValue:100}
-        };
-
+            vAxis: {minValue: 0, maxValue:100},
+            titleTextStyle: { fontSize: 26 }}
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
         chart.draw(data, options);
     }
@@ -78,6 +78,10 @@
     <a class="active-nav-item" href="#">Weekly</a>
     <a href="/profile">Saved Recipes</a>
   </div>
+
+
+    <div id="chart_div2" style="width: 100%; height: 500px"></div>
+    <div id="chart_div" style="width: 100%; height: 500px;"></div>
   <div class="header-inline">
       <div>
         <h2 class="other-recipes">Week Score</h2>
@@ -96,10 +100,6 @@
       </div>
     </div>
   </div>
-
-
-  <div id="chart_div2" style="width: 100%; height: 500px"></div>
-  <div id="chart_div" style="width: 100%; height: 500px;"></div>
 
   <br>
 
