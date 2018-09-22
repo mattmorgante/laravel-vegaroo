@@ -292,7 +292,8 @@ nav ul li a {
     margin-top: 20px;
     line-height: 30px;
     .col {
-      margin: 0 0 10px 0;
+      max-width: 400px;
+      margin: 10px auto;
       text-align: center;
     }
   }

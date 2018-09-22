@@ -313,7 +313,8 @@ nav ul li a {
   }
 
   .custom-flex-grid .col {
-    margin: 0 0 10px 0;
+    max-width: 400px;
+    margin: 10px auto;
     text-align: center;
   }
 

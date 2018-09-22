@@ -54,7 +54,7 @@
         <h4>About</h4>
         <ul>
             <li><a href="/values">Why Vegaroo?</a></li>
-            <li><a href="https://www.facebook.com/vegaroo.co">Connect With Us On Facebook</a></li>
+            <li><a href="https://www.facebook.com/vegaroo.co"><Connect></Connect> On Facebook</a></li>
             <li style="padding-bottom: 5px;"><a href="mailto:matthewmorgante@gmail.com?Subject=Vegaroo">Contact Me</a></li>
             <li><a href="https://www.mattmorgante.com">Made by &#x2615 & &#x1F34E & &#x1F955 & Matt</a></li>
         </ul>
