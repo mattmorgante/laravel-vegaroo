@@ -24,7 +24,7 @@ class recipe extends Model
     }
 
     public static function getRecipeByTag($tag, $limit = 4) {
-        $key = md5('recipe-tag'.$tag);
+        $key = md5('recipe-tag-'.$tag);
         if (Cache::has( $key )) {
             $response = Cache::get( $key );
         } else {
