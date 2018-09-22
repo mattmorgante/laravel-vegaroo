@@ -4,13 +4,13 @@
         <ul>
             <li><a href="/vegan-recipes">All Recipes</a></li>
             <li><a href="/vegan-recipes/popular">Most Popular Recipes</a></li>
-            <li><a href="/vegan-recipes#grain-bowls">Grain Bowls</a></li>
-            <li><a href="/vegan-recipes#curry">Curries</a></li>
-            <li><a href="/vegan-recipes#stir-fries">Stir-Fries</a></li>
-            <li><a href="/vegan-recipes#salads">Salads</a></li>
-            <li><a href="/vegan-re  cipes#breakfasts">Breakfasts</a></li>
-            <li><a href="/vegan-recipes#snacks">Snacks</a></li>
-            <li><a href="/vegan-recipes#smoothies">Smoothies</a></li>
+            <li><a href="/vegan-recipes/bowls">Grain Bowls</a></li>
+            <li><a href="/vegan-recipes/curries">Curries</a></li>
+            <li><a href="/vegan-recipes/stir-fries">Stir-Fries</a></li>
+            <li><a href="/vegan-recipes/salads">Salads</a></li>
+            <li><a href="/vegan-recipes/breakfasts">Breakfasts</a></li>
+            <li><a href="/vegan-recipes/snacks">Snacks</a></li>
+            <li><a href="/vegan-recipes/smoothies">Smoothies</a></li>
         </ul>
     </div>
     <div class="footer_category" id="resources_footer">

@@ -24,6 +24,7 @@ class RecipesController extends Controller
 
     public function show($category, $slug = null)
     {
+        $recipeHelper = new RecipeHelper();
         if ($category == 'popular') {
             $recipes = recipe::orderBy('upvotes', 'desc')->get();
             return view('popularRecipes')->with([
@@ -32,12 +33,11 @@ class RecipesController extends Controller
         } elseif ($slug == null) {
             return view('recipeCategory')->with([
                 'category' => ucwords($category),
-                'recipes' => recipe::getRecipesByCategory($category)
+                'recipes' => recipe::getRecipesByCategory($category),
             ]);
         } else {
             $recipe = recipe::getARecipe($slug);
             $recipe->upvotes = recipe::getUpvotes($slug);
-            $recipeHelper = new RecipeHelper();
             $recipe = $recipeHelper->calculateMacros($recipe);
             list($saved, $userId) = $recipeHelper->getUserInfoOfARecipe($recipe);
             list($breakfasts, $salads, $bowls, $curries, $stirFries, $classics, $snacks, $smoothies) = recipe::getAllCategories();

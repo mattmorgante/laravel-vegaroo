@@ -159,7 +159,7 @@ h3 {
 .styled-link {
   color: #26ce81;
   font-weight: 900;
-  font-size: 24px;
+  font-size: 38px;
   cursor: pointer;
 }
 
@@ -568,6 +568,25 @@ h3 {
 
 .other-recipes {
   text-align: center;
+}
+
+.category_title {
+  text-align: center;
+  font-size: 36px;
+}
+
+.recipe-info {
+  color: black;
+}
+
+.recipe-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
 }
 
 .green {

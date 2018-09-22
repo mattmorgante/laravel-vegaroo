@@ -38,18 +38,22 @@
             value+=incrementor;
 
             if (value == 0) {
+                // 0 percent
               document.getElementById(target).parentElement.style.backgroundColor = "#ef5757";
             }
 
             if ( (value / recommended) >= .33 ) {
+                // 1 out of 3 or better
                 document.getElementById(target).parentElement.style.backgroundColor = "#ffff7e";
             }
 
-            if ( (value / recommended) > .50 ) {
+            if ( (value / recommended) >= .50 ) {
+                // Better than 50%
                 document.getElementById(target).parentElement.style.backgroundColor = "#92e6c0";
             }
 
             if ( value >= recommended ) {
+                // 100%
                 document.getElementById(target).parentElement.style.backgroundColor = "#26ce81";
             }
 
