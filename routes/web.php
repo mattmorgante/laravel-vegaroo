@@ -2,6 +2,11 @@
 Route::get('/', 'LandingController@home');
 Route::get('/vegan-recipes', 'RecipesController@index');
 Route::get('/vegan-recipes/{category}/{slug?}', 'RecipesController@show');
+Route::get('/6-easy-weeknight-vegan-dinner-recipes', 'RecipeGroupsController@weeknight');
+Route::get('/5-vegan-recipes-with-plant-based-dairy-alternatives', 'RecipeGroupsController@dairySwap');
+Route::get('/8-high-protein-vegan-recipes', 'RecipeGroupsController@highProtein');
+Route::get('/6-vegan-recipes-perfect-for-leftovers', 'RecipeGroupsController@leftovers');
+Route::get('/10-vegan-recipes-raw-food-diet', 'RecipeGroupsController@rawFood');
 Route::get('/upvote', 'RecipeActionsController@upvote');
 Route::get('/save-recipe', 'RecipeActionsController@save')->name('save_recipe')->middleware('auth');
 Route::get('/unsave-recipe', 'RecipeActionsController@unsave')->name('save_recipe')->middleware('auth');

@@ -26,9 +26,8 @@ class RecipesController extends Controller
     {
         $recipeHelper = new RecipeHelper();
         if ($category == 'popular') {
-            $recipes = recipe::orderBy('upvotes', 'desc')->get();
             return view('popularRecipes')->with([
-                'recipes' => $recipes
+                'recipes' => recipe::orderBy('upvotes', 'desc')->get()
             ]);
         } elseif ($slug == null) {
             return view('recipeCategory')->with([
