@@ -24,6 +24,7 @@ Route::get('/small-steps', 'ArticlesController@smallSteps');
 Route::get('/blogs-books-documentaries', 'ArticlesController@blogs');
 Route::get('/tools', 'ToolsController@tools');
 Route::get('/calculator', 'ToolsController@calculator');
+Route::get('/blueprint', 'BlueprintController@index');
 
 Route::get('/onboarding-quiz/save', 'OnboardingController@saveAnswerAjax')->middleware('auth');
 Route::get('/onboarding-quiz/{hashed_id?}/{question_number?}', 'OnboardingController@findNextQuestion')->middleware('auth');
