@@ -14,7 +14,7 @@
         <h1 class="landing-page-title title" style="margin: 0">Vegaroo makes it easier to eat a <br><span class="keyword"
                     style="color: #26ce81;">healthy</span><br> plant-based diet</h1>
           <br><br>
-            </div>
+        </div>
           <div class="hero">
               <div class="hero-list-wrapper" style="text-align: center">
                   <h3>How does it work?</h3>
@@ -27,7 +27,15 @@
               </div>
           </div>
       </div>
-        <br><br>
+      <br>
+      <div class="btn-wrapper">
+        @if ( Auth::guest() )
+            <a id="call_to_action_btn" class="btn" href="/register">Get Started</a>
+        @else 
+            <a id="call_to_action_btn" class="btn" href="/home">My Dashboard</a>
+        @endif 
+    </div>
+        <br>
     </div>
 </div>
 
@@ -95,7 +103,7 @@
        <div class="features-wrapper">
            <div>
                <h2 class="landing-page-h2">1. Track &nbsp;&#x2705</h2>
-               <p class="features-text">It can be tough to get enough nutrients on a plant-based diet. Vegaroo has you
+               <p class="features-text">It can be tough to <span class="homepage-call-out">get enough nutrients on a plant-based diet.</span> Vegaroo has you
                    covered with food group tracking to make sure you get enough Protein, Iron, B12, and more.</h3>
            </div>
            <div class="photo">
@@ -110,8 +118,8 @@
         <div style="padding: 30px;">
             <h2 class="landing-page-h2">2. Eat &nbsp;&#x1F60B</h2>
             <p class="recipes-text">Based on your diet and goals, Vegaroo will provide
-                personalized recipe
-                recommendations. Here are some of the most popular:</p>
+                <span class="homepage-call-out">personalized recipe
+                recommendations.</span> Here are some of the most popular:</p>
             <ul class="flexible_row">
                 @foreach ($recipes as $recipe)
                 @include('partials.recipe-box')
@@ -131,13 +139,17 @@
             <div>
                 <h2 class="landing-page-h2">3. Improve &nbsp;&#x1F4C8</h2>
                 <p class="features-text">Need to eat more fruits? More nuts? Vegaroo's nutrition reporting helps you to
-                    identify the holes in your diet and find ways to improve.</p>
+                    <span class="homepage-call-out">identify the holes in your diet</span> and find ways to improve.</p>
 
             </div>
             <img id="desktop-pic" alt="Visualize your improvement over time" src="/img/desktop.png">
             </div>
         <div class="btn-wrapper">
-            <a id="call_to_action_btn" class="btn" href="/register">Get started for free</a>
+            @if ( Auth::guest() )
+                <a id="call_to_action_btn" class="btn" href="/register">Get Started</a>
+            @else 
+                <a id="call_to_action_btn" class="btn" href="/home">My Dashboard</a>
+            @endif 
         </div>
         <br>
     </div>
