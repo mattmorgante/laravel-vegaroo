@@ -1,0 +1,2 @@
+Hey there {{ $mailInfo->receiver }}, 
+

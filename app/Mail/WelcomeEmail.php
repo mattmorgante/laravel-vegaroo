@@ -20,6 +20,7 @@ class WelcomeEmail extends Mailable
     public function build()
     {
         return $this->from('matthewmorgante@gmail.com')
+            ->subject('Welcome To Vegaroo')
             ->view('mails.welcome')
             ->text('mails.welcome_plain');
     }
