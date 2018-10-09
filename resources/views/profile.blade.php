@@ -12,6 +12,7 @@
     <a href="/weekly">Weekly</a>
     <a class="active-nav-item" href="#">Saved Recipes</a>
   </div>
+
   <h2 class="btn-wrapper">My Favorite Recipes</h2>
   @if(count($savedRecipes) == 0 )
     <h2>Head on over to the <a href="/vegan-recipes">recipes page</a> and save your favorites to see them here</h2>
@@ -28,6 +29,21 @@
     @endif
   @endforeach
   <br>
-  </div>
+
+
+<h2>Do you want a daily reminder to fill out your daily dozen?</h2>
+    <input class="quiz-input" name="radio" type="radio" value="yes">Yes<br>
+    <input class="quiz-input" name="radio" type="radio" value="no">No<br>
+
+    <div class="btn-wrapper-profile">
+        <button onclick="savePreferences()" class="quiz-btn btn">Save</button>
+    </div>
+</div>
 </div>
 @endsection
+
+<script>
+    function savePreferences() {
+        alert('test');
+    }
+</script>
