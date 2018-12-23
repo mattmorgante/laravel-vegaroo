@@ -7,7 +7,7 @@
 @include('partials.nav')
 <div class="container">
     <div class="hero">
-        <h1 class="title">Simple, easy, cheap, nutritious and delicious plant-based meals</h1>
+        <h1 class="title">Easy, cheap, nutritious and delicious plant-based meals</h1>
     </div>
 
     <div class="hero">

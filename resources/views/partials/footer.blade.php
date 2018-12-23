@@ -17,21 +17,21 @@
         <h4>Resources</h4>
         <p>Why should I eat fewer animal products?</p>
         <ul>
-            <li><a href="/health-benefits-long-term">For your health</a></li>
-            <li><a href="/environmental-benefits">For the planet</a></li>
-            <li><a href="/stop-animal-cruelty">For the animals</a></li>
+            <li><a href="/health-benefits-long-term">For Your Health</a></li>
+            <li><a href="/environmental-benefits">For The Planet</a></li>
+            <li><a href="/stop-animal-cruelty">For The Animals</a></li>
         </ul>
         <p>How can I eat fewer animal products?</p>
         <ul>
             <li><a href="/small-steps">7 Small Steps To Get Started</a></li>
-            <li><a href="/nutrition">What foods should I eat?</a></li>
+            <li><a href="/nutrition">What Foods Should I Eat?</a></li>
             <li><a href="/blogs-books-documentaries">Blogs, Books, and Documentaries</a></li>
         </ul>
     </div>
     <div class="footer_category" id="tools_footer">
         <h4>Tools</h4>
         <ul>
-            <li><a href="/dashboard">Track the Daily Dozen</a></li>
+            <li><a href="/dashboard">Track The Daily Dozen</a></li>
             <li><a href="/calculator">Environmental Impact Calculator</a></li>
         </ul>
         @if ( Auth::guest() )
