@@ -101,6 +101,7 @@
         }
 
         function changeDateByOne(incrementor){
+          var incrementor = incrementor + 1;
           var urlParts = window.location.href.split('/');
           var lastPart = urlParts.pop();
           var date = new Date(lastPart);
