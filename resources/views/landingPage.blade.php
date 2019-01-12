@@ -30,10 +30,10 @@
       <br>
       <div class="btn-wrapper">
         @if ( Auth::guest() )
-            <a id="call_to_action_btn" class="btn" href="/register">Get Started</a>
-        @else 
+            <a id="call_to_action_btn" class="btn" href="/register">Join Vegaroo</a>
+        @else
             <a id="call_to_action_btn" class="btn" href="/home">My Dashboard</a>
-        @endif 
+        @endif
     </div>
         <br>
     </div>
@@ -146,10 +146,10 @@
             </div>
         <div class="btn-wrapper">
             @if ( Auth::guest() )
-                <a id="call_to_action_btn" class="btn" href="/register">Get Started</a>
-            @else 
+                <a id="call_to_action_btn" class="btn" href="/register">Join Vegaroo</a>
+            @else
                 <a id="call_to_action_btn" class="btn" href="/home">My Dashboard</a>
-            @endif 
+            @endif
         </div>
         <br>
     </div>
