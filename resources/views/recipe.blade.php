@@ -13,6 +13,7 @@
         <div class="row_item recipe_detail">
             <h1>{{ $recipe->title }}</h1>
             <p>{{ $recipe->description }}</p>
+            <p>Serves 1 person</p>
             <div class="recipe_extras">
                 <p><span class="call-out-small">Time: </span><br>{{ $recipe->time }}</p><br>
                 <p><span class="call-out-small">Calories: </span><br>{{ $recipe->calories }}</p>
